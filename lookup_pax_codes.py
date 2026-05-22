@@ -19,7 +19,9 @@ from rapidfuzz import fuzz
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-API_URL = "https://play-asia.com/api/v1/products/quick"
+API_URL = "https://play-asia.com/api/v1/products/filtered"
+PRODUCT_TYPE = "digital codes"
+DIGITAL_ONLY = 1
 REQUEST_DELAY_S = 0.2
 TIMEOUT_S = 15
 
@@ -34,16 +36,29 @@ def build_session() -> requests.Session:
         raise_on_status=False,
     )
     session.mount("https://", HTTPAdapter(max_retries=retry))
-    session.headers.update({"User-Agent": "bandai-royalty-analysis/1.0"})
+    # Required to bypass Cloudflare's bot challenge on play-asia.com.
+    session.headers.update({"User-Agent": "playasia-auth/1.0"})
     return session
+
+
+def normalize_query(name: str) -> str:
+    # Strip trademark/registered marks — they confuse the search.
+    return name.replace("™", "").replace("®", "").strip()
 
 
 def quick_search(session: requests.Session, name: str) -> dict:
     resp = session.get(
         API_URL,
-        params={"q": name, "language": "en"},
+        params={
+            "q": normalize_query(name),
+            "type": PRODUCT_TYPE,
+            "digital": DIGITAL_ONLY,
+            "language": "en",
+        },
         timeout=TIMEOUT_S,
     )
+    if resp.status_code == 404:
+        return {"totalCount": 0, "results": []}
     resp.raise_for_status()
     return resp.json()
 
