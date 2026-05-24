@@ -2,7 +2,7 @@
 
 Walks every period sheet in BNEPA_Royalty_Report_*.xlsx, dumps the data table
 (from the ``Product Name`` header row down, all columns preserved) into
-``data/base_export_royalty_csvs/<YYYY-MM>.csv``. Sheets covering multiple
+``data/level_0_export_royalty_csvs/<YYYY-MM>.csv``. Sheets covering multiple
 months produce ``<YYYY-MM>_<YYYY-MM>.csv``.
 """
 
@@ -17,7 +17,7 @@ import openpyxl
 import pandas as pd
 
 DEFAULT_WORKBOOK = Path("BNEPA_Royalty_Report_MAY2026_LV.xlsx")
-DEFAULT_OUTPUT_DIR = Path("data/base_export_royalty_csvs")
+DEFAULT_OUTPUT_DIR = Path("data/level_0_export_royalty_csvs")
 
 SKIP_SHEETS = {"New template", "銷售庫存統計總表"}
 HEADER_SCAN_DEPTH = 12
