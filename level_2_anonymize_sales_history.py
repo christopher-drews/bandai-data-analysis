@@ -2,11 +2,18 @@
 
 Reads data/level_1_extract_sales_history/product_sales_history.csv and writes
 an anonymized copy to data/level_2_anonymize_sales_history/product_sales_history.csv.
-Customer Reference, paxCode, Product Name, period, and currency are preserved
-verbatim — only ``amount`` and ``selling_price`` are perturbed.
+paxCode, Product Name, period, and currency are preserved verbatim — only
+``amount`` and ``selling_price`` are perturbed.
 
 Noise is per-row, per-column, independent: a uniform magnitude in [min_pct,
 max_pct] with random sign. Use --seed for reproducible output.
+
+After noising, rows with ``Customer == "All"`` and a positive ``amount`` are
+split across the SPLIT_TARGETS resellers (Heybox + Sonkwo) in the ratio of
+their assignable post-noise sales. The split preserves the original row's
+total amount: the first N-1 targets get ``round(amount * ratio, decimals)``
+and the last target gets the remainder. Zero/NaN-amount ``All`` rows are
+left untouched.
 """
 
 from __future__ import annotations
@@ -21,6 +28,9 @@ import pandas as pd
 DEFAULT_INPUT = Path("data/level_1_extract_sales_history/product_sales_history.csv")
 DEFAULT_OUTPUT = Path("data/level_2_anonymize_sales_history/product_sales_history.csv")
 NOISE_COLUMNS = ("amount", "selling_price")
+SPLIT_SOURCE = "All"
+SPLIT_TARGETS = ("Heybox", "Sonkwo")
+SORT_COLUMNS = ["Product Name", "Customer", "start_month"]
 
 
 def apply_noise(series: pd.Series, rng: np.random.Generator, min_pct: float, max_pct: float) -> pd.Series:
@@ -29,6 +39,64 @@ def apply_noise(series: pd.Series, rng: np.random.Generator, min_pct: float, max
     sign = rng.choice([-1.0, 1.0], size=len(values))
     factor = 1.0 + sign * magnitude
     return values * factor
+
+
+def split_all_rows(df: pd.DataFrame, decimals: int) -> pd.DataFrame:
+    """Replace ``Customer == SPLIT_SOURCE`` rows with one row per SPLIT_TARGETS reseller.
+
+    Amounts are split in the ratio of each target's post-noise non-source
+    sales totals. Rows whose amount is 0 / NaN are left as-is.
+    """
+    if "Customer" not in df.columns:
+        return df
+
+    target_totals = {
+        name: float(df.loc[df["Customer"] == name, "amount"].fillna(0).clip(lower=0).sum())
+        for name in SPLIT_TARGETS
+    }
+    total = sum(target_totals.values())
+    if total <= 0:
+        print(
+            f"  warn: no assignable {SPLIT_TARGETS} sales — cannot split {SPLIT_SOURCE!r} rows",
+            file=sys.stderr,
+        )
+        return df
+    ratios = {name: target_totals[name] / total for name in SPLIT_TARGETS}
+    ratio_blurb = ", ".join(f"{name}={ratios[name]:.4f}" for name in SPLIT_TARGETS)
+    print(f"  split ratio: {ratio_blurb}", file=sys.stderr)
+
+    source_mask = df["Customer"] == SPLIT_SOURCE
+    splittable_mask = source_mask & df["amount"].notna() & (df["amount"] > 0)
+    splittable = df[splittable_mask]
+    if splittable.empty:
+        return df
+
+    expanded_rows: list[dict] = []
+    last_target = SPLIT_TARGETS[-1]
+    for row in splittable.to_dict(orient="records"):
+        amount = float(row["amount"])
+        remaining = amount
+        for name in SPLIT_TARGETS:
+            new_row = dict(row)
+            new_row["Customer"] = name
+            if name == last_target:
+                share = round(remaining, decimals)
+            else:
+                share = round(amount * ratios[name], decimals)
+                remaining -= share
+            new_row["amount"] = share
+            expanded_rows.append(new_row)
+
+    out = pd.concat([df[~splittable_mask], pd.DataFrame(expanded_rows)], ignore_index=True)
+    sort_cols = [c for c in SORT_COLUMNS if c in out.columns]
+    if sort_cols:
+        out = out.sort_values(sort_cols).reset_index(drop=True)
+    print(
+        f"  split {len(splittable)} {SPLIT_SOURCE!r} rows into "
+        f"{len(expanded_rows)} {'/'.join(SPLIT_TARGETS)} rows",
+        file=sys.stderr,
+    )
+    return out
 
 
 def main() -> int:
@@ -57,6 +125,8 @@ def main() -> int:
             continue
         noised = apply_noise(df[col], rng, args.min_pct, args.max_pct)
         df[col] = noised.round(args.decimals)
+
+    df = split_all_rows(df, args.decimals)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(args.output, index=False)

@@ -4,7 +4,7 @@ For every (reseller, month) pair in data/level_2_anonymize_sales_history/
 product_sales_history.csv, this script:
 
   1. Resolves paxCode -> sku_id via /api/v1/lv-team/catalog.
-  2. Resolves Customer Reference -> reseller org_id via the customer/org map.
+  2. Resolves Customer -> reseller org_id via data/customer_org_map.csv.
   3. Pulls unsold keys the reseller owns for that SKU via
        GET /api/v1/orgs/{reseller_org_id}/inventory/{sku_id}/keys?status=unsold
   4. Assigns ``amount`` keyIds per CSV row, each with a random ISO 8601
@@ -132,7 +132,7 @@ def main() -> int:
     if not cust_to_org:
         print(
             f"error: {args.customer_org_map} has no usable rows "
-            "(populate the customer_reference column before running)",
+            "(populate it with name,org_id rows before running)",
             file=sys.stderr,
         )
         return 1
@@ -165,12 +165,12 @@ def main() -> int:
             skipped_amount += 1
             continue
         pax = (row.get("paxCode") or "").strip()
-        cust = (row.get("Customer Reference") or "").strip()
+        customer = (row.get("Customer") or "").strip()
         sku_id = pax_to_sku.get(pax)
         if not sku_id:
             skipped_pax += 1
             continue
-        reseller_org = cust_to_org.get(cust)
+        reseller_org = cust_to_org.get(customer)
         if not reseller_org:
             skipped_cust += 1
             continue

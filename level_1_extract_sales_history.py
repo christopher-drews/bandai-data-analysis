@@ -1,14 +1,18 @@
 """Extract per-file sales rows from the level_0 CSVs and join PAX codes.
 
 Walks every CSV in data/level_0_export_royalty_csvs/, pulls Product Name,
-Sales Units, and Selling Price (CNY) for each row, normalizes the product
-names via ``normalize.normalize_name``, joins to the level_0_match_pax_codes
-output for ``paxCode`` and ``Customer Reference``, and emits one row per
+Customer, Sales Units, and Selling Price (CNY) for each row, normalizes
+the product names via ``normalize.normalize_name``, joins to the
+level_0_match_pax_codes output for ``paxCode``, and emits one row per
 input row (no within-file aggregation — products can legitimately repeat
 with different selling prices).
 
+``Customer`` is the reseller name (Heybox / Sonkwo). Older files (before
+2025-07) have no Customer column; those rows are labelled ``All``.
+Aggregate rows (Customer = SUBTOTAL/TOTAL) are dropped.
+
 Output: data/level_1_extract_sales_history/product_sales_history.csv with columns
-    Product Name, Normalized Name, paxCode, Customer Reference,
+    Product Name, Normalized Name, paxCode, Customer,
     amount, selling_price, currency, start_month, end_month
 """
 
@@ -27,32 +31,44 @@ from pax_lookup import DEFAULT_PAX_CSV, build_pax_lookup
 DEFAULT_INPUT_DIR = Path("data/level_0_export_royalty_csvs")
 DEFAULT_OUTPUT = Path("data/level_1_extract_sales_history/product_sales_history.csv")
 SALES_CURRENCY = "CNY"
+AGGREGATE_CUSTOMERS = {"SUBTOTAL", "TOTAL"}
 
 OUTPUT_COLUMNS = [
-    "Product Name", "Normalized Name", "paxCode", "Customer Reference",
+    "Product Name", "Normalized Name", "paxCode", "Customer",
     "amount", "selling_price", "currency", "start_month", "end_month",
 ]
 
 
 def extract_file_sales(path: Path) -> pd.DataFrame:
-    """Per-row Product Name + Sales Units + Selling Price (CNY) from one CSV."""
+    """Per-row Product Name + Customer + Sales Units + Selling Price (CNY) from one CSV."""
     df = pd.read_csv(path)
     cols = {c.strip(): c for c in df.columns if isinstance(c, str)}
     pn = cols.get("Product Name")
     units = cols.get("Sales Units")
     price = cols.get("Selling Price (CNY)")
+    cust = cols.get("Customer")
     if not (pn and units and price):
-        return pd.DataFrame(columns=["Product Name", "Normalized Name", "amount", "selling_price"])
+        return pd.DataFrame(columns=["Product Name", "Normalized Name", "Customer", "amount", "selling_price"])
 
-    sub = df[[pn, units, price]].rename(columns={pn: "Product Name", units: "amount", price: "selling_price"})
+    keep = [pn, units, price] + ([cust] if cust else [])
+    sub = df[keep].copy()
+    rename = {pn: "Product Name", units: "amount", price: "selling_price"}
+    if cust:
+        rename[cust] = "Customer"
+    sub = sub.rename(columns=rename)
+    if "Customer" not in sub.columns:
+        sub["Customer"] = "All"
+
     sub["Product Name"] = sub["Product Name"].astype(str).str.strip()
+    sub["Customer"] = sub["Customer"].fillna("All").astype(str).str.strip()
     sub = sub[sub["Product Name"].ne("") & sub["Product Name"].ne("nan")]
+    sub = sub[~sub["Customer"].str.upper().isin(AGGREGATE_CUSTOMERS)]
     sub["amount"] = pd.to_numeric(sub["amount"], errors="coerce")
     sub["selling_price"] = pd.to_numeric(sub["selling_price"], errors="coerce")
     sub = sub.dropna(subset=["amount", "selling_price"], how="all")
     sub["Normalized Name"] = sub["Product Name"].map(normalize_name)
     sub = sub[sub["Normalized Name"] != ""]
-    return sub[["Product Name", "Normalized Name", "amount", "selling_price"]]
+    return sub[["Product Name", "Normalized Name", "Customer", "amount", "selling_price"]]
 
 
 def main() -> int:
@@ -87,12 +103,11 @@ def main() -> int:
     rows = pd.concat(parts, ignore_index=True)
     rows["currency"] = SALES_CURRENCY
     rows["paxCode"] = rows["Normalized Name"].map(lambda s: pax_lookup.get(s, ("", ""))[0])
-    rows["Customer Reference"] = rows["Normalized Name"].map(lambda s: pax_lookup.get(s, ("", ""))[1])
 
     missing_mask = ~rows["Normalized Name"].isin(pax_lookup)
     missing = rows.loc[missing_mask, "Product Name"]
 
-    rows = rows[OUTPUT_COLUMNS].sort_values(["Product Name", "start_month"]).reset_index(drop=True)
+    rows = rows[OUTPUT_COLUMNS].sort_values(["Product Name", "Customer", "start_month"]).reset_index(drop=True)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     rows.to_csv(args.output, index=False)

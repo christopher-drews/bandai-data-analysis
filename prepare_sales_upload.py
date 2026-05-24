@@ -6,13 +6,14 @@ Reads data/level_2_anonymize_sales_history/product_sales_history.csv and:
   2. Uploads that many synthetic keys to the supplier vault via
        POST /api/v1/supplier/{org_id}/inventory/{sku_id}/upload
      (CSV body, X-Idempotency-Key header).
-  3. Aggregates ``amount`` per (paxCode, Customer Reference) and transfers
-     the per-reseller share from the supplier vault to each reseller via
+  3. Aggregates ``amount`` per (paxCode, Customer) and transfers the
+     per-reseller share from the supplier vault to each reseller via
        POST /api/v1/orgs/{supplier_org_id}/inventory/{sku_id}/transfer
 
 paxCode -> sku_id resolution uses the catalog item's ``paPaxCode`` field
-fetched from /api/v1/lv-team/catalog?supplier=<org_id>. Customer Reference
--> reseller org_id resolution uses data/customer_org_map.csv.
+fetched from /api/v1/lv-team/catalog?supplier=<org_id>. Customer ->
+reseller org_id resolution uses data/customer_org_map.csv. Rows whose
+``Customer`` is not in the map (including ``All``) are skipped.
 """
 
 from __future__ import annotations
@@ -72,15 +73,15 @@ def fetch_catalog_by_paxcode(
 
 
 def load_customer_org_map(path: Path) -> dict[str, str]:
-    """Return {customer_reference: org_id}. Blank customer_references are skipped."""
+    """Return {customer_name: org_id} keyed on the Customer column from the sales CSV."""
     mapping: dict[str, str] = {}
     with path.open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
-            cust = (row.get("customer_reference") or "").strip()
+            name = (row.get("name") or "").strip()
             org = (row.get("org_id") or "").strip()
-            if not cust or not org:
+            if not name or not org:
                 continue
-            mapping[cust] = org
+            mapping[name] = org
     return mapping
 
 
@@ -106,12 +107,12 @@ def aggregate(rows: list[dict], pax_to_sku: dict[str, str], cust_to_org: dict[st
         if amount <= 0:
             continue
         pax = (row.get("paxCode") or "").strip()
-        cust = (row.get("Customer Reference") or "").strip()
+        customer = (row.get("Customer") or "").strip()
         sku = pax_to_sku.get(pax)
         if not sku:
             skipped_pax += 1
             continue
-        org = cust_to_org.get(cust)
+        org = cust_to_org.get(customer)
         if not org:
             skipped_cust += 1
             continue
@@ -139,7 +140,7 @@ def main() -> int:
     if not cust_to_org:
         print(
             f"error: {args.customer_org_map} has no usable rows "
-            "(populate the customer_reference column before running)",
+            "(populate it with name,org_id rows before running)",
             file=sys.stderr,
         )
         return 1
