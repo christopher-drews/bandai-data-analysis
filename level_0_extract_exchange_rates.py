@@ -3,7 +3,8 @@
 Walks every monthly sheet in BNEPA_Royalty_Report_*.xlsx, reads the
 "Sales Period" dates in B3/B4 to determine the month(s) the sheet covers,
 and locates the exchange rate (cell position varies across template
-revisions). Writes one row per calendar month to exchange_rates.csv.
+revisions). Writes one row per calendar month to
+data/level_0_extract_exchange_rates/exchange_rates.csv.
 """
 
 from __future__ import annotations
@@ -17,7 +18,7 @@ from pathlib import Path
 import openpyxl
 
 DEFAULT_WORKBOOK = Path("BNEPA_Royalty_Report_MAY2026_LV.xlsx")
-DEFAULT_OUTPUT = Path("exchange_rates.csv")
+DEFAULT_OUTPUT = Path("data/level_0_extract_exchange_rates/exchange_rates.csv")
 
 # Sheets that don't carry monthly royalty data.
 NON_MONTHLY_SHEETS = {"New template", "銷售庫存統計總表"}
@@ -96,6 +97,7 @@ def main() -> int:
 
     rows.sort(key=lambda r: r["month"])
 
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = ["month", "exchange_rate", "sheet_name"]
     with args.output.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=fieldnames)

@@ -1,4 +1,4 @@
-"""Upload monthly CNY exchange rates from exchange_rates.csv into LootVault.
+"""Upload monthly CNY exchange rates from data/level_0_extract_exchange_rates/exchange_rates.csv into LootVault.
 
 PUTs each (year, month) row to /api/v1/supplier/{org_id}/exchange-rates,
 which is an upsert: existing rates for that month are replaced.
@@ -17,7 +17,7 @@ import requests
 DEFAULT_HOST = "lv.play-asia.com"
 DEFAULT_ORG_ID = "org-u1gm1u0j"
 DEFAULT_CURRENCY = "CNY"
-DEFAULT_CSV = Path("exchange_rates.csv")
+DEFAULT_CSV = Path("data/level_0_extract_exchange_rates/exchange_rates.csv")
 REQUEST_DELAY_S = 0.1
 TIMEOUT_S = 30
 
