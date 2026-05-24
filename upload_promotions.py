@@ -3,8 +3,9 @@
 For each row, POSTs to
     /api/v1/supplier/{org_id}/catalog/{sku_id}/promotions
 
-Rows are joined to a LootVault SKU by their ``paxCode`` (resolved against
-the supplier catalog's ``paPaxCode`` field). The ``Customer`` column from
+Rows are joined to a LootVault SKU by normalizing the catalog item's
+``name`` with ``normalize.normalize_name`` and matching it against the
+CSV's ``Normalized Name`` column. The ``Customer`` column from
 level_1_extract_promo_history is mapped to a reseller scope:
 
   - "All"       -> applies to every reseller (resellers field omitted)
@@ -14,8 +15,8 @@ level_1_extract_promo_history is mapped to a reseller scope:
 
 ``Promo Discount`` is a fraction in the CSV (e.g. 0.20 = 20% off) and is
 multiplied by 100 for the API, which expects ``discountPercentage`` in
-the 0.01–100 range. ``start_month``/``end_month`` expand to first-of-month
-/ last-of-month dates and the currency defaults to CNY.
+the 0.01–100 range. ``start_date``/``end_date`` are YYYY-MM-DD and used
+verbatim. The currency defaults to CNY.
 
 Note: the create endpoint normally requires startDate >= today and admin
 privileges. Historical runs will fail unless the caller is admin and the
@@ -25,7 +26,6 @@ server permits backdating.
 from __future__ import annotations
 
 import argparse
-import calendar
 import csv
 import sys
 import time
@@ -33,6 +33,8 @@ from collections import defaultdict
 from pathlib import Path
 
 import requests
+
+from normalize import normalize_name
 
 DEFAULT_HOST = "lv.play-asia.com"
 DEFAULT_ORG_ID = "org-u1gm1u0j"
@@ -48,13 +50,15 @@ ALL_CUSTOMERS_TOKEN = "All"
 def fetch_catalog(
     session: requests.Session, host: str, org_id: str, headers: dict
 ) -> dict[str, tuple[str, dict[str, str]]]:
-    """Return {paPaxCode: (skuId, {reseller_name_lower: reseller_id})}.
+    """Return {normalized_name: (skuId, {reseller_name_lower: reseller_id})}.
 
     Pages through /api/v1/lv-team/catalog filtered to this supplier so each
     SKU is returned alongside its attached resellers (id + display name).
+    Catalog item names are normalized with ``normalize.normalize_name`` so
+    they match the ``Normalized Name`` column the level_1 extracts emit.
     """
     base = f"https://{host}/api/v1/lv-team/catalog"
-    by_pax: dict[str, tuple[str, dict[str, str]]] = {}
+    by_name: dict[str, tuple[str, dict[str, str]]] = {}
     duplicates: dict[str, list[str]] = defaultdict(list)
     offset = 0
     while True:
@@ -62,7 +66,6 @@ def fetch_catalog(
             base,
             params={
                 "supplier": org_id,
-                "has_paxcode": "true",
                 "offset": offset,
                 "limit": CATALOG_PAGE_SIZE,
             },
@@ -73,33 +76,25 @@ def fetch_catalog(
         payload = resp.json()
         items = payload.get("items", [])
         for item in items:
-            pax = item.get("paPaxCode")
+            slug = normalize_name(item.get("name"))
             sku = item.get("id")
-            if not pax or not sku:
+            if not slug or not sku:
                 continue
             resellers = {
                 (r.get("name") or "").strip().lower(): r["id"]
                 for r in item.get("resellers", [])
                 if r.get("id")
             }
-            if pax in by_pax and by_pax[pax][0] != sku:
-                duplicates[pax].append(sku)
-            by_pax[pax] = (sku, resellers)
+            if slug in by_name and by_name[slug][0] != sku:
+                duplicates[slug].append(sku)
+            by_name[slug] = (sku, resellers)
         offset += len(items)
         if len(items) < CATALOG_PAGE_SIZE or offset >= payload.get("total", offset):
             break
 
-    for pax, skus in duplicates.items():
-        print(f"  warn: paxCode {pax!r} maps to multiple SKUs: {[by_pax[pax][0], *skus]}", file=sys.stderr)
-    return by_pax
-
-
-def month_bounds(start_month: str, end_month: str) -> tuple[str, str]:
-    """`'2024-08','2024-10'` -> `('2024-08-01','2024-10-31')`."""
-    sy, sm = (int(x) for x in start_month.split("-"))
-    ey, em = (int(x) for x in end_month.split("-"))
-    last_day = calendar.monthrange(ey, em)[1]
-    return f"{sy:04d}-{sm:02d}-01", f"{ey:04d}-{em:02d}-{last_day:02d}"
+    for slug, skus in duplicates.items():
+        print(f"  warn: normalized name {slug!r} maps to multiple SKUs: {[by_name[slug][0], *skus]}", file=sys.stderr)
+    return by_name
 
 
 def main() -> int:
@@ -123,30 +118,30 @@ def main() -> int:
 
     print("Fetching supplier catalog...", file=sys.stderr)
     catalog = fetch_catalog(session, args.host, args.org_id, headers)
-    print(f"  {len(catalog)} SKUs with paPaxCode", file=sys.stderr)
+    print(f"  {len(catalog)} SKUs indexed by normalized name", file=sys.stderr)
 
     ok = fail = skipped = 0
     for row in rows:
-        pax = (row.get("paxCode") or "").strip()
+        slug = (row.get("Normalized Name") or "").strip() or normalize_name(row.get("Product Name"))
         promo_raw = (row.get("Promo Discount") or "").strip()
         customer = (row.get("Customer") or "").strip()
-        start_month = (row.get("start_month") or "").strip()
-        end_month = (row.get("end_month") or "").strip()
+        start_date = (row.get("start_date") or "").strip()
+        end_date = (row.get("end_date") or "").strip()
         product = (row.get("Product Name") or "").strip()
 
-        if not pax:
-            print(f"  skip {product!r}: no paxCode", file=sys.stderr)
+        if not slug:
+            print(f"  skip {product!r}: no normalized name", file=sys.stderr)
             skipped += 1
             continue
-        entry = catalog.get(pax)
+        entry = catalog.get(slug)
         if not entry:
-            print(f"  skip {product!r} ({pax}): no matching SKU in catalog", file=sys.stderr)
+            print(f"  skip {product!r} ({slug}): no matching SKU in catalog", file=sys.stderr)
             skipped += 1
             continue
         sku_id, sku_resellers = entry
 
-        if not (promo_raw and start_month and end_month):
-            print(f"  skip {product!r}: missing promo/months", file=sys.stderr)
+        if not (promo_raw and start_date and end_date):
+            print(f"  skip {product!r}: missing promo/dates", file=sys.stderr)
             skipped += 1
             continue
 
@@ -159,18 +154,17 @@ def main() -> int:
 
         body: dict = {
             "discountPercentage": round(discount_percentage, 4),
-            "startDate": "",
-            "endDate": "",
+            "startDate": start_date,
+            "endDate": end_date,
             "currencies": [args.currency],
         }
-        body["startDate"], body["endDate"] = month_bounds(start_month, end_month)
 
         scope = "all-resellers"
         if customer and customer != ALL_CUSTOMERS_TOKEN:
             reseller_id = sku_resellers.get(customer.lower())
             if not reseller_id:
                 print(
-                    f"  skip {product!r} ({pax}): customer {customer!r} not in "
+                    f"  skip {product!r} ({slug}): customer {customer!r} not in "
                     f"SKU resellers {sorted(sku_resellers)}",
                     file=sys.stderr,
                 )
@@ -180,7 +174,7 @@ def main() -> int:
             scope = f"{customer}={reseller_id}"
 
         prefix = (
-            f"{pax} ({sku_id}) {body['discountPercentage']}% "
+            f"{slug} ({sku_id}) {body['discountPercentage']}% "
             f"{body['startDate']}->{body['endDate']} [{scope}]"
         )
         if args.dry_run:

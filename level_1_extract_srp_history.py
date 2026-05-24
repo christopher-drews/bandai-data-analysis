@@ -148,6 +148,11 @@ def main() -> int:
     per_period = pd.concat(parts, ignore_index=True)
     runs = collapse_runs(per_period, file_order)
 
+    # An SRP whose run reaches the most recent month of data is still
+    # active — leave end_month blank so consumers treat it as open-ended.
+    latest_month = per_period["end_month"].max()
+    runs.loc[runs["end_month"] == latest_month, "end_month"] = ""
+
     # One canonical display name per slug — the spelling from the most recent
     # file that carried it.
     file_rank = {s: i for i, s in enumerate(file_order)}

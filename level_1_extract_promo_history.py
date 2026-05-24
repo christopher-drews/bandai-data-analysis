@@ -12,13 +12,23 @@ rows are dropped.
 
 Output: data/level_1_extract_promo_history/product_promo_history.csv with columns
     Product Name, Normalized Name, Customer, Promo Discount,
-    paxCode, Customer Reference, start_month, end_month
+    paxCode, Customer Reference, start_date, end_date
+
+start_date/end_date are YYYY-MM-DD. By default they map to first-of-month /
+last-of-month. When two consecutive runs for the same (slug, customer) share
+a boundary month, that month is split: the earlier run ends on day 15, the
+later run starts on day 16, so LootVault sees non-overlapping ranges.
+
+Identical promotions (same slug, discount, dates) for both Heybox and Sonkwo
+are collapsed into a single Customer=All row.
 """
 
 from __future__ import annotations
 
 import argparse
+import calendar
 import sys
+from datetime import date
 from pathlib import Path
 
 import pandas as pd
@@ -35,8 +45,119 @@ AGGREGATE_CUSTOMERS = {"SUBTOTAL", "TOTAL"}
 
 OUTPUT_COLUMNS = [
     "Product Name", "Normalized Name", "Customer", "Promo Discount",
-    "paxCode", "Customer Reference", "start_month", "end_month",
+    "paxCode", "Customer Reference", "start_date", "end_date",
 ]
+
+
+def month_first(ym: str) -> date:
+    y, m = (int(x) for x in ym.split("-"))
+    return date(y, m, 1)
+
+
+def month_last(ym: str) -> date:
+    y, m = (int(x) for x in ym.split("-"))
+    return date(y, m, calendar.monthrange(y, m)[1])
+
+
+def collapse_heybox_sonkwo(runs: pd.DataFrame) -> pd.DataFrame:
+    """Merge Heybox + Sonkwo rows with identical (slug, discount, dates) into one Customer=All row.
+
+    A pair is only collapsed when no *other* row for the same slug (any customer,
+    including a pre-existing All) overlaps the proposed date range. Otherwise the
+    collapse would create an All-vs-reseller overlap that LootVault rejects.
+    """
+    key = ["Normalized Name", "Promo Discount", "start_month", "end_month"]
+    grouped = (
+        runs.groupby(key, sort=False)["Customer"].agg(set).reset_index()
+    )
+    candidates = grouped[
+        grouped["Customer"].apply(lambda s: {"Heybox", "Sonkwo"}.issubset(s))
+    ][key]
+    if candidates.empty:
+        return runs
+
+    # Per-slug list of (start_date, end_date, customer, discount, start_month, end_month)
+    # for every row, used to test whether a candidate collide with anything else.
+    slug_rows: dict[str, list[tuple]] = {}
+    for _, r in runs.iterrows():
+        slug_rows.setdefault(r["Normalized Name"], []).append((
+            month_first(r["start_month"]), month_last(r["end_month"]),
+            r["Customer"], r["Promo Discount"],
+            r["start_month"], r["end_month"],
+        ))
+
+    safe_pairs: set[tuple] = set()
+    for _, c in candidates.iterrows():
+        slug, disc, sm, em = c["Normalized Name"], c["Promo Discount"], c["start_month"], c["end_month"]
+        c_start, c_end = month_first(sm), month_last(em)
+        overlaps_other = False
+        for r_start, r_end, r_cust, r_disc, r_sm, r_em in slug_rows[slug]:
+            # Skip the candidate's own (Heybox, Sonkwo) rows.
+            if (r_cust in {"Heybox", "Sonkwo"} and r_disc == disc
+                    and r_sm == sm and r_em == em):
+                continue
+            if c_start <= r_end and r_start <= c_end:
+                overlaps_other = True
+                print(
+                    f"  skip-collapse {slug} @ {disc} {sm}->{em}: would collide with "
+                    f"{r_cust} {r_disc} {r_sm}->{r_em}",
+                    file=sys.stderr,
+                )
+                break
+        if not overlaps_other:
+            safe_pairs.add((slug, disc, sm, em))
+
+    if not safe_pairs:
+        return runs
+
+    def is_safe_pair_row(r: pd.Series) -> bool:
+        return (
+            r["Customer"] in {"Heybox", "Sonkwo"}
+            and (
+                r["Normalized Name"], r["Promo Discount"],
+                r["start_month"], r["end_month"],
+            ) in safe_pairs
+        )
+
+    is_pair = runs.apply(is_safe_pair_row, axis=1)
+    pair_rows = runs[is_pair].drop_duplicates(subset=key).copy()
+    pair_rows["Customer"] = "All"
+    return pd.concat([runs[~is_pair], pair_rows], ignore_index=True)
+
+
+def to_dates_with_conflict_split(runs: pd.DataFrame) -> pd.DataFrame:
+    """Expand month columns to dates and split overlapping boundary months at 15/16."""
+    runs = runs.copy()
+    runs["start_date"] = runs["start_month"].map(month_first)
+    runs["end_date"] = runs["end_month"].map(month_last)
+    runs = runs.sort_values(
+        ["Normalized Name", "Customer", "start_date"]
+    ).reset_index(drop=True)
+
+    for _, group_idx in runs.groupby(
+        ["Normalized Name", "Customer"], sort=False
+    ).groups.items():
+        idx = list(group_idx)
+        for a, b in zip(idx, idx[1:]):
+            if runs.at[a, "end_date"] < runs.at[b, "start_date"]:
+                continue
+            conflict = runs.at[b, "start_date"]
+            y, m = conflict.year, conflict.month
+            mid, after = date(y, m, 15), date(y, m, 16)
+            if runs.at[a, "start_date"] > mid or runs.at[b, "end_date"] < after:
+                print(
+                    f"  warn: complex conflict for "
+                    f"{runs.at[a, 'Normalized Name']!r} / {runs.at[a, 'Customer']!r} "
+                    f"at {conflict.isoformat()} — manual fix needed",
+                    file=sys.stderr,
+                )
+                continue
+            runs.at[a, "end_date"] = mid
+            runs.at[b, "start_date"] = after
+
+    runs["start_date"] = runs["start_date"].map(lambda d: d.isoformat())
+    runs["end_date"] = runs["end_date"].map(lambda d: d.isoformat())
+    return runs.drop(columns=["start_month", "end_month"])
 
 
 def extract_file_promos(path: Path) -> pd.DataFrame:
@@ -155,6 +276,8 @@ def main() -> int:
 
     per_period = pd.concat(parts, ignore_index=True)
     runs = collapse_runs(per_period, file_order)
+    runs = collapse_heybox_sonkwo(runs)
+    runs = to_dates_with_conflict_split(runs)
 
     # Canonical display name per slug: spelling from the most recent file.
     file_rank = {s: i for i, s in enumerate(file_order)}
@@ -173,7 +296,7 @@ def main() -> int:
     missing = runs.loc[missing_mask, "Product Name"]
 
     runs = runs[OUTPUT_COLUMNS].sort_values(
-        ["Product Name", "Customer", "start_month", "Promo Discount"]
+        ["Product Name", "Customer", "start_date", "Promo Discount"]
     ).reset_index(drop=True)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
