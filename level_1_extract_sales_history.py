@@ -1,13 +1,13 @@
-"""Extract per-sheet sales rows from the Bandai royalty workbook and join PAX codes.
+"""Extract per-file sales rows from the level_0 CSVs and join PAX codes.
 
-Walks every monthly sheet in BNEPA_Royalty_Report_*.xlsx, pulls Product Name,
+Walks every CSV in data/level_0_export_royalty_csvs/, pulls Product Name,
 Sales Units, and Selling Price (CNY) for each row, normalizes the product
-names via ``normalize.normalize_name``, joins to ``royalty_pax_match.xlsx``
-for the ``paxCode`` and ``Customer Reference`` columns, and emits one row per
-workbook row (no within-sheet aggregation — products can legitimately repeat
-in one sheet with different selling prices).
+names via ``normalize.normalize_name``, joins to the level_0_match_pax_codes
+output for ``paxCode`` and ``Customer Reference``, and emits one row per
+input row (no within-file aggregation — products can legitimately repeat
+with different selling prices).
 
-Output: product_sales_history.csv with columns
+Output: data/level_1_extract_sales_history/product_sales_history.csv with columns
     Product Name, Normalized Name, paxCode, Customer Reference,
     amount, selling_price, currency, start_month, end_month
 """
@@ -18,22 +18,14 @@ import argparse
 import sys
 from pathlib import Path
 
-import openpyxl
 import pandas as pd
 
-from extract_srp_history import (
-    SKIP_SHEETS,
-    build_pax_lookup,
-    find_header_row,
-    find_period,
-    month_range,
-)
+from level_1_extract_srp_history import parse_period
 from normalize import normalize_name
+from pax_lookup import DEFAULT_PAX_CSV, build_pax_lookup
 
-DEFAULT_WORKBOOK = Path("BNEPA_Royalty_Report_MAY2026_LV.xlsx")
-DEFAULT_PAX_MATCH = Path("royalty_pax_match.xlsx")
-DEFAULT_OUTPUT = Path("product_sales_history.csv")
-
+DEFAULT_INPUT_DIR = Path("data/level_0_export_royalty_csvs")
+DEFAULT_OUTPUT = Path("data/level_1_extract_sales_history/product_sales_history.csv")
 SALES_CURRENCY = "CNY"
 
 OUTPUT_COLUMNS = [
@@ -42,10 +34,9 @@ OUTPUT_COLUMNS = [
 ]
 
 
-def extract_sheet_sales(path: Path, sheet: str) -> pd.DataFrame:
-    """Per-row Product Name + Sales Units + Selling Price (CNY) from one sheet."""
-    hdr = find_header_row(path, sheet)
-    df = pd.read_excel(path, sheet_name=sheet, header=hdr, engine="openpyxl")
+def extract_file_sales(path: Path) -> pd.DataFrame:
+    """Per-row Product Name + Sales Units + Selling Price (CNY) from one CSV."""
+    df = pd.read_csv(path)
     cols = {c.strip(): c for c in df.columns if isinstance(c, str)}
     pn = cols.get("Product Name")
     units = cols.get("Sales Units")
@@ -66,40 +57,29 @@ def extract_sheet_sales(path: Path, sheet: str) -> pd.DataFrame:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--workbook", default=DEFAULT_WORKBOOK, type=Path)
-    parser.add_argument("--pax-match", default=DEFAULT_PAX_MATCH, type=Path)
+    parser.add_argument("--input-dir", default=DEFAULT_INPUT_DIR, type=Path)
+    parser.add_argument("--pax-csv", default=DEFAULT_PAX_CSV, type=Path)
     parser.add_argument("--output", default=DEFAULT_OUTPUT, type=Path)
     args = parser.parse_args()
 
-    pax_lookup = build_pax_lookup(args.pax_match)
-    print(f"Loaded {len(pax_lookup)} PAX-match entries", file=sys.stderr)
+    pax_lookup = build_pax_lookup(args.pax_csv)
+    print(f"Loaded {len(pax_lookup)} PAX-lookup entries", file=sys.stderr)
 
-    wb = openpyxl.load_workbook(args.workbook, read_only=False, data_only=True)
-    monthly = [s for s in wb.sheetnames if s.strip() not in SKIP_SHEETS]
-
-    sheet_periods = {}
-    for sheet in monthly:
-        period = find_period(wb[sheet])
-        if period is None:
-            print(f"  skip {sheet!r}: no sales period found", file=sys.stderr)
-            continue
-        sheet_periods[sheet] = period
-
-    sheet_order = sorted(sheet_periods, key=lambda s: sheet_periods[s][0])
+    files = sorted(args.input_dir.glob("*.csv"), key=lambda p: parse_period(p)[0])
 
     parts: list[pd.DataFrame] = []
-    for sheet in sheet_order:
-        start, end = sheet_periods[sheet]
-        months = month_range(start, end)
-        sub = extract_sheet_sales(args.workbook, sheet)
+    for path in files:
+        start, end = parse_period(path)
+        sub = extract_file_sales(path)
         if sub.empty:
-            print(f"  skip {sheet!r}: no sales rows", file=sys.stderr)
+            print(f"  skip {path.name!r}: no sales rows", file=sys.stderr)
             continue
-        sub["start_month"] = months[0]
-        sub["end_month"] = months[-1]
+        sub["start_month"] = start
+        sub["end_month"] = end
         parts.append(sub)
 
     if not parts:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
         pd.DataFrame(columns=OUTPUT_COLUMNS).to_csv(args.output, index=False)
         print(f"Wrote {args.output} (0 rows)", file=sys.stderr)
         return 0
@@ -113,12 +93,14 @@ def main() -> int:
     missing = rows.loc[missing_mask, "Product Name"]
 
     rows = rows[OUTPUT_COLUMNS].sort_values(["Product Name", "start_month"]).reset_index(drop=True)
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     rows.to_csv(args.output, index=False)
     print(f"Wrote {args.output} ({len(rows)} rows)", file=sys.stderr)
 
     if not missing.empty:
         unique_missing = sorted(set(missing))
-        print(f"\n{len(unique_missing)} product(s) had no PAX-match entry:", file=sys.stderr)
+        print(f"\n{len(unique_missing)} product(s) had no PAX-lookup entry:", file=sys.stderr)
         for name in unique_missing:
             print(f"  - {name}", file=sys.stderr)
 

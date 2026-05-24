@@ -1,4 +1,4 @@
-"""Upload SRP runs from product_srp_history.csv into LootVault.
+"""Upload SRP runs from data/level_1_extract_srp_history/product_srp_history.csv into LootVault.
 
 For each row, POSTs to
     /api/v1/supplier/{org_id}/catalog/{sku_id}/srp
@@ -26,7 +26,7 @@ import requests
 
 DEFAULT_HOST = "lv.play-asia.com"
 DEFAULT_ORG_ID = "org-u1gm1u0j"
-DEFAULT_CSV = Path("product_srp_history.csv")
+DEFAULT_CSV = Path("data/level_1_extract_srp_history/product_srp_history.csv")
 CATALOG_PAGE_SIZE = 1000
 REQUEST_DELAY_S = 0.1
 TIMEOUT_S = 30

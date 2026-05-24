@@ -30,6 +30,7 @@ from normalize import normalize_name
 
 DEFAULT_WORKBOOK = Path("BNEPA_Royalty_Report_MAY2026_LV.xlsx")
 DEFAULT_BANDAI = Path("data/bandai_products.csv")
+DEFAULT_PAX_XLSX = Path("royalty_pax_match.xlsx")
 DEFAULT_OUTPUT = Path("data/level_0_match_pax_codes/royalty_pax_match.csv")
 
 SKIP_SHEETS = {"New template", "銷售庫存統計總表"}
@@ -251,10 +252,28 @@ def enforce_uniqueness(merged: pd.DataFrame) -> pd.DataFrame:
     ].sort_values(["match_status", "Normalized Name"]).reset_index(drop=True)
 
 
+def load_customer_references(xlsx_path: Path) -> dict[str, str]:
+    """Normalized Name -> Customer Reference from the hand-curated SKUs sheet.
+
+    Last-write wins on duplicate slugs.
+    """
+    df = pd.read_excel(xlsx_path, sheet_name="SKUs", engine="openpyxl")
+    df = df[["Name", "Customer Reference"]].copy()
+    df["slug"] = df["Name"].map(normalize_name)
+    df = df[df["slug"] != ""]
+    lookup: dict[str, str] = {}
+    for _, row in df.iterrows():
+        ref = row["Customer Reference"] if pd.notna(row["Customer Reference"]) else ""
+        lookup[row["slug"]] = ref
+    return lookup
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workbook", default=DEFAULT_WORKBOOK, type=Path)
     parser.add_argument("--bandai", default=DEFAULT_BANDAI, type=Path)
+    parser.add_argument("--pax-xlsx", default=DEFAULT_PAX_XLSX, type=Path,
+                        help="Hand-curated SKU sheet supplying Customer Reference.")
     parser.add_argument("--output", default=DEFAULT_OUTPUT, type=Path)
     args = parser.parse_args()
 
@@ -267,6 +286,10 @@ def main() -> int:
     print(f"{len(bandai)} Bandai catalog rows", file=sys.stderr)
 
     result = match(distinct, bandai)
+
+    customer_refs = load_customer_references(args.pax_xlsx)
+    result["Customer Reference"] = result["Normalized Name"].map(customer_refs).fillna("")
+    print(f"{len(customer_refs)} Customer Reference entries loaded", file=sys.stderr)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     result.to_csv(args.output, index=False)
