@@ -33,15 +33,25 @@ TIMEOUT_S = 30
 
 
 def fetch_pax_to_sku(session: requests.Session, host: str, org_id: str, headers: dict) -> dict[str, str]:
-    """Page through the supplier catalog and return {paPaxCode: skuId}."""
-    base = f"https://{host}/api/v1/supplier/{org_id}/catalog"
+    """Page through the lv-team catalog (filtered to this supplier) and return {paPaxCode: skuId}.
+
+    Uses /api/v1/lv-team/catalog rather than /supplier/{org_id}/catalog because
+    the deployed API currently only allows POST on the supplier-catalog path.
+    Both endpoints expose the same paPaxCode field.
+    """
+    base = f"https://{host}/api/v1/lv-team/catalog"
     mapping: dict[str, str] = {}
     duplicates: dict[str, list[str]] = defaultdict(list)
     offset = 0
     while True:
         resp = session.get(
             base,
-            params={"offset": offset, "limit": CATALOG_PAGE_SIZE},
+            params={
+                "supplier": org_id,
+                "has_paxcode": "true",
+                "offset": offset,
+                "limit": CATALOG_PAGE_SIZE,
+            },
             headers=headers,
             timeout=TIMEOUT_S,
         )
