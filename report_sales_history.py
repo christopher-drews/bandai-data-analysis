@@ -59,11 +59,12 @@ from upload_sales_history import (
     random_timestamps,
 )
 
-DEFAULT_INPUT_DIR = Path("data/level_2_anonymize_sales_history")
+DEFAULT_INPUT_DIRS = [Path("data/level_2_anonymize_sales_history")]
 DEFAULT_STATE_FILE = Path("data/.report_sales_state.json")
 
 # Async-ingest polling for supplier upload + reseller transfer.
-POLL_ATTEMPTS = 24
+# Big uploads (100k+ keys) can take many minutes to ingest, so allow up to ~30 min.
+POLL_ATTEMPTS = 360
 POLL_DELAY_S = 5
 
 FILENAME_RE = re.compile(r"^(?P<month>\d{4}-\d{2})_(?P<customer>.+)\.csv$")
@@ -90,16 +91,41 @@ def save_state(path: Path, state: dict) -> None:
     tmp.replace(path)
 
 
-def discover_inputs(input_dir: Path) -> list[tuple[str, str, Path]]:
-    """Return [(month, customer, csv_path)] for every YYYY-MM_<customer>.csv."""
-    found = []
-    for path in sorted(input_dir.glob("*.csv")):
-        match = FILENAME_RE.match(path.name)
-        if not match:
-            print(f"  skip: {path.name} does not match YYYY-MM_<customer>.csv", file=sys.stderr)
+def discover_inputs(input_dirs: list[Path]) -> list[Path]:
+    """Return every *.csv path under each input dir (sorted, deduped)."""
+    seen: set[Path] = set()
+    out: list[Path] = []
+    for input_dir in input_dirs:
+        if not input_dir.is_dir():
+            print(f"  warn: input dir not found: {input_dir}", file=sys.stderr)
             continue
-        found.append((match.group("month"), match.group("customer"), path))
-    return found
+        for path in sorted(input_dir.glob("*.csv")):
+            resolved = path.resolve()
+            if resolved in seen:
+                continue
+            seen.add(resolved)
+            out.append(path)
+    return out
+
+
+def iter_csv_units(path: Path):
+    """Yield ``(month, customer, row_dict)`` for every row in ``path``.
+
+    If the filename matches ``YYYY-MM_<customer>.csv``, the filename overrides
+    each row's metadata (matches the level_2 partitioned layout). Otherwise
+    the row's ``start_month`` / ``Customer`` columns are used (matches an
+    un-partitioned CSV like ``level_3_project_may_sales/product_sales_history.csv``).
+    """
+    match = FILENAME_RE.match(path.name)
+    filename_month = match.group("month") if match else None
+    filename_customer = match.group("customer") if match else None
+    with path.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            month = filename_month or (row.get("start_month") or "").strip()
+            customer = filename_customer or (row.get("Customer") or "").strip()
+            if not month or not customer:
+                continue
+            yield month, customer, row
 
 
 def wait_for_count_at_least(
@@ -328,8 +354,11 @@ def process_unit(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input-dir", default=DEFAULT_INPUT_DIR, type=Path,
-                        help="Directory of per-(month, customer) CSVs from level_2_anonymize_sales_history.")
+    parser.add_argument("--input-dir", default=None, type=Path, action="append",
+                        help="Directory containing input CSVs. May be given multiple times; "
+                             "defaults to data/level_2_anonymize_sales_history. CSVs named "
+                             "YYYY-MM_<customer>.csv use filename metadata; other CSVs fall "
+                             "back to each row's start_month + Customer columns.")
     parser.add_argument("--customer-org-map", default=DEFAULT_CUSTOMER_MAP, type=Path)
     parser.add_argument("--host", default=DEFAULT_HOST)
     parser.add_argument("--org-id", default=DEFAULT_ORG_ID, help="Supplier organisation id")
@@ -345,8 +374,12 @@ def main() -> int:
                         help="Used to build X-Idempotency-Key per (month, sku, reseller) upload")
     args = parser.parse_args()
 
-    if not args.input_dir.is_dir():
-        print(f"error: input dir not found: {args.input_dir}", file=sys.stderr)
+    input_dirs = args.input_dir or list(DEFAULT_INPUT_DIRS)
+    if not any(d.is_dir() for d in input_dirs):
+        print(
+            f"error: no input dirs exist (looked in: {', '.join(str(d) for d in input_dirs)})",
+            file=sys.stderr,
+        )
         return 1
 
     cust_to_org = load_customer_org_map(args.customer_org_map)
@@ -372,54 +405,61 @@ def main() -> int:
 
     rng = random.Random(args.seed)
 
-    inputs = discover_inputs(args.input_dir)
-    if not inputs:
-        print(f"No CSVs in {args.input_dir}", file=sys.stderr)
+    input_paths = discover_inputs(input_dirs)
+    if not input_paths:
+        print(f"No CSVs in {[str(d) for d in input_dirs]}", file=sys.stderr)
         return 1
+    print(f"Discovered {len(input_paths)} input CSVs across {len(input_dirs)} dir(s)", file=sys.stderr)
 
     # Group rows: (month, sku, reseller_org) -> [spec, ...]
     # Track per-(month, sku) total for SKU-ordering.
     units: dict[tuple[str, str, str], list[dict]] = defaultdict(list)
     per_month_sku_total: dict[tuple[str, str], int] = defaultdict(int)
     skipped_pax = skipped_cust = skipped_amount = skipped_filter = 0
+    unknown_customers: set[str] = set()
 
-    for month, customer, path in inputs:
-        if args.month and month != args.month:
-            skipped_filter += 1
-            continue
-        if args.reseller and customer != args.reseller:
-            skipped_filter += 1
-            continue
-        reseller_org = cust_to_org.get(customer)
-        if not reseller_org:
-            skipped_cust += 1
-            print(f"  skip: {path.name} (customer {customer!r} not in map)", file=sys.stderr)
-            continue
-        with path.open(newline="", encoding="utf-8") as fh:
-            for row in csv.DictReader(fh):
-                amount = amount_as_int(row.get("amount", ""))
-                if amount <= 0:
-                    skipped_amount += 1
-                    continue
-                pax = (row.get("paxCode") or "").strip()
-                sku_id = pax_to_sku.get(pax)
-                if not sku_id:
-                    skipped_pax += 1
-                    continue
-                try:
-                    price = float(row.get("selling_price") or 0.0)
-                except ValueError:
-                    price = 0.0
-                currency = (row.get("currency") or "").strip() or "CNY"
-                end_month = (row.get("end_month") or month).strip()
-                units[(month, sku_id, reseller_org)].append({
-                    "count": amount,
-                    "price": round(price, 2),
-                    "currency": currency,
-                    "start_month": month,
-                    "end_month": end_month,
-                })
-                per_month_sku_total[(month, sku_id)] += amount
+    for path in input_paths:
+        for month, customer, row in iter_csv_units(path):
+            if args.month and month != args.month:
+                skipped_filter += 1
+                continue
+            if args.reseller and customer != args.reseller:
+                skipped_filter += 1
+                continue
+            reseller_org = cust_to_org.get(customer)
+            if not reseller_org:
+                skipped_cust += 1
+                unknown_customers.add(customer)
+                continue
+            amount = amount_as_int(row.get("amount", ""))
+            if amount <= 0:
+                skipped_amount += 1
+                continue
+            pax = (row.get("paxCode") or "").strip()
+            sku_id = pax_to_sku.get(pax)
+            if not sku_id:
+                skipped_pax += 1
+                continue
+            try:
+                price = float(row.get("selling_price") or 0.0)
+            except ValueError:
+                price = 0.0
+            currency = (row.get("currency") or "").strip() or "CNY"
+            end_month = (row.get("end_month") or month).strip()
+            units[(month, sku_id, reseller_org)].append({
+                "count": amount,
+                "price": round(price, 2),
+                "currency": currency,
+                "start_month": month,
+                "end_month": end_month,
+            })
+            per_month_sku_total[(month, sku_id)] += amount
+
+    if unknown_customers:
+        print(
+            f"  skipped rows for unmapped customers: {sorted(unknown_customers)}",
+            file=sys.stderr,
+        )
 
     print(
         f"Grouped {len(units)} (month, sku, reseller) units across "
