@@ -14,12 +14,17 @@ paxCode -> sku_id resolution uses the catalog item's ``paPaxCode`` field
 fetched from /api/v1/lv-team/catalog?supplier=<org_id>. Customer ->
 reseller org_id resolution uses data/customer_org_map.csv. Rows whose
 ``Customer`` is not in the map (including ``All``) are skipped.
+
+Resumable: every successful upload / transfer is appended to --state-file
+(JSON). Re-running picks up where the last run left off. Transient read
+timeouts and 5xx responses are retried with exponential backoff.
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+import json
 import sys
 import time
 from collections import defaultdict
@@ -32,9 +37,68 @@ DEFAULT_HOST = "lv.play-asia.com"
 DEFAULT_ORG_ID = "org-u1gm1u0j"
 DEFAULT_CSV = Path("data/level_2_anonymize_sales_history/product_sales_history.csv")
 DEFAULT_CUSTOMER_MAP = Path("data/customer_org_map.csv")
+DEFAULT_STATE_FILE = Path("data/.prepare_sales_state.json")
 CATALOG_PAGE_SIZE = 1000
 REQUEST_DELAY_S = 0.1
-TIMEOUT_S = 60
+TIMEOUT_S = 120
+RETRY_ATTEMPTS = 4
+RETRY_BACKOFF_S = (2, 5, 15)  # waits between attempts 1->2, 2->3, 3->4
+
+
+def post_with_retry(
+    session: requests.Session,
+    url: str,
+    *,
+    headers: dict,
+    json_body: dict | None = None,
+    data: bytes | None = None,
+) -> requests.Response:
+    """POST with retries on read timeouts and 5xx. Returns the final response."""
+    last_exc: Exception | None = None
+    for attempt in range(RETRY_ATTEMPTS):
+        try:
+            resp = session.post(
+                url,
+                headers=headers,
+                json=json_body,
+                data=data,
+                timeout=TIMEOUT_S,
+            )
+        except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectionError) as exc:
+            last_exc = exc
+            resp = None
+        else:
+            if resp.status_code < 500:
+                return resp
+            last_exc = RuntimeError(f"{resp.status_code} {resp.text[:200]}")
+        if attempt < RETRY_ATTEMPTS - 1:
+            wait = RETRY_BACKOFF_S[min(attempt, len(RETRY_BACKOFF_S) - 1)]
+            print(f"    retry in {wait}s ({last_exc})", file=sys.stderr)
+            time.sleep(wait)
+    if resp is not None:
+        return resp
+    raise last_exc  # type: ignore[misc]
+
+
+def load_state(path: Path) -> dict:
+    if not path.exists():
+        return {"uploads_done": [], "transfers_done": []}
+    raw = json.loads(path.read_text())
+    return {
+        "uploads_done": list(raw.get("uploads_done", [])),
+        "transfers_done": [tuple(t) for t in raw.get("transfers_done", [])],
+    }
+
+
+def save_state(path: Path, state: dict) -> None:
+    serializable = {
+        "uploads_done": sorted(set(state["uploads_done"])),
+        "transfers_done": sorted({tuple(t) for t in state["transfers_done"]}),
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(serializable, indent=2))
+    tmp.replace(path)
 
 
 def fetch_catalog_by_paxcode(
@@ -131,6 +195,11 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--idempotency-prefix", default=f"bandai-{uuid4().hex[:8]}",
                         help="Used to build X-Idempotency-Key per SKU upload")
+    parser.add_argument("--state-file", default=DEFAULT_STATE_FILE, type=Path,
+                        help="JSON file recording completed uploads/transfers; "
+                             "re-runs skip what's already there.")
+    parser.add_argument("--skip-uploads", action="store_true",
+                        help="Treat the upload phase as already complete (uses state for the transfer phase only).")
     args = parser.parse_args()
 
     with args.csv.open(newline="", encoding="utf-8") as fh:
@@ -168,9 +237,24 @@ def main() -> int:
         print("Nothing to upload.", file=sys.stderr)
         return 0
 
-    upload_ok = upload_fail = 0
+    state = load_state(args.state_file)
+    if args.skip_uploads:
+        state["uploads_done"] = sorted(set(state["uploads_done"]) | set(per_sku))
+    done_uploads = set(state["uploads_done"])
+    done_transfers = {tuple(t) for t in state["transfers_done"]}
+    print(
+        f"State: {len(done_uploads)} uploads already done, "
+        f"{len(done_transfers)} transfers already done "
+        f"({args.state_file})",
+        file=sys.stderr,
+    )
+
+    upload_ok = upload_fail = upload_skip = 0
     print("\n== Upload phase ==", file=sys.stderr)
     for sku_id, count in sorted(per_sku.items()):
+        if sku_id in done_uploads:
+            upload_skip += 1
+            continue
         key_lines = [f"BANDAI-{sku_id}-{uuid4().hex[:16]}" for _ in range(count)]
         body = "\n".join(key_lines) + "\n"
         idempotency = f"{args.idempotency_prefix}-upload-{sku_id}"
@@ -179,27 +263,32 @@ def main() -> int:
             print(f"  [dry-run] POST upload {prefix}", file=sys.stderr)
             continue
         url = f"https://{args.host}/api/v1/supplier/{args.org_id}/inventory/{sku_id}/upload"
-        resp = session.post(
+        resp = post_with_retry(
+            session,
             url,
-            data=body.encode("utf-8"),
             headers={
                 "Authorization": f"Bearer {args.token}",
                 "Content-Type": "text/csv",
                 "X-Idempotency-Key": idempotency,
             },
-            timeout=TIMEOUT_S,
+            data=body.encode("utf-8"),
         )
         if resp.ok:
             print(f"  ok   upload {prefix}", file=sys.stderr)
             upload_ok += 1
+            state["uploads_done"].append(sku_id)
+            save_state(args.state_file, state)
         else:
             print(f"  FAIL upload {prefix} -> {resp.status_code} {resp.text}", file=sys.stderr)
             upload_fail += 1
         time.sleep(REQUEST_DELAY_S)
 
-    transfer_ok = transfer_fail = 0
+    transfer_ok = transfer_fail = transfer_skip = 0
     print("\n== Transfer phase ==", file=sys.stderr)
     for (sku_id, reseller_org), count in sorted(per_sku_reseller.items()):
+        if (sku_id, reseller_org) in done_transfers:
+            transfer_skip += 1
+            continue
         body = {
             "amountOfEntries": count,
             "oldOwner": args.org_id,
@@ -211,18 +300,20 @@ def main() -> int:
             print(f"  [dry-run] POST transfer {prefix}", file=sys.stderr)
             continue
         url = f"https://{args.host}/api/v1/orgs/{args.org_id}/inventory/{sku_id}/transfer"
-        resp = session.post(url, json=body, headers=headers, timeout=TIMEOUT_S)
+        resp = post_with_retry(session, url, headers=headers, json_body=body)
         if resp.ok:
             print(f"  ok   transfer {prefix}", file=sys.stderr)
             transfer_ok += 1
+            state["transfers_done"].append((sku_id, reseller_org))
+            save_state(args.state_file, state)
         else:
             print(f"  FAIL transfer {prefix} -> {resp.status_code} {resp.text}", file=sys.stderr)
             transfer_fail += 1
         time.sleep(REQUEST_DELAY_S)
 
     print(
-        f"\nDone. uploads ok={upload_ok} fail={upload_fail}; "
-        f"transfers ok={transfer_ok} fail={transfer_fail}",
+        f"\nDone. uploads ok={upload_ok} fail={upload_fail} skip={upload_skip}; "
+        f"transfers ok={transfer_ok} fail={transfer_fail} skip={transfer_skip}",
         file=sys.stderr,
     )
     return 1 if (upload_fail or transfer_fail) else 0

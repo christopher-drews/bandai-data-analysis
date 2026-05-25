@@ -1,0 +1,3529 @@
+{
+  "units": {
+    "2026-03|sku-aabjhjfpxu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-lknbbugiuzucrhrmo4sr",
+      "report_submitted_at": "2026-05-25T13:08:50Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-aabjhjfpxu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-aabjhjfpxu|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-cvaclirkdnb2xq3olwcv",
+      "report_submitted_at": "2026-05-25T13:08:52Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-aabjhjfpxu-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-acnmdkz9kb|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ocgftvdiijvfqdyqhg3s",
+      "report_submitted_at": "2026-05-25T13:06:59Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-acnmdkz9kb-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-acnmdkz9kb|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-kprowthssy3lemnvnrt4",
+      "report_submitted_at": "2026-05-25T13:07:01Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-acnmdkz9kb-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-anzseiamts|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ybbuz0yl47x8od8ngi8l",
+      "report_submitted_at": "2026-05-25T13:11:53Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-anzseiamts-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-anzseiamts|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-inthnxxqvhiimziiresd",
+      "report_submitted_at": "2026-05-25T13:11:57Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-anzseiamts-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-aubd3i8dxl|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-nii48yebgo1lrg3eupxc",
+      "report_submitted_at": "2026-05-25T13:16:41Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-aubd3i8dxl-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-aubd3i8dxl|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-ivqqztmqnxnshctxuopk",
+      "report_submitted_at": "2026-05-25T13:16:53Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-aubd3i8dxl-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-b7aibfxpml|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-cetxolqhc1zx56uaylm6",
+      "report_submitted_at": "2026-05-25T13:10:15Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-b7aibfxpml-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-b7aibfxpml|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-tdtiri0t6fmkvv4gopsm",
+      "report_submitted_at": "2026-05-25T13:10:18Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-b7aibfxpml-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-bcxj0jd0yx|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-e7yq7d7jyne9ag34wdam",
+      "report_submitted_at": "2026-05-25T13:16:00Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-bcxj0jd0yx-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-bcxj0jd0yx|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-zmn59fq9k7vsndlekj7s",
+      "report_submitted_at": "2026-05-25T13:16:10Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-bcxj0jd0yx-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-bgqgcyljou|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-n16uvybirmznpij93ikj",
+      "report_submitted_at": "2026-05-25T13:10:50Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-bgqgcyljou-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-bgqgcyljou|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-dsyz1sk3szvrhkyb6fzi",
+      "report_submitted_at": "2026-05-25T13:10:53Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-bgqgcyljou-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-bmyjsux3xd|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qzcfb2ufk00m1olkn0ed",
+      "report_submitted_at": "2026-05-25T13:08:42Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-bmyjsux3xd-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-cd10yom2io|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-gml3mi1rodbpych9cskk",
+      "report_submitted_at": "2026-05-25T13:09:34Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-cd10yom2io-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-cd10yom2io|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-owf88r4litpvtkexdcr1",
+      "report_submitted_at": "2026-05-25T13:09:36Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-cd10yom2io-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-cdvaevzjvm|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-gkhhlwbcqcj0hylgwlup",
+      "report_submitted_at": "2026-05-25T13:10:01Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-cdvaevzjvm-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-cmalhm96lm|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-icrag1sbdu5ppphs90ei",
+      "report_submitted_at": "2026-05-25T13:06:43Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-cmalhm96lm-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-cobkfalorb|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qxjbez6rzd7haojince7",
+      "report_submitted_at": "2026-05-25T13:07:10Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-cobkfalorb-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-dlvfdd7lqy|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-n3nrk7xxnyggizryq4hk",
+      "report_submitted_at": "2026-05-25T13:09:52Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-dlvfdd7lqy-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-dlvfdd7lqy|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-mzwbtx2jtkq5f5pn2cbx",
+      "report_submitted_at": "2026-05-25T13:09:55Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-dlvfdd7lqy-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-doawxsdopq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-rbvcn7jpsiimfrqii2px",
+      "report_submitted_at": "2026-05-25T13:06:39Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-doawxsdopq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-dp0flqpqr3|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vmsjihvb8wqpcxyhwj1a",
+      "report_submitted_at": "2026-05-25T13:06:53Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-dp0flqpqr3-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-ebvgmbke4h|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ikz087mbqmk3xxbo6k5l",
+      "report_submitted_at": "2026-05-25T13:08:35Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ebvgmbke4h-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-ebvgmbke4h|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-uueetk1hjpimcic3ejse",
+      "report_submitted_at": "2026-05-25T13:08:37Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ebvgmbke4h-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-emipxcurax|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-n86x1fijmv9cbcmdobnu",
+      "report_submitted_at": "2026-05-25T13:14:18Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-emipxcurax-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-emipxcurax|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-kuqg52d1ol7mdbbvldh6",
+      "report_submitted_at": "2026-05-25T13:14:24Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-emipxcurax-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-epbuwkre4i|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vcscsdwwxemppz4xzfcc",
+      "report_submitted_at": "2026-05-25T13:17:04Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-epbuwkre4i-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-epbuwkre4i|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-uzgoo29ecggwxmbwagek",
+      "report_submitted_at": "2026-05-25T13:17:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-epbuwkre4i-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-eqhiefjisq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qcyzb0tobveugvhoewsj",
+      "report_submitted_at": "2026-05-25T13:10:05Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-eqhiefjisq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-eqhiefjisq|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-dve3v1dzfxisyc51oext",
+      "report_submitted_at": "2026-05-25T13:10:08Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-eqhiefjisq-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-exlhthon2m|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-nlaytlytjtyxxpscmdia",
+      "report_submitted_at": "2026-05-25T13:07:30Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-exlhthon2m-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-f2aamhtslu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ddpj7lc1bb4tps1wygxf",
+      "report_submitted_at": "2026-05-25T13:10:36Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-f2aamhtslu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-fyl1itxpmy|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-gkmqbsqd0xkosawazuty",
+      "report_submitted_at": "2026-05-25T13:06:30Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-fyl1itxpmy-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-gclyr9sd1l|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qkpnutuutps0wdbeyecp",
+      "report_submitted_at": "2026-05-25T13:15:41Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-gclyr9sd1l-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-gclyr9sd1l|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-q9ytgxabdnvjk1apxyda",
+      "report_submitted_at": "2026-05-25T13:15:51Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-gclyr9sd1l-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-gfiudk8rzh|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-h90bwufk0jaxhitmg8rk",
+      "report_submitted_at": "2026-05-25T13:06:51Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-gfiudk8rzh-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-ggc9nvl4ix|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-rmwdsnvcog2r7c9htzus",
+      "report_submitted_at": "2026-05-25T13:12:54Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ggc9nvl4ix-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-ggc9nvl4ix|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-gz13litmtlqyijeivhuv",
+      "report_submitted_at": "2026-05-25T13:13:00Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ggc9nvl4ix-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-ghh83kwcfk|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ynd4mdmvmowjrvohotbe",
+      "report_submitted_at": "2026-05-25T13:08:24Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ghh83kwcfk-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-gkrnl9gfjm|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-lgfoblday2xaqlhysxi9",
+      "report_submitted_at": "2026-05-25T13:08:54Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-gkrnl9gfjm-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-go45lushz5|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ykbaylw31tuphrd8vbdg",
+      "report_submitted_at": "2026-05-25T13:13:04Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-go45lushz5-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-go45lushz5|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-lndoo5nqvdq8p89pyskv",
+      "report_submitted_at": "2026-05-25T13:13:10Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-go45lushz5-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-grs3rvxyzt|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-tmx5lspqsuutcvqvwhcg",
+      "report_submitted_at": "2026-05-25T13:09:20Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-grs3rvxyzt-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-grs3rvxyzt|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-s6kexbsmn2elenzve18v",
+      "report_submitted_at": "2026-05-25T13:09:23Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-grs3rvxyzt-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-gxtwqsikx8|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-fjjefqlxvngbd0y0rxg1",
+      "report_submitted_at": "2026-05-25T13:07:56Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-gxtwqsikx8-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-gxtwqsikx8|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-mz4ev1kolofaagiveyay",
+      "report_submitted_at": "2026-05-25T13:07:58Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-gxtwqsikx8-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-gz8wrzicut|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-htdartvkeix4chjip5bq",
+      "report_submitted_at": "2026-05-25T13:06:45Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-gz8wrzicut-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-h0pabypche|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-iqyxixg0et9wgfcemmxo",
+      "report_submitted_at": "2026-05-25T13:06:41Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-h0pabypche-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-hfg08ccfl1|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-tatciizws4wion9hd0lx",
+      "report_submitted_at": "2026-05-25T13:08:26Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-hfg08ccfl1-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-hfg08ccfl1|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-nqibntyxali4skma2n0c",
+      "report_submitted_at": "2026-05-25T13:08:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-hfg08ccfl1-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-i2kyyaak8p|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-iqu1eolutniajrew18mp",
+      "report_submitted_at": "2026-05-25T13:06:34Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-i2kyyaak8p-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-i8tcijhzlv|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-yfj37lzatwmvfxhwhcfz",
+      "report_submitted_at": "2026-05-25T13:09:38Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-i8tcijhzlv-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-i8tcijhzlv|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-r5nojswkfqtisgvd44wl",
+      "report_submitted_at": "2026-05-25T13:09:41Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-i8tcijhzlv-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-ibhxahvc3s|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ynvguifwogzoyzjupsci",
+      "report_submitted_at": "2026-05-25T13:15:07Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ibhxahvc3s-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-ibhxahvc3s|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-xpxeyni8j14kts0hnnws",
+      "report_submitted_at": "2026-05-25T13:15:14Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ibhxahvc3s-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-ikq1kszfpv|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ue7f0emo56eukugp8aki",
+      "report_submitted_at": "2026-05-25T13:12:44Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ikq1kszfpv-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-ikq1kszfpv|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-vbsofi2xsx4rweqqyoig",
+      "report_submitted_at": "2026-05-25T13:12:49Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ikq1kszfpv-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-iwdfnhc2fc|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-sehpog4refra6afn3onj",
+      "report_submitted_at": "2026-05-25T13:09:43Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-iwdfnhc2fc-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-iwdfnhc2fc|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-dwfle6uxodi6hf7j015i",
+      "report_submitted_at": "2026-05-25T13:09:46Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-iwdfnhc2fc-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-j81wll61h8|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-biqu6ebhdqv5p6ry3khb",
+      "report_submitted_at": "2026-05-25T13:07:24Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-j81wll61h8-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-jegu3g3qhb|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-jbny6rjfuocyvkzigzja",
+      "report_submitted_at": "2026-05-25T13:07:40Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-jegu3g3qhb-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-jegu3g3qhb|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-alea85iila6tcmekymtl",
+      "report_submitted_at": "2026-05-25T13:07:42Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-jegu3g3qhb-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-joofdah8db|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-drrv6jakvxhkuxhsifeh",
+      "report_submitted_at": "2026-05-25T13:12:01Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-joofdah8db-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-jrzcibeptf|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-gkjlmxqzpci5vaduzmwi",
+      "report_submitted_at": "2026-05-25T13:06:55Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-jrzcibeptf-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-jvonv4hb8r|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-euknseimuf2i4yey69xb",
+      "report_submitted_at": "2026-05-25T13:12:35Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-jvonv4hb8r-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-jvonv4hb8r|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-fu944pvh7b32mc7wtr4y",
+      "report_submitted_at": "2026-05-25T13:12:40Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-jvonv4hb8r-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-jzsj32ygcr|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-of5azyoc1h2rvzq72pyz",
+      "report_submitted_at": "2026-05-25T13:09:06Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-jzsj32ygcr-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-jzsj32ygcr|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-fpgrvv4ydx8kwjo1uhib",
+      "report_submitted_at": "2026-05-25T13:09:09Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-jzsj32ygcr-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-k0pad6mubz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ird9tbuco83lxwac6gya",
+      "report_submitted_at": "2026-05-25T13:12:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-k0pad6mubz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-k0pad6mubz|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-nbqnjgc9q99imjty2m7u",
+      "report_submitted_at": "2026-05-25T13:12:21Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-k0pad6mubz-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-k9q3ihg7cu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ettfdwfwzvy3zytismfy",
+      "report_submitted_at": "2026-05-25T13:08:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-k9q3ihg7cu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-kpk71nadaf|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-r4izusyaim81is3jbh6m",
+      "report_submitted_at": "2026-05-25T13:07:12Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-kpk71nadaf-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-kpk71nadaf|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-crlomyrogy9e2xb3nprz",
+      "report_submitted_at": "2026-05-25T13:07:14Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-kpk71nadaf-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-ksjvyjoz30|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ayjcom2e5eiivvzsaeib",
+      "report_submitted_at": "2026-05-25T13:11:05Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ksjvyjoz30-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-ksjvyjoz30|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-to8g5sbskzr9l4ve0vio",
+      "report_submitted_at": "2026-05-25T13:11:08Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ksjvyjoz30-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-kxuigefnyo|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ik4nm8nb3zwqhlb1hifr",
+      "report_submitted_at": "2026-05-25T13:06:22Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-kxuigefnyo-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-kyj6zkpd8b|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-cjh50aadond6fp3furgr",
+      "report_submitted_at": "2026-05-25T13:06:47Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-kyj6zkpd8b-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-kyj6zkpd8b|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-idzv4rk16mdtko7igexo",
+      "report_submitted_at": "2026-05-25T13:06:49Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-kyj6zkpd8b-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-lh6dbhev9n|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hmks9n1dhqmigm2jemwe",
+      "report_submitted_at": "2026-05-25T13:11:23Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-lh6dbhev9n-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-loifvzjm62|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-t7wmshw8vwwsmavbf1ps",
+      "report_submitted_at": "2026-05-25T13:08:31Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-loifvzjm62-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-loifvzjm62|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-mxmg9sllyzbxmuipb4d6",
+      "report_submitted_at": "2026-05-25T13:08:33Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-loifvzjm62-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-lphe0ldl1l|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ebkmrtxdv4tlzluwmfry",
+      "report_submitted_at": "2026-05-25T13:14:41Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-lphe0ldl1l-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-lphe0ldl1l|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-rjk5e1nsqnzi8nqvpvr5",
+      "report_submitted_at": "2026-05-25T13:14:48Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-lphe0ldl1l-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-lpyaxqxsiz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-bdndxnvkpcsnc40jylqn",
+      "report_submitted_at": "2026-05-25T13:15:22Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-lpyaxqxsiz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-lpyaxqxsiz|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-bb84ew1ceemxk6n0hkoh",
+      "report_submitted_at": "2026-05-25T13:15:32Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-lpyaxqxsiz-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-lyasqjlwvq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-pyix5ozkb5vuciug8q4u",
+      "report_submitted_at": "2026-05-25T13:09:49Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-lyasqjlwvq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-m2vugylcfz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qjk83vrfuclg4q53lxxj",
+      "report_submitted_at": "2026-05-25T13:06:57Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-m2vugylcfz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-m5jtovbfh4|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-bncfuli6kweai6lddygz",
+      "report_submitted_at": "2026-05-25T13:08:00Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-m5jtovbfh4-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-m5jtovbfh4|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-hk4i6u1op0wpvb87oimm",
+      "report_submitted_at": "2026-05-25T13:08:03Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-m5jtovbfh4-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-mqciekjezh|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hijl4lwopwfjqdehtjte",
+      "report_submitted_at": "2026-05-25T13:14:31Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-mqciekjezh-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-myb71jjycz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-t1h9ugepe644slfehrsh",
+      "report_submitted_at": "2026-05-25T13:10:44Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-myb71jjycz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-myb71jjycz|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-g2bczpjoigwsw9bzbrpm",
+      "report_submitted_at": "2026-05-25T13:10:47Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-myb71jjycz-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-myxs9twnyn|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vcmenqbq6yhxlasdmr2y",
+      "report_submitted_at": "2026-05-25T13:07:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-myxs9twnyn-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-n12s7wdlti|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-dqutusv0tmdoeeolr7kb",
+      "report_submitted_at": "2026-05-25T13:08:40Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-n12s7wdlti-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-n4ixlcwxzw|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-pvuu9inozcgbukabb6az",
+      "report_submitted_at": "2026-05-25T13:09:25Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-n4ixlcwxzw-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-n9d4jo8u6n|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-nd14ixj7cggfks4jfcmk",
+      "report_submitted_at": "2026-05-25T13:13:34Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-n9d4jo8u6n-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-n9d4jo8u6n|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-m4nrrzxaumoaj0kild5c",
+      "report_submitted_at": "2026-05-25T13:13:39Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-n9d4jo8u6n-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-nacg5gkfdu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qxcntwmmzm3l6kt62zmj",
+      "report_submitted_at": "2026-05-25T13:11:01Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-nacg5gkfdu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-nbbcwgm9gg|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-skvcjbhd2yzhh4fmorny",
+      "report_submitted_at": "2026-05-25T13:10:21Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-nbbcwgm9gg-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-nglrqmxg0a|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vaqw9hmxmtm6ouysffta",
+      "report_submitted_at": "2026-05-25T13:06:24Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-nglrqmxg0a-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-npuuxds8fo|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-pfjug2wanpsd8dnsyntn",
+      "report_submitted_at": "2026-05-25T13:07:44Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-npuuxds8fo-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-npuuxds8fo|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-qsptkry3o3oqvxp06ldm",
+      "report_submitted_at": "2026-05-25T13:07:46Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-npuuxds8fo-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-ntoedcg9zc|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-n4ngm0pn2bousqeitnw3",
+      "report_submitted_at": "2026-05-25T13:13:25Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-ntoedcg9zc-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-o7fcykr1tg|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-zjwcs4axncebkzeyltzt",
+      "report_submitted_at": "2026-05-25T13:09:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-o7fcykr1tg-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-o7fcykr1tg|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-zrcr01xqdj2zse5bfxmk",
+      "report_submitted_at": "2026-05-25T13:09:31Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-o7fcykr1tg-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-o7tfmutrns|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-j1xsn5pg5kccftetcar8",
+      "report_submitted_at": "2026-05-25T13:07:18Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-o7tfmutrns-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-o7tfmutrns|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-vlfsze1ewjoqesywviru",
+      "report_submitted_at": "2026-05-25T13:07:20Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-o7tfmutrns-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-oajwyqzpix|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-mafea43t6tlt9bcklpyf",
+      "report_submitted_at": "2026-05-25T13:13:57Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-oajwyqzpix-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-oajwyqzpix|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-l62otyknw5n1ddw5uhus",
+      "report_submitted_at": "2026-05-25T13:14:02Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-oajwyqzpix-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-oldpkvonzg|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-rzlaa0itdd4o6gfpenxc",
+      "report_submitted_at": "2026-05-25T13:09:10Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-oldpkvonzg-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-oldpkvonzg|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-guqkikaxexbwth8blxta",
+      "report_submitted_at": "2026-05-25T13:09:13Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-oldpkvonzg-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-op5mh6azbi|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-gexlbhckhjdzz5bebplj",
+      "report_submitted_at": "2026-05-25T13:07:26Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-op5mh6azbi-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-osrz0dcc6x|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-akks5yxsiz0ripddz4pm",
+      "report_submitted_at": "2026-05-25T13:13:15Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-osrz0dcc6x-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-osrz0dcc6x|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-tl3gvuhqeywzydmkm5wq",
+      "report_submitted_at": "2026-05-25T13:13:20Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-osrz0dcc6x-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-pdiaubv99y|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-eo5wfmnrnxy43ijssxlb",
+      "report_submitted_at": "2026-05-25T13:06:36Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-pdiaubv99y-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-pnm5kavdrl|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-mg7fxsiq7oz0qw6l9ktf",
+      "report_submitted_at": "2026-05-25T13:07:32Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-pnm5kavdrl-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-pnm5kavdrl|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-ciym9s9uwao0x6npusey",
+      "report_submitted_at": "2026-05-25T13:07:34Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-pnm5kavdrl-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-psezznuxdq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-abljvrrubwavy4rufoku",
+      "report_submitted_at": "2026-05-25T13:08:19Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-psezznuxdq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-pzigsmtlcm|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ptk8v42dowxmctrwolhr",
+      "report_submitted_at": "2026-05-25T13:09:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-pzigsmtlcm-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-pzigsmtlcm|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-w6rnnzr8tlalp4hade7x",
+      "report_submitted_at": "2026-05-25T13:09:18Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-pzigsmtlcm-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-q5jajqnzpf|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-xe2ujya4uwergxhgien9",
+      "report_submitted_at": "2026-05-25T13:10:31Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-q5jajqnzpf-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-q5jajqnzpf|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-gtgayfdabfyund6q2i9h",
+      "report_submitted_at": "2026-05-25T13:10:34Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-q5jajqnzpf-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-qepqrs2c9e|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-wjb3sux1q1v3pkxd4jjj",
+      "report_submitted_at": "2026-05-25T13:12:26Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-qepqrs2c9e-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-qepqrs2c9e|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-gbxyibt4tth8z9vhlbsw",
+      "report_submitted_at": "2026-05-25T13:12:31Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-qepqrs2c9e-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-qxy4j0zhul|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-svnbqke8nry57p8apy6u",
+      "report_submitted_at": "2026-05-25T13:06:32Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-qxy4j0zhul-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-r7pf0c2hnt|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-fiesai3fozbvf2ur3e4o",
+      "report_submitted_at": "2026-05-25T13:13:45Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-r7pf0c2hnt-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-r7pf0c2hnt|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-lct6af9ofihoceivrlec",
+      "report_submitted_at": "2026-05-25T13:13:51Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-r7pf0c2hnt-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-rgmhwckb18|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ldajwubjvcjnxxql7ede",
+      "report_submitted_at": "2026-05-25T13:10:10Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-rgmhwckb18-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-rgmhwckb18|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-yx07oq02or9madh3rrko",
+      "report_submitted_at": "2026-05-25T13:10:13Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-rgmhwckb18-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-rihzvkkhdw|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hydirfh8vadg7sk6dnld",
+      "report_submitted_at": "2026-05-25T13:10:56Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-rihzvkkhdw-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-rimjvasg8k|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-isa1h9suoecqp61jfuth",
+      "report_submitted_at": "2026-05-25T13:10:25Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-rimjvasg8k-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-rimjvasg8k|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-mhfvhehk1ee1ug2cq1bl",
+      "report_submitted_at": "2026-05-25T13:10:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-rimjvasg8k-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-rtkb8lietf|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-gmxylpjompats4sjcyfg",
+      "report_submitted_at": "2026-05-25T13:08:05Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-rtkb8lietf-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-rxcojax0a8|org-lxgtpgpi": {
+      "supplier_baseline": 0,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-rxcojax0a8-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-szlqydhzuj|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hqnimewznguuykil3eat",
+      "report_submitted_at": "2026-05-25T13:06:25Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-szlqydhzuj-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-t12db2mw9q|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ab1pebvqi8eom7sp3uzy",
+      "report_submitted_at": "2026-05-25T13:11:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-t12db2mw9q-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-t12db2mw9q|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-lyfm8pbrdyhs5jbasfik",
+      "report_submitted_at": "2026-05-25T13:11:32Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-t12db2mw9q-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-tigmoh0zuc|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vs5i0zbxolja47mg3umm",
+      "report_submitted_at": "2026-05-25T13:07:22Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-tigmoh0zuc-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-tkcmnaujmq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-o9q82pedm5xhfgnvdmcf",
+      "report_submitted_at": "2026-05-25T13:11:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-tkcmnaujmq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-tkcmnaujmq|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-s1jiajvi3g2ru21pxrlh",
+      "report_submitted_at": "2026-05-25T13:11:20Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-tkcmnaujmq-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-toy4zez7bq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-mf69g10rizdyymbdafni",
+      "report_submitted_at": "2026-05-25T13:09:57Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-toy4zez7bq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-uaruhelkln|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-o0e4jsw8fon7s4ryiyiv",
+      "report_submitted_at": "2026-05-25T13:07:03Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-uaruhelkln-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-uekgfsxv7x|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-dady7h2pwg8phbkcm3vn",
+      "report_submitted_at": "2026-05-25T13:07:36Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-uekgfsxv7x-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-uekgfsxv7x|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-fzagau4oxkqls0uix7ke",
+      "report_submitted_at": "2026-05-25T13:07:38Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-uekgfsxv7x-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-uz4kiywicz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-mnej1txrzy3va8svieen",
+      "report_submitted_at": "2026-05-25T13:08:57Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-uz4kiywicz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-uz4kiywicz|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-v2lcpa1rysybfptwpw8c",
+      "report_submitted_at": "2026-05-25T13:08:59Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-uz4kiywicz-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-uzyulpmtof|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-atezbh9gij2s0sjpjuij",
+      "report_submitted_at": "2026-05-25T13:07:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-uzyulpmtof-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-v6hqjs4rgh|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ejqukwgt03yycsru1b3t",
+      "report_submitted_at": "2026-05-25T13:11:46Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-v6hqjs4rgh-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-vbajsnrplj|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-g09vpizdkanqfca4lrha",
+      "report_submitted_at": "2026-05-25T13:14:08Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-vbajsnrplj-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-vssm4vyfwo|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-i6ben60caiapzvnco8mq",
+      "report_submitted_at": "2026-05-25T13:17:27Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-vssm4vyfwo-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-vssm4vyfwo|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-kywolsexh2g2elu7qaxr",
+      "report_submitted_at": "2026-05-25T13:17:39Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-vssm4vyfwo-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-wbavzfspxu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-si7cmyvkbyaq1n3hk09w",
+      "report_submitted_at": "2026-05-25T13:07:48Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wbavzfspxu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-wbavzfspxu|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-u8juwm7eri1lwa5koptw",
+      "report_submitted_at": "2026-05-25T13:07:50Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wbavzfspxu-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-wbjitrksng|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ndvb7ihplydrrvs7nv5u",
+      "report_submitted_at": "2026-05-25T13:08:14Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wbjitrksng-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-wcbjfqjicu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-u5yvpf4q1vfytycrsasc",
+      "report_submitted_at": "2026-05-25T13:11:35Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wcbjfqjicu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-wdi8yfjl7j|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-j4g79yngcyimeuskanbm",
+      "report_submitted_at": "2026-05-25T13:18:42Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wdi8yfjl7j-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-wdi8yfjl7j|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-jzesxxoqnku2jsdm42ji",
+      "report_submitted_at": "2026-05-25T13:18:56Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wdi8yfjl7j-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-wic4mcpvub|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-a4bh2xpzutxffcmcvxp4",
+      "report_submitted_at": "2026-05-25T13:12:07Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wic4mcpvub-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-wic4mcpvub|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-i75w21nak1yry5hjeldq",
+      "report_submitted_at": "2026-05-25T13:12:11Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wic4mcpvub-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-wme6g34rok|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-h9cqlmzftyusie0uc8at",
+      "report_submitted_at": "2026-05-25T13:08:07Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wme6g34rok-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-wme6g34rok|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-dasuvpf1q2qikujqsafw",
+      "report_submitted_at": "2026-05-25T13:08:09Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wme6g34rok-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-wp6ju0hacs|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-rlmusp2ghtmwzdiaezal",
+      "report_submitted_at": "2026-05-25T13:07:05Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wp6ju0hacs-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-wp6ju0hacs|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-kpjmsljqd3atqwfeugiz",
+      "report_submitted_at": "2026-05-25T13:07:07Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wp6ju0hacs-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-wzpfxtbvyp|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hrgldb3cdnucygmjmynj",
+      "report_submitted_at": "2026-05-25T13:18:15Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-wzpfxtbvyp-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-x2iyontc2o|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-p3ltsvcfrfihrfl4blaa",
+      "report_submitted_at": "2026-05-25T13:06:38Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-x2iyontc2o-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-x84cifdwcz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-nbtqht1a0gccgidfkaje",
+      "report_submitted_at": "2026-05-25T13:11:41Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-x84cifdwcz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-xdbz3gyf1l|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-nhp8wwftp2ne0lgackan",
+      "report_submitted_at": "2026-05-25T13:11:12Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-xdbz3gyf1l-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-xggym4lqil|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-baizgx54le5qgj4hmymw",
+      "report_submitted_at": "2026-05-25T13:06:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-xggym4lqil-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-xkhsgydxwp|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vwez5l8azgz8xki3oajh",
+      "report_submitted_at": "2026-05-25T13:17:50Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-xkhsgydxwp-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-xkhsgydxwp|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-dsatscughzsdvwbx4jze",
+      "report_submitted_at": "2026-05-25T13:18:02Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-xkhsgydxwp-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-xtnwcwh9fa|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-nmmhydr0ntsqyp8k3kzb",
+      "report_submitted_at": "2026-05-25T13:07:52Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-xtnwcwh9fa-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-xtnwcwh9fa|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-e2kktg2q2mjjn3hgl9gq",
+      "report_submitted_at": "2026-05-25T13:07:54Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-xtnwcwh9fa-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-y6uwvvg3lt|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-omgs6z2wbvcjikmkmqcm",
+      "report_submitted_at": "2026-05-25T13:14:54Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-y6uwvvg3lt-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-y8e1yqodv7|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-gzuxyfzrvwfxeqg3syho",
+      "report_submitted_at": "2026-05-25T13:10:40Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-y8e1yqodv7-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-yipojzohoq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hhyd5o8rijmbmj6bjini",
+      "report_submitted_at": "2026-05-25T13:16:20Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-yipojzohoq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-yipojzohoq|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-dgeiy4kfmzazpfnh8yru",
+      "report_submitted_at": "2026-05-25T13:16:31Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-yipojzohoq-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-yjr81yjl41|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-drebh1qi3qrmtxl8iuyn",
+      "report_submitted_at": "2026-05-25T13:09:02Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-yjr81yjl41-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-yjr81yjl41|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-rrfzizighdzxdvbkhajb",
+      "report_submitted_at": "2026-05-25T13:09:04Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-yjr81yjl41-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-zbaocrufic|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-xxl4ycgjip8iwwsho9t4",
+      "report_submitted_at": "2026-05-25T13:08:45Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-zbaocrufic-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-zbaocrufic|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-zdzmprxutvdopngtd0yo",
+      "report_submitted_at": "2026-05-25T13:08:47Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-zbaocrufic-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-03|sku-zgqhbvbonu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-heqhaxg2soeyevzhve66",
+      "report_submitted_at": "2026-05-25T13:08:11Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-zgqhbvbonu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-03|sku-zogpjhadpw|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hppyzjwpzwv5scgfz8ac",
+      "report_submitted_at": "2026-05-25T13:08:21Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-03-sku-zogpjhadpw-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-aabjhjfpxu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vas9kwftvm9do2zdivks",
+      "report_submitted_at": "2026-05-25T12:50:26Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-aabjhjfpxu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-acnmdkz9kb|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-docw4lll6uce4tpur66b",
+      "report_submitted_at": "2026-05-25T12:49:11Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-acnmdkz9kb-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-anzseiamts|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-alh5vyaoncsxesdwgjlv",
+      "report_submitted_at": "2026-05-25T12:52:14Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-anzseiamts-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-anzseiamts|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-mxtfserfiesgkl9mtnw9",
+      "report_submitted_at": "2026-05-25T12:52:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-anzseiamts-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-aubd3i8dxl|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hxm6imgkv1bkcul7uabi",
+      "report_submitted_at": "2026-05-25T12:54:56Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-aubd3i8dxl-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-b7aibfxpml|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-cvdj1clfipqpfdmexzhg",
+      "report_submitted_at": "2026-05-25T12:52:03Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-b7aibfxpml-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-b7aibfxpml|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-lthlcxcueirysqfms4yv",
+      "report_submitted_at": "2026-05-25T12:52:06Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-b7aibfxpml-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-bcxj0jd0yx|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-xtzjrrrcierjfmecrnmm",
+      "report_submitted_at": "2026-05-25T12:55:14Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-bcxj0jd0yx-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-bcxj0jd0yx|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-au70r2bbwcz3z0kovntg",
+      "report_submitted_at": "2026-05-25T12:55:19Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-bcxj0jd0yx-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-bgqgcyljou|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-jinesi6nbqjvs1x1azsp",
+      "report_submitted_at": "2026-05-25T12:53:42Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-bgqgcyljou-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-bmyjsux3xd|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-gxcldfjgezilntpelwrl",
+      "report_submitted_at": "2026-05-25T12:51:30Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-bmyjsux3xd-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-cd10yom2io|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-bckpairy918kevrbmuj3",
+      "report_submitted_at": "2026-05-25T12:50:44Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-cd10yom2io-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-cdvaevzjvm|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-nlxrd7acmwcmjz1nqngu",
+      "report_submitted_at": "2026-05-25T12:52:25Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-cdvaevzjvm-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-cdvaevzjvm|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-t0sm9xetlztczbvqdgjs",
+      "report_submitted_at": "2026-05-25T12:52:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-cdvaevzjvm-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-cmalhm96lm|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-xmjqtx6xnwkvwy6gsljm",
+      "report_submitted_at": "2026-05-25T12:49:25Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-cmalhm96lm-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-cobkfalorb|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ebh9apt0syjbj8ysy9ky",
+      "report_submitted_at": "2026-05-25T12:49:15Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-cobkfalorb-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-dlvfdd7lqy|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-deo8zb2ggp1nssrqgji3",
+      "report_submitted_at": "2026-05-25T12:51:33Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-dlvfdd7lqy-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-doawxsdopq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-xhia1owhbjmykgeekpsh",
+      "report_submitted_at": "2026-05-25T12:49:01Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-doawxsdopq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-doawxsdopq|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-fndv4va7qflawvz2pnti",
+      "report_submitted_at": "2026-05-25T12:49:03Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-doawxsdopq-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-dp0flqpqr3|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-cdatek7ggdjljikpnwoc",
+      "report_submitted_at": "2026-05-25T12:50:33Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-dp0flqpqr3-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-ebvgmbke4h|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-jvfskckei67iyl7koyjn",
+      "report_submitted_at": "2026-05-25T12:50:35Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ebvgmbke4h-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-emipxcurax|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-e7bl1nf3vthqrekzcbie",
+      "report_submitted_at": "2026-05-25T12:49:42Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-emipxcurax-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-emipxcurax|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-uzd8lqmgvwivutipw6tu",
+      "report_submitted_at": "2026-05-25T12:49:44Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-emipxcurax-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-epbuwkre4i|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-z6ogkb5c37gvy6j7dbqy",
+      "report_submitted_at": "2026-05-25T12:56:39Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-epbuwkre4i-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-epbuwkre4i|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-xd6q0ft7mqybddjrzwl2",
+      "report_submitted_at": "2026-05-25T12:56:49Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-epbuwkre4i-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-eqhiefjisq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qezm2xkg8r2mcp8pv8pg",
+      "report_submitted_at": "2026-05-25T12:49:17Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-eqhiefjisq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-exlhthon2m|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ffvsxd2kwaq8y9ijbkmn",
+      "report_submitted_at": "2026-05-25T12:50:55Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-exlhthon2m-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-f2aamhtslu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-jgytse4y0aqdmuc9zv5v",
+      "report_submitted_at": "2026-05-25T12:51:05Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-f2aamhtslu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-fyl1itxpmy|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-pyfpl94ur0ktnpzqtpsm",
+      "report_submitted_at": "2026-05-25T12:50:38Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-fyl1itxpmy-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-gclyr9sd1l|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-jo7ij7qvql84w5c92lyo",
+      "report_submitted_at": "2026-05-25T12:59:00Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-gclyr9sd1l-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-gclyr9sd1l|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-staof4fimd8cvoeycd4l",
+      "report_submitted_at": "2026-05-25T12:59:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-gclyr9sd1l-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-gfiudk8rzh|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-juz6ynw9hral51sdefig",
+      "report_submitted_at": "2026-05-25T12:50:19Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-gfiudk8rzh-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-gfiudk8rzh|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-vp5yeq8m4q2rjqviewsq",
+      "report_submitted_at": "2026-05-25T12:50:21Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-gfiudk8rzh-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-ggc9nvl4ix|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ymy62ptvdswens2dlp7d",
+      "report_submitted_at": "2026-05-25T12:52:36Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ggc9nvl4ix-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-ggc9nvl4ix|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-adqoa7cbajxixxseqccz",
+      "report_submitted_at": "2026-05-25T12:52:39Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ggc9nvl4ix-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-ghh83kwcfk|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-krlwelajwpfuulgsvgsn",
+      "report_submitted_at": "2026-05-25T12:49:19Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ghh83kwcfk-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-gkrnl9gfjm|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ad3we8ij0rk34lwko3zm",
+      "report_submitted_at": "2026-05-25T12:55:24Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-gkrnl9gfjm-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-gkrnl9gfjm|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-axza5unbhkaxdn6telnd",
+      "report_submitted_at": "2026-05-25T12:55:29Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-gkrnl9gfjm-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-go45lushz5|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-nsqaax1oxu8upiloogyp",
+      "report_submitted_at": "2026-05-25T12:53:12Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-go45lushz5-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-grs3rvxyzt|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-uizvy6j8b7k1vs6r2pp9",
+      "report_submitted_at": "2026-05-25T12:50:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-grs3rvxyzt-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-gxtwqsikx8|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ujwzzgfkwndspk5rqvs1",
+      "report_submitted_at": "2026-05-25T12:49:32Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-gxtwqsikx8-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-gxtwqsikx8|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-hgfln5cfixjp9xdwo2rx",
+      "report_submitted_at": "2026-05-25T12:49:34Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-gxtwqsikx8-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-gz8wrzicut|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ue8ceghnebbkrjaecgj4",
+      "report_submitted_at": "2026-05-25T12:48:48Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-gz8wrzicut-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-h0pabypche|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-zcsqokxhqsxiubqozqx1",
+      "report_submitted_at": "2026-05-25T12:51:08Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-h0pabypche-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-h0pabypche|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-lb4mojiponfbaeklqtuw",
+      "report_submitted_at": "2026-05-25T12:51:10Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-h0pabypche-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-hfg08ccfl1|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-czxqicssbv8i7h0cu5hd",
+      "report_submitted_at": "2026-05-25T12:48:50Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-hfg08ccfl1-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-i2kyyaak8p|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-widk3aehqgitutczvtva",
+      "report_submitted_at": "2026-05-25T12:49:21Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-i2kyyaak8p-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-i8tcijhzlv|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-pdjqcptqf08vv8dnchhh",
+      "report_submitted_at": "2026-05-25T12:51:20Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-i8tcijhzlv-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-ibhxahvc3s|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hbk1quwkxu0w59gjoham",
+      "report_submitted_at": "2026-05-25T12:58:30Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ibhxahvc3s-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-ibhxahvc3s|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-mse6a9mrf5gsliv2luhp",
+      "report_submitted_at": "2026-05-25T12:58:46Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ibhxahvc3s-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-ikq1kszfpv|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ukxdokrtnxjun4goz0gv",
+      "report_submitted_at": "2026-05-25T12:55:04Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ikq1kszfpv-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-ikq1kszfpv|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-iaedbrkuu9xfenxhbbr7",
+      "report_submitted_at": "2026-05-25T12:55:09Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ikq1kszfpv-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-iwdfnhc2fc|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-jqvecc5ecomstb9anzvq",
+      "report_submitted_at": "2026-05-25T12:52:42Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-iwdfnhc2fc-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-iwdfnhc2fc|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-bir4pmdvt1uj6gw7yple",
+      "report_submitted_at": "2026-05-25T12:52:45Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-iwdfnhc2fc-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-j81wll61h8|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-da42ktqfm9m2zuxaltr6",
+      "report_submitted_at": "2026-05-25T12:50:03Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-j81wll61h8-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-jegu3g3qhb|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-fmsmpzrogzxugbf11qoz",
+      "report_submitted_at": "2026-05-25T12:54:24Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-jegu3g3qhb-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-joofdah8db|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-amksdiahfkgwvghgofzc",
+      "report_submitted_at": "2026-05-25T12:56:58Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-joofdah8db-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-jrzcibeptf|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-m78jzasnuohw12i71jji",
+      "report_submitted_at": "2026-05-25T12:48:57Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-jrzcibeptf-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-jvonv4hb8r|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-jdz6ye8eotmqj1tqcbju",
+      "report_submitted_at": "2026-05-25T12:54:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-jvonv4hb8r-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-jvonv4hb8r|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-jupcrbqkvnptxk8ogpfb",
+      "report_submitted_at": "2026-05-25T12:54:20Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-jvonv4hb8r-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-jzsj32ygcr|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vcg4bo727m2cxxz6eigg",
+      "report_submitted_at": "2026-05-25T12:57:39Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-jzsj32ygcr-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-jzsj32ygcr|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-jgqg4k6sjyx0gnilylze",
+      "report_submitted_at": "2026-05-25T12:57:51Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-jzsj32ygcr-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-k0pad6mubz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-je3bcon6dfrcypi0gb8a",
+      "report_submitted_at": "2026-05-25T12:54:08Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-k0pad6mubz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-k0pad6mubz|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-jp2itutftlm4qqfvpc3l",
+      "report_submitted_at": "2026-05-25T12:54:12Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-k0pad6mubz-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-k9q3ihg7cu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-rkvgrebiyvx5vvwcbcg1",
+      "report_submitted_at": "2026-05-25T13:01:40Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-k9q3ihg7cu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-k9q3ihg7cu|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-lmnmkunjyw8vw4efleci",
+      "report_submitted_at": "2026-05-25T13:02:27Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-k9q3ihg7cu-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-kpk71nadaf|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-sf4rgal2ph9bofpqrw8b",
+      "report_submitted_at": "2026-05-25T12:49:50Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-kpk71nadaf-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-ksjvyjoz30|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-yfwb978hbxopsmkmpqic",
+      "report_submitted_at": "2026-05-25T12:52:58Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ksjvyjoz30-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-ksjvyjoz30|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-wog4vefesnzkgd0x0k8q",
+      "report_submitted_at": "2026-05-25T12:53:02Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ksjvyjoz30-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-kyj6zkpd8b|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hbubhka3lv7defnhx8pr",
+      "report_submitted_at": "2026-05-25T12:49:36Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-kyj6zkpd8b-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-lh6dbhev9n|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-jw6wib6mo7gprc8iitfv",
+      "report_submitted_at": "2026-05-25T12:53:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-lh6dbhev9n-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-lh6dbhev9n|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-tutrlwlussbww4krinwf",
+      "report_submitted_at": "2026-05-25T12:53:32Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-lh6dbhev9n-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-loifvzjm62|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-sfgazirobraaujn6lmbl",
+      "report_submitted_at": "2026-05-25T12:50:40Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-loifvzjm62-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-loifvzjm62|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-eyro6hxhaeyzepyhbauj",
+      "report_submitted_at": "2026-05-25T12:50:42Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-loifvzjm62-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-lphe0ldl1l|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-gcemcawmvarwkac20yro",
+      "report_submitted_at": "2026-05-25T12:54:02Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-lphe0ldl1l-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-lpyaxqxsiz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qc9bwcpee7tkoupitxz9",
+      "report_submitted_at": "2026-05-25T12:58:03Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-lpyaxqxsiz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-lpyaxqxsiz|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-yua6znoxbx5w41etwk0r",
+      "report_submitted_at": "2026-05-25T12:58:17Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-lpyaxqxsiz-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-lyasqjlwvq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vmtbsaukmcngmeei6dll",
+      "report_submitted_at": "2026-05-25T12:51:12Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-lyasqjlwvq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-lyasqjlwvq|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-oi0zgwxehkjqpbezubkg",
+      "report_submitted_at": "2026-05-25T12:51:15Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-lyasqjlwvq-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-m2vugylcfz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-awxlpb8coxfk9nkf6teo",
+      "report_submitted_at": "2026-05-25T12:49:38Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-m2vugylcfz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-m5jtovbfh4|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-asybojetnlnpjtbtbxxd",
+      "report_submitted_at": "2026-05-25T12:49:28Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-m5jtovbfh4-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-mqciekjezh|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ghsbxs5ma0ojz8yv3ts9",
+      "report_submitted_at": "2026-05-25T12:56:22Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-mqciekjezh-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-myb71jjycz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-aoaqxsmxhjt5ryfuaav8",
+      "report_submitted_at": "2026-05-25T12:51:17Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-myb71jjycz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-myxs9twnyn|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vv6ab24pkh6ceii2undo",
+      "report_submitted_at": "2026-05-25T12:49:52Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-myxs9twnyn-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-n12s7wdlti|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-xwecbtajmvcoqr1ievqp",
+      "report_submitted_at": "2026-05-25T12:50:08Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-n12s7wdlti-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-n4ixlcwxzw|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hwh82ifi7jz7fnbj7vd2",
+      "report_submitted_at": "2026-05-25T13:02:45Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-n4ixlcwxzw-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-n4ixlcwxzw|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-yscuefjgl2r4zn89belg",
+      "report_submitted_at": "2026-05-25T13:03:32Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-n4ixlcwxzw-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-n9d4jo8u6n|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-sgfjhlnkfuvsn4znsq15",
+      "report_submitted_at": "2026-05-25T12:50:05Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-n9d4jo8u6n-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-nacg5gkfdu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-sxixtoajzzw2wouorywd",
+      "report_submitted_at": "2026-05-25T12:53:56Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-nacg5gkfdu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-nbbcwgm9gg|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-h0dwxxepizmg9zmjsknr",
+      "report_submitted_at": "2026-05-25T12:51:27Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-nbbcwgm9gg-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-npuuxds8fo|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-dynitmbrqhxwrytecffr",
+      "report_submitted_at": "2026-05-25T12:49:55Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-npuuxds8fo-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-ntoedcg9zc|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-jqbumev1o0mwdg4gnrlj",
+      "report_submitted_at": "2026-05-25T12:54:46Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ntoedcg9zc-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-ntoedcg9zc|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-holgbou7kp2khbcrqfne",
+      "report_submitted_at": "2026-05-25T12:54:51Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-ntoedcg9zc-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-o7fcykr1tg|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-bdfsjkkrwx8dx6tnjx9m",
+      "report_submitted_at": "2026-05-25T12:52:48Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-o7fcykr1tg-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-o7fcykr1tg|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-wuntkydpc5olinfsbucd",
+      "report_submitted_at": "2026-05-25T12:52:51Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-o7fcykr1tg-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-o7tfmutrns|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-b2bzaxlqlsdrjkn4xir2",
+      "report_submitted_at": "2026-05-25T12:49:59Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-o7tfmutrns-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-o7tfmutrns|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-fsm4x28do9vi0oh1s8id",
+      "report_submitted_at": "2026-05-25T12:50:01Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-o7tfmutrns-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-oajwyqzpix|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-nts7jxyper2mwqdmy1zd",
+      "report_submitted_at": "2026-05-25T12:53:21Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-oajwyqzpix-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-oajwyqzpix|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-nbw2c9iv3hvzjz84lqdf",
+      "report_submitted_at": "2026-05-25T12:53:25Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-oajwyqzpix-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-oldpkvonzg|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-zao14frvpu64d4ani7n3",
+      "report_submitted_at": "2026-05-25T12:50:10Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-oldpkvonzg-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-oldpkvonzg|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-jnsipld6xj6668svr1r8",
+      "report_submitted_at": "2026-05-25T12:50:12Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-oldpkvonzg-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-op5mh6azbi|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-x39qzbhwnlyvpn4rpuus",
+      "report_submitted_at": "2026-05-25T12:51:03Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-op5mh6azbi-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-osrz0dcc6x|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-l7ovawbrynno7v19ferv",
+      "report_submitted_at": "2026-05-25T12:54:39Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-osrz0dcc6x-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-pdiaubv99y|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-fqaru3lty6rnxcgdwek5",
+      "report_submitted_at": "2026-05-25T12:49:05Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-pdiaubv99y-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-pnm5kavdrl|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-toc30ktfkkmttjdwxvjg",
+      "report_submitted_at": "2026-05-25T12:49:46Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-pnm5kavdrl-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-psezznuxdq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-o6wb2hsqiskf0htumkkh",
+      "report_submitted_at": "2026-05-25T12:49:57Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-psezznuxdq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-pzigsmtlcm|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-kqwqzzehs1hzaj5xjbeq",
+      "report_submitted_at": "2026-05-25T12:51:22Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-pzigsmtlcm-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-pzigsmtlcm|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-mgpebqlynq0bwe1a8a8x",
+      "report_submitted_at": "2026-05-25T12:51:25Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-pzigsmtlcm-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-q5jajqnzpf|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-be41jrwa6yahhnkzt4le",
+      "report_submitted_at": "2026-05-25T12:51:50Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-q5jajqnzpf-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-qepqrs2c9e|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-rtwedpb7l69tedd2qvsr",
+      "report_submitted_at": "2026-05-25T12:56:06Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-qepqrs2c9e-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-qepqrs2c9e|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-b6fsb4bilhjccnpuxsvm",
+      "report_submitted_at": "2026-05-25T12:56:13Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-qepqrs2c9e-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-r7pf0c2hnt|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qxmxxeoste9eozrurfcz",
+      "report_submitted_at": "2026-05-25T12:53:05Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-r7pf0c2hnt-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-r7pf0c2hnt|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-hvcr64tfcvvgr6zvnedj",
+      "report_submitted_at": "2026-05-25T12:53:08Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-r7pf0c2hnt-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-rgmhwckb18|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-ntu3mxuqrlixogau8eqf",
+      "report_submitted_at": "2026-05-25T12:48:59Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-rgmhwckb18-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-rihzvkkhdw|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ucafl4efpcqugbbnw7dm",
+      "report_submitted_at": "2026-05-25T12:51:42Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-rihzvkkhdw-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-rihzvkkhdw|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-cmzl85jqstt6cfznpzaj",
+      "report_submitted_at": "2026-05-25T12:51:45Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-rihzvkkhdw-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-rimjvasg8k|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vqtrvlb4cejvphe411d2",
+      "report_submitted_at": "2026-05-25T12:52:19Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-rimjvasg8k-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-rimjvasg8k|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-vsanuzf2kzpigx25wfan",
+      "report_submitted_at": "2026-05-25T12:52:22Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-rimjvasg8k-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-rtkb8lietf|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-yu4nmutsbreqbsoj0tj5",
+      "report_submitted_at": "2026-05-25T12:49:40Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-rtkb8lietf-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-rxcojax0a8|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-p255ag9xswsjsskeacoc",
+      "report_submitted_at": "2026-05-25T12:49:07Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-rxcojax0a8-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-szlqydhzuj|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-tq6cgjjyqpo0u4ewlb8u",
+      "report_submitted_at": "2026-05-25T12:48:52Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-szlqydhzuj-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-t12db2mw9q|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-w7xvv9rofgxwh8fgu3zl",
+      "report_submitted_at": "2026-05-25T12:55:45Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-t12db2mw9q-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-t12db2mw9q|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-psinass3vax8tiqe1xqk",
+      "report_submitted_at": "2026-05-25T12:55:51Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-t12db2mw9q-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-tigmoh0zuc|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-k0gebqpu8qaaptsvbu4o",
+      "report_submitted_at": "2026-05-25T12:49:13Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-tigmoh0zuc-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-tkcmnaujmq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qbreyrbcs1jjvibgt6ub",
+      "report_submitted_at": "2026-05-25T12:59:30Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-tkcmnaujmq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-tkcmnaujmq|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-qbkfca0u2t6tnxm0vqsw",
+      "report_submitted_at": "2026-05-25T12:59:47Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-tkcmnaujmq-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-toy4zez7bq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-v3vmc1a5cds93fwhotnh",
+      "report_submitted_at": "2026-05-25T12:51:58Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-toy4zez7bq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-toy4zez7bq|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-tmph5cgs5ialvluhhcji",
+      "report_submitted_at": "2026-05-25T12:52:00Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-toy4zez7bq-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-uaruhelkln|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-wdouvlhskqlsfuu26nkg",
+      "report_submitted_at": "2026-05-25T12:49:30Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-uaruhelkln-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-uekgfsxv7x|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-rpwlhymgrdahslxpdob2",
+      "report_submitted_at": "2026-05-25T12:49:48Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-uekgfsxv7x-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-uz4kiywicz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vgfmdoulmf9td6kr2lf8",
+      "report_submitted_at": "2026-05-25T13:05:05Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-uz4kiywicz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-uz4kiywicz|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-ro00andkhaxxanbdz2ag",
+      "report_submitted_at": "2026-05-25T13:06:19Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-uz4kiywicz-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-uzyulpmtof|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-xcjm8qpowgvbyuff8soq",
+      "report_submitted_at": "2026-05-25T12:50:14Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-uzyulpmtof-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-v6hqjs4rgh|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-rmzssnvnecl2mf8e0jdd",
+      "report_submitted_at": "2026-05-25T12:51:37Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-v6hqjs4rgh-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-v6hqjs4rgh|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-ejj0sbwylxqvwdjoh8fe",
+      "report_submitted_at": "2026-05-25T12:51:39Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-v6hqjs4rgh-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-vbajsnrplj|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-kwpixr54i7vnunmn7gkh",
+      "report_submitted_at": "2026-05-25T12:51:47Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-vbajsnrplj-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-vssm4vyfwo|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-rochpf3rpd1shogkmwrf",
+      "report_submitted_at": "2026-05-25T13:00:02Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-vssm4vyfwo-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-wbavzfspxu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-t0iyoklbqgovqpdggjz7",
+      "report_submitted_at": "2026-05-25T12:49:09Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wbavzfspxu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-wbjitrksng|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-dxgqbcl9ubyexwzzhnxt",
+      "report_submitted_at": "2026-05-25T12:50:58Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wbjitrksng-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-wbjitrksng|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-a7vmdj6p6cnxktvhbdfc",
+      "report_submitted_at": "2026-05-25T12:51:00Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wbjitrksng-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-wcbjfqjicu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vy1s7gxwehltybmu7dqg",
+      "report_submitted_at": "2026-05-25T12:53:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wcbjfqjicu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-wdi8yfjl7j|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-bdmjvnsgnexgbrv8buqa",
+      "report_submitted_at": "2026-05-25T12:55:56Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wdi8yfjl7j-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-wic4mcpvub|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-itueo6et4sgqn72hj6el",
+      "report_submitted_at": "2026-05-25T12:51:54Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wic4mcpvub-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-wme6g34rok|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-iynqp8qu3z5r8blwy7bu",
+      "report_submitted_at": "2026-05-25T12:50:51Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wme6g34rok-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-wme6g34rok|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-jzllepqbbjowzp0vovfm",
+      "report_submitted_at": "2026-05-25T12:50:53Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wme6g34rok-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-wp6ju0hacs|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qgvwmtwhjro1l9duurxx",
+      "report_submitted_at": "2026-05-25T12:49:23Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wp6ju0hacs-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-wzpfxtbvyp|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-xk4jnz9czzjzoox42thd",
+      "report_submitted_at": "2026-05-25T12:55:35Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wzpfxtbvyp-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-wzpfxtbvyp|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-qzp2qa8oquuzazflbzrc",
+      "report_submitted_at": "2026-05-25T12:55:40Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-wzpfxtbvyp-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-x2iyontc2o|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-lvlvmwzm79nsktkw8gpa",
+      "report_submitted_at": "2026-05-25T13:00:36Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-x2iyontc2o-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-x2iyontc2o|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-iu0johrzh2rphle8o1mz",
+      "report_submitted_at": "2026-05-25T13:00:56Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-x2iyontc2o-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-x84cifdwcz|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-dy5caw1nlbemzqtaqsrn",
+      "report_submitted_at": "2026-05-25T12:52:08Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-x84cifdwcz-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-x84cifdwcz|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-pzuzxtcwuoxnyxqeoial",
+      "report_submitted_at": "2026-05-25T12:52:11Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-x84cifdwcz-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-xdbz3gyf1l|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-uogafjxucj0wutd8bxzj",
+      "report_submitted_at": "2026-05-25T12:52:54Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-xdbz3gyf1l-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-xggym4lqil|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-dpnbjkdcqwxl8qvrxjgz",
+      "report_submitted_at": "2026-05-25T12:48:53Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-xggym4lqil-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-xkhsgydxwp|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-kwpw99xnxyqg0y6hxmt9",
+      "report_submitted_at": "2026-05-25T12:57:18Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-xkhsgydxwp-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-xtnwcwh9fa|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ckt7c9rtbig1559irplw",
+      "report_submitted_at": "2026-05-25T12:50:30Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-xtnwcwh9fa-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-y6uwvvg3lt|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-i8zhb88qnxahaqqjbkqh",
+      "report_submitted_at": "2026-05-25T12:53:48Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-y6uwvvg3lt-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-y6uwvvg3lt|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-s52ddthzwg0lpsdoaane",
+      "report_submitted_at": "2026-05-25T12:53:52Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-y6uwvvg3lt-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-y8e1yqodv7|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-qlsibi1zbcicb73vjsez",
+      "report_submitted_at": "2026-05-25T12:50:16Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-y8e1yqodv7-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-yipojzohoq|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-vwh37wsrv3mmfp2v5nn3",
+      "report_submitted_at": "2026-05-25T12:53:35Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-yipojzohoq-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-yipojzohoq|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-n9iyo8yaadqfgbef9dop",
+      "report_submitted_at": "2026-05-25T12:53:38Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-yipojzohoq-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-yjr81yjl41|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-hk9u7wmtyuan4iabwgjs",
+      "report_submitted_at": "2026-05-25T12:52:30Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-yjr81yjl41-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-yjr81yjl41|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-c4uo6wh0unntpwxnqddi",
+      "report_submitted_at": "2026-05-25T12:52:33Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-yjr81yjl41-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-z08irljzak|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-becjq7h6nhxzopv4g4ik",
+      "report_submitted_at": "2026-05-25T12:54:31Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-z08irljzak-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-z08irljzak|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-maq40gjoxgypltd9juym",
+      "report_submitted_at": "2026-05-25T12:54:35Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-z08irljzak-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-zbaocrufic|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-oe7xizgtizgfbwogfxuw",
+      "report_submitted_at": "2026-05-25T12:48:55Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-zbaocrufic-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-zgqhbvbonu|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-ookqb6svy5iypkfvelj9",
+      "report_submitted_at": "2026-05-25T12:50:47Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-zgqhbvbonu-org-lxgtpgpi",
+      "uploaded": true
+    },
+    "2026-04|sku-zgqhbvbonu|org-wpqkidco": {
+      "confirmed": true,
+      "report_id": "report-ims3rccmsrxd9ixutxkt",
+      "report_submitted_at": "2026-05-25T12:50:49Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-zgqhbvbonu-org-wpqkidco",
+      "uploaded": true
+    },
+    "2026-04|sku-zogpjhadpw|org-lxgtpgpi": {
+      "confirmed": true,
+      "report_id": "report-tt4onj5sik8mxq9ky4s6",
+      "report_submitted_at": "2026-05-25T12:50:23Z",
+      "reseller_baseline": 0,
+      "supplier_baseline": 0,
+      "transferred": true,
+      "upload_idempotency": "bandai-c9fdc0a8-upload-2026-04-sku-zogpjhadpw-org-lxgtpgpi",
+      "uploaded": true
+    }
+  }
+}

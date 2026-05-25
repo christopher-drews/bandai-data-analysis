@@ -1,20 +1,27 @@
 """Report level_2 sales history to LootVault month-by-month.
 
-For every (reseller, month) pair in data/level_2_anonymize_sales_history/
-product_sales_history.csv, this script:
+For data/level_2_anonymize_sales_history/product_sales_history.csv this
+script:
 
   1. Resolves paxCode -> sku_id via /api/v1/lv-team/catalog.
   2. Resolves Customer -> reseller org_id via data/customer_org_map.csv.
-  3. Pulls unsold keys the reseller owns for that SKU via
+  3. For every (reseller, sku) pair, fetches the **total** number of unsold
+     reseller-owned keys needed across all months **once** (so a key is
+     never reused). Keys are pulled from
        GET /api/v1/orgs/{reseller_org_id}/inventory/{sku_id}/keys?status=unsold
-  4. Assigns ``amount`` keyIds per CSV row, each with a random ISO 8601
-     timestamp uniformly distributed in [start_of(start_month),
-     end_of(end_month) + 1 day).
+  4. Hands out keys chronologically: month 1's report consumes the first
+     N1 keys, month 2 the next N2, and so on. Each key gets a random ISO
+     8601 timestamp uniformly distributed in
+       [start_of(start_month), end_of(end_month) + 1 day).
   5. Submits one batched report per (month, reseller) to
        POST /api/v1/reseller/{reseller_org_id}/reports/json
 
 Run prepare_sales_upload.py first — it stages enough unsold keys per
 reseller for this script to consume.
+
+Resumable: every successful report is appended to --state-file (JSON)
+and skipped on re-run. Transient timeouts / 5xx are retried with
+exponential backoff (uses the helper from prepare_sales_upload).
 """
 
 from __future__ import annotations
@@ -22,6 +29,7 @@ from __future__ import annotations
 import argparse
 import calendar
 import csv
+import json
 import random
 import sys
 import time
@@ -40,9 +48,11 @@ from prepare_sales_upload import (
     amount_as_int,
     fetch_catalog_by_paxcode,
     load_customer_org_map,
+    post_with_retry,
 )
 
 DEFAULT_CSV = Path("data/level_2_anonymize_sales_history/product_sales_history.csv")
+DEFAULT_STATE_FILE = Path("data/.upload_sales_state.json")
 KEYS_PAGE_SIZE = 1000
 
 
@@ -112,6 +122,23 @@ def fetch_reseller_keys(
     return ids
 
 
+def load_state(path: Path) -> dict:
+    if not path.exists():
+        return {"reports_done": []}
+    raw = json.loads(path.read_text())
+    return {"reports_done": [tuple(r) for r in raw.get("reports_done", [])]}
+
+
+def save_state(path: Path, state: dict) -> None:
+    serializable = {
+        "reports_done": sorted({tuple(r) for r in state["reports_done"]}),
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(serializable, indent=2))
+    tmp.replace(path)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--csv", default=DEFAULT_CSV, type=Path)
@@ -123,6 +150,8 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--seed", type=int, default=None, help="RNG seed for timestamp generation")
     parser.add_argument("--month", default=None, help="Optional YYYY-MM filter; defaults to all months")
+    parser.add_argument("--state-file", default=DEFAULT_STATE_FILE, type=Path,
+                        help="JSON file recording completed (month, reseller) reports; re-runs skip them.")
     args = parser.parse_args()
 
     with args.csv.open(newline="", encoding="utf-8") as fh:
@@ -150,7 +179,7 @@ def main() -> int:
 
     rng = random.Random(args.seed)
 
-    # Group: month -> reseller_org -> sku_id -> list of (count, price, currency, start_month, end_month)
+    # Group: month -> reseller_org -> sku_id -> list of row specs
     grouped: dict[str, dict[str, dict[str, list[dict]]]] = defaultdict(
         lambda: defaultdict(lambda: defaultdict(list))
     )
@@ -190,36 +219,76 @@ def main() -> int:
 
     print(
         f"Grouped {sum(len(per_org) for per_month in grouped.values() for per_org in per_month.values())} "
-        f"(month, reseller, sku) groups across {len(grouped)} months. "
+        f"(month, reseller) report-targets across {len(grouped)} months. "
         f"Skipped: pax={skipped_pax} customer={skipped_cust} amount={skipped_amount} month-filter={skipped_filter}",
         file=sys.stderr,
     )
 
-    report_ok = report_fail = 0
+    # Load resume state.
+    state = load_state(args.state_file)
+    done_reports = {tuple(r) for r in state["reports_done"]}
+    print(
+        f"State: {len(done_reports)} reports already done ({args.state_file})",
+        file=sys.stderr,
+    )
+
+    # Total keys needed per (reseller, sku) across every month — pulled ONCE
+    # so each keyId is allocated to exactly one report. Reports already in the
+    # state file are excluded so re-runs don't over-fetch.
+    pool_demand: dict[tuple[str, str], int] = defaultdict(int)
+    for month, by_org in grouped.items():
+        for org, by_sku in by_org.items():
+            if (month, org) in done_reports:
+                continue
+            for sku, specs in by_sku.items():
+                pool_demand[(org, sku)] += sum(s["count"] for s in specs)
+
+    # Fetch each pool once. The result is the canonical assignment order.
+    print(f"\n== Fetching key pools ({len(pool_demand)} (reseller, sku) pairs) ==", file=sys.stderr)
+    key_pool: dict[tuple[str, str], list[str]] = {}
+    short_pools: list[str] = []
+    for (org, sku), needed in sorted(pool_demand.items()):
+        if needed <= 0:
+            key_pool[(org, sku)] = []
+            continue
+        if args.dry_run:
+            key_pool[(org, sku)] = [f"<dryrun-key-{sku}-{i}>" for i in range(needed)]
+            continue
+        ids = fetch_reseller_keys(session, args.host, org, sku, headers, needed)
+        if len(ids) < needed:
+            short_pools.append(f"{sku} @ {org} (need {needed}, have {len(ids)})")
+        key_pool[(org, sku)] = ids[:needed]
+
+    if short_pools:
+        print(
+            "  WARN insufficient inventory for: " + ", ".join(short_pools),
+            file=sys.stderr,
+        )
+
+    # Hand out keys chronologically.
+    pool_cursor: dict[tuple[str, str], int] = defaultdict(int)
+    report_ok = report_fail = report_skip = 0
     for month in sorted(grouped):
         for reseller_org in sorted(grouped[month]):
+            if (month, reseller_org) in done_reports:
+                report_skip += 1
+                continue
             entries: list[dict] = []
-            short_skus: list[str] = []
+            short_inline: list[str] = []
             for sku_id in sorted(grouped[month][reseller_org]):
                 row_specs = grouped[month][reseller_org][sku_id]
-                keys_needed = sum(spec["count"] for spec in row_specs)
-
-                if args.dry_run:
-                    keyids = [f"<dryrun-key-{sku_id}-{i}>" for i in range(keys_needed)]
-                else:
-                    keyids = fetch_reseller_keys(
-                        session, args.host, reseller_org, sku_id, headers, keys_needed
-                    )
-                if len(keyids) < keys_needed:
-                    short_skus.append(f"{sku_id} (need {keys_needed}, have {len(keyids)})")
-                    continue
-
-                cursor = 0
+                pool = key_pool.get((reseller_org, sku_id), [])
+                cursor = pool_cursor[(reseller_org, sku_id)]
                 for spec in row_specs:
                     n = spec["count"]
+                    available = pool[cursor:cursor + n]
+                    if len(available) < n:
+                        short_inline.append(f"{sku_id} (need {n}, pool exhausted at cursor {cursor})")
+                        cursor = len(pool)
+                        break
                     window_start, window_end = month_window(spec["start_month"], spec["end_month"])
                     timestamps = random_timestamps(rng, window_start, window_end, n)
-                    for keyid, ts in zip(keyids[cursor:cursor + n], timestamps, strict=True):
+                    for keyid, ts in zip(available, timestamps, strict=True):
                         entries.append({
                             "skuId": sku_id,
                             "keyId": keyid,
@@ -228,11 +297,11 @@ def main() -> int:
                             "currency": spec["currency"],
                         })
                     cursor += n
+                pool_cursor[(reseller_org, sku_id)] = cursor
 
-            if short_skus:
+            if short_inline:
                 print(
-                    f"  FAIL {month} reseller={reseller_org}: insufficient unsold keys for "
-                    + ", ".join(short_skus),
+                    f"  FAIL {month} reseller={reseller_org}: " + ", ".join(short_inline),
                     file=sys.stderr,
                 )
                 report_fail += 1
@@ -246,16 +315,21 @@ def main() -> int:
                 continue
 
             url = f"https://{args.host}/api/v1/reseller/{reseller_org}/reports/json"
-            resp = session.post(url, json={"entries": entries}, headers=headers, timeout=TIMEOUT_S)
+            resp = post_with_retry(session, url, headers=headers, json_body={"entries": entries})
             if resp.ok:
                 print(f"  ok   report {prefix}", file=sys.stderr)
                 report_ok += 1
+                state["reports_done"].append((month, reseller_org))
+                save_state(args.state_file, state)
             else:
                 print(f"  FAIL report {prefix} -> {resp.status_code} {resp.text}", file=sys.stderr)
                 report_fail += 1
             time.sleep(REQUEST_DELAY_S)
 
-    print(f"\nDone. reports ok={report_ok} fail={report_fail}", file=sys.stderr)
+    print(
+        f"\nDone. reports ok={report_ok} fail={report_fail} skip={report_skip}",
+        file=sys.stderr,
+    )
     return 1 if report_fail else 0
 
 
