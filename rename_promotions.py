@@ -1,15 +1,24 @@
-"""Set ``name`` on existing LootVault promotions to ``<YYYY-MM> <Product> <Customer>``.
+"""Set ``name`` on existing LootVault promotions using a hybrid campaign / per-SKU label.
 
 Walks the same CSV as ``upload_promotions.py``
 (``data/level_1_extract_promo_history/product_promo_history.csv``), locates
 the matching promotion on each SKU by ``startDate``/``endDate``/
 ``discountPercentage``/``resellers``, and PUTs the promotion back with a
-descriptive ``name``. Idempotent: rows whose promotion already has the target
-name are skipped silently.
+short, deterministic ``name``.
 
-Match is strict on all four fields. Customer="All" matches a promotion with no
-resellers (server returns null/empty); Customer="Heybox"/"Sonkwo" matches a
-promotion whose resellers contain exactly that reseller's organisation id.
+Naming
+------
+Base label: ``"{YYYY-MM} {Customer} {pct}%"`` — e.g. ``"2025-08 Heybox 20%"``.
+The supplier UI's promotion-list view groups rows sharing
+``(name, start_date, end_date, discount_percentage)`` into one campaign row,
+so SKUs that share the tuple collapse correctly.
+
+When the (start_date, end_date, Customer, discount) tuple covers only ONE
+SKU in this CSV, the label gets a truncated product suffix (≤30 chars,
+trademark + " Edition" suffix stripped) so singletons remain identifiable:
+``"2025-08 Heybox 20% — ELDEN RING NIGHTREIGN"``.
+
+Idempotent: rows whose promotion already has the target name are skipped.
 
 Note: the public ``api.yaml`` omits ``name`` from ``UpdatePromotionRequest``
 but the server accepts it (the column exists and the Rust struct deserializes
@@ -20,8 +29,10 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 import sys
 import time
+from collections import Counter
 from pathlib import Path
 
 import requests
@@ -39,6 +50,36 @@ DEFAULT_ORG_ID = "org-u1gm1u0j"
 DEFAULT_CSV = Path("data/level_1_extract_promo_history/product_promo_history.csv")
 PROMOTIONS_PAGE_LIMIT = 1000
 DISCOUNT_TOLERANCE = 1e-4
+PRODUCT_NAME_MAX = 30
+EDITION_SUFFIX_RE = re.compile(
+    r"\s+(Digital\s+|Premium\s+|Ultimate\s+|Deluxe\s+|Standard\s+|Collector'?s?\s+)?Edition\s*$",
+    re.IGNORECASE,
+)
+TRADEMARK_RE = re.compile(r"[™®]")  # ™ ®
+
+
+def short_product(name: str) -> str:
+    """Strip trademarks and trailing 'Edition' clause, then truncate to PRODUCT_NAME_MAX."""
+    cleaned = TRADEMARK_RE.sub("", name).strip()
+    cleaned = EDITION_SUFFIX_RE.sub("", cleaned).strip()
+    if len(cleaned) > PRODUCT_NAME_MAX:
+        cleaned = cleaned[: PRODUCT_NAME_MAX - 1].rstrip() + "…"
+    return cleaned
+
+
+def build_name(
+    start_date: str,
+    customer: str,
+    discount_percentage: float,
+    cluster_size: int,
+    product: str,
+) -> str:
+    """Build the promotion name from row fields + cluster size from the pre-pass."""
+    pct = f"{discount_percentage:g}"
+    base = f"{start_date[:7]} {customer or 'All'} {pct}%"
+    if cluster_size <= 1:
+        return f"{base} — {short_product(product)}"
+    return base
 
 
 def fetch_sku_promotions(
@@ -98,6 +139,22 @@ def main() -> int:
 
     with args.csv.open(newline="", encoding="utf-8") as fh:
         rows = list(csv.DictReader(fh))
+
+    # Pre-pass: count how many CSV rows share each (start, end, Customer, discount).
+    # Matches the tuple the supplier UI groups campaigns on. Used to decide whether
+    # a row gets the bare campaign label or the singleton (label + product) label.
+    cluster_size: Counter[tuple[str, str, str, float]] = Counter()
+    for row in rows:
+        try:
+            disc = round(float((row.get("Promo Discount") or "").strip()) * 100, 4)
+        except ValueError:
+            continue
+        cluster_size[(
+            (row.get("start_date") or "").strip(),
+            (row.get("end_date") or "").strip(),
+            (row.get("Customer") or "").strip() or ALL_CUSTOMERS_TOKEN,
+            disc,
+        )] += 1
 
     headers = {
         "Authorization": f"Bearer {args.token}",
@@ -182,7 +239,14 @@ def main() -> int:
             continue
 
         promo = matches[0]
-        new_name = f"{start_date[:7]} {product} {customer or 'All'}"
+        cluster_key = (start_date, end_date, customer or ALL_CUSTOMERS_TOKEN, discount_percentage)
+        new_name = build_name(
+            start_date,
+            customer,
+            discount_percentage,
+            cluster_size[cluster_key],
+            product,
+        )
         if promo.get("name") == new_name:
             unchanged += 1
             continue
