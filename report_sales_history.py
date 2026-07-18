@@ -200,7 +200,7 @@ def process_unit(
             session, args.host, args.org_id, sku, headers_json, placement="vault"
         )
         unit_state["supplier_baseline"] = baseline
-        key_lines = [f"BANDAI-{sku}-{uuid4().hex[:16]}" for _ in range(count)]
+        key_lines = [f"BANDAI-{sku}-{uuid4().hex}" for _ in range(count)]
         body = ("\n".join(key_lines) + "\n").encode("utf-8")
         url = f"https://{args.host}/api/v1/supplier/{args.org_id}/inventory/{sku}/upload"
         resp = post_with_retry(

@@ -255,7 +255,7 @@ def main() -> int:
         if sku_id in done_uploads:
             upload_skip += 1
             continue
-        key_lines = [f"BANDAI-{sku_id}-{uuid4().hex[:16]}" for _ in range(count)]
+        key_lines = [f"BANDAI-{sku_id}-{uuid4().hex}" for _ in range(count)]
         body = "\n".join(key_lines) + "\n"
         idempotency = f"{args.idempotency_prefix}-upload-{sku_id}"
         prefix = f"{sku_id}: {count} keys [{idempotency}]"
