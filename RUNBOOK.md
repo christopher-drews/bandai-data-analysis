@@ -198,14 +198,20 @@ python level_1_extract_promo_history.py      # promo runs   → scenario promoti
 - **SRP** collapses consecutive same-price months into `[start_month, end_month]`
   runs; a run reaching the latest month gets a blank `end_month` (still active).
   June-2026: **316 runs over 184 SKUs**; 66 SKUs changed price ≥once; 181 open-ended.
-- **Promotions** collapse per `(product, reseller, discount)`, merge identical
-  Heybox+Sonkwo into `All`, and split boundary months at day 15/16 to avoid overlaps
-  LootVault rejects. June-2026: **1412 runs over 171 SKUs** (Heybox 532 / All 441 /
-  Sonkwo 438 / **Alibaba 1 — drop at scenario mapping**).
-  ⚠️ **7 "complex conflict — manual fix needed"** promo runs (overlaps the 15/16 split
-  can't resolve) on 3 products: `captain_tsubasa_rise_of_new_champions`,
-  `naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto`,
-  `naruto_shippuden_ultimate_ninja_storm_legacy`. Fix dates manually before upload.
+- **Promotions** use an **evidence-based duration model** (the report is monthly, so
+  in-month dates are inferred):
+  - *full month* — a discount is the only promo that month AND no non-promo sales →
+    whole month; consecutive full months of the same discount merge into one span.
+  - *partial* — non-promo sales coexisted → short window (`--default-days`, default
+    **14**). *stacked* — ≥2 discounts in a month → packed back-to-back, each
+    `min(default_days, month_days/K)` days.
+  - Partial/stacked windows are anchored at the month start; windows never overlap
+    within a (product, reseller) **by construction** (no more 15/16 boundary splits,
+    no "complex conflict" cases).
+  - Heybox+Sonkwo windows sharing (slug, discount, dates) collapse to `All`.
+  June-2026: **2365 windows / 171 SKUs** (basis: 1150 full, 740 partial, 475 stacked;
+  lengths 9–365 days). `basis` column records how each window was derived.
+  **Alibaba** promo rows still present — drop at scenario mapping.
 
 Sales extracts (separate leg):
 ```
@@ -215,29 +221,28 @@ python level_2_anonymize_sales_history.py    # → per-(paxCode,customer,month) 
 
 ### Phase 4 — Generate the scenario YAML  *(`level_3_build_scenario.py`)*
 
-Emits the scenario from the enriched SKU list. **SKU-scoped today** (orgs + SKUs,
-validated); SRP/promotions/relationships get layered in as Phase 3 extracts are
-re-pointed at the June data.
+Emits orgs + SKUs + SRP + promotions from the enriched SKU list and the Phase-3
+extracts.
 ```
 python level_3_build_scenario.py     # -> data/level_3_build_scenario/bandai-skus.yaml
 ```
-Current output: **3 orgs + all 172 SKUs** (131 with `pa_pax_code`; 41 emitted
-without one, awaiting curation — `pa_pax_code` is optional in SkuSpec). Validated
-offline:
+Current output (June-2026, validated): **3 orgs, 184 SKUs (136 with `pa_pax_code`),
+316 SRP windows, 1293 promotion campaigns**.
 ```
 (in lootvault) cargo run -r --bin lootvault_cli -- scenario validate \
   --file .../data/level_3_build_scenario/bandai-skus.yaml
-# -> "Scenario 'bandai-skus' is valid: 3 org(s), 172 sku(s), ..."
+# -> "valid: 3 org(s), 184 sku(s), ..., 1293 promotion(s), 0 sales block(s)"
 ```
-`steamId` is NOT emitted — `SkuSpec` uses `deny_unknown_fields`; the Steam ids stay
-in `skus_enriched.csv` for our own use.
-
-The full generator target (schema: `spec.rs`) — **hybrid build: no inventory, no
-sales in the scenario** (the live-API leg owns those):
-- `orgs`: bandai (supplier), heybox, sonkwo (resellers). ✅
-- `skus[]`: one per matched paxCode — `name`, `pa_pax_code`, stable `alias` ✅;
-  `srp[]` = **all** SRP windows from `product_srp_history.csv` (start/end + CNY
-  price) *(next)*; `cost[].percentage` = 70 (assumption); **`keys: 0`**.
+Mapping details:
+- `skus[]`: every SKU; `pa_pax_code` when known (omitted otherwise); `srp[]` = the
+  SKU's dated CNY windows (open-ended when `end_month` blank). `steamId` NOT emitted
+  (SkuSpec `deny_unknown_fields`); `cost` NOT emitted (no cost in report).
+- `promotions[]`: windows sharing (start_date, end_date, discount, reseller-scope)
+  grouped into one campaign over many SKUs. `Customer` → scope: All → all resellers
+  (field omitted); Heybox/Sonkwo → that reseller; **Alibaba dropped**. `discount_percentage`
+  = report fraction ×100. Name = `"{start} {scope} {pct}%"`.
+- **Hybrid**: no `keys`, no `sales` (live-API leg owns those). `pa_pax_code` optional,
+  so uncurated SKUs are still emitted (and can carry SRP/promotions).
 - `franchises` + `apply_franchises: true` (optional, mirrors existing scenario).
 - `relationships[]`: bandai→heybox, bandai→sonkwo — `authorize_skus: all`,
   `allowed_regions: [region-china]`, monthly `exchange_rates` (CNY→USD) for

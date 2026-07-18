@@ -1,26 +1,37 @@
-"""Extract per-(product, customer, promo) month ranges from the level_0 CSVs.
+"""Extract per-(product, reseller, promo) date windows from the level_0 CSVs.
 
-Walks every CSV in data/level_0_export_royalty_csvs/, pulls Product Name,
-Customer, and Promo Discount (OFF) for each row, normalizes the product
-names via ``normalize.normalize_name``, joins to the level_0_match_pax_codes
-output for ``paxCode`` and ``Customer Reference``, and collapses consecutive
-files with the same (product, customer, promo) into start/end month ranges.
+Walks every CSV in data/level_0_export_royalty_csvs/, and for each
+(product, reseller) per month reads the set of promo discounts (``Promo Discount
+(OFF)`` > 0) **and** whether there were non-promo sales that month (a row with no
+discount and Sales Units > 0). Product names are normalized and folded onto their
+canonical SKU slug (merged spelling variants), then joined to skus_enriched.csv
+for paxCode / Customer Reference.
 
-Older files (before 2025-07) have no Customer column; those rows are
-labelled ``All``. Aggregate rows (Customer = SUBTOTAL/TOTAL) and zero-promo
-rows are dropped.
+Duration model (the report is monthly, so exact in-month dates are inferred)
+---------------------------------------------------------------------------
+Per (product, reseller), each month a discount appears is classified:
+
+  * **full month** — that discount is the only promo that month AND there were no
+    non-promo sales. The discount is taken to cover the whole month; consecutive
+    full months of the same discount merge into one continuous span. This keeps
+    genuine long-running discounts intact.
+  * **partial** — non-promo sales coexisted, OR two or more discounts ran that
+    month. Evidence that the promo did not fill the month, so it gets a short
+    default window (``--default-days``, default 14). Multiple discounts in one
+    month are **packed** back-to-back — each gets ``min(default_days,
+    month_days / K)`` days for K discounts — so windows never overlap.
+
+Because partial windows are packed within their month and full spans are
+whole-month, the output has no overlapping ranges for a given (slug, reseller),
+so LootVault's no-overlap rule is satisfied by construction.
+
+Identical windows for both Heybox and Sonkwo (same slug, discount, dates) collapse
+into one Customer=All row.
 
 Output: data/level_1_extract_promo_history/product_promo_history.csv with columns
     Product Name, Normalized Name, Customer, Promo Discount,
-    paxCode, Customer Reference, start_date, end_date
-
-start_date/end_date are YYYY-MM-DD. By default they map to first-of-month /
-last-of-month. When two consecutive runs for the same (slug, customer) share
-a boundary month, that month is split: the earlier run ends on day 15, the
-later run starts on day 16, so LootVault sees non-overlapping ranges.
-
-Identical promotions (same slug, discount, dates) for both Heybox and Sonkwo
-are collapsed into a single Customer=All row.
+    paxCode, Customer Reference, start_date, end_date, basis
+``basis`` records how the window was derived: ``full`` / ``partial`` / ``stacked``.
 """
 
 from __future__ import annotations
@@ -28,7 +39,7 @@ from __future__ import annotations
 import argparse
 import calendar
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import pandas as pd
@@ -42,10 +53,11 @@ DEFAULT_OUTPUT = Path("data/level_1_extract_promo_history/product_promo_history.
 
 PROMO_COL_VARIANTS = ("Promo Discount\n(OFF)", "Promo Discount (OFF)")
 AGGREGATE_CUSTOMERS = {"SUBTOTAL", "TOTAL"}
+DEFAULT_PROMO_DAYS = 14
 
 OUTPUT_COLUMNS = [
     "Product Name", "Normalized Name", "Customer", "Promo Discount",
-    "paxCode", "Customer Reference", "start_date", "end_date",
+    "paxCode", "Customer Reference", "start_date", "end_date", "basis",
 ]
 
 
@@ -59,188 +71,136 @@ def month_last(ym: str) -> date:
     return date(y, m, calendar.monthrange(y, m)[1])
 
 
-def collapse_heybox_sonkwo(runs: pd.DataFrame) -> pd.DataFrame:
-    """Merge Heybox + Sonkwo rows with identical (slug, discount, dates) into one Customer=All row.
+def extract_file_promo_state(path: Path) -> pd.DataFrame:
+    """One row per (slug, customer, discount>0) with the month's promo context.
 
-    A pair is only collapsed when no *other* row for the same slug (any customer,
-    including a pre-existing All) overlaps the proposed date range. Otherwise the
-    collapse would create an All-vs-reseller overlap that LootVault rejects.
+    Carries ``has_nonpromo`` (a non-promo sale existed that month) and
+    ``n_discounts`` (distinct promo discounts that month) so the caller can tell
+    full-month from partial without re-reading the file.
     """
-    key = ["Normalized Name", "Promo Discount", "start_month", "end_month"]
-    grouped = (
-        runs.groupby(key, sort=False)["Customer"].agg(set).reset_index()
-    )
-    candidates = grouped[
-        grouped["Customer"].apply(lambda s: {"Heybox", "Sonkwo"}.issubset(s))
-    ][key]
-    if candidates.empty:
-        return runs
-
-    # Per-slug list of (start_date, end_date, customer, discount, start_month, end_month)
-    # for every row, used to test whether a candidate collide with anything else.
-    slug_rows: dict[str, list[tuple]] = {}
-    for _, r in runs.iterrows():
-        slug_rows.setdefault(r["Normalized Name"], []).append((
-            month_first(r["start_month"]), month_last(r["end_month"]),
-            r["Customer"], r["Promo Discount"],
-            r["start_month"], r["end_month"],
-        ))
-
-    safe_pairs: set[tuple] = set()
-    for _, c in candidates.iterrows():
-        slug, disc, sm, em = c["Normalized Name"], c["Promo Discount"], c["start_month"], c["end_month"]
-        c_start, c_end = month_first(sm), month_last(em)
-        overlaps_other = False
-        for r_start, r_end, r_cust, r_disc, r_sm, r_em in slug_rows[slug]:
-            # Skip the candidate's own (Heybox, Sonkwo) rows.
-            if (r_cust in {"Heybox", "Sonkwo"} and r_disc == disc
-                    and r_sm == sm and r_em == em):
-                continue
-            if c_start <= r_end and r_start <= c_end:
-                overlaps_other = True
-                print(
-                    f"  skip-collapse {slug} @ {disc} {sm}->{em}: would collide with "
-                    f"{r_cust} {r_disc} {r_sm}->{r_em}",
-                    file=sys.stderr,
-                )
-                break
-        if not overlaps_other:
-            safe_pairs.add((slug, disc, sm, em))
-
-    if not safe_pairs:
-        return runs
-
-    def is_safe_pair_row(r: pd.Series) -> bool:
-        return (
-            r["Customer"] in {"Heybox", "Sonkwo"}
-            and (
-                r["Normalized Name"], r["Promo Discount"],
-                r["start_month"], r["end_month"],
-            ) in safe_pairs
-        )
-
-    is_pair = runs.apply(is_safe_pair_row, axis=1)
-    pair_rows = runs[is_pair].drop_duplicates(subset=key).copy()
-    pair_rows["Customer"] = "All"
-    return pd.concat([runs[~is_pair], pair_rows], ignore_index=True)
-
-
-def to_dates_with_conflict_split(runs: pd.DataFrame) -> pd.DataFrame:
-    """Expand month columns to dates and split overlapping boundary months at 15/16."""
-    runs = runs.copy()
-    runs["start_date"] = runs["start_month"].map(month_first)
-    runs["end_date"] = runs["end_month"].map(month_last)
-    runs = runs.sort_values(
-        ["Normalized Name", "Customer", "start_date"]
-    ).reset_index(drop=True)
-
-    for _, group_idx in runs.groupby(
-        ["Normalized Name", "Customer"], sort=False
-    ).groups.items():
-        idx = list(group_idx)
-        for a, b in zip(idx, idx[1:]):
-            if runs.at[a, "end_date"] < runs.at[b, "start_date"]:
-                continue
-            conflict = runs.at[b, "start_date"]
-            y, m = conflict.year, conflict.month
-            mid, after = date(y, m, 15), date(y, m, 16)
-            if runs.at[a, "start_date"] > mid or runs.at[b, "end_date"] < after:
-                print(
-                    f"  warn: complex conflict for "
-                    f"{runs.at[a, 'Normalized Name']!r} / {runs.at[a, 'Customer']!r} "
-                    f"at {conflict.isoformat()} — manual fix needed",
-                    file=sys.stderr,
-                )
-                continue
-            runs.at[a, "end_date"] = mid
-            runs.at[b, "start_date"] = after
-
-    runs["start_date"] = runs["start_date"].map(lambda d: d.isoformat())
-    runs["end_date"] = runs["end_date"].map(lambda d: d.isoformat())
-    return runs.drop(columns=["start_month", "end_month"])
-
-
-def extract_file_promos(path: Path) -> pd.DataFrame:
-    """Per-row Product Name + Customer + Promo Discount from one level_0 CSV."""
     df = pd.read_csv(path)
     cols = {c.strip(): c for c in df.columns if isinstance(c, str)}
     pn = cols.get("Product Name")
     promo = next((cols[k] for k in PROMO_COL_VARIANTS if k in cols), None)
     cust = cols.get("Customer")
+    units = cols.get("Sales Units")
     if not (pn and promo):
-        return pd.DataFrame(columns=["Product Name", "Normalized Name", "Customer", "Promo Discount"])
+        return pd.DataFrame(columns=["Product Name", "Normalized Name", "Customer",
+                                     "discount", "has_nonpromo", "n_discounts"])
 
-    keep = [pn, promo] + ([cust] if cust else [])
-    sub = df[keep].copy()
-    rename = {pn: "Product Name", promo: "Promo Discount"}
-    if cust:
-        rename[cust] = "Customer"
-    sub = sub.rename(columns=rename)
-    if "Customer" not in sub.columns:
-        sub["Customer"] = "All"
-
-    sub["Product Name"] = sub["Product Name"].astype(str).str.strip()
-    sub["Customer"] = sub["Customer"].fillna("All").astype(str).str.strip()
+    sub = pd.DataFrame({
+        "Product Name": df[pn].astype(str).str.strip(),
+        "Customer": (df[cust].astype(str).str.strip() if cust else "All"),
+        "promo": pd.to_numeric(df[promo], errors="coerce").fillna(0.0),
+        # No Sales Units column (shouldn't happen) -> treat every row as a sale.
+        "units": (pd.to_numeric(df[units], errors="coerce").fillna(0) if units else 1),
+    })
+    sub["Customer"] = sub["Customer"].replace("", "All")
     sub = sub[sub["Product Name"].ne("") & sub["Product Name"].ne("nan")]
     sub = sub[~sub["Customer"].str.upper().isin(AGGREGATE_CUSTOMERS)]
-    sub["Promo Discount"] = pd.to_numeric(sub["Promo Discount"], errors="coerce")
-    sub = sub.dropna(subset=["Promo Discount"])
-    sub = sub[sub["Promo Discount"] > 0]
     sub["Normalized Name"] = sub["Product Name"].map(normalize_name)
     sub = sub[sub["Normalized Name"] != ""]
-    sub = sub.drop_duplicates(subset=["Normalized Name", "Customer", "Promo Discount"])
-    return sub[["Product Name", "Normalized Name", "Customer", "Promo Discount"]]
+
+    rows: list[dict] = []
+    for (slug, customer), g in sub.groupby(["Normalized Name", "Customer"]):
+        discounts = sorted({float(d) for d in g.loc[g["promo"] > 0, "promo"]})
+        if not discounts:
+            continue
+        has_nonpromo = bool(((g["promo"] == 0) & (g["units"] > 0)).any())
+        pname = g["Product Name"].iloc[0]
+        for d in discounts:
+            rows.append({
+                "Product Name": pname, "Normalized Name": slug, "Customer": customer,
+                "discount": d, "has_nonpromo": has_nonpromo, "n_discounts": len(discounts),
+            })
+    return pd.DataFrame(rows)
 
 
-def collapse_runs(per_period: pd.DataFrame, file_order: list[str]) -> pd.DataFrame:
-    """Collapse consecutive same-(slug, customer, promo) files into runs.
-
-    A gap in file coverage breaks the run.
-    """
+def build_windows(per_period: pd.DataFrame, file_order: list[str], default_days: int) -> pd.DataFrame:
+    """Turn per-period promo state into dated windows using the duration model."""
     file_idx = {s: i for i, s in enumerate(file_order)}
     per_period = per_period.copy()
     per_period["_idx"] = per_period["file"].map(file_idx)
-    group_keys = ["Normalized Name", "Customer", "Promo Discount"]
-    per_period = per_period.sort_values(group_keys + ["_idx"]).reset_index(drop=True)
 
-    runs: list[dict] = []
-    for (slug, customer, promo), grp in per_period.groupby(group_keys, sort=False):
-        grp = grp.sort_values("_idx")
-        run_start_month = run_end_month = None
-        prev_idx = None
-        product_name = None
-        for _, row in grp.iterrows():
-            if prev_idx is None:
-                run_start_month = row["start_month"]
-                run_end_month = row["end_month"]
-                prev_idx = row["_idx"]
-                product_name = row["Product Name"]
-                continue
-            if row["_idx"] == prev_idx + 1:
-                run_end_month = row["end_month"]
-            else:
-                runs.append({
-                    "Product Name": product_name,
-                    "Normalized Name": slug,
-                    "Customer": customer,
-                    "Promo Discount": promo,
-                    "start_month": run_start_month,
-                    "end_month": run_end_month,
-                })
-                run_start_month = row["start_month"]
-                run_end_month = row["end_month"]
-                product_name = row["Product Name"]
-            prev_idx = row["_idx"]
-        if prev_idx is not None:
-            runs.append({
-                "Product Name": product_name,
-                "Normalized Name": slug,
-                "Customer": customer,
-                "Promo Discount": promo,
-                "start_month": run_start_month,
-                "end_month": run_end_month,
+    out: list[dict] = []
+    for (slug, customer), g in per_period.groupby(["Normalized Name", "Customer"], sort=False):
+        # Reconstruct each period's discount set + partial flag.
+        periods: dict[int, dict] = {}
+        for _, r in g.iterrows():
+            p = periods.setdefault(int(r["_idx"]), {
+                "sm": r["start_month"], "em": r["end_month"],
+                "discounts": set(), "has_nonpromo": bool(r["has_nonpromo"]),
+                "product": r["Product Name"],
             })
-    return pd.DataFrame(runs)
+            p["discounts"].add(float(r["discount"]))
+
+        full_runs: dict[float, list[int]] = {}  # discount -> sorted list of full-month period idxs
+        for idx in sorted(periods):
+            p = periods[idx]
+            k = len(p["discounts"])
+            partial = p["has_nonpromo"] or k >= 2
+            if not partial:
+                (d,) = tuple(p["discounts"])
+                full_runs.setdefault(d, []).append(idx)
+                continue
+            # Partial: pack the k discounts sequentially within the period span.
+            span_days = (month_last(p["em"]) - month_first(p["sm"])).days + 1
+            length = min(default_days, span_days // k) if k else default_days
+            length = max(length, 1)
+            base = month_first(p["sm"])
+            for i, d in enumerate(sorted(p["discounts"])):
+                start = base + timedelta(days=i * length)
+                end = start + timedelta(days=length - 1)
+                out.append({
+                    "Product Name": p["product"], "Normalized Name": slug, "Customer": customer,
+                    "Promo Discount": d, "start_date": start, "end_date": end,
+                    "basis": "stacked" if k >= 2 else "partial",
+                })
+
+        # Merge consecutive full-month periods (same discount) into one span.
+        for d, idxs in full_runs.items():
+            run_sm = run_em = None
+            prev = None
+            for idx in sorted(idxs):
+                p = periods[idx]
+                if prev is None:
+                    run_sm, run_em, prev = p["sm"], p["em"], idx
+                elif idx == prev + 1:
+                    run_em, prev = p["em"], idx
+                else:
+                    out.append(_full_row(slug, customer, periods[prev]["product"], d, run_sm, run_em))
+                    run_sm, run_em, prev = p["sm"], p["em"], idx
+            if prev is not None:
+                out.append(_full_row(slug, customer, periods[prev]["product"], d, run_sm, run_em))
+
+    return pd.DataFrame(out)
+
+
+def _full_row(slug, customer, product, discount, sm, em) -> dict:
+    return {
+        "Product Name": product, "Normalized Name": slug, "Customer": customer,
+        "Promo Discount": discount, "start_date": month_first(sm), "end_date": month_last(em),
+        "basis": "full",
+    }
+
+
+def collapse_heybox_sonkwo(runs: pd.DataFrame) -> pd.DataFrame:
+    """Merge Heybox+Sonkwo rows sharing (slug, discount, dates) into one Customer=All row."""
+    key = ["Normalized Name", "Promo Discount", "start_date", "end_date"]
+    grp = runs.groupby(key, sort=False)["Customer"].agg(set).reset_index()
+    pairs = grp[grp["Customer"].apply(lambda s: {"Heybox", "Sonkwo"}.issubset(s))][key]
+    if pairs.empty:
+        return runs
+    pair_set = {tuple(r) for r in pairs.itertuples(index=False)}
+
+    def is_pair(r: pd.Series) -> bool:
+        return (r["Customer"] in {"Heybox", "Sonkwo"}
+                and (r["Normalized Name"], r["Promo Discount"], r["start_date"], r["end_date"]) in pair_set)
+
+    mask = runs.apply(is_pair, axis=1)
+    merged = runs[mask].drop_duplicates(subset=key).copy()
+    merged["Customer"] = "All"
+    return pd.concat([runs[~mask], merged], ignore_index=True)
 
 
 def main() -> int:
@@ -248,6 +208,8 @@ def main() -> int:
     parser.add_argument("--input-dir", default=DEFAULT_INPUT_DIR, type=Path)
     parser.add_argument("--pax-csv", default=DEFAULT_PAX_CSV, type=Path)
     parser.add_argument("--output", default=DEFAULT_OUTPUT, type=Path)
+    parser.add_argument("--default-days", default=DEFAULT_PROMO_DAYS, type=int,
+                        help="Window length for a partial/stacked promo (default 14).")
     args = parser.parse_args()
 
     pax_lookup = build_pax_lookup(args.pax_csv)
@@ -260,11 +222,10 @@ def main() -> int:
     parts: list[pd.DataFrame] = []
     for path in files:
         start, end = parse_period(path)
-        sub = extract_file_promos(path)
+        sub = extract_file_promo_state(path)
         if sub.empty:
             print(f"  skip {path.name!r}: no promo rows", file=sys.stderr)
             continue
-        # Fold merged spelling variants onto their canonical SKU slug.
         sub["Normalized Name"] = sub["Normalized Name"].map(lambda s: alias_map.get(s, s))
         sub["file"] = path.name
         sub["start_month"] = start
@@ -278,9 +239,8 @@ def main() -> int:
         return 0
 
     per_period = pd.concat(parts, ignore_index=True)
-    runs = collapse_runs(per_period, file_order)
+    runs = build_windows(per_period, file_order, args.default_days)
     runs = collapse_heybox_sonkwo(runs)
-    runs = to_dates_with_conflict_split(runs)
 
     # Canonical display name per slug: spelling from the most recent file.
     file_rank = {s: i for i, s in enumerate(file_order)}
@@ -290,13 +250,16 @@ def main() -> int:
         .drop_duplicates(subset=["Normalized Name"], keep="last")
         .set_index("Normalized Name")["Product Name"]
     )
-    runs["Product Name"] = runs["Normalized Name"].map(display_names)
+    runs["Product Name"] = runs["Normalized Name"].map(display_names).fillna(runs["Product Name"])
+
+    # Promo Discount as a fraction (e.g. 0.2); dates to ISO strings.
+    runs["Promo Discount"] = runs["Promo Discount"].map(lambda x: round(float(x), 6))
+    runs["start_date"] = runs["start_date"].map(lambda d: d.isoformat())
+    runs["end_date"] = runs["end_date"].map(lambda d: d.isoformat())
 
     runs["paxCode"] = runs["Normalized Name"].map(lambda s: pax_lookup.get(s, ("", ""))[0])
     runs["Customer Reference"] = runs["Normalized Name"].map(lambda s: pax_lookup.get(s, ("", ""))[1])
-
-    missing_mask = ~runs["Normalized Name"].isin(pax_lookup)
-    missing = runs.loc[missing_mask, "Product Name"]
+    missing = sorted(set(runs.loc[~runs["Normalized Name"].isin(pax_lookup), "Product Name"]))
 
     runs = runs[OUTPUT_COLUMNS].sort_values(
         ["Product Name", "Customer", "start_date", "Promo Discount"]
@@ -304,20 +267,13 @@ def main() -> int:
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     runs.to_csv(args.output, index=False)
-    print(
-        f"Wrote {args.output} ({len(runs)} promo runs across "
-        f"{runs['Normalized Name'].nunique()} products, "
-        f"{runs[['Normalized Name', 'Customer']].drop_duplicates().shape[0]} "
-        f"(product, customer) pairs)",
-        file=sys.stderr,
-    )
-
-    if not missing.empty:
-        unique_missing = sorted(set(missing))
-        print(f"\n{len(unique_missing)} product(s) had no PAX-lookup entry:", file=sys.stderr)
-        for name in unique_missing:
+    print(f"Wrote {args.output} ({len(runs)} promo windows across "
+          f"{runs['Normalized Name'].nunique()} products)", file=sys.stderr)
+    print("  basis:", runs["basis"].value_counts().to_dict(), file=sys.stderr)
+    if missing:
+        print(f"\n{len(missing)} product(s) had no PAX-lookup entry:", file=sys.stderr)
+        for name in missing:
             print(f"  - {name}", file=sys.stderr)
-
     return 0
 
 
