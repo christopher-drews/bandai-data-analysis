@@ -9,11 +9,11 @@ name: bandai-base
 
 bootstrap:
   superuser:
-    email: "admin@example.com"
-    password: "test123"
+    email: "christopher.drews@play-asia.com"
+    password: "test1234"
 
 orgs:
-  - { alias: bandai, name: "Bandai Namco", role: supplier }
+  - { alias: bandai, name: "Bandai Namco Entertainment", role: supplier }
   - { alias: heybox, name: "Heybox", role: reseller }
   - { alias: sonkwo, name: "Sonkwo", role: reseller }
 
