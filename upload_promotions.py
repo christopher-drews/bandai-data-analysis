@@ -1,7 +1,12 @@
 """Upload promotion runs from data/level_1_extract_promo_history/product_promo_history.csv into LootVault.
 
-For each row, POSTs to
-    /api/v1/supplier/{org_id}/catalog/{sku_id}/promotions
+For each row, POSTs a single-line promotion campaign to
+    /api/v1/supplier/{org_id}/promotions
+
+The campaign carries the shared ``name``/``startDate``/``endDate``; the SKU,
+discount, and reseller scope live on its one inline line (``LineSpec``), with
+the SKU targeted via ``scope.skuIds``. (The older per-SKU endpoint
+``/catalog/{sku_id}/promotions`` is now GET-only and returns 405 on POST.)
 
 Rows are joined to a LootVault SKU by normalizing the catalog item's
 ``name`` with ``normalize.normalize_name`` and matching it against the
@@ -152,11 +157,10 @@ def main() -> int:
             skipped += 1
             continue
 
-        body: dict = {
+        line: dict = {
             "discountPercentage": round(discount_percentage, 4),
-            "startDate": start_date,
-            "endDate": end_date,
             "currencies": [args.currency],
+            "scope": {"skuIds": [sku_id]},
         }
 
         scope = "all-resellers"
@@ -170,18 +174,27 @@ def main() -> int:
                 )
                 skipped += 1
                 continue
-            body["resellers"] = [reseller_id]
+            line["resellers"] = [reseller_id]
             scope = f"{customer}={reseller_id}"
 
+        reseller_label = customer if customer and customer != ALL_CUSTOMERS_TOKEN else "All"
+        name = f"{product} {start_date} -{round(discount_percentage, 2)}% [{reseller_label}]"
+        body: dict = {
+            "name": name,
+            "startDate": start_date,
+            "endDate": end_date,
+            "lines": [line],
+        }
+
         prefix = (
-            f"{slug} ({sku_id}) {body['discountPercentage']}% "
-            f"{body['startDate']}->{body['endDate']} [{scope}]"
+            f"{slug} ({sku_id}) {line['discountPercentage']}% "
+            f"{start_date}->{end_date} [{scope}]"
         )
         if args.dry_run:
             print(f"  [dry-run] POST {prefix}", file=sys.stderr)
             continue
 
-        url = f"https://{args.host}/api/v1/supplier/{args.org_id}/catalog/{sku_id}/promotions"
+        url = f"https://{args.host}/api/v1/supplier/{args.org_id}/promotions"
         resp = session.post(url, json=body, headers=headers, timeout=TIMEOUT_S)
         if resp.ok:
             print(f"  ok   {prefix}", file=sys.stderr)
