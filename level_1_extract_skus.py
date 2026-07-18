@@ -80,8 +80,10 @@ def load_observations(input_dir: Path) -> pd.DataFrame:
     """One row per (period, product, item number, customer) from the level_0 CSVs.
 
     ``period`` is the CSV basename (e.g. ``2026-06`` or ``2024-08_2024-09``).
-    Aggregate rows (Customer = SUBTOTAL/TOTAL) and blank product/item cells are
-    dropped. Item Number and Product Name are whitespace-stripped; the header
+    Aggregate rows (Customer = SUBTOTAL/TOTAL) and blank-product rows are dropped.
+    Blank Item Numbers are KEPT — a product with no Item Number (new/upcoming
+    titles) still becomes a SKU (with a blank Customer Reference), like the ``0``
+    case. Item Number and Product Name are whitespace-stripped; the header
     ``Item Number`` is matched after stripping its own trailing space.
     """
     files = sorted(input_dir.glob("*.csv"))
@@ -107,7 +109,7 @@ def load_observations(input_dir: Path) -> pd.DataFrame:
 
     obs = pd.concat(parts, ignore_index=True)
     obs = obs[~obs["customer"].isin(AGGREGATE_CUSTOMERS)]
-    obs = obs[(obs["product"] != "") & (obs["item_number"] != "")]
+    obs = obs[obs["product"] != ""]  # keep blank item_number rows (SKU survives)
     obs["slug"] = obs["product"].map(normalize_name)
     obs = obs[obs["slug"] != ""].reset_index(drop=True)
     return obs
@@ -146,7 +148,9 @@ def build_skus(
     coverage_by_slug: dict[str, pd.Series] = {}
     for slug, grp in obs.groupby("slug"):
         valid = grp[grp["item_number"].str.fullmatch(VALID_ITEM_NUMBER)]
-        malformed = sorted(set(grp["item_number"]) - set(valid["item_number"]))
+        # Blank ("") is "no Item Number in the report", not corruption — exclude it
+        # from the malformed set (only real junk like "0" is reported as malformed).
+        malformed = sorted(set(grp["item_number"]) - set(valid["item_number"]) - {""})
         cov = valid.groupby("item_number")["period"].nunique().sort_values(ascending=False)
         coverage_by_slug[slug] = cov
         pname = grp.loc[grp["period"] == grp["period"].max(), "product"].iloc[0]
@@ -156,8 +160,9 @@ def build_skus(
                                 "issue_type": "malformed_dropped", "detail": f"dropped {malformed}"})
         canonical[slug] = "" if cov.empty else cov.index[0]
         if cov.empty:
+            detail = f"malformed only: {malformed}" if malformed else "no Item Number in report"
             review_rows.append({"Normalized Name": slug, "Product Name": pname,
-                                "issue_type": "no_valid_item_number", "detail": f"all malformed: {malformed}"})
+                                "issue_type": "no_valid_item_number", "detail": detail})
         else:
             runner_up = cov.iloc[1:][cov.iloc[1:] >= COMPETING_MIN_PERIODS]
             if len(runner_up):

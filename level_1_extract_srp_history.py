@@ -21,7 +21,7 @@ from pathlib import Path
 import pandas as pd
 
 from normalize import normalize_name
-from pax_lookup import DEFAULT_PAX_CSV, build_pax_lookup
+from pax_lookup import DEFAULT_PAX_CSV, build_pax_lookup, build_slug_alias_map
 
 DEFAULT_INPUT_DIR = Path("data/level_0_export_royalty_csvs")
 DEFAULT_OUTPUT = Path("data/level_1_extract_srp_history/product_srp_history.csv")
@@ -119,7 +119,8 @@ def main() -> int:
     args = parser.parse_args()
 
     pax_lookup = build_pax_lookup(args.pax_csv)
-    print(f"Loaded {len(pax_lookup)} PAX-lookup entries", file=sys.stderr)
+    alias_map = build_slug_alias_map(args.pax_csv)
+    print(f"Loaded {len(pax_lookup)} PAX-lookup entries, {len(alias_map)} variant aliases", file=sys.stderr)
 
     files = sorted(args.input_dir.glob("*.csv"), key=lambda p: parse_period(p)[0])
     file_order = [p.name for p in files]
@@ -131,6 +132,9 @@ def main() -> int:
         if sub.empty:
             print(f"  skip {path.name!r}: no SRP rows", file=sys.stderr)
             continue
+        # Fold merged spelling variants onto their canonical SKU slug so a SKU's
+        # SRP history stays continuous across a rename.
+        sub["Normalized Name"] = sub["Normalized Name"].map(lambda s: alias_map.get(s, s))
         # If the same normalized product appears multiple times in one file,
         # keep the modal SRP and the first display name.
         sub = (

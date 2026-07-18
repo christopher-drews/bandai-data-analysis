@@ -12,25 +12,32 @@ name: bandai-skus
 
 bootstrap:
   superuser:
-    email: "christopher.drews@play-asia.com"
-    password: "test1234"
+    email: "admin@example.com"
+    password: "test123"
 
 orgs:
-  - { alias: bandai, name: "Bandai Namco Entertainment", role: supplier }
+  - { alias: bandai, name: "Bandai Namco", role: supplier }
   - { alias: heybox, name: "Heybox", role: reseller }
   - { alias: sonkwo, name: "Sonkwo", role: reseller }
 
 skus:
   - { supplier: bandai, alias: "hack_g_u_last_recode", name: ".hack//G.U. Last Recode", pa_pax_code: PAX0011204972 }
   - { supplier: bandai, alias: "ace_combat_7_skies_unknown", name: "ACE COMBAT 7: SKIES UNKNOWN", pa_pax_code: PAX0009836302 }
+  - { supplier: bandai, alias: "ace_combat_8_wings_of_theve", name: "ACE COMBAT 8: WINGS OF THEVE", pa_pax_code: PAX0015391392 }
+  - { supplier: bandai, alias: "ace_combat_8_wings_of_theve_deluxe", name: "ACE COMBAT 8: WINGS OF THEVE Digital Deluxe Edition" }
   - { supplier: bandai, alias: "ace_combat_7_skies_unknown_top_gun_maverick", name: "ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Edition", pa_pax_code: PAX0012537704 }
+  - { supplier: bandai, alias: "ace_combat_7_skies_unknown_top_gun_maverick_ultimate", name: "ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition" }
   - { supplier: bandai, alias: "armored_core_vi_fires_of_rubicon_deluxe", name: "ARMORED CORE VI FIRES OF RUBICON Deluxe Edition", pa_pax_code: PAX0013069260 }
   - { supplier: bandai, alias: "armored_core_vi_fires_of_rubicon", name: "ARMORED CORE VI FIRES OF RUBICON Standard Edition", pa_pax_code: PAX0013077488 }
   - { supplier: bandai, alias: "accel_world_vs_sword_art_online_deluxe", name: "Accel World VS. Sword Art Online Deluxe Edition", pa_pax_code: PAX0009526222 }
   - { supplier: bandai, alias: "black_clover_quartet_knights", name: "BLACK CLOVER: QUARTET KNIGHTS", pa_pax_code: PAX0009950542 }
   - { supplier: bandai, alias: "black_clover_quartet_knights_deluxe", name: "BLACK CLOVER: QUARTET KNIGHTS Deluxe Edition", pa_pax_code: PAX0009950610 }
   - { supplier: bandai, alias: "bleach_rebirth_of_souls", name: "BLEACH Rebirth of Souls", pa_pax_code: PAX0014038022 }
+  - { supplier: bandai, alias: "bleach_rebirth_of_souls_deluxe", name: "BLEACH Rebirth of Souls Deluxe Edition" }
+  - { supplier: bandai, alias: "bleach_rebirth_of_souls_ultimate", name: "BLEACH Rebirth of Souls Ultimate Edition" }
   - { supplier: bandai, alias: "baten_kaitos_i_ii_hd_remaster", name: "Baten Kaitos I & II HD Remaster", pa_pax_code: PAX0014235936 }
+  - { supplier: bandai, alias: "captain_tsubasa_2_world_fighters_deluxe", name: "CAPTAIN TSUBASA 2: WORLD FIGHTERS - Deluxe Edition" }
+  - { supplier: bandai, alias: "captain_tsubasa_2_world_fighters_ultimate", name: "CAPTAIN TSUBASA 2: WORLD FIGHTERS - Ultimate Edition" }
   - { supplier: bandai, alias: "code_vein", name: "CODE VEIN", pa_pax_code: PAX0010324338 }
   - { supplier: bandai, alias: "code_vein_deluxe", name: "CODE VEIN Deluxe Edition", pa_pax_code: PAX0011496930 }
   - { supplier: bandai, alias: "code_vein_ii", name: "CODE VEIN II", pa_pax_code: PAX0014842054 }
@@ -44,13 +51,19 @@ skus:
   - { supplier: bandai, alias: "dark_souls_iii_deluxe", name: "DARK SOULS III Deluxe Edition", pa_pax_code: PAX0009513030 }
   - { supplier: bandai, alias: "dark_souls_remastered", name: "DARK SOULS: REMASTERED", pa_pax_code: PAX0009575522 }
   - { supplier: bandai, alias: "dark_souls_ii_scholar_of_the_first_sin", name: "DARK SOULS™ II: Scholar of the First Sin", pa_pax_code: PAX0006971122 }
+  - { supplier: bandai, alias: "death_note_killer_within", name: "DEATH NOTE Killer Within" }
+  - { supplier: bandai, alias: "death_note_killer_within_deluxe", name: "DEATH NOTE Killer Within - Deluxe Edition" }
+  - { supplier: bandai, alias: "death_note_killer_within_special", name: "DEATH NOTE Killer Within Special Edition" }
   - { supplier: bandai, alias: "doraemon_story_of_seasons", name: "DORAEMON STORY OF SEASONS", pa_pax_code: PAX0010731760 }
   - { supplier: bandai, alias: "doraemon_story_of_seasons_friends_of_the_great_kingdom", name: "DORAEMON STORY OF SEASONS: Friends of the Great Kingdom", pa_pax_code: PAX0012561776 }
+  - { supplier: bandai, alias: "doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe", name: "DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition" }
   - { supplier: bandai, alias: "dragon_ball_fighterz", name: "DRAGON BALL FighterZ", pa_pax_code: PAX0009332320 }
   - { supplier: bandai, alias: "dragon_ball_fighterz_fighterz", name: "DRAGON BALL FighterZ - FighterZ Edition", pa_pax_code: PAX0009410826 }
   - { supplier: bandai, alias: "dragon_ball_fighterz_legendary", name: "DRAGON BALL FighterZ - Legendary Edition", pa_pax_code: PAX0013747526 }
   - { supplier: bandai, alias: "dragon_ball_xenoverse_2", name: "DRAGON BALL XENOVERSE 2", pa_pax_code: PAX0008452536 }
   - { supplier: bandai, alias: "dragon_ball_xenoverse_2_deluxe", name: "DRAGON BALL XENOVERSE 2 Deluxe Edition", pa_pax_code: PAX0012760472 }
+  - { supplier: bandai, alias: "dragon_ball_xenoverse_2_special", name: "DRAGON BALL XENOVERSE 2 Special Edition" }
+  - { supplier: bandai, alias: "dragon_ball_z_kakarot_master", name: "DRAGON BALL Z : KAKAROT - MASTER EDITION" }
   - { supplier: bandai, alias: "dragon_ball_z_kakarot", name: "DRAGON BALL Z: KAKAROT", pa_pax_code: PAX0010474210 }
   - { supplier: bandai, alias: "dragon_ball_z_kakarot_daima", name: "DRAGON BALL Z: KAKAROT - DAIMA EDITION", pa_pax_code: PAX0015502742 }
   - { supplier: bandai, alias: "dragon_ball_z_kakarot_deluxe", name: "DRAGON BALL Z: KAKAROT Deluxe Edition", pa_pax_code: PAX0010489986 }
@@ -67,6 +80,9 @@ skus:
   - { supplier: bandai, alias: "digimon_survive", name: "Digimon Survive", pa_pax_code: PAX0012413910 }
   - { supplier: bandai, alias: "digimon_world_next_order", name: "Digimon World: Next Order", pa_pax_code: PAX0012723344 }
   - { supplier: bandai, alias: "everybody_s_golf_hot_shots", name: "EVERYBODY'S GOLF HOT SHOTS", pa_pax_code: PAX0014836172 }
+  - { supplier: bandai, alias: "echoes_of_aincrad", name: "Echoes of Aincrad", pa_pax_code: PAX0015999822 }
+  - { supplier: bandai, alias: "echoes_of_aincrad_deluxe", name: "Echoes of Aincrad Deluxe Edition", pa_pax_code: PAX0016000162 }
+  - { supplier: bandai, alias: "echoes_of_aincrad_ultimate", name: "Echoes of Aincrad Ultimate Edition", pa_pax_code: PAX0016000264 }
   - { supplier: bandai, alias: "freedom_wars_remastered", name: "FREEDOM WARS Remastered", pa_pax_code: PAX0014175688 }
   - { supplier: bandai, alias: "god_eater_2_rage_burst", name: "GOD EATER 2 Rage Burst", pa_pax_code: PAX0009309268 }
   - { supplier: bandai, alias: "god_eater_3", name: "GOD EATER 3", pa_pax_code: PAX0009956560 }
@@ -91,8 +107,12 @@ skus:
   - { supplier: bandai, alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", name: "NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy", pa_pax_code: PAX0009772144 }
   - { supplier: bandai, alias: "naruto_to_boruto_shinobi_striker", name: "NARUTO TO BORUTO: SHINOBI STRIKER", pa_pax_code: PAX0009688844 }
   - { supplier: bandai, alias: "naruto_to_boruto_shinobi_striker_deluxe", name: "NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition", pa_pax_code: PAX0009966964 }
+  - { supplier: bandai, alias: "naruto_to_boruto_shinobi_striker_ultimate", name: "NARUTO TO BORUTO: SHINOBI STRIKER Ultimate Edition" }
   - { supplier: bandai, alias: "naruto_x_boruto_ultimate_ninja_storm_connections", name: "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS", pa_pax_code: PAX0013555324 }
+  - { supplier: bandai, alias: "naruto_x_boruto_ultimate_ninja_storm_connections_deluxe", name: "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Deluxe Edition" }
+  - { supplier: bandai, alias: "naruto_x_boruto_ultimate_ninja_storm_connections_ultimate", name: "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Ultimate Edition" }
   - { supplier: bandai, alias: "naruto_ultimate_ninja_storm", name: "NARUTO: Ultimate Ninja STORM", pa_pax_code: PAX0010567064 }
+  - { supplier: bandai, alias: "naruto_shippuden_ultimate_ninja_storm_3_eu_version", name: "Naruto Shippuden Ultimate Ninja Storm 3 - EU Version" }
   - { supplier: bandai, alias: "new_gundam_breaker", name: "New Gundam Breaker", pa_pax_code: PAX0009974784 }
   - { supplier: bandai, alias: "one_piece_burning_blood", name: "ONE PIECE BURNING BLOOD", pa_pax_code: PAX0009056410 }
   - { supplier: bandai, alias: "one_piece_burning_blood_gold", name: "ONE PIECE BURNING BLOOD GOLD Edition", pa_pax_code: PAX0010475706 }
@@ -102,32 +122,47 @@ skus:
   - { supplier: bandai, alias: "one_piece_world_seeker_deluxe", name: "ONE PIECE WORLD SEEKER Deluxe Edition", pa_pax_code: PAX0010423108 }
   - { supplier: bandai, alias: "one_piece_pirate_warriors_4", name: "ONE PIECE: PIRATE WARRIORS 4", pa_pax_code: PAX0010605960 }
   - { supplier: bandai, alias: "one_piece_pirate_warriors_4_deluxe", name: "ONE PIECE: PIRATE WARRIORS 4 Deluxe Edition", pa_pax_code: PAX0010640946 }
+  - { supplier: bandai, alias: "one_piece_pirate_warriors_4_legendary", name: "ONE PIECE: PIRATE WARRIORS 4 Legendary Edition" }
+  - { supplier: bandai, alias: "one_piece_pirate_warriors_4_ultimate", name: "ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition" }
   - { supplier: bandai, alias: "one_punch_man_a_hero_nobody_knows", name: "ONE PUNCH MAN: A HERO NOBODY KNOWS", pa_pax_code: PAX0010593278 }
   - { supplier: bandai, alias: "once_upon_a_katamari", name: "Once Upon A KATAMARI", pa_pax_code: PAX0014976150 }
+  - { supplier: bandai, alias: "once_upon_a_katamari_king_of_all_sounds", name: "Once Upon A KATAMARI - King of All Sounds Edition" }
   - { supplier: bandai, alias: "pac_man_mega_tunnel_battle_chomp_champs", name: "PAC-MAN Mega Tunnel Battle: Chomp Champs", pa_pax_code: PAX0013651816 }
+  - { supplier: bandai, alias: "pac_man_mega_tunnel_battle_chomp_champs_deluxe", name: "PAC-MAN Mega Tunnel Battle: Chomp Champs - Deluxe Edition" }
   - { supplier: bandai, alias: "pac_man_world_2_re_pac", name: "PAC-MAN WORLD 2 Re-PAC", pa_pax_code: PAX0014976422 }
+  - { supplier: bandai, alias: "pac_man_world_2_re_pac_deluxe", name: "PAC-MAN WORLD 2 Re-PAC Deluxe Edition" }
   - { supplier: bandai, alias: "patapon_1_2_replay", name: "PATAPON 1+2 REPLAY", pa_pax_code: PAX0014894210 }
   - { supplier: bandai, alias: "park_beyond", name: "Park Beyond", pa_pax_code: PAX0012897084 }
   - { supplier: bandai, alias: "sand_land", name: "SAND LAND", pa_pax_code: PAX0013449516 }
+  - { supplier: bandai, alias: "sand_land_deluxe", name: "SAND LAND Deluxe Edition" }
   - { supplier: bandai, alias: "scarlet_nexus", name: "SCARLET NEXUS", pa_pax_code: PAX0011642280 }
   - { supplier: bandai, alias: "scarlet_nexus_deluxe", name: "SCARLET NEXUS Deluxe Edition", pa_pax_code: PAX0011642246 }
+  - { supplier: bandai, alias: "scarlet_nexus_ultimate", name: "SCARLET NEXUS Ultimate Edition" }
   - { supplier: bandai, alias: "sd_gundam_battle_alliance", name: "SD GUNDAM BATTLE ALLIANCE", pa_pax_code: PAX0012417582 }
+  - { supplier: bandai, alias: "sd_gundam_battle_alliance_deluxe", name: "SD GUNDAM BATTLE ALLIANCE - Deluxe Edition" }
   - { supplier: bandai, alias: "sd_gundam_g_generation_cross_rays", name: "SD GUNDAM G GENERATION CROSS RAYS", pa_pax_code: PAX0011539804 }
+  - { supplier: bandai, alias: "sd_gundam_g_generation_cross_rays_platinum", name: "SD GUNDAM G GENERATION CROSS RAYS Platinum Edition" }
   - { supplier: bandai, alias: "soulcalibur_vi", name: "SOULCALIBUR VI", pa_pax_code: PAX0009799344 }
   - { supplier: bandai, alias: "soulcalibur_vi_deluxe", name: "SOULCALIBUR VI Deluxe Edition", pa_pax_code: PAX0009799650 }
   - { supplier: bandai, alias: "spy_anya_operation_memories", name: "SPY×ANYA: Operation Memories", pa_pax_code: PAX0013837558 }
+  - { supplier: bandai, alias: "spy_anya_operation_memories_deluxe", name: "SPY×ANYA: Operation Memories Deluxe Edition" }
   - { supplier: bandai, alias: "super_robot_wars_x", name: "SUPER ROBOT WARS X", pa_pax_code: PAX0011599848 }
   - { supplier: bandai, alias: "super_robot_wars_y", name: "SUPER ROBOT WARS Y", pa_pax_code: PAX0014733764 }
+  - { supplier: bandai, alias: "super_robot_wars_y_expansion_pack", name: "SUPER ROBOT WARS Y - Expansion Pack" }
   - { supplier: bandai, alias: "super_robot_wars_y_deluxe", name: "SUPER ROBOT WARS Y Deluxe Edition", pa_pax_code: PAX0014929502 }
   - { supplier: bandai, alias: "super_robot_wars_y_ultimate", name: "SUPER ROBOT WARS Y Ultimate Edition", pa_pax_code: PAX0014929434 }
   - { supplier: bandai, alias: "sword_art_online_alicization_lycoris", name: "SWORD ART ONLINE Alicization Lycoris", pa_pax_code: PAX0010781400 }
   - { supplier: bandai, alias: "sword_art_online_alicization_lycoris_deluxe", name: "SWORD ART ONLINE Alicization Lycoris Deluxe Edition", pa_pax_code: PAX0010797788 }
   - { supplier: bandai, alias: "sword_art_online_fractured_daydream", name: "SWORD ART ONLINE Fractured Daydream", pa_pax_code: PAX0013976312 }
+  - { supplier: bandai, alias: "sword_art_online_fractured_daydream_deluxe", name: "SWORD ART ONLINE Fractured Daydream Deluxe Edition" }
+  - { supplier: bandai, alias: "sword_art_online_fractured_daydream_premium", name: "SWORD ART ONLINE Fractured Daydream Premium Edition" }
   - { supplier: bandai, alias: "sword_art_online_last_recollection", name: "SWORD ART ONLINE Last Recollection", pa_pax_code: PAX0013159190 }
   - { supplier: bandai, alias: "sword_art_online_last_recollection_deluxe", name: "SWORD ART ONLINE Last Recollection Deluxe Edition", pa_pax_code: PAX0014008374 }
   - { supplier: bandai, alias: "synduality_echo_of_ada", name: "SYNDUALITY Echo of Ada", pa_pax_code: PAX0014079774 }
   - { supplier: bandai, alias: "synduality_echo_of_ada_deluxe", name: "SYNDUALITY Echo of Ada Deluxe Edition", pa_pax_code: PAX0015630684 }
+  - { supplier: bandai, alias: "synduality_echo_of_ada_ultimate", name: "SYNDUALITY Echo of Ada Ultimate Edition" }
   - { supplier: bandai, alias: "shadow_labyrinth", name: "Shadow Labyrinth", pa_pax_code: PAX0014732166 }
+  - { supplier: bandai, alias: "shadow_labyrinth_deluxe", name: "Shadow Labyrinth - Deluxe Edition" }
   - { supplier: bandai, alias: "super_robot_wars_30", name: "Super Robot Wars 30", pa_pax_code: PAX0011886978 }
   - { supplier: bandai, alias: "super_robot_wars_30_deluxe", name: "Super Robot Wars 30 Digital Deluxe Edition", pa_pax_code: PAX0011923630 }
   - { supplier: bandai, alias: "super_robot_wars_30_ultimate", name: "Super Robot Wars 30 Ultimate Edition", pa_pax_code: PAX0011934816 }
@@ -139,16 +174,34 @@ skus:
   - { supplier: bandai, alias: "tekken_7_originals", name: "TEKKEN 7 - Originals Edition", pa_pax_code: PAX0012530020 }
   - { supplier: bandai, alias: "tekken_8", name: "TEKKEN 8", pa_pax_code: PAX0013411368 }
   - { supplier: bandai, alias: "tekken_8_ultimate", name: "TEKKEN 8 - Ultimate Edition", pa_pax_code: PAX0013432958 }
+  - { supplier: bandai, alias: "tekken_8_advanced", name: "TEKKEN 8 Advanced Edition" }
   - { supplier: bandai, alias: "tekken_8_deluxe", name: "TEKKEN 8 Deluxe Edition", pa_pax_code: PAX0013432856 }
+  - { supplier: bandai, alias: "tekken_8_season_2_deluxe", name: "TEKKEN 8 Season 2 Deluxe Edition" }
+  - { supplier: bandai, alias: "tekken_8_season_2_ultimate", name: "TEKKEN 8 Season 2 Ultimate Edition" }
+  - { supplier: bandai, alias: "the_idolm_ster_starlit_season", name: "THE IDOLM@STER STARLIT SEASON" }
+  - { supplier: bandai, alias: "the_idolm_ster_starlit_season_deluxe", name: "THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition" }
+  - { supplier: bandai, alias: "taiko_no_tatsujin_rhythm_festival", name: "Taiko no Tatsujin: Rhythm Festival" }
+  - { supplier: bandai, alias: "taiko_no_tatsujin_rhythm_festival_the_setlist", name: "Taiko no Tatsujin: Rhythm Festival The Setlist Edition" }
   - { supplier: bandai, alias: "tales_of_arise", name: "Tales of Arise", pa_pax_code: PAX0011827716 }
+  - { supplier: bandai, alias: "tales_of_arise_beyond_the_dawn_deluxe", name: "Tales of Arise - Beyond the Dawn Deluxe Edition" }
+  - { supplier: bandai, alias: "tales_of_arise_beyond_the_dawn", name: "Tales of Arise - Beyond the Dawn Edition" }
   - { supplier: bandai, alias: "tales_of_arise_beyond_the_dawn_expansion", name: "Tales of Arise - Beyond the Dawn Expansion", pa_pax_code: PAX0013555222 }
+  - { supplier: bandai, alias: "tales_of_arise_beyond_the_dawn_ultimate", name: "Tales of Arise - Beyond the Dawn Ultimate Edition" }
+  - { supplier: bandai, alias: "tales_of_arise_beyond_the_dawn_premium", name: "Tales of Arise Beyond the Dawn Premium Edition" }
   - { supplier: bandai, alias: "tales_of_berseria", name: "Tales of Berseria", pa_pax_code: PAX0008665002 }
   - { supplier: bandai, alias: "tales_of_berseria_remastered", name: "Tales of Berseria Remastered", pa_pax_code: PAX0015323358 }
+  - { supplier: bandai, alias: "tales_of_berseria_remastered_deluxe", name: "Tales of Berseria Remastered Deluxe Edition" }
   - { supplier: bandai, alias: "tales_of_graces_f_remastered", name: "Tales of Graces f Remastered", pa_pax_code: PAX0014183542 }
+  - { supplier: bandai, alias: "tales_of_graces_f_remastered_deluxe", name: "Tales of Graces f Remastered Deluxe Edition" }
   - { supplier: bandai, alias: "tales_of_vesperia_definitive", name: "Tales of Vesperia: Definitive Edition", pa_pax_code: PAX0010367280 }
   - { supplier: bandai, alias: "tales_of_xillia_remastered", name: "Tales of Xillia Remastered", pa_pax_code: PAX0015083964 }
   - { supplier: bandai, alias: "tales_of_xillia_remastered_deluxe", name: "Tales of Xillia Remastered Deluxe Edition", pa_pax_code: PAX0015249510 }
   - { supplier: bandai, alias: "tales_of_zestiria", name: "Tales of Zestiria", pa_pax_code: PAX0008665036 }
   - { supplier: bandai, alias: "that_time_i_got_reincarnated_as_a_slime_isekai_chronicles", name: "That Time I Got Reincarnated as a Slime ISEKAI Chronicles", pa_pax_code: PAX0013924904 }
+  - { supplier: bandai, alias: "that_time_i_got_reincarnated_as_a_slime_isekai_chronicles_deluxe", name: "That Time I Got Reincarnated as a Slime ISEKAI Chronicles Deluxe Edition" }
+  - { supplier: bandai, alias: "the_blood_of_dawnwalker", name: "The Blood of Dawnwalker", pa_pax_code: PAX0014894142 }
+  - { supplier: bandai, alias: "the_blood_of_dawnwalker_eclipse", name: "The Blood of Dawnwalker Eclipse Edition" }
   - { supplier: bandai, alias: "towa_and_the_guardians_of_the_sacred_tree", name: "Towa and the Guardians of the Sacred Tree", pa_pax_code: PAX0014842190 }
+  - { supplier: bandai, alias: "towa_and_the_guardians_of_the_sacred_tree_deluxe", name: "Towa and the Guardians of the Sacred Tree Deluxe Edition" }
   - { supplier: bandai, alias: "we_love_katamari_reroll_royal_reverie", name: "We Love Katamari REROLL+ Royal Reverie", pa_pax_code: PAX0012872162 }
+  - { supplier: bandai, alias: "we_love_katamari_reroll_royal_reverie_special", name: "We Love Katamari REROLL+ Royal Reverie Special Edition" }

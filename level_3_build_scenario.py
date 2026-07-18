@@ -2,18 +2,18 @@
 
 Phase 4 (scoped to SKUs). Reads the enriched SKU list from
 data/level_2_enrich_pax_codes/skus_enriched.csv and emits a scenario the
-lootvault CLI can apply (``scenario apply``): the three partner orgs plus one SKU
-per row that has a paxCode.
+lootvault CLI can apply (``scenario apply``): the three partner orgs plus **every**
+SKU.
 
 Hybrid build (see RUNBOOK.md): this file carries **no keys and no sales** — the
 live-API leg owns inventory + sales. SRP, cost, promotions, and relationships are
 added by later phases; this step only stands up the catalog.
 
-Only SKUs with a non-empty ``paxCode`` are emitted — a SKU needs its ``pa_pax_code``
-to be resolvable downstream. Rows still awaiting curation (editions / unmatched)
-are skipped and reported. ``steamId`` is deliberately omitted: SkuSpec uses
-``deny_unknown_fields``, so an extra key would fail to parse; the Steam ids live in
-the enriched CSV for our own use.
+**All SKUs are emitted.** ``pa_pax_code`` is optional in SkuSpec, so a SKU still
+awaiting curation is written without one (it can be filled later via
+sku_paxcode_overrides.csv and regenerated). ``steamId`` is deliberately omitted:
+SkuSpec uses ``deny_unknown_fields``, so an extra key would fail to parse; the Steam
+ids live in the enriched CSV for our own use.
 
 Output: data/level_3_build_scenario/bandai-skus.yaml
 """
@@ -70,12 +70,15 @@ def build_yaml(skus: pd.DataFrame) -> str:
         )
     lines += ["", "skus:"]
     for _, r in skus.iterrows():
-        lines.append(
+        entry = (
             f"  - {{ supplier: {SUPPLIER['alias']}, "
             f"alias: {yq(r['Normalized Name'])}, "
-            f"name: {yq(r['Product Name'])}, "
-            f"pa_pax_code: {r['paxCode']} }}"
+            f"name: {yq(r['Product Name'])}"
         )
+        # pa_pax_code is optional; emit it only when the SKU has one.
+        if r["paxCode"]:
+            entry += f", pa_pax_code: {r['paxCode']}"
+        lines.append(entry + " }")
     return "\n".join(lines) + "\n"
 
 
@@ -86,19 +89,21 @@ def main() -> int:
     args = parser.parse_args()
 
     df = pd.read_csv(args.skus, dtype=str, keep_default_na=False)
-    with_pax = df[df["paxCode"] != ""].sort_values("Product Name").reset_index(drop=True)
-    skipped = df[df["paxCode"] == ""]
+    # Emit EVERY SKU (pa_pax_code is optional); sort for stable output.
+    all_skus = df.sort_values("Product Name").reset_index(drop=True)
+    with_pax = all_skus[all_skus["paxCode"] != ""]
 
     # Guard the invariants the scenario validator also enforces.
-    assert with_pax["Normalized Name"].is_unique, "SKU alias (Normalized Name) not unique"
-    assert with_pax["paxCode"].is_unique, "paxCode not unique among emitted SKUs"
+    assert all_skus["Normalized Name"].is_unique, "SKU alias (Normalized Name) not unique"
+    non_blank = all_skus.loc[all_skus["paxCode"] != "", "paxCode"]
+    assert non_blank.is_unique, "paxCode not unique among emitted SKUs"
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(build_yaml(with_pax), encoding="utf-8")
+    args.output.write_text(build_yaml(all_skus), encoding="utf-8")
 
     print(f"Wrote {args.output}", file=sys.stderr)
-    print(f"  orgs: {1 + len(RESELLERS)}  |  skus: {len(with_pax)}", file=sys.stderr)
-    print(f"  skipped (no paxCode, awaiting curation): {len(skipped)}", file=sys.stderr)
+    print(f"  orgs: {1 + len(RESELLERS)}  |  skus: {len(all_skus)}", file=sys.stderr)
+    print(f"  with pa_pax_code: {len(with_pax)}  |  without (awaiting curation): {len(all_skus) - len(with_pax)}", file=sys.stderr)
     return 0
 
 

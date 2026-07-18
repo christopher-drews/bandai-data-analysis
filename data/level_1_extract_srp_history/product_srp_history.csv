@@ -2,11 +2,14 @@ Product Name,Normalized Name,SRP,currency,start_month,end_month,paxCode,Customer
 .hack//G.U. Last Recode,hack_g_u_last_recode,278.0,CNY,2024-08,2025-04,PAX0011204972,E05367
 .hack//G.U. Last Recode,hack_g_u_last_recode,278.0,CNY,2025-06,,PAX0011204972,E05367
 ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,268.0,CNY,2024-08,,PAX0009836302,E03174
+ACE COMBAT 8: WINGS OF THEVE,ace_combat_8_wings_of_theve,298.0,CNY,2026-06,,PAX0015391392,
+ACE COMBAT 8: WINGS OF THEVE Digital Deluxe Edition,ace_combat_8_wings_of_theve_deluxe,398.0,CNY,2026-06,,,
 ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Edition,ace_combat_7_skies_unknown_top_gun_maverick,368.0,CNY,2024-08,,PAX0012537704,E05445
 ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,498.0,CNY,2024-08,,,E05444
 ARMORED CORE VI FIRES OF RUBICON Deluxe Edition,armored_core_vi_fires_of_rubicon_deluxe,348.0,CNY,2024-08,,PAX0013069260,E05838
-ARMORED CORE VI FIRES OF RUBICON Standard Edition,armored_core_vi_fires_of_rubicon,298.0,CNY,2024-08,,PAX0013073340,E05837
-Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,278.0,CNY,2024-08,,PAX0009526222,E02452
+ARMORED CORE VI FIRES OF RUBICON Standard Edition,armored_core_vi_fires_of_rubicon,298.0,CNY,2024-08,,PAX0013077488,E05837
+Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,278.0,CNY,2024-08,2026-05,PAX0009526222,E02452
+Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,138.0,CNY,2026-06,,PAX0009526222,E02452
 BLACK CLOVER: QUARTET KNIGHTS,black_clover_quartet_knights,268.0,CNY,2024-08,,PAX0009950542,E02895
 BLACK CLOVER: QUARTET KNIGHTS Deluxe Edition,black_clover_quartet_knights_deluxe,288.0,CNY,2024-08,,PAX0009950610,E02950
 BLEACH Rebirth of Souls,bleach_rebirth_of_souls,298.0,CNY,2025-03,,PAX0014038022,E06132
@@ -14,8 +17,10 @@ BLEACH Rebirth of Souls Deluxe Edition,bleach_rebirth_of_souls_deluxe,398.0,CNY,
 BLEACH Rebirth of Souls Ultimate Edition,bleach_rebirth_of_souls_ultimate,498.0,CNY,2025-03,,,E06691
 Baten Kaitos I & II HD Remaster,baten_kaitos_i_ii_hd_remaster,248.0,CNY,2024-12,2024-12,PAX0014235936,E06117
 Baten Kaitos I & II HD Remaster,baten_kaitos_i_ii_hd_remaster,248.0,CNY,2025-02,,PAX0014235936,E06117
+CAPTAIN TSUBASA 2: WORLD FIGHTERS - Deluxe Edition,captain_tsubasa_2_world_fighters_deluxe,348.0,CNY,2026-06,,,
+CAPTAIN TSUBASA 2: WORLD FIGHTERS - Ultimate Edition,captain_tsubasa_2_world_fighters_ultimate,398.0,CNY,2026-06,,,
 CODE VEIN,code_vein,268.0,CNY,2024-08,,PAX0010324338,E03009
-CODE VEIN Deluxe Edition,code_vein_deluxe,368.0,CNY,2024-08,,PAX0010361296,E03483
+CODE VEIN Deluxe Edition,code_vein_deluxe,368.0,CNY,2024-08,,PAX0011496930,E03483
 CODE VEIN II,code_vein_ii,268.0,CNY,2026-01,,PAX0014842054,L00239
 CODE VEIN II Deluxe Edition,code_vein_ii_deluxe,398.0,CNY,2026-01,,PAX0015167434,L00240
 CODE VEIN II Ultimate Edition,code_vein_ii_ultimate,468.0,CNY,2026-01,,PAX0015167570,L00241
@@ -69,18 +74,18 @@ Digimon World: Next Order,digimon_world_next_order,248.0,CNY,2024-08,2024-11,PAX
 Digimon World: Next Order,digimon_world_next_order,248.0,CNY,2025-01,2025-01,PAX0012723344,E04521
 Digimon World: Next Order,digimon_world_next_order,248.0,CNY,2025-03,2025-04,PAX0012723344,E04521
 Digimon World: Next Order,digimon_world_next_order,248.0,CNY,2025-06,,PAX0012723344,E04521
-EVERYBODY'S GOLF HOT SHOTS,everybody_s_golf_hot_shots,178.0,CNY,2025-09,,PAX0014836172,L00036
-Everybody's Golf: Hotshots,everybody_s_golf_hotshots,178.0,CNY,2025-07,,,
+EVERYBODY'S GOLF HOT SHOTS,everybody_s_golf_hot_shots,178.0,CNY,2025-07,,PAX0014836172,L00036
+Echoes of Aincrad,echoes_of_aincrad,268.0,CNY,2026-06,,PAX0015999822,
+Echoes of Aincrad Deluxe Edition,echoes_of_aincrad_deluxe,368.0,CNY,2026-06,,PAX0016000162,
+Echoes of Aincrad Ultimate Edition,echoes_of_aincrad_ultimate,498.0,CNY,2026-06,,PAX0016000264,
 FREEDOM WARS Remastered,freedom_wars_remastered,198.0,CNY,2025-07,,PAX0014175688,E06517
 GOD EATER 2 Rage Burst,god_eater_2_rage_burst,268.0,CNY,2024-08,2025-04,PAX0009309268,E05369
 GOD EATER 2 Rage Burst,god_eater_2_rage_burst,268.0,CNY,2025-06,,PAX0009309268,E05369
-GOD EATER 3,god_eater_3,268.0,CNY,2024-08,2024-09,PAX0009956560,E03177
-GOD EATER 3,god_eater_3,268.0,CNY,2024-12,2025-04,PAX0009956560,E03177
+GOD EATER 3,god_eater_3,268.0,CNY,2024-08,2025-04,PAX0009956560,E03177
 GOD EATER 3,god_eater_3,268.0,CNY,2025-06,,PAX0009956560,E03177
 GUNDAM BREAKER 4,gundam_breaker_4,298.0,CNY,2024-08,,PAX0013798832,E04524
 GUNDAM BREAKER 4 Deluxe Edition,gundam_breaker_4_deluxe,448.0,CNY,2024-08,,PAX0013986614,E06529
 GUNDAM BREAKER 4 Ultimate Edition,gundam_breaker_4_ultimate,498.0,CNY,2024-08,,PAX0013986716,E06530
-God Eaters 3,god_eaters_3,268.0,CNY,2024-10,2024-11,,
 JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,248.0,CNY,2024-08,2025-01,PAX0012435840,E03528
 JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,248.0,CNY,2025-03,2025-04,PAX0012435840,E03528
 JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,248.0,CNY,2025-06,,PAX0012435840,E03528
@@ -102,36 +107,37 @@ Little Nightmares III,little_nightmares_iii,182.28,CNY,2025-07,2025-09,PAX001347
 Little Nightmares III,little_nightmares_iii,178.0,CNY,2025-10,,PAX0013475322,E05707
 Little Nightmares III Deluxe Edition,little_nightmares_iii_deluxe,300.96,CNY,2025-07,2025-09,PAX0015081176,L00119
 Little Nightmares III Deluxe Edition,little_nightmares_iii_deluxe,268.0,CNY,2025-10,,PAX0015081176,L00119
+Little Nightmares VR: Altered Echoes,little_nightmares_vr_altered_echoes,118.0,CNY,2026-05,,PAX0015766480,L51736
 MOBILE SUIT GUNDAM SEED BATTLE DESTINY REMASTERED,mobile_suit_gundam_seed_battle_destiny_remastered,198.0,CNY,2025-05,,PAX0014731554,E06942
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,108.0,CNY,2024-08,2024-11,PAX0010567030,E05373
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,108.0,CNY,2025-03,2025-03,PAX0010567030,E05373
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,108.0,CNY,2025-06,,PAX0010567030,E05373
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4,98.0,CNY,2024-08,,PAX0007774372,E01592
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2024-08,2024-12,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2025-01,2025-02,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2025-03,2025-04,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2025-05,2025-06,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.0,CNY,2025-07,2025-07,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2025-08,2025-08,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2025-09,2025-09,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2025-10,2025-11,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2025-12,2026-02,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2026-03,2026-03,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2026-04,,PAX0009671674,E04555
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2024-08,2024-10,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2024-11,2024-11,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2024-12,2024-12,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2025-01,2025-02,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2025-03,2025-04,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2025-05,2025-06,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.0,CNY,2025-07,2025-07,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2025-08,2025-08,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2025-09,2025-09,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2025-10,2025-11,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2025-12,2026-01,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.4,CNY,2026-02,2026-02,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2026-03,2026-03,PAX0010114966,E05371
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2026-04,,PAX0010114966,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2024-08,2024-12,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2025-01,2025-02,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2025-03,2025-04,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2025-05,2025-06,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.0,CNY,2025-07,2025-07,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2025-08,2025-08,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2025-09,2025-09,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2025-10,2025-11,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2025-12,2026-02,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,360.0,CNY,2026-03,2026-03,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,266.4,CNY,2026-04,,PAX0011492170,E04555
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2024-08,2024-10,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2024-11,2024-11,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2024-12,2024-12,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2025-01,2025-02,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2025-03,2025-04,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2025-05,2025-06,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.0,CNY,2025-07,2025-07,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2025-08,2025-08,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2025-09,2025-09,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2025-10,2025-11,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2025-12,2026-01,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.4,CNY,2026-02,2026-02,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,684.0,CNY,2026-03,2026-03,PAX0015827680,E05371
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,376.2,CNY,2026-04,,PAX0015827680,E05371
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,217.08,CNY,2024-08,2024-11,PAX0009772144,E05387
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,324.0,CNY,2025-01,2025-01,PAX0009772144,E05387
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,217.08,CNY,2025-03,2025-04,PAX0009772144,E05387
@@ -139,7 +145,9 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_s
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,217.08,CNY,2025-08,2025-09,PAX0009772144,E05387
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,324.0,CNY,2025-10,2025-11,PAX0009772144,E05387
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,217.08,CNY,2025-12,2026-02,PAX0009772144,E05387
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,217.0,CNY,2026-03,,PAX0009772144,E05387
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,217.0,CNY,2026-03,2026-04,PAX0009772144,E05387
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,217.08,CNY,2026-05,2026-05,PAX0009772144,E05387
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,217.0,CNY,2026-06,,PAX0009772144,E05387
 NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,98.0,CNY,2024-08,2024-12,PAX0009688844,E02855
 NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,98.0,CNY,2025-02,,PAX0009688844,E02855
 NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_striker_deluxe,198.0,CNY,2024-08,2024-11,PAX0009966964,E02942
@@ -193,8 +201,10 @@ PAC-MAN Mega Tunnel Battle: Chomp Champs - Deluxe Edition,pac_man_mega_tunnel_ba
 PAC-MAN Mega Tunnel Battle: Chomp Champs - Deluxe Edition,pac_man_mega_tunnel_battle_chomp_champs_deluxe,148.0,CNY,2025-03,,,E06652
 PAC-MAN WORLD 2 Re-PAC,pac_man_world_2_re_pac,138.0,CNY,2025-09,2025-11,PAX0014976422,E06971
 PAC-MAN WORLD 2 Re-PAC,pac_man_world_2_re_pac,138.0,CNY,2026-03,2026-03,PAX0014976422,E06971
+PAC-MAN WORLD 2 Re-PAC,pac_man_world_2_re_pac,138.0,CNY,2026-05,,PAX0014976422,E06971
 PAC-MAN WORLD 2 Re-PAC Deluxe Edition,pac_man_world_2_re_pac_deluxe,178.0,CNY,2025-09,2025-10,,L00118
 PAC-MAN WORLD 2 Re-PAC Deluxe Edition,pac_man_world_2_re_pac_deluxe,178.0,CNY,2026-02,2026-03,,L00118
+PAC-MAN WORLD 2 Re-PAC Deluxe Edition,pac_man_world_2_re_pac_deluxe,178.0,CNY,2026-05,,,L00118
 PATAPON 1+2 REPLAY,patapon_1_2_replay,138.0,CNY,2025-07,,PAX0014894210,E06134
 Park Beyond,park_beyond,128.0,CNY,2024-08,2024-10,PAX0012897084,E04538
 Park Beyond,park_beyond,248.0,CNY,2024-11,2024-11,PAX0012897084,E04538
@@ -204,19 +214,13 @@ SAND LAND,sand_land,298.0,CNY,2025-03,,PAX0013449516,E06114
 SAND LAND Deluxe Edition,sand_land_deluxe,348.0,CNY,2024-08,2025-01,,E06272
 SAND LAND Deluxe Edition,sand_land_deluxe,348.0,CNY,2025-03,,,E06272
 SCARLET NEXUS,scarlet_nexus,328.0,CNY,2024-08,,PAX0011642280,E03557
-SCARLET NEXUS Deluxe,scarlet_nexus_deluxe,398.0,CNY,2024-08,,PAX0011642246,E04727
+SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,398.0,CNY,2024-08,,PAX0011642246,E04727
 SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,518.0,CNY,2024-08,,,E05643
 SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,348.0,CNY,2024-08,2025-01,PAX0012417582,E03559
 SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,348.0,CNY,2025-03,,PAX0012417582,E03559
 SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,498.0,CNY,2024-08,,,E05472
-SD GUNDAM G GENERATION CROSS RAY,sd_gundam_g_generation_cross_ray,198.0,CNY,2024-08,2024-11,,
-SD GUNDAM G GENERATION CROSS RAY,sd_gundam_g_generation_cross_ray,198.0,CNY,2025-12,2025-12,,
-SD GUNDAM G GENERATION CROSS RAY,sd_gundam_g_generation_cross_ray,198.0,CNY,2026-04,,,
-SD GUNDAM G GENERATION CROSS RAY Platinum Edition,sd_gundam_g_generation_cross_ray_platinum,298.0,CNY,2024-08,2024-09,,
-SD GUNDAM G GENERATION CROSS RAY Platinum Edition,sd_gundam_g_generation_cross_ray_platinum,298.0,CNY,2025-12,2025-12,,
-SD GUNDAM G GENERATION CROSS RAY Platinum Edition,sd_gundam_g_generation_cross_ray_platinum,298.0,CNY,2026-04,,,
-SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,198.0,CNY,2024-12,,PAX0011539804,E02985
-SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,298.0,CNY,2024-10,,,E06306
+SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,198.0,CNY,2024-08,,PAX0011539804,E02985
+SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,298.0,CNY,2024-08,,,E06306
 SOULCALIBUR VI,soulcalibur_vi,298.0,CNY,2024-08,,PAX0009799344,E02875
 SOULCALIBUR VI Deluxe Edition,soulcalibur_vi_deluxe,448.0,CNY,2024-08,2025-01,PAX0009799650,E03123
 SOULCALIBUR VI Deluxe Edition,soulcalibur_vi_deluxe,448.0,CNY,2025-03,,PAX0009799650,E03123
@@ -227,11 +231,12 @@ SPY×ANYA: Operation Memories Deluxe Edition,spy_anya_operation_memories_deluxe,
 SPY×ANYA: Operation Memories Deluxe Edition,spy_anya_operation_memories_deluxe,348.0,CNY,2025-06,,,E06533
 SUPER ROBOT WARS X,super_robot_wars_x,248.0,CNY,2024-08,,PAX0011599848,E03632
 SUPER ROBOT WARS Y,super_robot_wars_y,298.0,CNY,2025-07,,PAX0014733764,L00033
+SUPER ROBOT WARS Y - Expansion Pack,super_robot_wars_y_expansion_pack,178.0,CNY,2026-06,,,L52098
 SUPER ROBOT WARS Y Deluxe Edition,super_robot_wars_y_deluxe,498.0,CNY,2025-07,,PAX0014929502,L00034
 SUPER ROBOT WARS Y Ultimate Edition,super_robot_wars_y_ultimate,638.0,CNY,2025-07,,PAX0014929434,L00035
 SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,298.0,CNY,2024-08,2026-02,PAX0010781400,E03060
 SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,88.0,CNY,2026-03,,PAX0010781400,E03060
-SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,498.0,CNY,2024-08,,PAX0010797788,E03954
+SWORD ART ONLINE Alicization Lycoris Deluxe Edition,sword_art_online_alicization_lycoris_deluxe,498.0,CNY,2024-08,,PAX0010797788,E03954
 SWORD ART ONLINE Fractured Daydream,sword_art_online_fractured_daydream,298.0,CNY,2024-08,,PAX0013976312,E06120
 SWORD ART ONLINE Fractured Daydream Deluxe Edition,sword_art_online_fractured_daydream_deluxe,428.0,CNY,2024-08,,,E06531
 SWORD ART ONLINE Fractured Daydream Premium Edition,sword_art_online_fractured_daydream_premium,498.0,CNY,2024-08,,,E06532
@@ -257,30 +262,27 @@ Sword Art Online: Fatal Bullet - Complete Edition,sword_art_online_fatal_bullet_
 Sword Art Online: Fatal Bullet - Complete Edition,sword_art_online_fatal_bullet_complete,301.5,CNY,2025-07,2026-03,PAX0009957376,E03322
 Sword Art Online: Fatal Bullet - Complete Edition,sword_art_online_fatal_bullet_complete,146.0,CNY,2026-04,,PAX0009957376,E03322
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,278.0,CNY,2024-08,2025-01,PAX0009348402,E02310
-Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,278.0,CNY,2025-03,,PAX0009348402,E02310
+Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,278.0,CNY,2025-03,2026-04,PAX0009348402,E02310
+Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,118.0,CNY,2026-05,2026-05,PAX0009348402,E02310
+Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,278.0,CNY,2026-06,,PAX0009348402,E02310
 Sword Art Online: Lost Song,sword_art_online_lost_song,88.0,CNY,2024-08,,PAX0010120168,E05372
 TEKKEN 7,tekken_7,198.0,CNY,2024-08,,PAX0008666974,E02278
 TEKKEN 7 - Originals Edition,tekken_7_originals,398.0,CNY,2024-08,,PAX0012530020,E05647
 TEKKEN 8,tekken_8,348.0,CNY,2024-08,2025-05,PAX0013411368,E05700
 TEKKEN 8,tekken_8,248.0,CNY,2025-06,2026-03,PAX0013411368,E05700
 TEKKEN 8,tekken_8,168.0,CNY,2026-04,,PAX0013411368,E05700
-TEKKEN 8 - Ultimate Edition,tekken_8_ultimate,548.0,CNY,2024-08,2025-05,PAX0013420038,E06227
-TEKKEN 8 - Ultimate Edition,tekken_8_ultimate,548.0,CNY,2025-07,,PAX0013420038,E06227
+TEKKEN 8 - Ultimate Edition,tekken_8_ultimate,548.0,CNY,2024-08,2025-05,PAX0013432958,E06227
+TEKKEN 8 - Ultimate Edition,tekken_8_ultimate,548.0,CNY,2025-07,,PAX0013432958,E06227
 TEKKEN 8 Advanced Edition,tekken_8_advanced,298.0,CNY,2025-09,2026-03,,L00129
 TEKKEN 8 Advanced Edition,tekken_8_advanced,198.0,CNY,2026-04,,,L00129
-TEKKEN 8 Deluxe Edition,tekken_8_deluxe,498.0,CNY,2024-08,2025-05,PAX0013419936,E06226
-TEKKEN 8 Deluxe Edition,tekken_8_deluxe,498.0,CNY,2025-07,,PAX0013419936,E06226
+TEKKEN 8 Deluxe Edition,tekken_8_deluxe,498.0,CNY,2024-08,2025-05,PAX0013432856,E06226
+TEKKEN 8 Deluxe Edition,tekken_8_deluxe,498.0,CNY,2025-07,,PAX0013432856,E06226
 TEKKEN 8 Season 2 Deluxe Edition,tekken_8_season_2_deluxe,398.0,CNY,2025-07,2026-03,,L00111
 TEKKEN 8 Season 2 Deluxe Edition,tekken_8_season_2_deluxe,348.0,CNY,2026-04,,,L00111
-TEKKEN 8 Season 2 Ultimate Edition,tekken_8_season_2_ultimate,448.0,CNY,2025-07,,,L00112
-THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,348.0,CNY,2024-10,,,E03045
-THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,the_idolm_ster_starlit_season_deluxe,498.0,CNY,2024-10,,,E05096
-THE IDOLMASTER STARLIT SEASON,the_idolmaster_starlit_season,348.0,CNY,2024-08,2024-09,,
-THE IDOLMASTER STARLIT SEASON,the_idolmaster_starlit_season,348.0,CNY,2025-12,2025-12,,
-THE IDOLMASTER STARLIT SEASON,the_idolmaster_starlit_season,348.0,CNY,2026-04,,,
-THE IDOLMASTER STARLIT SEASON Deluxe Edition,the_idolmaster_starlit_season_deluxe,498.0,CNY,2024-08,2024-09,,
-THE IDOLMASTER STARLIT SEASON Deluxe Edition,the_idolmaster_starlit_season_deluxe,498.0,CNY,2025-12,2025-12,,
-THE IDOLMASTER STARLIT SEASON Deluxe Edition,the_idolmaster_starlit_season_deluxe,498.0,CNY,2026-04,,,
+TEKKEN 8 Season 2 Ultimate Edition,tekken_8_season_2_ultimate,448.0,CNY,2025-07,2026-04,,L00112
+TEKKEN 8 Season 2 Ultimate Edition,tekken_8_season_2_ultimate,398.0,CNY,2026-05,,,L00112
+THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,348.0,CNY,2024-08,,,E03045
+THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,the_idolm_ster_starlit_season_deluxe,498.0,CNY,2024-08,,,E05096
 Taiko no Tatsujin: Rhythm Festival,taiko_no_tatsujin_rhythm_festival,248.0,CNY,2024-11,,,E06129
 Taiko no Tatsujin: Rhythm Festival The Setlist Edition,taiko_no_tatsujin_rhythm_festival_the_setlist,348.0,CNY,2024-11,,,E06635
 Tales of Arise,tales_of_arise,198.0,CNY,2024-08,,PAX0011827716,E03024
@@ -289,6 +291,7 @@ Tales of Arise - Beyond the Dawn Edition,tales_of_arise_beyond_the_dawn,298.0,CN
 Tales of Arise - Beyond the Dawn Edition,tales_of_arise_beyond_the_dawn,168.0,CNY,2026-02,,,E06160
 Tales of Arise - Beyond the Dawn Expansion,tales_of_arise_beyond_the_dawn_expansion,178.0,CNY,2024-08,,PAX0013555222,E06168
 Tales of Arise - Beyond the Dawn Ultimate Edition,tales_of_arise_beyond_the_dawn_ultimate,498.0,CNY,2024-08,,,E06162
+Tales of Arise Beyond the Dawn Premium Edition,tales_of_arise_beyond_the_dawn_premium,248.0,CNY,2026-05,2026-05,,
 Tales of Berseria,tales_of_berseria,268.0,CNY,2024-08,2025-01,PAX0008665002,E02174
 Tales of Berseria,tales_of_berseria,268.0,CNY,2025-04,2025-04,PAX0008665002,E02174
 Tales of Berseria,tales_of_berseria,268.0,CNY,2025-06,,PAX0008665002,E02174
@@ -304,7 +307,9 @@ Tales of Zestiria,tales_of_zestiria,314.0,CNY,2024-08,,PAX0008665036,E01607
 That Time I Got Reincarnated as a Slime ISEKAI Chronicles,that_time_i_got_reincarnated_as_a_slime_isekai_chronicles,248.0,CNY,2024-08,2024-11,PAX0013924904,E03566
 That Time I Got Reincarnated as a Slime ISEKAI Chronicles,that_time_i_got_reincarnated_as_a_slime_isekai_chronicles,248.0,CNY,2025-03,2025-05,PAX0013924904,E03566
 That Time I Got Reincarnated as a Slime ISEKAI Chronicles,that_time_i_got_reincarnated_as_a_slime_isekai_chronicles,248.0,CNY,2025-07,,PAX0013924904,E03566
-That Time I Got Reincarnated as a Slime ISEKAI Chronicles Digital Deluxe Edition,that_time_i_got_reincarnated_as_a_slime_isekai_chronicles_deluxe,348.0,CNY,2024-08,,,E06534
+That Time I Got Reincarnated as a Slime ISEKAI Chronicles Deluxe Edition,that_time_i_got_reincarnated_as_a_slime_isekai_chronicles_deluxe,348.0,CNY,2024-08,,,E06534
+The Blood of Dawnwalker,the_blood_of_dawnwalker,298.0,CNY,2026-06,,PAX0014894142,
+The Blood of Dawnwalker Eclipse Edition,the_blood_of_dawnwalker_eclipse,368.0,CNY,2026-06,,,
 Towa and the Guardians of the Sacred Tree,towa_and_the_guardians_of_the_sacred_tree,148.0,CNY,2025-07,,PAX0014842190,E06936
 Towa and the Guardians of the Sacred Tree Deluxe Edition,towa_and_the_guardians_of_the_sacred_tree_deluxe,198.0,CNY,2025-07,,,L00117
 We Love Katamari REROLL+ Royal Reverie,we_love_katamari_reroll_royal_reverie,148.0,CNY,2024-08,2025-04,PAX0012872162,E05071

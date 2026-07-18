@@ -186,14 +186,32 @@ becomes `pax_match_status = manual`, wins over any auto-match, and is never blan
 by uniqueness enforcement. The template is never overwritten once it exists.
 Only paxCode-bearing SKUs become catalog entries downstream.
 
-### Phase 3 — Extracts  *(parallelizable)*
+### Phase 3 — SRP + promotion history  *(temporal)*
+Both read the level_0 CSVs and join paxCode/Customer Reference from
+`skus_enriched.csv` (via `pax_lookup`, now re-pointed there); both fold merged
+spelling variants onto their canonical SKU slug (`build_slug_alias_map`) so a SKU's
+history stays continuous across a rename.
 ```
 python level_1_extract_srp_history.py       # SRP windows  → scenario skus[].srp[]
 python level_1_extract_promo_history.py      # promo runs   → scenario promotions[]
+```
+- **SRP** collapses consecutive same-price months into `[start_month, end_month]`
+  runs; a run reaching the latest month gets a blank `end_month` (still active).
+  June-2026: **316 runs over 184 SKUs**; 66 SKUs changed price ≥once; 181 open-ended.
+- **Promotions** collapse per `(product, reseller, discount)`, merge identical
+  Heybox+Sonkwo into `All`, and split boundary months at day 15/16 to avoid overlaps
+  LootVault rejects. June-2026: **1412 runs over 171 SKUs** (Heybox 532 / All 441 /
+  Sonkwo 438 / **Alibaba 1 — drop at scenario mapping**).
+  ⚠️ **7 "complex conflict — manual fix needed"** promo runs (overlaps the 15/16 split
+  can't resolve) on 3 products: `captain_tsubasa_rise_of_new_champions`,
+  `naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto`,
+  `naruto_shippuden_ultimate_ninja_storm_legacy`. Fix dates manually before upload.
+
+Sales extracts (separate leg):
+```
 python level_1_extract_sales_history.py      # sales rows
 python level_2_anonymize_sales_history.py    # → per-(paxCode,customer,month) amounts
 ```
-(First three are independent; the level_2 step depends on the sales extract.)
 
 ### Phase 4 — Generate the scenario YAML  *(`level_3_build_scenario.py`)*
 
@@ -203,12 +221,13 @@ re-pointed at the June data.
 ```
 python level_3_build_scenario.py     # -> data/level_3_build_scenario/bandai-skus.yaml
 ```
-Current output: **3 orgs + 131 SKUs** (only paxCode-bearing rows; 41 skipped
-pending curation). Validated offline:
+Current output: **3 orgs + all 172 SKUs** (131 with `pa_pax_code`; 41 emitted
+without one, awaiting curation — `pa_pax_code` is optional in SkuSpec). Validated
+offline:
 ```
 (in lootvault) cargo run -r --bin lootvault_cli -- scenario validate \
   --file .../data/level_3_build_scenario/bandai-skus.yaml
-# -> "Scenario 'bandai-skus' is valid: 3 org(s), 131 sku(s), ..."
+# -> "Scenario 'bandai-skus' is valid: 3 org(s), 172 sku(s), ..."
 ```
 `steamId` is NOT emitted — `SkuSpec` uses `deny_unknown_fields`; the Steam ids stay
 in `skus_enriched.csv` for our own use.

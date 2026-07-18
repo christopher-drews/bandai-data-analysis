@@ -1,12 +1,17 @@
 Product Name,Normalized Name,Customer Reference,paxCode,related_pax_codes,pax_match_status,pax_review_reason
 ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,E05444,,PAX0012537704,base_game,duplicate_paxCode:PAX0012537704
+ACE COMBAT 8: WINGS OF THEVE Digital Deluxe Edition,ace_combat_8_wings_of_theve_deluxe,,,PAX0015391392,base_game,duplicate_paxCode:PAX0015391392
 BLEACH Rebirth of Souls Deluxe Edition,bleach_rebirth_of_souls_deluxe,E06690,,PAX0014038022,base_game,duplicate_paxCode:PAX0014038022
 BLEACH Rebirth of Souls Ultimate Edition,bleach_rebirth_of_souls_ultimate,E06691,,PAX0014038022,base_game,duplicate_paxCode:PAX0014038022
+CAPTAIN TSUBASA 2: WORLD FIGHTERS - Deluxe Edition,captain_tsubasa_2_world_fighters_deluxe,,,,unmatched,unmatched
+CAPTAIN TSUBASA 2: WORLD FIGHTERS - Ultimate Edition,captain_tsubasa_2_world_fighters_ultimate,,,,unmatched,unmatched
 DEATH NOTE Killer Within,death_note_killer_within,E06643,,,unmatched,unmatched
+DEATH NOTE Killer Within - Deluxe Edition,death_note_killer_within_deluxe,,,,unmatched,unmatched
 DEATH NOTE Killer Within Special Edition,death_note_killer_within_special,E06646,,,unmatched,unmatched
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe,E05733,,"PAX0012561776, PAX0014680690",base_game,duplicate_paxCode:PAX0012561776
 DRAGON BALL XENOVERSE 2 Special Edition,dragon_ball_xenoverse_2_special,E06308,,"PAX0008452536, PAX0011772466, PAX0012306674, PAX0010401620, PAX0010476862, PAX0010515724, PAX0011083252, PAX0013007346",base_game,duplicate_paxCode:PAX0008452536
 DRAGON BALL Z : KAKAROT - MASTER EDITION,dragon_ball_z_kakarot_master,L00114,,"PAX0010474210, PAX0010507598, PAX0011221632, PAX0011514134, PAX0012925712, PAX0015493800",base_game,duplicate_paxCode:PAX0010474210
+Naruto Shippuden Ultimate Ninja Storm 3 - EU Version,naruto_shippuden_ultimate_ninja_storm_3_eu_version,,,,unmatched,unmatched
 NARUTO TO BORUTO: SHINOBI STRIKER Ultimate Edition,naruto_to_boruto_shinobi_striker_ultimate,E06292,,"PAX0009688844, PAX0010585968, PAX0011909486, PAX0010146858, PAX0011078050, PAX0011555104",base_game,duplicate_paxCode:PAX0009688844
 NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Deluxe Edition,naruto_x_boruto_ultimate_ninja_storm_connections_deluxe,E06164,,PAX0013555324,base_game,duplicate_paxCode:PAX0013555324
 NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Ultimate Edition,naruto_x_boruto_ultimate_ninja_storm_connections_ultimate,E06165,,PAX0013555324,base_game,duplicate_paxCode:PAX0013555324
@@ -29,6 +34,7 @@ Taiko no Tatsujin: Rhythm Festival,taiko_no_tatsujin_rhythm_festival,E06129,,,un
 Taiko no Tatsujin: Rhythm Festival The Setlist Edition,taiko_no_tatsujin_rhythm_festival_the_setlist,E06635,,,unmatched,unmatched
 Tales of Arise - Beyond the Dawn Edition,tales_of_arise_beyond_the_dawn,E06160,,,unmatched,unmatched
 Tales of Arise - Beyond the Dawn Deluxe Edition,tales_of_arise_beyond_the_dawn_deluxe,E06161,,,unmatched,unmatched
+Tales of Arise Beyond the Dawn Premium Edition,tales_of_arise_beyond_the_dawn_premium,,,,unmatched,unmatched
 Tales of Arise - Beyond the Dawn Ultimate Edition,tales_of_arise_beyond_the_dawn_ultimate,E06162,,,unmatched,unmatched
 Tales of Berseria Remastered Deluxe Edition,tales_of_berseria_remastered_deluxe,L00439,,PAX0015323358,base_game,duplicate_paxCode:PAX0015323358
 Tales of Graces f Remastered Deluxe Edition,tales_of_graces_f_remastered_deluxe,E06689,,PAX0014183542,base_game,duplicate_paxCode:PAX0014183542
@@ -36,6 +42,7 @@ TEKKEN 8 Advanced Edition,tekken_8_advanced,L00129,,"PAX0013411368, PAX001341898
 TEKKEN 8 Season 2 Deluxe Edition,tekken_8_season_2_deluxe,L00111,,"PAX0013411368, PAX0013418984, PAX0013420072",base_game,duplicate_paxCode:PAX0013411368
 TEKKEN 8 Season 2 Ultimate Edition,tekken_8_season_2_ultimate,L00112,,"PAX0013411368, PAX0013418984, PAX0013420072",base_game,duplicate_paxCode:PAX0013411368
 That Time I Got Reincarnated as a Slime ISEKAI Chronicles Deluxe Edition,that_time_i_got_reincarnated_as_a_slime_isekai_chronicles_deluxe,E06534,,PAX0013924904,base_game,duplicate_paxCode:PAX0013924904
+The Blood of Dawnwalker Eclipse Edition,the_blood_of_dawnwalker_eclipse,,,,unmatched,unmatched
 THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,E03045,,,unmatched,unmatched
 THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,the_idolm_ster_starlit_season_deluxe,E05096,,,unmatched,unmatched
 Towa and the Guardians of the Sacred Tree Deluxe Edition,towa_and_the_guardians_of_the_sacred_tree_deluxe,L00117,,PAX0014842190,base_game,duplicate_paxCode:PAX0014842190
