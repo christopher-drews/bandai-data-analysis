@@ -23,6 +23,7 @@ skus:
     name: ".hack//G.U. Last Recode"
     pa_pax_code: PAX0011204972
     customer_reference: "E05367"
+    steam_app_id: "525480"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-04-30
@@ -36,6 +37,7 @@ skus:
     name: "ACE COMBAT 7: SKIES UNKNOWN"
     pa_pax_code: PAX0009836302
     customer_reference: "E03174"
+    steam_app_id: "502500"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -44,6 +46,7 @@ skus:
     alias: "ace_combat_8_wings_of_theve"
     name: "ACE COMBAT 8: WINGS OF THEVE"
     pa_pax_code: PAX0015391392
+    steam_app_id: "2288340"
     srp:
       - start_date: 2026-06-01
         prices:
@@ -51,6 +54,7 @@ skus:
   - supplier: bandai
     alias: "ace_combat_8_wings_of_theve_deluxe"
     name: "ACE COMBAT 8: WINGS OF THEVE Digital Deluxe Edition"
+    steam_app_id: "2288340"
     srp:
       - start_date: 2026-06-01
         prices:
@@ -86,6 +90,7 @@ skus:
     name: "ARMORED CORE VI FIRES OF RUBICON Standard Edition"
     pa_pax_code: PAX0013077488
     customer_reference: "E05837"
+    steam_app_id: "1888160"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -95,6 +100,7 @@ skus:
     name: "Accel World VS. Sword Art Online Deluxe Edition"
     pa_pax_code: PAX0009526222
     customer_reference: "E02452"
+    steam_app_id: "607880"
     srp:
       - start_date: 2024-08-01
         end_date: 2026-05-31
@@ -108,6 +114,7 @@ skus:
     name: "BLACK CLOVER: QUARTET KNIGHTS"
     pa_pax_code: PAX0009950542
     customer_reference: "E02895"
+    steam_app_id: "714080"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -126,6 +133,7 @@ skus:
     name: "BLEACH Rebirth of Souls"
     pa_pax_code: PAX0014038022
     customer_reference: "E06132"
+    steam_app_id: "1689620"
     srp:
       - start_date: 2025-03-01
         prices:
@@ -134,6 +142,7 @@ skus:
     alias: "bleach_rebirth_of_souls_deluxe"
     name: "BLEACH Rebirth of Souls Deluxe Edition"
     customer_reference: "E06690"
+    steam_app_id: "1689620"
     srp:
       - start_date: 2025-03-01
         prices:
@@ -142,6 +151,7 @@ skus:
     alias: "bleach_rebirth_of_souls_ultimate"
     name: "BLEACH Rebirth of Souls Ultimate Edition"
     customer_reference: "E06691"
+    steam_app_id: "1689620"
     srp:
       - start_date: 2025-03-01
         prices:
@@ -151,6 +161,7 @@ skus:
     name: "Baten Kaitos I & II HD Remaster"
     pa_pax_code: PAX0014235936
     customer_reference: "E06117"
+    steam_app_id: "2146170"
     srp:
       - start_date: 2024-12-01
         end_date: 2024-12-31
@@ -178,6 +189,7 @@ skus:
     name: "CODE VEIN"
     pa_pax_code: PAX0010324338
     customer_reference: "E03009"
+    steam_app_id: "678960"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -187,6 +199,7 @@ skus:
     name: "CODE VEIN Deluxe Edition"
     pa_pax_code: PAX0011496930
     customer_reference: "E03483"
+    steam_app_id: "678960"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -196,6 +209,7 @@ skus:
     name: "CODE VEIN II"
     pa_pax_code: PAX0014842054
     customer_reference: "L00239"
+    steam_app_id: "2362060"
     srp:
       - start_date: 2026-01-01
         prices:
@@ -205,6 +219,7 @@ skus:
     name: "CODE VEIN II Deluxe Edition"
     pa_pax_code: PAX0015167434
     customer_reference: "L00240"
+    steam_app_id: "2362060"
     srp:
       - start_date: 2026-01-01
         prices:
@@ -214,6 +229,7 @@ skus:
     name: "CODE VEIN II Ultimate Edition"
     pa_pax_code: PAX0015167570
     customer_reference: "L00241"
+    steam_app_id: "2362060"
     srp:
       - start_date: 2026-01-01
         prices:
@@ -223,6 +239,7 @@ skus:
     name: "Captain Tsubasa: Rise of New Champions"
     pa_pax_code: PAX0010849876
     customer_reference: "E03350"
+    steam_app_id: "1163550"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -250,6 +267,7 @@ skus:
     name: "DARK SOULS III"
     pa_pax_code: PAX0007785082
     customer_reference: "E01572"
+    steam_app_id: "374320"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -259,6 +277,7 @@ skus:
     name: "DARK SOULS III - Season Pass"
     pa_pax_code: PAX0007947534
     customer_reference: "E01893"
+    steam_app_id: "442010"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -277,6 +296,7 @@ skus:
     name: "DARK SOULS: REMASTERED"
     pa_pax_code: PAX0009575522
     customer_reference: "E02716"
+    steam_app_id: "570940"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -286,6 +306,7 @@ skus:
     name: "DARK SOULS™ II: Scholar of the First Sin"
     pa_pax_code: PAX0006971122
     customer_reference: "E01927"
+    steam_app_id: "335300"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-02-28
@@ -342,6 +363,7 @@ skus:
     name: "DORAEMON STORY OF SEASONS"
     pa_pax_code: PAX0010731760
     customer_reference: "E03496"
+    steam_app_id: "965230"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -351,6 +373,7 @@ skus:
     name: "DORAEMON STORY OF SEASONS: Friends of the Great Kingdom"
     pa_pax_code: PAX0012561776
     customer_reference: "E05019"
+    steam_app_id: "1492730"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -359,6 +382,7 @@ skus:
     alias: "doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe"
     name: "DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition"
     customer_reference: "E05733"
+    steam_app_id: "1492730"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -368,6 +392,7 @@ skus:
     name: "DRAGON BALL FighterZ"
     pa_pax_code: PAX0009332320
     customer_reference: "E02533"
+    steam_app_id: "678950"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -399,6 +424,7 @@ skus:
     name: "DRAGON BALL XENOVERSE 2"
     pa_pax_code: PAX0008452536
     customer_reference: "E02035"
+    steam_app_id: "454650"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -416,6 +442,7 @@ skus:
     alias: "dragon_ball_xenoverse_2_special"
     name: "DRAGON BALL XENOVERSE 2 Special Edition"
     customer_reference: "E06308"
+    steam_app_id: "454650"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -424,6 +451,7 @@ skus:
     alias: "dragon_ball_z_kakarot_master"
     name: "DRAGON BALL Z : KAKAROT - MASTER EDITION"
     customer_reference: "L00114"
+    steam_app_id: "851850"
     srp:
       - start_date: 2025-09-01
         prices:
@@ -433,6 +461,7 @@ skus:
     name: "DRAGON BALL Z: KAKAROT"
     pa_pax_code: PAX0010474210
     customer_reference: "E03005"
+    steam_app_id: "851850"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-07-31
@@ -446,6 +475,7 @@ skus:
     name: "DRAGON BALL Z: KAKAROT - DAIMA EDITION"
     pa_pax_code: PAX0015502742
     customer_reference: "L00113"
+    steam_app_id: "851850"
     srp:
       - start_date: 2025-09-01
         prices:
@@ -473,6 +503,7 @@ skus:
     name: "DRAGON BALL: Sparking! ZERO"
     pa_pax_code: PAX0013753680
     customer_reference: "E06127"
+    steam_app_id: "1790600"
     srp:
       - start_date: 2024-10-01
         prices:
@@ -482,6 +513,7 @@ skus:
     name: "DRAGON BALL: Sparking! ZERO Deluxe Edition"
     pa_pax_code: PAX0013795602
     customer_reference: "E06634"
+    steam_app_id: "1790600"
     srp:
       - start_date: 2024-10-01
         prices:
@@ -500,6 +532,7 @@ skus:
     name: "DRAGON BALL: THE BREAKERS"
     pa_pax_code: PAX0012529510
     customer_reference: "E05011"
+    steam_app_id: "1276760"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -513,6 +546,7 @@ skus:
     name: "DRAGON BALL: THE BREAKERS Special Edition"
     pa_pax_code: PAX0012527878
     customer_reference: "E05644"
+    steam_app_id: "1777260"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -526,6 +560,7 @@ skus:
     name: "Digimon Story Cyber Sleuth: Complete Edition"
     pa_pax_code: PAX0010995022
     customer_reference: "E05368"
+    steam_app_id: "1042550"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-04-30
@@ -539,6 +574,7 @@ skus:
     name: "Digimon Story Time Stranger"
     pa_pax_code: PAX0014830086
     customer_reference: "E03053"
+    steam_app_id: "1984270"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -548,6 +584,7 @@ skus:
     name: "Digimon Story Time Stranger Deluxe Edition"
     pa_pax_code: PAX0014928822
     customer_reference: "L00115"
+    steam_app_id: "1984270"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -557,6 +594,7 @@ skus:
     name: "Digimon Story Time Stranger Ultimate Edition"
     pa_pax_code: PAX0014928856
     customer_reference: "L00116"
+    steam_app_id: "1984270"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -566,6 +604,7 @@ skus:
     name: "Digimon Survive"
     pa_pax_code: PAX0012413910
     customer_reference: "E05471"
+    steam_app_id: "871980"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -575,6 +614,7 @@ skus:
     name: "Digimon World: Next Order"
     pa_pax_code: PAX0012723344
     customer_reference: "E04521"
+    steam_app_id: "1530160"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -596,6 +636,7 @@ skus:
     name: "EVERYBODY'S GOLF HOT SHOTS"
     pa_pax_code: PAX0014836172
     customer_reference: "L00036"
+    steam_app_id: "2730810"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -604,6 +645,7 @@ skus:
     alias: "echoes_of_aincrad"
     name: "Echoes of Aincrad"
     pa_pax_code: PAX0015999822
+    steam_app_id: "2244210"
     srp:
       - start_date: 2026-06-01
         prices:
@@ -612,6 +654,7 @@ skus:
     alias: "echoes_of_aincrad_deluxe"
     name: "Echoes of Aincrad Deluxe Edition"
     pa_pax_code: PAX0016000162
+    steam_app_id: "1531723"
     srp:
       - start_date: 2026-06-01
         prices:
@@ -620,6 +663,7 @@ skus:
     alias: "echoes_of_aincrad_ultimate"
     name: "Echoes of Aincrad Ultimate Edition"
     pa_pax_code: PAX0016000264
+    steam_app_id: "1531725"
     srp:
       - start_date: 2026-06-01
         prices:
@@ -629,6 +673,7 @@ skus:
     name: "FREEDOM WARS Remastered"
     pa_pax_code: PAX0014175688
     customer_reference: "E06517"
+    steam_app_id: "3004100"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -638,6 +683,7 @@ skus:
     name: "GOD EATER 2 Rage Burst"
     pa_pax_code: PAX0009309268
     customer_reference: "E05369"
+    steam_app_id: "438490"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-04-30
@@ -651,6 +697,7 @@ skus:
     name: "GOD EATER 3"
     pa_pax_code: PAX0009956560
     customer_reference: "E03177"
+    steam_app_id: "899440"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-04-30
@@ -664,6 +711,7 @@ skus:
     name: "GUNDAM BREAKER 4"
     pa_pax_code: PAX0013798832
     customer_reference: "E04524"
+    steam_app_id: "1672500"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -673,6 +721,7 @@ skus:
     name: "GUNDAM BREAKER 4 Deluxe Edition"
     pa_pax_code: PAX0013986614
     customer_reference: "E06529"
+    steam_app_id: "1047258"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -682,6 +731,7 @@ skus:
     name: "GUNDAM BREAKER 4 Ultimate Edition"
     pa_pax_code: PAX0013986716
     customer_reference: "E06530"
+    steam_app_id: "1047259"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -691,6 +741,7 @@ skus:
     name: "JoJo's Bizarre Adventure: All-Star Battle R"
     pa_pax_code: PAX0012435840
     customer_reference: "E03528"
+    steam_app_id: "1372110"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-01-31
@@ -730,6 +781,7 @@ skus:
     name: "Jujutsu Kaisen Cursed Clash"
     pa_pax_code: PAX0013412422
     customer_reference: "E05703"
+    steam_app_id: "1877020"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -781,6 +833,7 @@ skus:
     name: "Klonoa Phantasy Reverie Series"
     pa_pax_code: PAX0012403812
     customer_reference: "E04522"
+    steam_app_id: "1730680"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -794,6 +847,7 @@ skus:
     name: "Little Nightmares III"
     pa_pax_code: PAX0013475322
     customer_reference: "E05707"
+    steam_app_id: "1392860"
     srp:
       - start_date: 2025-07-01
         end_date: 2025-09-30
@@ -807,6 +861,7 @@ skus:
     name: "Little Nightmares III Deluxe Edition"
     pa_pax_code: PAX0015081176
     customer_reference: "L00119"
+    steam_app_id: "1392860"
     srp:
       - start_date: 2025-07-01
         end_date: 2025-09-30
@@ -820,6 +875,7 @@ skus:
     name: "Little Nightmares VR: Altered Echoes"
     pa_pax_code: PAX0015766480
     customer_reference: "L51736"
+    steam_app_id: "2482940"
     srp:
       - start_date: 2026-05-01
         prices:
@@ -829,6 +885,7 @@ skus:
     name: "MOBILE SUIT GUNDAM SEED BATTLE DESTINY REMASTERED"
     pa_pax_code: PAX0014731554
     customer_reference: "E06942"
+    steam_app_id: "1857740"
     srp:
       - start_date: 2025-05-01
         prices:
@@ -838,6 +895,7 @@ skus:
     name: "NARUTO SHIPPUDEN: Ultimate Ninja STORM 2"
     pa_pax_code: PAX0010567030
     customer_reference: "E05373"
+    steam_app_id: "543870"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -855,6 +913,7 @@ skus:
     name: "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4"
     pa_pax_code: PAX0007774372
     customer_reference: "E01592"
+    steam_app_id: "349040"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -864,6 +923,7 @@ skus:
     name: "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto"
     pa_pax_code: PAX0011492170
     customer_reference: "E04555"
+    steam_app_id: "495160"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-12-31
@@ -913,6 +973,7 @@ skus:
     name: "NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy"
     pa_pax_code: PAX0015827680
     customer_reference: "E05371"
+    steam_app_id: "4308"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-10-31
@@ -1019,6 +1080,7 @@ skus:
     name: "NARUTO TO BORUTO: SHINOBI STRIKER"
     pa_pax_code: PAX0009688844
     customer_reference: "E02855"
+    steam_app_id: "633230"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-12-31
@@ -1048,6 +1110,7 @@ skus:
     alias: "naruto_to_boruto_shinobi_striker_ultimate"
     name: "NARUTO TO BORUTO: SHINOBI STRIKER Ultimate Edition"
     customer_reference: "E06292"
+    steam_app_id: "633230"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -1061,6 +1124,7 @@ skus:
     name: "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS"
     pa_pax_code: PAX0013555324
     customer_reference: "E03049"
+    steam_app_id: "1020790"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1069,6 +1133,7 @@ skus:
     alias: "naruto_x_boruto_ultimate_ninja_storm_connections_deluxe"
     name: "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Deluxe Edition"
     customer_reference: "E06164"
+    steam_app_id: "1020790"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1077,6 +1142,7 @@ skus:
     alias: "naruto_x_boruto_ultimate_ninja_storm_connections_ultimate"
     name: "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Ultimate Edition"
     customer_reference: "E06165"
+    steam_app_id: "1020790"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1086,6 +1152,7 @@ skus:
     name: "NARUTO: Ultimate Ninja STORM"
     pa_pax_code: PAX0010567064
     customer_reference: "E05386"
+    steam_app_id: "495140"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -1106,6 +1173,7 @@ skus:
     name: "New Gundam Breaker"
     pa_pax_code: PAX0009974784
     customer_reference: "E02758"
+    steam_app_id: "738530"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -1127,6 +1195,7 @@ skus:
     name: "ONE PIECE BURNING BLOOD"
     pa_pax_code: PAX0009056410
     customer_reference: "E01970"
+    steam_app_id: "425220"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -1140,6 +1209,7 @@ skus:
     name: "ONE PIECE BURNING BLOOD GOLD Edition"
     pa_pax_code: PAX0010475706
     customer_reference: "E05642"
+    steam_app_id: "501580"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1149,6 +1219,7 @@ skus:
     name: "ONE PIECE ODYSSEY"
     pa_pax_code: PAX0012652998
     customer_reference: "E05083"
+    steam_app_id: "814000"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-01-31
@@ -1203,6 +1274,7 @@ skus:
     name: "ONE PIECE WORLD SEEKER"
     pa_pax_code: PAX0009975226
     customer_reference: "E03295"
+    steam_app_id: "755500"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -1237,6 +1309,7 @@ skus:
     name: "ONE PIECE: PIRATE WARRIORS 4"
     pa_pax_code: PAX0010605960
     customer_reference: "E02973"
+    steam_app_id: "1089090"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -1262,6 +1335,7 @@ skus:
     alias: "one_piece_pirate_warriors_4_legendary"
     name: "ONE PIECE: PIRATE WARRIORS 4 Legendary Edition"
     customer_reference: "L00434"
+    steam_app_id: "1089090"
     srp:
       - start_date: 2026-01-01
         prices:
@@ -1270,6 +1344,7 @@ skus:
     alias: "one_piece_pirate_warriors_4_ultimate"
     name: "ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition"
     customer_reference: "E06098"
+    steam_app_id: "1089090"
     srp:
       - start_date: 2024-08-01
         end_date: 2026-01-31
@@ -1283,6 +1358,7 @@ skus:
     name: "ONE PUNCH MAN: A HERO NOBODY KNOWS"
     pa_pax_code: PAX0010593278
     customer_reference: "E02997"
+    steam_app_id: "991560"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1292,6 +1368,7 @@ skus:
     name: "Once Upon A KATAMARI"
     pa_pax_code: PAX0014976150
     customer_reference: "E06970"
+    steam_app_id: "1880620"
     srp:
       - start_date: 2025-11-01
         prices:
@@ -1313,6 +1390,7 @@ skus:
     name: "PAC-MAN Mega Tunnel Battle: Chomp Champs"
     pa_pax_code: PAX0013651816
     customer_reference: "E06649"
+    steam_app_id: "2095950"
     srp:
       - start_date: 2025-03-01
         prices:
@@ -1321,6 +1399,7 @@ skus:
     alias: "pac_man_mega_tunnel_battle_chomp_champs_deluxe"
     name: "PAC-MAN Mega Tunnel Battle: Chomp Champs - Deluxe Edition"
     customer_reference: "E06652"
+    steam_app_id: "2095950"
     srp:
       - start_date: 2025-01-01
         end_date: 2025-01-31
@@ -1334,6 +1413,7 @@ skus:
     name: "PAC-MAN WORLD 2 Re-PAC"
     pa_pax_code: PAX0014976422
     customer_reference: "E06971"
+    steam_app_id: "2324290"
     srp:
       - start_date: 2025-09-01
         end_date: 2025-11-30
@@ -1350,6 +1430,7 @@ skus:
     alias: "pac_man_world_2_re_pac_deluxe"
     name: "PAC-MAN WORLD 2 Re-PAC Deluxe Edition"
     customer_reference: "L00118"
+    steam_app_id: "2324290"
     srp:
       - start_date: 2025-09-01
         end_date: 2025-10-31
@@ -1367,6 +1448,7 @@ skus:
     name: "PATAPON 1+2 REPLAY"
     pa_pax_code: PAX0014894210
     customer_reference: "E06134"
+    steam_app_id: "2383200"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -1376,6 +1458,7 @@ skus:
     name: "Park Beyond"
     pa_pax_code: PAX0012897084
     customer_reference: "E04538"
+    steam_app_id: "1368130"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-10-31
@@ -1393,6 +1476,7 @@ skus:
     name: "SAND LAND"
     pa_pax_code: PAX0013449516
     customer_reference: "E06114"
+    steam_app_id: "1979440"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-01-31
@@ -1405,6 +1489,7 @@ skus:
     alias: "sand_land_deluxe"
     name: "SAND LAND Deluxe Edition"
     customer_reference: "E06272"
+    steam_app_id: "1979440"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-01-31
@@ -1418,6 +1503,7 @@ skus:
     name: "SCARLET NEXUS"
     pa_pax_code: PAX0011642280
     customer_reference: "E03557"
+    steam_app_id: "775500"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1435,6 +1521,7 @@ skus:
     alias: "scarlet_nexus_ultimate"
     name: "SCARLET NEXUS Ultimate Edition"
     customer_reference: "E05643"
+    steam_app_id: "775500"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1444,6 +1531,7 @@ skus:
     name: "SD GUNDAM BATTLE ALLIANCE"
     pa_pax_code: PAX0012417582
     customer_reference: "E03559"
+    steam_app_id: "824550"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-01-31
@@ -1456,6 +1544,7 @@ skus:
     alias: "sd_gundam_battle_alliance_deluxe"
     name: "SD GUNDAM BATTLE ALLIANCE - Deluxe Edition"
     customer_reference: "E05472"
+    steam_app_id: "824550"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1465,6 +1554,7 @@ skus:
     name: "SD GUNDAM G GENERATION CROSS RAYS"
     pa_pax_code: PAX0011539804
     customer_reference: "E02985"
+    steam_app_id: "728530"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1473,6 +1563,7 @@ skus:
     alias: "sd_gundam_g_generation_cross_rays_platinum"
     name: "SD GUNDAM G GENERATION CROSS RAYS Platinum Edition"
     customer_reference: "E06306"
+    steam_app_id: "728530"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1482,6 +1573,7 @@ skus:
     name: "SOULCALIBUR VI"
     pa_pax_code: PAX0009799344
     customer_reference: "E02875"
+    steam_app_id: "544750"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1504,6 +1596,7 @@ skus:
     name: "SPY×ANYA: Operation Memories"
     pa_pax_code: PAX0013837558
     customer_reference: "E05697"
+    steam_app_id: "2170370"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-03-31
@@ -1533,6 +1626,7 @@ skus:
     name: "SUPER ROBOT WARS X"
     pa_pax_code: PAX0011599848
     customer_reference: "E03632"
+    steam_app_id: "1031510"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1542,6 +1636,7 @@ skus:
     name: "SUPER ROBOT WARS Y"
     pa_pax_code: PAX0014733764
     customer_reference: "L00033"
+    steam_app_id: "1909950"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -1559,6 +1654,7 @@ skus:
     name: "SUPER ROBOT WARS Y Deluxe Edition"
     pa_pax_code: PAX0014929502
     customer_reference: "L00034"
+    steam_app_id: "1909950"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -1568,6 +1664,7 @@ skus:
     name: "SUPER ROBOT WARS Y Ultimate Edition"
     pa_pax_code: PAX0014929434
     customer_reference: "L00035"
+    steam_app_id: "1909950"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -1577,6 +1674,7 @@ skus:
     name: "SWORD ART ONLINE Alicization Lycoris"
     pa_pax_code: PAX0010781400
     customer_reference: "E03060"
+    steam_app_id: "1009290"
     srp:
       - start_date: 2024-08-01
         end_date: 2026-02-28
@@ -1599,6 +1697,7 @@ skus:
     name: "SWORD ART ONLINE Fractured Daydream"
     pa_pax_code: PAX0013976312
     customer_reference: "E06120"
+    steam_app_id: "1858630"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1607,6 +1706,7 @@ skus:
     alias: "sword_art_online_fractured_daydream_deluxe"
     name: "SWORD ART ONLINE Fractured Daydream Deluxe Edition"
     customer_reference: "E06531"
+    steam_app_id: "1858630"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1615,6 +1715,7 @@ skus:
     alias: "sword_art_online_fractured_daydream_premium"
     name: "SWORD ART ONLINE Fractured Daydream Premium Edition"
     customer_reference: "E06532"
+    steam_app_id: "1858630"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1624,6 +1725,7 @@ skus:
     name: "SWORD ART ONLINE Last Recollection"
     pa_pax_code: PAX0013159190
     customer_reference: "E05687"
+    steam_app_id: "1566880"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-01-31
@@ -1646,6 +1748,7 @@ skus:
     name: "SYNDUALITY Echo of Ada"
     pa_pax_code: PAX0014079774
     customer_reference: "E05693"
+    steam_app_id: "1245480"
     srp:
       - start_date: 2025-01-01
         prices:
@@ -1655,6 +1758,7 @@ skus:
     name: "SYNDUALITY Echo of Ada Deluxe Edition"
     pa_pax_code: PAX0015630684
     customer_reference: "E06636"
+    steam_app_id: "1142685"
     srp:
       - start_date: 2024-12-01
         end_date: 2025-03-31
@@ -1667,6 +1771,7 @@ skus:
     alias: "synduality_echo_of_ada_ultimate"
     name: "SYNDUALITY Echo of Ada Ultimate Edition"
     customer_reference: "E06637"
+    steam_app_id: "1245480"
     srp:
       - start_date: 2025-01-01
         end_date: 2025-03-31
@@ -1680,6 +1785,7 @@ skus:
     name: "Shadow Labyrinth"
     pa_pax_code: PAX0014732166
     customer_reference: "E06972"
+    steam_app_id: "1859430"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -1688,6 +1794,7 @@ skus:
     alias: "shadow_labyrinth_deluxe"
     name: "Shadow Labyrinth - Deluxe Edition"
     customer_reference: "L00032"
+    steam_app_id: "1859430"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -1697,6 +1804,7 @@ skus:
     name: "Super Robot Wars 30"
     pa_pax_code: PAX0011886978
     customer_reference: "E04508"
+    steam_app_id: "898750"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1724,6 +1832,7 @@ skus:
     name: "Sword Art Online: Fatal Bullet"
     pa_pax_code: PAX0009455468
     customer_reference: "E02540"
+    steam_app_id: "626690"
     srp:
       - start_date: 2024-08-01
         end_date: 2026-03-31
@@ -1766,6 +1875,7 @@ skus:
     name: "Sword Art Online: Hollow Realization Deluxe Edition"
     pa_pax_code: PAX0009348402
     customer_reference: "E02310"
+    steam_app_id: "607890"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-01-31
@@ -1787,6 +1897,7 @@ skus:
     name: "Sword Art Online: Lost Song"
     pa_pax_code: PAX0010120168
     customer_reference: "E05372"
+    steam_app_id: "840720"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1796,6 +1907,7 @@ skus:
     name: "TEKKEN 7"
     pa_pax_code: PAX0008666974
     customer_reference: "E02278"
+    steam_app_id: "389730"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1814,6 +1926,7 @@ skus:
     name: "TEKKEN 8"
     pa_pax_code: PAX0013411368
     customer_reference: "E05700"
+    steam_app_id: "1778820"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-05-31
@@ -1831,6 +1944,7 @@ skus:
     name: "TEKKEN 8 - Ultimate Edition"
     pa_pax_code: PAX0013432958
     customer_reference: "E06227"
+    steam_app_id: "912715"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-05-31
@@ -1843,6 +1957,7 @@ skus:
     alias: "tekken_8_advanced"
     name: "TEKKEN 8 Advanced Edition"
     customer_reference: "L00129"
+    steam_app_id: "1778820"
     srp:
       - start_date: 2025-09-01
         end_date: 2026-03-31
@@ -1856,6 +1971,7 @@ skus:
     name: "TEKKEN 8 Deluxe Edition"
     pa_pax_code: PAX0013432856
     customer_reference: "E06226"
+    steam_app_id: "912717"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-05-31
@@ -1868,6 +1984,7 @@ skus:
     alias: "tekken_8_season_2_deluxe"
     name: "TEKKEN 8 Season 2 Deluxe Edition"
     customer_reference: "L00111"
+    steam_app_id: "1778820"
     srp:
       - start_date: 2025-07-01
         end_date: 2026-03-31
@@ -1880,6 +1997,7 @@ skus:
     alias: "tekken_8_season_2_ultimate"
     name: "TEKKEN 8 Season 2 Ultimate Edition"
     customer_reference: "L00112"
+    steam_app_id: "1778820"
     srp:
       - start_date: 2025-07-01
         end_date: 2026-04-30
@@ -1925,6 +2043,7 @@ skus:
     name: "Tales of Arise"
     pa_pax_code: PAX0011827716
     customer_reference: "E03024"
+    steam_app_id: "740130"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1954,6 +2073,7 @@ skus:
     name: "Tales of Arise - Beyond the Dawn Expansion"
     pa_pax_code: PAX0013555222
     customer_reference: "E06168"
+    steam_app_id: "2391960"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -1978,6 +2098,7 @@ skus:
     name: "Tales of Berseria"
     pa_pax_code: PAX0008665002
     customer_reference: "E02174"
+    steam_app_id: "429660"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-01-31
@@ -1995,6 +2116,7 @@ skus:
     name: "Tales of Berseria Remastered"
     pa_pax_code: PAX0015323358
     customer_reference: "L00438"
+    steam_app_id: "2331020"
     srp:
       - start_date: 2026-02-01
         prices:
@@ -2003,6 +2125,7 @@ skus:
     alias: "tales_of_berseria_remastered_deluxe"
     name: "Tales of Berseria Remastered Deluxe Edition"
     customer_reference: "L00439"
+    steam_app_id: "2331020"
     srp:
       - start_date: 2026-02-01
         prices:
@@ -2012,6 +2135,7 @@ skus:
     name: "Tales of Graces f Remastered"
     pa_pax_code: PAX0014183542
     customer_reference: "E06381"
+    steam_app_id: "2530980"
     srp:
       - start_date: 2025-01-01
         prices:
@@ -2020,6 +2144,7 @@ skus:
     alias: "tales_of_graces_f_remastered_deluxe"
     name: "Tales of Graces f Remastered Deluxe Edition"
     customer_reference: "E06689"
+    steam_app_id: "2530980"
     srp:
       - start_date: 2025-01-01
         end_date: 2025-04-30
@@ -2033,6 +2158,7 @@ skus:
     name: "Tales of Vesperia: Definitive Edition"
     pa_pax_code: PAX0010367280
     customer_reference: "E03191"
+    steam_app_id: "738540"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -2042,6 +2168,7 @@ skus:
     name: "Tales of Xillia Remastered"
     pa_pax_code: PAX0015083964
     customer_reference: "E06124"
+    steam_app_id: "2246670"
     srp:
       - start_date: 2025-10-01
         prices:
@@ -2051,6 +2178,7 @@ skus:
     name: "Tales of Xillia Remastered Deluxe Edition"
     pa_pax_code: PAX0015249510
     customer_reference: "L00231"
+    steam_app_id: "2246670"
     srp:
       - start_date: 2025-10-01
         prices:
@@ -2060,6 +2188,7 @@ skus:
     name: "Tales of Zestiria"
     pa_pax_code: PAX0008665036
     customer_reference: "E01607"
+    steam_app_id: "351970"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -2069,6 +2198,7 @@ skus:
     name: "That Time I Got Reincarnated as a Slime ISEKAI Chronicles"
     pa_pax_code: PAX0013924904
     customer_reference: "E03566"
+    steam_app_id: "2197680"
     srp:
       - start_date: 2024-08-01
         end_date: 2024-11-30
@@ -2085,6 +2215,7 @@ skus:
     alias: "that_time_i_got_reincarnated_as_a_slime_isekai_chronicles_deluxe"
     name: "That Time I Got Reincarnated as a Slime ISEKAI Chronicles Deluxe Edition"
     customer_reference: "E06534"
+    steam_app_id: "2197680"
     srp:
       - start_date: 2024-08-01
         prices:
@@ -2093,6 +2224,7 @@ skus:
     alias: "the_blood_of_dawnwalker"
     name: "The Blood of Dawnwalker"
     pa_pax_code: PAX0014894142
+    steam_app_id: "3751260"
     srp:
       - start_date: 2026-06-01
         prices:
@@ -2109,6 +2241,7 @@ skus:
     name: "Towa and the Guardians of the Sacred Tree"
     pa_pax_code: PAX0014842190
     customer_reference: "E06936"
+    steam_app_id: "1910090"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -2117,6 +2250,7 @@ skus:
     alias: "towa_and_the_guardians_of_the_sacred_tree_deluxe"
     name: "Towa and the Guardians of the Sacred Tree Deluxe Edition"
     customer_reference: "L00117"
+    steam_app_id: "1910090"
     srp:
       - start_date: 2025-07-01
         prices:
@@ -2126,6 +2260,7 @@ skus:
     name: "We Love Katamari REROLL+ Royal Reverie"
     pa_pax_code: PAX0012872162
     customer_reference: "E05071"
+    steam_app_id: "1730700"
     srp:
       - start_date: 2024-08-01
         end_date: 2025-04-30
@@ -2138,6 +2273,7 @@ skus:
     alias: "we_love_katamari_reroll_royal_reverie_special"
     name: "We Love Katamari REROLL+ Royal Reverie Special Edition"
     customer_reference: "E06305"
+    steam_app_id: "1730700"
     srp:
       - start_date: 2024-08-01
         prices:

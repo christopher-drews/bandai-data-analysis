@@ -241,11 +241,13 @@ Current output (June-2026, all validated):
 - **`bandai-promotions.yaml`** — 3 orgs, 184 SKUs, **1293 promotions**. Create-only, largest.
 Mapping details:
 - `skus[]`: every SKU; `pa_pax_code` when known; **`customer_reference`** = the
-  report Item Number (172 set, unique per supplier; 12 blank→omitted); `srp[]` = the
-  SKU's dated CNY windows (open-ended when `end_month` blank). `steamId` NOT emitted
-  (SkuSpec `deny_unknown_fields`); `cost` NOT emitted (no cost in report).
-  *(Requires the lootvault CLI change adding `customer_reference` to SkuSpec/ensure_sku;
-  set at SKU create time, so it lands via `bandai-base` which is applied first.)*
+  report Item Number (172 set, unique per supplier; 12 blank→omitted);
+  **`steam_app_id`** = catalog Steam App ID (136 set; `steam_type` defaults to `app`
+  in the CLI); `srp[]` = the SKU's dated CNY windows (open-ended when `end_month`
+  blank). `cost` NOT emitted (no cost in report).
+  *(Requires the lootvault CLI change adding `customer_reference` + `steam_app_id`/
+  `steam_type` to SkuSpec/ensure_sku — PR playasia/lootvault#1531. Both set at SKU
+  create time, so they land via `bandai-base`, applied first.)*
 - `relationships[]`: bandai→heybox and bandai→sonkwo. **`authorize_skus` is
   data-driven** — each reseller gets only the SKUs it actually carried (Heybox 170,
   Sonkwo 169; 159 shared). The 4 SKUs with no reseller-attributed data stay

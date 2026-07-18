@@ -193,6 +193,9 @@ def build_yaml(name: str, skus: pd.DataFrame, srp_by_slug: dict[str, list[dict]]
             lines.append(f"    pa_pax_code: {r['paxCode']}")
         if r["Customer Reference"]:
             lines.append(f"    customer_reference: {yq(r['Customer Reference'])}")
+        if r.get("steamId"):
+            # steam_type defaults to "app" in the CLI (these are Steam App IDs).
+            lines.append(f"    steam_app_id: {yq(r['steamId'])}")
         windows = srp_by_slug.get(r["Normalized Name"], []) if include_srp else []
         if windows:
             lines.append("    srp:")
