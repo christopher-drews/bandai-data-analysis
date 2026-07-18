@@ -7,15 +7,9 @@ tales_of_arise_beyond_the_dawn_ultimate,Tales of Arise - Beyond the Dawn Ultimat
 tekken_8_deluxe,TEKKEN 8 Deluxe Edition,competing_item_numbers,E06226=20p; E06227=3p
 digimon_story_time_stranger_deluxe,Digimon Story Time Stranger Deluxe Edition,malformed_dropped,dropped ['0']
 digimon_story_time_stranger_ultimate,Digimon Story Time Stranger Ultimate Edition,malformed_dropped,dropped ['0']
-everybody_s_golf_hot_shots,EVERYBODY'S GOLF HOT SHOTS,shared_item_number,L00036 also on: ['everybody_s_golf_hotshots']
-everybody_s_golf_hotshots,Everybody's Golf: Hotshots,shared_item_number,L00036 also on: ['everybody_s_golf_hot_shots']
-god_eater_3,GOD EATER 3,shared_item_number,E03177 also on: ['god_eaters_3']
-god_eaters_3,God Eaters 3,shared_item_number,E03177 also on: ['god_eater_3']
-sd_gundam_g_generation_cross_ray,SD GUNDAM G GENERATION CROSS RAY,shared_item_number,E02985 also on: ['sd_gundam_g_generation_cross_rays']
-sd_gundam_g_generation_cross_ray_platinum,SD GUNDAM G GENERATION CROSS RAY Platinum Edition,shared_item_number,E06306 also on: ['sd_gundam_g_generation_cross_rays_platinum']
-sd_gundam_g_generation_cross_rays,SD GUNDAM G GENERATION CROSS RAYS,shared_item_number,E02985 also on: ['sd_gundam_g_generation_cross_ray']
-sd_gundam_g_generation_cross_rays_platinum,SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,shared_item_number,E06306 also on: ['sd_gundam_g_generation_cross_ray_platinum']
-the_idolm_ster_starlit_season,THE IDOLM@STER STARLIT SEASON,shared_item_number,E03045 also on: ['the_idolmaster_starlit_season']
-the_idolm_ster_starlit_season_deluxe,THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,shared_item_number,E05096 also on: ['the_idolmaster_starlit_season_deluxe']
-the_idolmaster_starlit_season,THE IDOLMASTER STARLIT SEASON,shared_item_number,E03045 also on: ['the_idolm_ster_starlit_season']
-the_idolmaster_starlit_season_deluxe,THE IDOLMASTER STARLIT SEASON Deluxe Edition,shared_item_number,E05096 also on: ['the_idolm_ster_starlit_season_deluxe']
+everybody_s_golf_hot_shots,EVERYBODY'S GOLF HOT SHOTS,merged_variant,"L00036 merged ['everybody_s_golf_hot_shots', 'everybody_s_golf_hotshots'] -> ""EVERYBODY'S GOLF HOT SHOTS"""
+god_eater_3,GOD EATER 3,merged_variant,"E03177 merged ['god_eater_3', 'god_eaters_3'] -> 'GOD EATER 3'"
+sd_gundam_g_generation_cross_rays,SD GUNDAM G GENERATION CROSS RAYS,merged_variant,"E02985 merged ['sd_gundam_g_generation_cross_ray', 'sd_gundam_g_generation_cross_rays'] -> 'SD GUNDAM G GENERATION CROSS RAYS'"
+sd_gundam_g_generation_cross_rays_platinum,SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,merged_variant,"E06306 merged ['sd_gundam_g_generation_cross_ray_platinum', 'sd_gundam_g_generation_cross_rays_platinum'] -> 'SD GUNDAM G GENERATION CROSS RAYS Platinum Edition'"
+the_idolm_ster_starlit_season,THE IDOLM@STER STARLIT SEASON,merged_variant,"E03045 merged ['the_idolm_ster_starlit_season', 'the_idolmaster_starlit_season'] -> 'THE IDOLM@STER STARLIT SEASON'"
+the_idolm_ster_starlit_season_deluxe,THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,merged_variant,"E05096 merged ['the_idolm_ster_starlit_season_deluxe', 'the_idolmaster_starlit_season_deluxe'] -> 'THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition'"

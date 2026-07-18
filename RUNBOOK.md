@@ -120,18 +120,34 @@ python extract_bandai_products.py          # refresh bandai_products.csv from Pl
 🚦 **Gate:** `data/level_0_export_royalty_csvs/2026-05.csv` and `2026-06.csv` exist
 with sane row counts (~432 / ~482).
 
-### Phase 2 — PAX-code identification  *(accuracy-critical)*
-```
-python level_0_match_pax_codes.py --workbook "BNEPA_Royalty_Report_June 2026.xlsx"
-```
-Matches distinct products across **all** sheets (global, not per-month) via
-exact → fuzzy(≥0.95) → base-game fallback.
+### Phase 2 — Unique SKUs + PAX codes  *(accuracy-critical, split in two)*
 
-🚦 **Gate — the most important human review in the run.** Inspect the
-`match_status` counts. The two new months may add products that land in
-`distinct_only` (unmatched → **excluded from the catalog**) or trigger
-`related pax code` collisions. Resolve before generating the scenario; every
-SKU/SRP/promo downstream inherits this mapping.
+**Part 1 — `level_1_extract_skus.py`** (offline, deterministic; reads the level_0
+CSVs). Emits one row per unique SKU keyed on normalized Product Name, each with its
+**Customer Reference** (report `Item Number`) chosen by temporal dominance.
+```
+python level_1_extract_skus.py
+```
+Corruption handling (DECIDED: auto-fix + flag):
+- Valid codes = `^[EL]\d{5}$` (`E####`/`L####` families; both real). `0` and other
+  malformed values are dropped.
+- Per product, the code with the widest distinct-period coverage wins — auto-fixes
+  transient 1-month errors (e.g. `digimon_survive` → E05471, drops a 1-month E03730).
+- Two products sharing a canonical code are merged **only** if the code is in the
+  curated `data/known_name_variants.csv` (`item_number,correct_name,note`) — the
+  control surface for spelling merges (GOD EATER 3, SD GUNDAM …CROSS RAYS, THE
+  IDOLM@STER…). Unlisted shared codes stay flagged.
+- Outputs `data/level_1_extract_skus/{skus.csv, review.csv}`.
+
+🚦 **Gate — the most important human review in the run.** Read
+`review.csv` (`competing_item_numbers`, `shared_item_number`, `no_valid_item_number`).
+Confirm the auto-picked Customer References and add any new spelling variants to
+`known_name_variants.csv`, then re-run. Current June-2026 result: **172 unique SKUs,
+all with a valid Customer Reference; 6 flagged** (all clear-dominant competing codes).
+
+**Part 2 — `level_2_enrich_pax_codes.py`** (the API leg; TO BUILD). Takes the clean
+SKU list and enriches each with a `paxCode` from the Playasia catalog. ⚠️ The catalog
+endpoint currently returns **401** — auth needs resolving before this runs.
 
 ### Phase 3 — Extracts  *(parallelizable)*
 ```
