@@ -196,8 +196,10 @@ python level_1_extract_srp_history.py       # SRP windows  → scenario skus[].s
 python level_1_extract_promo_history.py      # promo runs   → scenario promotions[]
 ```
 - **SRP** collapses consecutive same-price months into `[start_month, end_month]`
-  runs; a run reaching the latest month gets a blank `end_month` (still active).
-  June-2026: **316 runs over 184 SKUs**; 66 SKUs changed price ≥once; 181 open-ended.
+  runs; **each SKU's most-recent run is left open-ended** (blank `end_month`) so its
+  last-known price is the active one — even a one-off/discontinued title keeps a
+  current price instead of showing empty. June-2026: **316 runs over 184 SKUs**;
+  66 SKUs changed price ≥once.
 - **Promotions** use an **evidence-based duration model** (the report is monthly, so
   in-month dates are inferred):
   - *full month* — a discount is the only promo that month AND no non-promo sales →
@@ -221,22 +223,34 @@ python level_2_anonymize_sales_history.py    # → per-(paxCode,customer,month) 
 
 ### Phase 4 — Generate the scenario YAML  *(`level_3_build_scenario.py`)*
 
-Emits orgs + SKUs + SRP + promotions from the enriched SKU list and the Phase-3
-extracts.
+Emits **three** scenario files from the enriched SKU list and the Phase-3 extracts.
+The split is by idempotency: SRP and promotions are **create-only** (re-applying
+duplicates them), so they're isolated from the idempotent base. All three share the
+orgs + SKU skeleton (needed to resolve aliases per run). **Apply order: base → srp
+→ promotions.**
 ```
-python level_3_build_scenario.py     # -> data/level_3_build_scenario/bandai-skus.yaml
+python level_3_build_scenario.py     # -> data/level_3_build_scenario/{bandai-base,bandai-srp,bandai-promotions}.yaml
 ```
-Current output (June-2026, validated): **3 orgs, 184 SKUs (136 with `pa_pax_code`),
-316 SRP windows, 1293 promotion campaigns**.
-```
-(in lootvault) cargo run -r --bin lootvault_cli -- scenario validate \
-  --file .../data/level_3_build_scenario/bandai-skus.yaml
-# -> "valid: 3 org(s), 184 sku(s), ..., 1293 promotion(s), 0 sales block(s)"
-```
+Depends on two more extracts: `level_1_extract_reseller_skus.py` (which reseller
+carried each SKU → per-reseller authorization) and `level_0_extract_exchange_rates.py`
+(monthly CNY→USD rates from the workbook).
+
+Current output (June-2026, all validated):
+- **`bandai-base.yaml`** — 3 orgs, 184 SKUs (136 with paxCode), **2 relationships**. Idempotent → safe to re-run.
+- **`bandai-srp.yaml`** — 3 orgs, 184 SKUs with **316 SRP windows**. Create-only.
+- **`bandai-promotions.yaml`** — 3 orgs, 184 SKUs, **1293 promotions**. Create-only, largest.
 Mapping details:
-- `skus[]`: every SKU; `pa_pax_code` when known (omitted otherwise); `srp[]` = the
+- `skus[]`: every SKU; `pa_pax_code` when known; **`customer_reference`** = the
+  report Item Number (172 set, unique per supplier; 12 blank→omitted); `srp[]` = the
   SKU's dated CNY windows (open-ended when `end_month` blank). `steamId` NOT emitted
   (SkuSpec `deny_unknown_fields`); `cost` NOT emitted (no cost in report).
+  *(Requires the lootvault CLI change adding `customer_reference` to SkuSpec/ensure_sku;
+  set at SKU create time, so it lands via `bandai-base` which is applied first.)*
+- `relationships[]`: bandai→heybox and bandai→sonkwo. **`authorize_skus` is
+  data-driven** — each reseller gets only the SKUs it actually carried (Heybox 170,
+  Sonkwo 169; 159 shared). The 4 SKUs with no reseller-attributed data stay
+  unauthorized. `allowed_regions: [region-china]`, `distribute_keys: 0` (hybrid),
+  and 23 monthly `exchange_rates` (CNY→USD, from the workbook's rate cell).
 - `promotions[]`: windows sharing (start_date, end_date, discount, reseller-scope)
   grouped into one campaign over many SKUs. `Customer` → scope: All → all resellers
   (field omitted); Heybox/Sonkwo → that reseller; **Alibaba dropped**. `discount_percentage`
@@ -260,10 +274,17 @@ Mapping details:
 Catches duplicate aliases, unknown org refs, empty SRP windows, bad roles.
 
 ### Phase 5 — Apply to the bandai env
-With the db-proxy tunnel open (Phase-0 prereq) and `org-platform` bootstrapped:
+Prereqs (cloud runner): `az login`; db-proxy tunnel up (`pa-cloud-infra ./scripts/db-proxy.sh bandai`,
+localhost:5448); `USER_KEY_SECRET` exported = the deployed bandai server's value.
+Apply the three files **in order** (base → srp → promotions):
 ```
-(in lootvault)  scripts/run_test_data_scenario_cloud.sh bandai scenarios/bandai-heybox-sonkwo.yaml
+(in lootvault)  scripts/run_test_data_scenario_cloud.sh bandai .../bandai-base.yaml
+                scripts/run_test_data_scenario_cloud.sh bandai .../bandai-srp.yaml
+                scripts/run_test_data_scenario_cloud.sh bandai .../bandai-promotions.yaml
 ```
+`base` is idempotent (re-run anytime). `srp`/`promotions` are create-only — apply once
+per fresh (or per-aspect-cleared) env, else they duplicate. `org-platform` is NOT
+required for this scenario (no keys/sales).
 Seeds, in order: superuser (DB-direct) → orgs → exchange rates → SKUs (SRP,
 cost) → franchises → relationships (authorize + FX + distribute keys) → supplier
 keys → promotions → sales reports.

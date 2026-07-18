@@ -152,10 +152,13 @@ def main() -> int:
     per_period = pd.concat(parts, ignore_index=True)
     runs = collapse_runs(per_period, file_order)
 
-    # An SRP whose run reaches the most recent month of data is still
-    # active — leave end_month blank so consumers treat it as open-ended.
-    latest_month = per_period["end_month"].max()
-    runs.loc[runs["end_month"] == latest_month, "end_month"] = ""
+    # Each SKU's most-recent SRP run is its current, still-active price — leave its
+    # end_month blank (open-ended). Earlier runs keep their end_month. This ensures
+    # every SKU has an active price even if it stopped appearing before the latest
+    # month (a one-off/discontinued title would otherwise show an empty current SRP).
+    runs = runs.sort_values(["Normalized Name", "start_month"])
+    last_idx = runs.groupby("Normalized Name").tail(1).index
+    runs.loc[last_idx, "end_month"] = ""
 
     # One canonical display name per slug — the spelling from the most recent
     # file that carried it.
