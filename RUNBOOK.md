@@ -145,6 +145,12 @@ Confirm the auto-picked Customer References and add any new spelling variants to
 `known_name_variants.csv`, then re-run. Current June-2026 result: **172 unique SKUs,
 all with a valid Customer Reference; 6 flagged** (all clear-dominant competing codes).
 
+Then run the completeness guard — asserts every origin product survived into
+`skus.csv` and reconciles dropped Item Numbers (exits non-zero on any real gap):
+```
+python check_skus_completeness.py
+```
+
 **Part 2 — `level_2_enrich_pax_codes.py`** (the API leg; TO BUILD). Takes the clean
 SKU list and enriches each with a `paxCode` from the Playasia catalog. ⚠️ The catalog
 endpoint currently returns **401** — auth needs resolving before this runs.
