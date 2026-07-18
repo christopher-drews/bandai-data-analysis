@@ -151,9 +151,40 @@ Then run the completeness guard — asserts every origin product survived into
 python check_skus_completeness.py
 ```
 
-**Part 2 — `level_2_enrich_pax_codes.py`** (the API leg; TO BUILD). Takes the clean
-SKU list and enriches each with a `paxCode` from the Playasia catalog. ⚠️ The catalog
-endpoint currently returns **401** — auth needs resolving before this runs.
+**Catalog fetch — `extract_bandai_products.py`** (network, run once). Dumps all
+Playasia Bandai products to `data/bandai_catalog.csv` (`paxCode, label, steamId`).
+The endpoint is behind Cloudflare; the allowlisted `playasia-auth/1.0` User-Agent
+(already set) returns 200. June-2026: **672 products** (403 with a steamId).
+```
+python extract_bandai_products.py
+```
+
+**Part 2 — `level_2_enrich_pax_codes.py`** (offline). Associates the clean SKU list
+(`skus.csv`) to `bandai_catalog.csv`, assigning each SKU a `paxCode` + `steamId` by
+name (exact → fuzzy ≥0.95 → base-game). The report carries no paxCode/steamId, so
+the join is name-based; steamId rides along as metadata (it's not unique in the
+catalog, so it can't be the join key).
+```
+python level_2_enrich_pax_codes.py
+```
+Outputs `data/level_2_enrich_pax_codes/{skus_enriched.csv, unmatched.csv}`.
+June-2026 result: **131/172 uniquely matched** (130 exact, 1 fuzzy). Flagged for
+manual curation (DECIDED — keep paxCode↔SKU 1:1, no auto-share):
+- **29 editions** (Deluxe/Ultimate/…) with no own catalog entry → base-game paxCode
+  is already taken, so left **blank**.
+- **12 unmatched** — ~8 resolvable (name/edition differences: Katamari, SPY×ANYA,
+  Tales …Beyond the Dawn "Expansion (DLC)"), ~4 true catalog gaps (IDOLM@STER
+  Starlit Season, Death Note Killer Within, Taiko Rhythm Festival, SRW Y Expansion).
+
+🚦 **Gate — manual matching.** `skus_enriched.csv` **always lists all 172 SKUs**
+(blank paxCode where unmatched). To resolve the 41, fill
+**`data/sku_paxcode_overrides.csv`** — seeded on first run with one row per blank
+SKU (`Normalized Name, Product Name, Customer Reference, reason, paxCode, steamId,
+note`). Enter a `paxCode` (steamId auto-fills from the catalog; or set it manually
+for true catalog gaps), then re-run `level_2_enrich_pax_codes.py`. A manual entry
+becomes `pax_match_status = manual`, wins over any auto-match, and is never blanked
+by uniqueness enforcement. The template is never overwritten once it exists.
+Only paxCode-bearing SKUs become catalog entries downstream.
 
 ### Phase 3 — Extracts  *(parallelizable)*
 ```
@@ -164,19 +195,30 @@ python level_2_anonymize_sales_history.py    # → per-(paxCode,customer,month) 
 ```
 (First three are independent; the level_2 step depends on the sales extract.)
 
-### Phase 4 — Generate the scenario YAML  *(NEW — to build)*
+### Phase 4 — Generate the scenario YAML  *(`level_3_build_scenario.py`)*
 
-> **Gap:** no generator exists yet. `scenarios/bandai-heybox-sonkwo.yaml` was a
-> one-off (through 2026-04, flattened SRP, invented promos). We need a
-> `level_3_build_scenario.py` (or similar) that emits an accurate YAML from the
-> extracts above.
+Emits the scenario from the enriched SKU list. **SKU-scoped today** (orgs + SKUs,
+validated); SRP/promotions/relationships get layered in as Phase 3 extracts are
+re-pointed at the June data.
+```
+python level_3_build_scenario.py     # -> data/level_3_build_scenario/bandai-skus.yaml
+```
+Current output: **3 orgs + 131 SKUs** (only paxCode-bearing rows; 41 skipped
+pending curation). Validated offline:
+```
+(in lootvault) cargo run -r --bin lootvault_cli -- scenario validate \
+  --file .../data/level_3_build_scenario/bandai-skus.yaml
+# -> "Scenario 'bandai-skus' is valid: 3 org(s), 131 sku(s), ..."
+```
+`steamId` is NOT emitted — `SkuSpec` uses `deny_unknown_fields`; the Steam ids stay
+in `skus_enriched.csv` for our own use.
 
-The generator must produce (schema: `spec.rs`) — **hybrid build: no inventory, no
+The full generator target (schema: `spec.rs`) — **hybrid build: no inventory, no
 sales in the scenario** (the live-API leg owns those):
-- `orgs`: bandai (supplier), heybox, sonkwo (resellers).
-- `skus[]`: one per matched paxCode — `name`, `pa_pax_code`, stable `alias`;
+- `orgs`: bandai (supplier), heybox, sonkwo (resellers). ✅
+- `skus[]`: one per matched paxCode — `name`, `pa_pax_code`, stable `alias` ✅;
   `srp[]` = **all** SRP windows from `product_srp_history.csv` (start/end + CNY
-  price); `cost[].percentage` = 70 (assumption); **`keys: 0`**.
+  price) *(next)*; `cost[].percentage` = 70 (assumption); **`keys: 0`**.
 - `franchises` + `apply_franchises: true` (optional, mirrors existing scenario).
 - `relationships[]`: bandai→heybox, bandai→sonkwo — `authorize_skus: all`,
   `allowed_regions: [region-china]`, monthly `exchange_rates` (CNY→USD) for
