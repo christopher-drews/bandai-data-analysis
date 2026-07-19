@@ -47,9 +47,10 @@ def login(session: requests.Session, base: str, email: str, password: str) -> st
     )
     if not resp.ok:
         raise SystemExit(f"Login failed ({resp.status_code}): {resp.text[:300]}")
-    token = resp.json().get("accessToken")
+    data = resp.json()
+    token = data.get("access_token") or data.get("accessToken")
     if not token:
-        raise SystemExit("Login response had no accessToken")
+        raise SystemExit(f"Login response had no access_token: {str(data)[:200]}")
     return token
 
 

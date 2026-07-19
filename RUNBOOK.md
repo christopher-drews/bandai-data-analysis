@@ -353,7 +353,24 @@ Steps:
    ```
    ⚠️ The committed map holds `lv.play-asia.com` ids — this overwrites it with the real
    bandai ids.
-3. Run the sales cycle. **Per-month lifecycle (recommended)** — `run_sales_by_month.sh`
+3. **Report the sales via the native CLI `testdata add-sales`** (the bandai server runs
+   current main; our `prepare_sales_upload.py`/`upload_sales_history.py` target the old
+   lv.play-asia API — `/lv-team/catalog`, `/inventory/`, `/reseller/…` — which 404s there).
+   `add-sales` ingests real per-(product×month) quantities+prices keyed by
+   `customer_reference`, auto-uploads+transfers any shortfall, and backdates the sales.
+   - Build its input: `python build_add_sales_csv.py` → `data/build_add_sales_csv/{heybox,sonkwo}.csv`
+     (columns `customer_reference,date,quantity,price,currency`; ~536k units, ~99.98% coverage
+     since customer_reference covers 172 SKUs vs paxCode's 133).
+   - Run per reseller (needs `--database-url` = the db-proxy tunnel URL for cref→SKU resolution):
+     ```
+     lootvault_cli --base-url https://bandai.knoxkee.io --email <e> --password <p> \
+       testdata add-sales --reseller-org-id org-pq6gycjv --file .../heybox.csv --database-url "$DATABASE_URL"
+     lootvault_cli ... testdata add-sales --reseller-org-id org-tapmbbts --file .../sonkwo.csv --database-url "$DATABASE_URL"
+     ```
+   - Then backdate keys/transfers (below). `add-sales` handles staging itself, so
+     `prepare_sales_upload.py` is not used on this path.
+
+   *(Legacy path, old API only — `run_sales_by_month.sh`
    loops the months ascending, doing the full circle each month (stage that month's keys →
    transfer → report → backdate to that month), so the inventory timeline is month-by-month,
    not bulk-upfront:
@@ -371,8 +388,8 @@ Steps:
    `2024-07-01` — is simpler but stages all inventory upfront on one date.)*
 
    `All`/`Alibaba` rows are skipped automatically (not in the bandai org map). Synthetic
-   keys back the sales (not real Steam keys). Everything is resumable + `--dry-run`.
-4. **Backdate mechanics** (invoked per-month by the driver, or once for the bulk path):
+   keys back the sales (not real Steam keys). Everything is resumable + `--dry-run`.)*
+4. **Backdate mechanics** (run after add-sales; or per-month by the legacy driver):
    the sale `date` is already backdated, but key `created_at` / transfer timestamps stamp
    `now()` (no API affordance), giving sold-before-created rows. `sql/backdate_bandai_inventory.sql`
    fixes it DB-direct over the db-proxy tunnel (DML app role): sets

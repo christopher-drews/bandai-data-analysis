@@ -57,9 +57,12 @@ class AuthSession(requests.Session):
         )
         if not resp.ok:
             raise SystemExit(f"Login failed ({resp.status_code}): {resp.text[:300]}")
-        token = resp.json().get("accessToken")
+        data = resp.json()
+        # The server returns snake_case `access_token` (matches the lootvault CLI's
+        # LoginResponse); accept camelCase too, just in case.
+        token = data.get("access_token") or data.get("accessToken")
         if not token:
-            raise SystemExit("Login response had no accessToken")
+            raise SystemExit(f"Login response had no access_token: {str(data)[:200]}")
         self._token = token
         print("  (re)authenticated", file=sys.stderr)
 
