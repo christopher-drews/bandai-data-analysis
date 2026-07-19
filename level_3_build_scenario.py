@@ -43,12 +43,12 @@ RESELLER_ALIAS = {"Heybox": "heybox", "Sonkwo": "sonkwo"}
 REGION = "region-china"
 
 SCENARIO_NAME = "bandai-skus"
-SUPPLIER = {"alias": "bandai", "name": "Bandai Namco", "role": "supplier"}
+SUPPLIER = {"alias": "bandai", "name": "Bandai Namco Entertainment", "role": "supplier"}
 RESELLERS = [
     {"alias": "heybox", "name": "Heybox", "role": "reseller"},
     {"alias": "sonkwo", "name": "Sonkwo", "role": "reseller"},
 ]
-BOOTSTRAP = {"email": "admin@example.com", "password": "test123"}
+BOOTSTRAP = {"email": "christopher.drews@play-asia.com", "password": "test1234"}
 
 
 def yq(s: str) -> str:

@@ -305,19 +305,51 @@ cost) → franchises → relationships (authorize + FX + distribute keys) → su
 keys → promotions → sales reports.
 
 ### Phase 6 — Unit-accurate sales, live-API leg (hybrid)
-Runs **after** the scenario has seeded catalog + relationships. First bridge the
-server-generated ids into the live-API scripts:
-1. Obtain a bearer token for the bandai env (log in as the scenario superuser /
-   a bandai supplier admin).
-2. Fetch heybox/sonkwo real org ids from the env and write a bandai-specific
-   `data/customer_org_map.csv` (`name,org_id`).
-3. Stage + transfer exact inventory, then report real sales — both against the
-   bandai host:
+LootVault sales are **key-backed**: a reseller reports keys it owns as sold, so the
+sales leg is stage-inventory → transfer-to-reseller → report-sold (not a scenario
+section). Runs **after** `bandai-base` (needs the SKUs + reseller authorizations).
+
+Decisions: **actual figures (level_1, no anonymization)**; **skip pre-2025-07** (no
+reseller breakdown before the `Customer` column); **Alibaba dropped**. Scope:
+Heybox+Sonkwo, 2025-07→2026-06 — **3442 rows, 536,575 units** (Heybox 491k / Sonkwo
+45k). Of these, **~90% (482,554 units / 133 SKUs) are uploadable now** (paxCode-bearing);
+the rest sit on uncurated no-paxCode SKUs — fill `sku_paxcode_overrides.csv` to lift.
+
+Steps:
+1. `python level_1_extract_sales_history.py` → `product_sales_history.csv` (real
+   units + selling prices; variant slugs folded via `alias_map`). Use level_1
+   **directly** — skip `level_2_anonymize_sales_history.py` (that adds noise).
+2. Bridge identities with **`fetch_bandai_org_ids.py`** — logs in (or takes `--token`),
+   writes a bandai-specific `data/customer_org_map.csv` (**Heybox+Sonkwo only**, no
+   Alibaba), and prints the Bandai supplier org id for `--org-id`:
    ```
-   python prepare_sales_upload.py  --host bandai.knoxkee.io --org-id <bandai-supplier-id> --token <JWT>
-   python upload_sales_history.py  --host bandai.knoxkee.io --org-id <bandai-supplier-id> --token <JWT>
+   python fetch_bandai_org_ids.py --host bandai.knoxkee.io --email <superuser> --password <pw>
+   # or: --token <JWT>
    ```
-   (Both are resumable and honor `--dry-run`; `reconcile_sales_inventory.py` is the check.)
+   ⚠️ The committed map holds `lv.play-asia.com` ids — this overwrites it with the real
+   bandai ids.
+3. Stage + transfer inventory, then report sales — both against the bandai host,
+   reading level_1 (`--csv`):
+   ```
+   python prepare_sales_upload.py --host bandai.knoxkee.io --org-id <bandai-supplier-id> --token <JWT> \
+     --csv data/level_1_extract_sales_history/product_sales_history.csv
+   python upload_sales_history.py --host bandai.knoxkee.io --org-id <bandai-supplier-id> --token <JWT> \
+     --csv data/level_1_extract_sales_history/product_sales_history.csv
+   ```
+   `All`/`Alibaba` rows are skipped automatically (not in the bandai org map). Synthetic
+   keys back the sales (not real Steam keys). Both resumable + `--dry-run`;
+   `reconcile_sales_inventory.py` is the check.
+4. **Backdate keys + transfers** (realism pass) — the sale `date` is already backdated,
+   but key `created_at` / transfer timestamps stamp `now()` (no API affordance), giving
+   sold-before-created rows. Fix DB-direct over the db-proxy tunnel with the DML app role:
+   ```
+   psql "$DATABASE_URL" -v supplier_org='<bandai-supplier-id>' -v created_date='2024-07-01' \
+     -f sql/backdate_bandai_inventory.sql
+   ```
+   Sets `product_keys.created_at`/`updated_at` and the transfer audit rows
+   (`vault.transactions.ts`, `vault.jobs.start_ts/end_ts`) to a pre-sales launch date;
+   leaves `selling_date` (the real sale time) untouched. Idempotent; prints a preview +
+   a `sold_before_created` post-check (must be 0).
 
 ### Phase 7 — Verify
 - Log into `https://bandai.knoxkee.io/` as the scenario superuser; spot-check

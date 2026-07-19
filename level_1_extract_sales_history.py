@@ -26,7 +26,8 @@ import pandas as pd
 
 from level_1_extract_srp_history import parse_period
 from normalize import normalize_name
-from pax_lookup import DEFAULT_PAX_CSV, build_pax_lookup
+
+from pax_lookup import DEFAULT_PAX_CSV, build_pax_lookup, build_slug_alias_map
 
 DEFAULT_INPUT_DIR = Path("data/level_0_export_royalty_csvs")
 DEFAULT_OUTPUT = Path("data/level_1_extract_sales_history/product_sales_history.csv")
@@ -79,7 +80,8 @@ def main() -> int:
     args = parser.parse_args()
 
     pax_lookup = build_pax_lookup(args.pax_csv)
-    print(f"Loaded {len(pax_lookup)} PAX-lookup entries", file=sys.stderr)
+    alias_map = build_slug_alias_map(args.pax_csv)
+    print(f"Loaded {len(pax_lookup)} PAX-lookup entries, {len(alias_map)} variant aliases", file=sys.stderr)
 
     files = sorted(args.input_dir.glob("*.csv"), key=lambda p: parse_period(p)[0])
 
@@ -101,6 +103,8 @@ def main() -> int:
         return 0
 
     rows = pd.concat(parts, ignore_index=True)
+    # Fold merged spelling variants onto their canonical SKU slug (as SRP/promo do).
+    rows["Normalized Name"] = rows["Normalized Name"].map(lambda s: alias_map.get(s, s))
     rows["currency"] = SALES_CURRENCY
     rows["paxCode"] = rows["Normalized Name"].map(lambda s: pax_lookup.get(s, ("", ""))[0])
 
