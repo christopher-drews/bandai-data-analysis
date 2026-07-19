@@ -6,11 +6,8 @@ emits a scenario the lootvault CLI can apply (``scenario apply``):
   * orgs      — bandai (supplier), heybox, sonkwo (resellers).
   * skus[]    — every SKU; ``pa_pax_code`` when known; ``srp[]`` = the SKU's
                 dated SRP windows (CNY) from level_1_extract_srp_history.
-  * promotions[] — from level_1_extract_promo_history, with windows that share
-                (start_date, end_date, discount, reseller-scope) grouped into one
-                campaign covering many SKUs. ``Customer`` maps to a reseller scope
-                (All -> every reseller; Heybox/Sonkwo -> that reseller). Alibaba
-                rows are dropped (out of scope).
+  * promotions[] — read verbatim from level_2_build_promotion_campaigns
+                (already grouped into campaigns and named); emitted as-is.
 
 Hybrid build (see RUNBOOK.md): still **no keys and no sales** — the live-API leg
 owns inventory + sales. ``steamId`` is not emitted (SkuSpec ``deny_unknown_fields``).
@@ -28,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import calendar
+import json
 import sys
 from datetime import date
 from pathlib import Path
@@ -36,7 +34,7 @@ import pandas as pd
 
 DEFAULT_SKUS = Path("data/level_2_enrich_pax_codes/skus_enriched.csv")
 DEFAULT_SRP = Path("data/level_1_extract_srp_history/product_srp_history.csv")
-DEFAULT_PROMO = Path("data/level_1_extract_promo_history/product_promo_history.csv")
+DEFAULT_CAMPAIGNS = Path("data/level_2_build_promotion_campaigns/promotion_campaigns.json")
 DEFAULT_RESELLER_SKUS = Path("data/level_1_extract_reseller_skus/reseller_skus.csv")
 DEFAULT_FX = Path("data/level_0_extract_exchange_rates/exchange_rates.csv")
 DEFAULT_OUTPUT_DIR = Path("data/level_3_build_scenario")
@@ -51,15 +49,6 @@ RESELLERS = [
     {"alias": "sonkwo", "name": "Sonkwo", "role": "reseller"},
 ]
 BOOTSTRAP = {"email": "admin@example.com", "password": "test123"}
-
-# Customer (report reseller) -> scenario reseller aliases. None => all resellers.
-# Alibaba is intentionally absent: its rows are dropped.
-CUSTOMER_SCOPE: dict[str, list[str] | None] = {
-    "All": None,
-    "Heybox": ["heybox"],
-    "Sonkwo": ["sonkwo"],
-}
-RESELLER_DISPLAY = {"heybox": "Heybox", "sonkwo": "Sonkwo"}
 
 
 def yq(s: str) -> str:
@@ -102,39 +91,6 @@ def build_srp_by_slug(srp: pd.DataFrame, alias_set: set[str]) -> tuple[dict[str,
     for windows in by_slug.values():
         windows.sort(key=lambda w: w["start_date"])
     return by_slug, sorted(set(skipped))
-
-
-def build_promotions(promo: pd.DataFrame, alias_set: set[str]) -> tuple[list[dict], dict[str, int]]:
-    stats = {"dropped_alibaba": 0, "unknown_customer": 0, "unknown_sku": 0}
-    groups: dict[tuple, list[str]] = {}
-    for _, r in promo.iterrows():
-        customer = r["Customer"]
-        if customer == "Alibaba":
-            stats["dropped_alibaba"] += 1
-            continue
-        if customer not in CUSTOMER_SCOPE:
-            stats["unknown_customer"] += 1
-            continue
-        slug = r["Normalized Name"]
-        if slug not in alias_set:
-            stats["unknown_sku"] += 1
-            continue
-        resellers = CUSTOMER_SCOPE[customer]
-        pct = fmt_num(float(r["Promo Discount"]) * 100)
-        key = (r["start_date"], r["end_date"], pct, tuple(resellers) if resellers else None)
-        groups.setdefault(key, []).append(slug)
-
-    promotions: list[dict] = []
-    for (sd, ed, pct, res), slugs in groups.items():
-        label = "All" if not res else "+".join(RESELLER_DISPLAY.get(x, x) for x in res)
-        promotions.append({
-            "name": f"{sd} {label} {pct}%",
-            "start_date": sd, "end_date": ed, "discount_percentage": pct,
-            "resellers": list(res) if res else None,
-            "skus": sorted(set(slugs)),
-        })
-    promotions.sort(key=lambda p: (p["start_date"], p["name"], p["skus"][0]))
-    return promotions, stats
 
 
 def build_fx_rates(fx: pd.DataFrame) -> list[dict]:
@@ -240,7 +196,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--skus", default=DEFAULT_SKUS, type=Path)
     parser.add_argument("--srp", default=DEFAULT_SRP, type=Path)
-    parser.add_argument("--promo", default=DEFAULT_PROMO, type=Path)
+    parser.add_argument("--campaigns", default=DEFAULT_CAMPAIGNS, type=Path)
     parser.add_argument("--reseller-skus", default=DEFAULT_RESELLER_SKUS, type=Path)
     parser.add_argument("--fx", default=DEFAULT_FX, type=Path)
     parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR, type=Path)
@@ -254,11 +210,10 @@ def main() -> int:
     assert non_blank.is_unique, "paxCode not unique among emitted SKUs"
 
     srp = pd.read_csv(args.srp, dtype=str, keep_default_na=False)
-    promo = pd.read_csv(args.promo, dtype=str, keep_default_na=False)
+    promotions = json.loads(args.campaigns.read_text(encoding="utf-8"))
     reseller_skus = pd.read_csv(args.reseller_skus, dtype=str, keep_default_na=False)
     fx = pd.read_csv(args.fx, dtype=str, keep_default_na=False)
     srp_by_slug, srp_skipped = build_srp_by_slug(srp, alias_set)
-    promotions, promo_stats = build_promotions(promo, alias_set)
     relationships = build_relationships(reseller_skus, fx, alias_set)
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -282,7 +237,7 @@ def main() -> int:
           f"({', '.join(r['target'] + '=' + str(len(r['authorize_skus'])) for r in relationships)})", file=sys.stderr)
     print(f"  srp        -> {n_srp} SRP windows across {len(srp_by_slug)} SKUs", file=sys.stderr)
     print(f"  promotions -> {len(promotions)} campaigns "
-          f"(dropped Alibaba rows: {promo_stats['dropped_alibaba']})", file=sys.stderr)
+          f"(from {args.campaigns})", file=sys.stderr)
     if srp_skipped:
         print(f"  warn: {len(srp_skipped)} SRP slug(s) not in SKU set (skipped)", file=sys.stderr)
     return 0

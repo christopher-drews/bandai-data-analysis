@@ -46,7 +46,7 @@ source of truth. What each royalty concept maps to:
 | SKU catalog | `skus[].name`, `.pa_pax_code` | exact (matched rows only) | `level_0_match_pax_codes` |
 | Pricing / SRP | `skus[].srp[]` — **multiple dated windows** | **full history** | `level_1_extract_srp_history` |
 | Supplier cost | `skus[].cost[].percentage` | **assumption** (not in report; default 70%) | — |
-| Promotions | `promotions[]` (grouped by dates+discount+resellers → sku list) | exact | `level_1_extract_promo_history` |
+| Promotions | `promotions[]` (grouped by dates+discount+resellers → sku list) | exact | `level_1_extract_promo_history` → `level_2_build_promotion_campaigns` |
 | Relationships / FX | `relationships[]` (authorize, region-china, monthly CNY→USD) | exact | fixed + FX extract |
 | Inventory | `skus[].keys`, `relationships[].distribute_keys` | derived (must cover sales) | from sales totals |
 | **Sales** | `sales[]` — `percent_sold` per reseller per month | **⚠ APPROXIMATE** | `level_2_anonymize_sales_history` |
@@ -213,13 +213,29 @@ python level_1_extract_promo_history.py      # promo runs   → scenario promoti
   - Heybox+Sonkwo windows sharing (slug, discount, dates) collapse to `All`.
   June-2026: **2365 windows / 171 SKUs** (basis: 1150 full, 740 partial, 475 stacked;
   lengths 9–365 days). `basis` column records how each window was derived.
-  **Alibaba** promo rows still present — drop at scenario mapping.
+  **Alibaba** promo rows still present — dropped in the campaign step below.
 
 Sales extracts (separate leg):
 ```
 python level_1_extract_sales_history.py      # sales rows
 python level_2_anonymize_sales_history.py    # → per-(paxCode,customer,month) amounts
 ```
+
+### Phase 3.5 — Group promotions into named campaigns  *(`level_2_build_promotion_campaigns.py`)*
+The campaign *analysis* (grouping + naming) is separated from the YAML emitter so the
+builder just serializes. Reads the raw promo history + the SKU catalog and writes one
+JSON the builder consumes verbatim.
+```
+python level_2_build_promotion_campaigns.py  # -> data/level_2_build_promotion_campaigns/promotion_campaigns.json
+```
+- Collapses promo rows sharing `(start_date, end_date, discount, reseller-scope)` into
+  one campaign over many SKUs. `Customer` → scope: All → all resellers; Heybox/Sonkwo →
+  that reseller; **Alibaba dropped**; rows whose SKU isn't in `skus.csv` dropped.
+- **Name** = `"{YYYY-MM} {scope} {pct}%"`; when a campaign covers exactly one SKU, a
+  truncated product suffix is appended (≤30 chars, trademark + " Edition" stripped) —
+  e.g. `2025-08 Heybox 20% — ELDEN RING NIGHTREIGN`. Mirrors `rename_promotions.py`
+  (the live-API renamer); the single-item helper is kept in sync by hand.
+  June-2026: **1293 campaigns** (855 single-SKU, named with product).
 
 ### Phase 4 — Generate the scenario YAML  *(`level_3_build_scenario.py`)*
 
@@ -253,19 +269,16 @@ Mapping details:
   Sonkwo 169; 159 shared). The 4 SKUs with no reseller-attributed data stay
   unauthorized. `allowed_regions: [region-china]`, `distribute_keys: 0` (hybrid),
   and 23 monthly `exchange_rates` (CNY→USD, from the workbook's rate cell).
-- `promotions[]`: windows sharing (start_date, end_date, discount, reseller-scope)
-  grouped into one campaign over many SKUs. `Customer` → scope: All → all resellers
-  (field omitted); Heybox/Sonkwo → that reseller; **Alibaba dropped**. `discount_percentage`
-  = report fraction ×100. Name = `"{start} {scope} {pct}%"`.
+- `promotions[]`: read **verbatim** from `promotion_campaigns.json` (Phase 3.5) — the
+  builder no longer groups or names, it just emits. `discount_percentage` = report
+  fraction ×100.
 - **Hybrid**: no `keys`, no `sales` (live-API leg owns those). `pa_pax_code` optional,
   so uncurated SKUs are still emitted (and can carry SRP/promotions).
 - `franchises` + `apply_franchises: true` (optional, mirrors existing scenario).
 - `relationships[]`: bandai→heybox, bandai→sonkwo — `authorize_skus: all`,
   `allowed_regions: [region-china]`, monthly `exchange_rates` (CNY→USD) for
   `2024-08 .. 2026-06`, **`distribute_keys: 0`** (live leg transfers exact qty).
-- `promotions[]`: group `product_promo_history.csv` by
-  `(start_date, end_date, discount, resellers)` → one entry each with its sku
-  alias list. Collapsed Heybox+Sonkwo rows (`Customer=All`) → both resellers.
+- `promotions[]`: emitted from `promotion_campaigns.json` (grouped + named in Phase 3.5).
 - **`sales[]`: omitted** — handled unit-accurately by the live-API leg (Phase 6).
 
 🚦 **Gate:** offline validate (no server, no writes):
@@ -347,6 +360,7 @@ python extract_bandai_products.py
 python level_0_match_pax_codes.py    --workbook "BNEPA_Royalty_Report_June 2026.xlsx"
 python level_1_extract_srp_history.py
 python level_1_extract_promo_history.py
+python level_2_build_promotion_campaigns.py   # group + name promotions → JSON
 python level_1_extract_sales_history.py
 python level_2_anonymize_sales_history.py
 python level_3_build_scenario.py     # TO BUILD → scenarios/bandai-heybox-sonkwo.yaml
