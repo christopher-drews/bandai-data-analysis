@@ -28,6 +28,11 @@ so LootVault's no-overlap rule is satisfied by construction.
 Identical windows for both Heybox and Sonkwo (same slug, discount, dates) collapse
 into one Customer=All row.
 
+Discounts are **rounded to the nearest whole percent**. The report's Promo Discount
+is a lossy ratio of integer prices (SRP vs selling price), so exact values are noisy
+(e.g. 0.1852); nearest-1% keeps the implied promo price within ~1 CNY of the reported
+selling price and merges near-identical discounts. Anything rounding to 0% is dropped.
+
 Output: data/level_1_extract_promo_history/product_promo_history.csv with columns
     Product Name, Normalized Name, Customer, Promo Discount,
     paxCode, Customer Reference, start_date, end_date, basis
@@ -103,7 +108,14 @@ def extract_file_promo_state(path: Path) -> pd.DataFrame:
 
     rows: list[dict] = []
     for (slug, customer), g in sub.groupby(["Normalized Name", "Customer"]):
-        discounts = sorted({float(d) for d in g.loc[g["promo"] > 0, "promo"]})
+        # The report's Promo Discount is a lossy ratio of integer prices, so exact
+        # values are noisy (e.g. 0.1852). Round each to the nearest whole percent
+        # (keeps the implied promo price within ~1 CNY); near-identical discounts
+        # then merge, and anything rounding to 0% is dropped.
+        discounts = sorted({
+            r for d in g.loc[g["promo"] > 0, "promo"]
+            if (r := round(float(d) * 100) / 100) > 0
+        })
         if not discounts:
             continue
         has_nonpromo = bool(((g["promo"] == 0) & (g["units"] > 0)).any())

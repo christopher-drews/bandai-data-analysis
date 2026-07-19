@@ -1017,120 +1017,110 @@ skus:
 
 promotions:
   - org: bandai
-    name: "2024-11-01 → 2024-11-14 All 10.2–70.47%"
+    name: "2024-11-01 → 2024-11-14 All 10–70%"
     start_date: 2024-11-01
     end_date: 2024-11-14
     sku_discounts:
-      - { alias: "accel_world_vs_sword_art_online_deluxe", discount_percentage: 68 }
       - { alias: "armored_core_vi_fires_of_rubicon", discount_percentage: 40 }
       - { alias: "armored_core_vi_fires_of_rubicon_deluxe", discount_percentage: 40 }
-      - { alias: "captain_tsubasa_rise_of_new_champions_deluxe", discount_percentage: 70.47 }
+      - { alias: "captain_tsubasa_rise_of_new_champions_deluxe", discount_percentage: 70 }
       - { alias: "dark_souls_ii_scholar_of_the_first_sin", discount_percentage: 50 }
       - { alias: "dark_souls_iii", discount_percentage: 50 }
       - { alias: "dark_souls_iii_deluxe", discount_percentage: 50 }
       - { alias: "dark_souls_iii_season_pass", discount_percentage: 50 }
       - { alias: "dark_souls_remastered", discount_percentage: 50 }
-      - { alias: "digimon_story_cyber_sleuth_complete", discount_percentage: 61.4 }
+      - { alias: "digimon_story_cyber_sleuth_complete", discount_percentage: 61 }
       - { alias: "doraemon_story_of_seasons", discount_percentage: 50 }
-      - { alias: "doraemon_story_of_seasons_friends_of_the_great_kingdom", discount_percentage: 29.84 }
-      - { alias: "doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe", discount_percentage: 29.89 }
-      - { alias: "dragon_ball_fighterz_legendary", discount_percentage: 60.3 }
-      - { alias: "dragon_ball_the_breakers", discount_percentage: 10.2 }
-      - { alias: "dragon_ball_xenoverse_2", discount_percentage: 10.2 }
-      - { alias: "dragon_ball_xenoverse_2_special", discount_percentage: 64.52 }
-      - { alias: "dragon_ball_z_kakarot", discount_percentage: 70.47 }
-      - { alias: "god_eater_2_rage_burst", discount_percentage: 67.16 }
-      - { alias: "god_eater_3", discount_percentage: 67.16 }
-      - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_ultimate", discount_percentage: 70.09 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_4", discount_percentage: 10.2 }
+      - { alias: "doraemon_story_of_seasons_friends_of_the_great_kingdom", discount_percentage: 30 }
+      - { alias: "doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe", discount_percentage: 30 }
+      - { alias: "dragon_ball_fighterz_legendary", discount_percentage: 60 }
+      - { alias: "dragon_ball_the_breakers", discount_percentage: 10 }
+      - { alias: "dragon_ball_xenoverse_2", discount_percentage: 10 }
+      - { alias: "dragon_ball_xenoverse_2_special", discount_percentage: 65 }
+      - { alias: "dragon_ball_z_kakarot", discount_percentage: 70 }
+      - { alias: "god_eater_2_rage_burst", discount_percentage: 67 }
+      - { alias: "god_eater_3", discount_percentage: 67 }
+      - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_ultimate", discount_percentage: 70 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_4", discount_percentage: 10 }
       - { alias: "naruto_x_boruto_ultimate_ninja_storm_connections", discount_percentage: 50 }
       - { alias: "naruto_x_boruto_ultimate_ninja_storm_connections_deluxe", discount_percentage: 50 }
-      - { alias: "sand_land", discount_percentage: 34.23 }
+      - { alias: "sand_land", discount_percentage: 34 }
       - { alias: "spy_anya_operation_memories_deluxe", discount_percentage: 30 }
-      - { alias: "super_robot_wars_30", discount_percentage: 67 }
-      - { alias: "super_robot_wars_30_deluxe", discount_percentage: 67.05 }
-      - { alias: "super_robot_wars_x", discount_percentage: 64.52 }
-      - { alias: "sword_art_online_hollow_realization_deluxe", discount_percentage: 68.35 }
-      - { alias: "tales_of_arise", discount_percentage: 55.56 }
+      - { alias: "super_robot_wars_30_deluxe", discount_percentage: 67 }
+      - { alias: "super_robot_wars_x", discount_percentage: 65 }
+      - { alias: "sword_art_online_hollow_realization_deluxe", discount_percentage: 68 }
+      - { alias: "tales_of_arise", discount_percentage: 56 }
       - { alias: "tales_of_arise_beyond_the_dawn_expansion", discount_percentage: 50 }
-      - { alias: "tales_of_berseria", discount_percentage: 67.16 }
+      - { alias: "tales_of_berseria", discount_percentage: 67 }
   - org: bandai
-    name: "2024-11-01 → 2024-11-30 All 10.2–83.01%"
+    name: "2024-11-01 → 2024-11-30 All 10–83%"
     start_date: 2024-11-01
     end_date: 2024-11-30
     sku_discounts:
-      - { alias: "ace_combat_7_skies_unknown", discount_percentage: 67.16 }
-      - { alias: "ace_combat_7_skies_unknown_top_gun_maverick", discount_percentage: 76.09 }
-      - { alias: "ace_combat_7_skies_unknown_top_gun_maverick_ultimate", discount_percentage: 80.32 }
-      - { alias: "black_clover_quartet_knights", discount_percentage: 67.16 }
-      - { alias: "black_clover_quartet_knights_deluxe", discount_percentage: 69.44 }
-      - { alias: "captain_tsubasa_rise_of_new_champions", discount_percentage: 55.56 }
-      - { alias: "captain_tsubasa_rise_of_new_champions_ultimate", discount_percentage: 75.38 }
-      - { alias: "code_vein", discount_percentage: 67.16 }
-      - { alias: "code_vein_deluxe", discount_percentage: 76.09 }
-      - { alias: "digimon_survive", discount_percentage: 70.47 }
-      - { alias: "digimon_world_next_order", discount_percentage: 64.52 }
-      - { alias: "dragon_ball_fighterz", discount_percentage: 55.56 }
-      - { alias: "dragon_ball_fighterz_fighterz", discount_percentage: 70.47 }
-      - { alias: "dragon_ball_the_breakers_special", discount_percentage: 40.54 }
-      - { alias: "dragon_ball_xenoverse_2_deluxe", discount_percentage: 55.56 }
-      - { alias: "dragon_ball_z_kakarot_deluxe", discount_percentage: 77.14 }
-      - { alias: "dragon_ball_z_kakarot_legendary", discount_percentage: 75.1 }
-      - { alias: "hack_g_u_last_recode", discount_percentage: 68.35 }
-      - { alias: "jojo_s_bizarre_adventure_all_star_battle_r", discount_percentage: 64.52 }
-      - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_deluxe", discount_percentage: 70.11 }
+      - { alias: "accel_world_vs_sword_art_online_deluxe", discount_percentage: 68 }
+      - { alias: "ace_combat_7_skies_unknown", discount_percentage: 67 }
+      - { alias: "ace_combat_7_skies_unknown_top_gun_maverick", discount_percentage: 76 }
+      - { alias: "ace_combat_7_skies_unknown_top_gun_maverick_ultimate", discount_percentage: 80 }
+      - { alias: "black_clover_quartet_knights", discount_percentage: 67 }
+      - { alias: "black_clover_quartet_knights_deluxe", discount_percentage: 69 }
+      - { alias: "captain_tsubasa_rise_of_new_champions", discount_percentage: 56 }
+      - { alias: "captain_tsubasa_rise_of_new_champions_ultimate", discount_percentage: 75 }
+      - { alias: "code_vein", discount_percentage: 67 }
+      - { alias: "code_vein_deluxe", discount_percentage: 76 }
+      - { alias: "digimon_world_next_order", discount_percentage: 65 }
+      - { alias: "dragon_ball_fighterz", discount_percentage: 56 }
+      - { alias: "dragon_ball_the_breakers_special", discount_percentage: 41 }
+      - { alias: "dragon_ball_xenoverse_2_deluxe", discount_percentage: 56 }
+      - { alias: "dragon_ball_z_kakarot_deluxe", discount_percentage: 77 }
+      - { alias: "hack_g_u_last_recode", discount_percentage: 68 }
+      - { alias: "jojo_s_bizarre_adventure_all_star_battle_r", discount_percentage: 65 }
+      - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_deluxe", discount_percentage: 70 }
       - { alias: "jujutsu_kaisen_cursed_clash", discount_percentage: 30 }
-      - { alias: "jujutsu_kaisen_cursed_clash_deluxe", discount_percentage: 30.15 }
-      - { alias: "jujutsu_kaisen_cursed_clash_ultimate", discount_percentage: 30.12 }
-      - { alias: "klonoa_phantasy_reverie_series", discount_percentage: 55.56 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_2", discount_percentage: 18.52 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 60.21 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 76.61 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 59.46 }
-      - { alias: "naruto_to_boruto_shinobi_striker", discount_percentage: 10.2 }
-      - { alias: "naruto_to_boruto_shinobi_striker_deluxe", discount_percentage: 55.56 }
-      - { alias: "naruto_to_boruto_shinobi_striker_ultimate", discount_percentage: 77.14 }
-      - { alias: "naruto_ultimate_ninja_storm", discount_percentage: 18.52 }
+      - { alias: "jujutsu_kaisen_cursed_clash_deluxe", discount_percentage: 30 }
+      - { alias: "jujutsu_kaisen_cursed_clash_ultimate", discount_percentage: 30 }
+      - { alias: "klonoa_phantasy_reverie_series", discount_percentage: 56 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_2", discount_percentage: 19 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 60 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 77 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 59 }
+      - { alias: "naruto_to_boruto_shinobi_striker", discount_percentage: 10 }
+      - { alias: "naruto_to_boruto_shinobi_striker_deluxe", discount_percentage: 56 }
+      - { alias: "naruto_to_boruto_shinobi_striker_ultimate", discount_percentage: 77 }
+      - { alias: "naruto_ultimate_ninja_storm", discount_percentage: 19 }
       - { alias: "naruto_x_boruto_ultimate_ninja_storm_connections_ultimate", discount_percentage: 50 }
-      - { alias: "new_gundam_breaker", discount_percentage: 67.16 }
-      - { alias: "one_piece_burning_blood", discount_percentage: 67.16 }
-      - { alias: "one_piece_burning_blood_gold", discount_percentage: 78.11 }
-      - { alias: "one_piece_odyssey", discount_percentage: 60.07 }
-      - { alias: "one_piece_odyssey_deluxe", discount_percentage: 60.05 }
-      - { alias: "one_piece_pirate_warriors_4", discount_percentage: 55.56 }
-      - { alias: "one_piece_pirate_warriors_4_deluxe", discount_percentage: 74.71 }
-      - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 70.09 }
-      - { alias: "one_piece_world_seeker", discount_percentage: 67.16 }
-      - { alias: "one_piece_world_seeker_deluxe", discount_percentage: 73.17 }
-      - { alias: "one_punch_man_a_hero_nobody_knows", discount_percentage: 67.16 }
-      - { alias: "sand_land_deluxe", discount_percentage: 34.2 }
-      - { alias: "scarlet_nexus", discount_percentage: 73.17 }
-      - { alias: "scarlet_nexus_deluxe", discount_percentage: 77.89 }
-      - { alias: "scarlet_nexus_ultimate", discount_percentage: 83.01 }
-      - { alias: "sd_gundam_battle_alliance", discount_percentage: 67.24 }
-      - { alias: "sd_gundam_battle_alliance_deluxe", discount_percentage: 67.07 }
-      - { alias: "sd_gundam_g_generation_cross_rays", discount_percentage: 55.56 }
-      - { alias: "sd_gundam_g_generation_cross_rays_platinum", discount_percentage: 70.47 }
-      - { alias: "soulcalibur_vi", discount_percentage: 70.47 }
-      - { alias: "soulcalibur_vi_deluxe", discount_percentage: 80.36 }
-      - { alias: "super_robot_wars_30_ultimate", discount_percentage: 67.11 }
-      - { alias: "sword_art_online_alicization_lycoris", discount_percentage: 70.47 }
-      - { alias: "sword_art_online_alicization_lycoris_deluxe", discount_percentage: 82.33 }
-      - { alias: "sword_art_online_fatal_bullet", discount_percentage: 44.3 }
-      - { alias: "sword_art_online_fatal_bullet_complete", discount_percentage: 70.81 }
-      - { alias: "sword_art_online_last_recollection", discount_percentage: 60.07 }
-      - { alias: "sword_art_online_last_recollection_deluxe", discount_percentage: 60.05 }
-      - { alias: "tales_of_vesperia_definitive", discount_percentage: 65.89 }
-      - { alias: "tales_of_zestiria", discount_percentage: 71.97 }
-      - { alias: "tekken_7", discount_percentage: 55.56 }
-      - { alias: "tekken_7_originals", discount_percentage: 77.89 }
+      - { alias: "new_gundam_breaker", discount_percentage: 67 }
+      - { alias: "one_piece_burning_blood", discount_percentage: 67 }
+      - { alias: "one_piece_odyssey", discount_percentage: 60 }
+      - { alias: "one_piece_odyssey_deluxe", discount_percentage: 60 }
+      - { alias: "one_piece_pirate_warriors_4", discount_percentage: 56 }
+      - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 70 }
+      - { alias: "one_piece_world_seeker", discount_percentage: 67 }
+      - { alias: "one_piece_world_seeker_deluxe", discount_percentage: 73 }
+      - { alias: "one_punch_man_a_hero_nobody_knows", discount_percentage: 67 }
+      - { alias: "sand_land_deluxe", discount_percentage: 34 }
+      - { alias: "scarlet_nexus", discount_percentage: 73 }
+      - { alias: "scarlet_nexus_deluxe", discount_percentage: 78 }
+      - { alias: "scarlet_nexus_ultimate", discount_percentage: 83 }
+      - { alias: "sd_gundam_battle_alliance", discount_percentage: 67 }
+      - { alias: "sd_gundam_g_generation_cross_rays", discount_percentage: 56 }
+      - { alias: "sd_gundam_g_generation_cross_rays_platinum", discount_percentage: 70 }
+      - { alias: "soulcalibur_vi", discount_percentage: 70 }
+      - { alias: "soulcalibur_vi_deluxe", discount_percentage: 80 }
+      - { alias: "sword_art_online_alicization_lycoris", discount_percentage: 70 }
+      - { alias: "sword_art_online_alicization_lycoris_deluxe", discount_percentage: 82 }
+      - { alias: "sword_art_online_fatal_bullet", discount_percentage: 44 }
+      - { alias: "sword_art_online_fatal_bullet_complete", discount_percentage: 71 }
+      - { alias: "sword_art_online_last_recollection", discount_percentage: 60 }
+      - { alias: "sword_art_online_last_recollection_deluxe", discount_percentage: 60 }
+      - { alias: "tales_of_vesperia_definitive", discount_percentage: 66 }
+      - { alias: "tales_of_zestiria", discount_percentage: 72 }
+      - { alias: "tekken_7", discount_percentage: 56 }
+      - { alias: "tekken_7_originals", discount_percentage: 78 }
       - { alias: "tekken_8", discount_percentage: 50 }
       - { alias: "tekken_8_deluxe", discount_percentage: 50 }
       - { alias: "tekken_8_ultimate", discount_percentage: 50 }
-      - { alias: "the_idolm_ster_starlit_season", discount_percentage: 60.06 }
-      - { alias: "the_idolm_ster_starlit_season_deluxe", discount_percentage: 60.04 }
-      - { alias: "we_love_katamari_reroll_royal_reverie", discount_percentage: 40.54 }
-      - { alias: "we_love_katamari_reroll_royal_reverie_special", discount_percentage: 55.56 }
+      - { alias: "we_love_katamari_reroll_royal_reverie", discount_percentage: 41 }
+      - { alias: "we_love_katamari_reroll_royal_reverie_special", discount_percentage: 56 }
   - org: bandai
     name: "2024-11-01 → 2024-12-31 All 30–50%"
     start_date: 2024-11-01
@@ -1139,24 +1129,37 @@ promotions:
       - { alias: "spy_anya_operation_memories", discount_percentage: 30 }
       - { alias: "tales_of_arise_beyond_the_dawn", discount_percentage: 50 }
   - org: bandai
+    name: "2024-11-01 → 2025-01-31 All 60–78%"
+    start_date: 2024-11-01
+    end_date: 2025-01-31
+    sku_discounts:
+      - { alias: "digimon_survive", discount_percentage: 70 }
+      - { alias: "dragon_ball_z_kakarot_legendary", discount_percentage: 75 }
+      - { alias: "one_piece_burning_blood_gold", discount_percentage: 78 }
+      - { alias: "one_piece_pirate_warriors_4_deluxe", discount_percentage: 75 }
+      - { alias: "the_idolm_ster_starlit_season", discount_percentage: 60 }
+      - { alias: "the_idolm_ster_starlit_season_deluxe", discount_percentage: 60 }
+  - org: bandai
     name: "2024-11-01 → 2025-02-28 All 50% — Tales of Arise - Beyond the D…"
     start_date: 2024-11-01
     end_date: 2025-02-28
     sku_discounts:
       - { alias: "tales_of_arise_beyond_the_dawn_ultimate", discount_percentage: 50 }
   - org: bandai
-    name: "2024-11-01 → 2025-03-31 All 50% — Tales of Arise - Beyond the D…"
+    name: "2024-11-01 → 2025-03-31 All 50–70%"
     start_date: 2024-11-01
     end_date: 2025-03-31
     sku_discounts:
+      - { alias: "dragon_ball_fighterz_fighterz", discount_percentage: 70 }
+      - { alias: "sd_gundam_battle_alliance_deluxe", discount_percentage: 67 }
+      - { alias: "super_robot_wars_30_ultimate", discount_percentage: 67 }
       - { alias: "tales_of_arise_beyond_the_dawn_deluxe", discount_percentage: 50 }
   - org: bandai
-    name: "2024-11-15 → 2024-11-28 All 67.12–68.35%"
-    start_date: 2024-11-15
-    end_date: 2024-11-28
+    name: "2024-11-01 → 2025-04-30 All 67% — Super Robot Wars 30"
+    start_date: 2024-11-01
+    end_date: 2025-04-30
     sku_discounts:
-      - { alias: "accel_world_vs_sword_art_online_deluxe", discount_percentage: 68.35 }
-      - { alias: "super_robot_wars_30", discount_percentage: 67.12 }
+      - { alias: "super_robot_wars_30", discount_percentage: 67 }
   - org: bandai
     name: "2024-12-01 → 2024-12-14 All 10–90%"
     start_date: 2024-12-01
@@ -1216,13 +1219,9 @@ promotions:
     start_date: 2024-12-01
     end_date: 2025-01-31
     sku_discounts:
-      - { alias: "digimon_survive", discount_percentage: 70 }
       - { alias: "doraemon_story_of_seasons_friends_of_the_great_kingdom", discount_percentage: 30 }
       - { alias: "dragon_ball_z_kakarot", discount_percentage: 70 }
-      - { alias: "dragon_ball_z_kakarot_legendary", discount_percentage: 75 }
       - { alias: "naruto_x_boruto_ultimate_ninja_storm_connections_deluxe", discount_percentage: 50 }
-      - { alias: "one_piece_burning_blood_gold", discount_percentage: 78 }
-      - { alias: "one_piece_pirate_warriors_4_deluxe", discount_percentage: 75 }
       - { alias: "sand_land", discount_percentage: 34 }
       - { alias: "soulcalibur_vi_deluxe", discount_percentage: 90 }
       - { alias: "super_robot_wars_x", discount_percentage: 65 }
@@ -1230,8 +1229,6 @@ promotions:
       - { alias: "sword_art_online_last_recollection", discount_percentage: 65 }
       - { alias: "tekken_8_deluxe", discount_percentage: 40 }
       - { alias: "that_time_i_got_reincarnated_as_a_slime_isekai_chronicles_deluxe", discount_percentage: 25 }
-      - { alias: "the_idolm_ster_starlit_season", discount_percentage: 60 }
-      - { alias: "the_idolm_ster_starlit_season_deluxe", discount_percentage: 60 }
       - { alias: "we_love_katamari_reroll_royal_reverie_special", discount_percentage: 75 }
   - org: bandai
     name: "2024-12-01 → 2025-02-28 All 67–85%"
@@ -1252,11 +1249,7 @@ promotions:
     start_date: 2024-12-01
     end_date: 2025-03-31
     sku_discounts:
-      - { alias: "dragon_ball_fighterz_fighterz", discount_percentage: 70 }
       - { alias: "hack_g_u_last_recode", discount_percentage: 90 }
-      - { alias: "sd_gundam_battle_alliance_deluxe", discount_percentage: 67 }
-      - { alias: "super_robot_wars_30", discount_percentage: 67 }
-      - { alias: "super_robot_wars_30_ultimate", discount_percentage: 67 }
       - { alias: "sword_art_online_alicization_lycoris_deluxe", discount_percentage: 81 }
       - { alias: "sword_art_online_fatal_bullet_complete", discount_percentage: 85 }
       - { alias: "sword_art_online_last_recollection_deluxe", discount_percentage: 65 }
@@ -1286,11 +1279,11 @@ promotions:
       - { alias: "sword_art_online_alicization_lycoris", discount_percentage: 84 }
       - { alias: "tales_of_vesperia_definitive", discount_percentage: 80 }
   - org: bandai
-    name: "2024-12-15 → 2024-12-28 All 65.0111–77%"
+    name: "2024-12-15 → 2024-12-28 All 65–77%"
     start_date: 2024-12-15
     end_date: 2024-12-28
     sku_discounts:
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 65.0111 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 65 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 77 }
   - org: bandai
     name: "2025-01-01 → 2025-01-10 All 26–45%"
@@ -1664,7 +1657,6 @@ promotions:
       - { alias: "naruto_ultimate_ninja_storm", discount_percentage: 75 }
       - { alias: "new_gundam_breaker", discount_percentage: 70 }
       - { alias: "spy_anya_operation_memories_deluxe", discount_percentage: 35 }
-      - { alias: "super_robot_wars_30", discount_percentage: 67 }
       - { alias: "super_robot_wars_x", discount_percentage: 75 }
       - { alias: "tales_of_arise", discount_percentage: 75 }
       - { alias: "tales_of_arise_beyond_the_dawn_expansion", discount_percentage: 34 }
@@ -1853,7 +1845,7 @@ promotions:
       - { alias: "synduality_echo_of_ada_ultimate", discount_percentage: 50 }
       - { alias: "taiko_no_tatsujin_rhythm_festival", discount_percentage: 40 }
       - { alias: "taiko_no_tatsujin_rhythm_festival_the_setlist", discount_percentage: 24 }
-      - { alias: "tekken_8", discount_percentage: 29.8387 }
+      - { alias: "tekken_8", discount_percentage: 30 }
   - org: bandai
     name: "2025-06-01 → 2025-06-30 All 25–90%"
     start_date: 2025-06-01
@@ -1889,31 +1881,31 @@ promotions:
       - { alias: "the_idolm_ster_starlit_season", discount_percentage: 60 }
       - { alias: "we_love_katamari_reroll_royal_reverie", discount_percentage: 75 }
   - org: bandai
-    name: "2025-06-11 → 2025-06-20 All 63–74.67%"
+    name: "2025-06-11 → 2025-06-20 All 63–75%"
     start_date: 2025-06-11
     end_date: 2025-06-20
     sku_discounts:
       - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 63 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 74.67 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 75 }
   - org: bandai
-    name: "2025-06-15 → 2025-06-28 All 30–92.2449%"
+    name: "2025-06-15 → 2025-06-28 All 30–92%"
     start_date: 2025-06-15
     end_date: 2025-06-28
     sku_discounts:
       - { alias: "death_note_killer_within", discount_percentage: 35 }
       - { alias: "dragon_ball_sparking_zero", discount_percentage: 30 }
       - { alias: "dragon_ball_sparking_zero_deluxe", discount_percentage: 30 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 83.25 }
-      - { alias: "pac_man_mega_tunnel_battle_chomp_champs", discount_percentage: 92.2449 }
-      - { alias: "sword_art_online_fatal_bullet_complete", discount_percentage: 83.92 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 83 }
+      - { alias: "pac_man_mega_tunnel_battle_chomp_champs", discount_percentage: 92 }
+      - { alias: "sword_art_online_fatal_bullet_complete", discount_percentage: 84 }
       - { alias: "tekken_8", discount_percentage: 50 }
   - org: bandai
-    name: "2025-06-21 → 2025-06-30 All 70.4–79.651%"
+    name: "2025-06-21 → 2025-06-30 All 70–80%"
     start_date: 2025-06-21
     end_date: 2025-06-30
     sku_discounts:
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 70.4 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 79.651 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 70 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 80 }
   - org: bandai
     name: "2025-07-01 → 2025-07-14 Heybox 25–85%"
     start_date: 2025-07-01
@@ -1925,7 +1917,7 @@ promotions:
       - { alias: "dragon_ball_sparking_zero_deluxe", discount_percentage: 30 }
       - { alias: "dragon_ball_z_kakarot", discount_percentage: 75 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_4", discount_percentage: 50 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 72.0802 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 72 }
       - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 70 }
       - { alias: "scarlet_nexus", discount_percentage: 84 }
       - { alias: "sd_gundam_battle_alliance", discount_percentage: 67 }
@@ -1976,7 +1968,7 @@ promotions:
       - { alias: "jujutsu_kaisen_cursed_clash_ultimate", discount_percentage: 50 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_3_eu_version", discount_percentage: 50 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 63 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 74.6695 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 75 }
       - { alias: "sword_art_online_fractured_daydream", discount_percentage: 34 }
       - { alias: "sword_art_online_last_recollection", discount_percentage: 75 }
       - { alias: "synduality_echo_of_ada_deluxe", discount_percentage: 50 }
@@ -2204,12 +2196,12 @@ promotions:
       - { alias: "sword_art_online_fatal_bullet", discount_percentage: 90 }
       - { alias: "tekken_7", discount_percentage: 85 }
   - org: bandai
-    name: "2025-08-01 → 2025-08-10 Heybox 31.0389% — NARUTO SHIPPUDEN: Ultimate Ni…"
+    name: "2025-08-01 → 2025-08-10 Heybox 31% — NARUTO SHIPPUDEN: Ultimate Ni…"
     start_date: 2025-08-01
     end_date: 2025-08-10
     resellers: [heybox]
     sku_discounts:
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 31.0389 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 31 }
   - org: bandai
     name: "2025-08-01 → 2025-08-14 Heybox 20–90%"
     start_date: 2025-08-01
@@ -2227,7 +2219,7 @@ promotions:
       - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_deluxe", discount_percentage: 72 }
       - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_ultimate", discount_percentage: 65 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_4", discount_percentage: 25 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 59.8801 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 60 }
       - { alias: "naruto_x_boruto_ultimate_ninja_storm_connections", discount_percentage: 50 }
       - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 79 }
       - { alias: "sd_gundam_battle_alliance", discount_percentage: 75 }
@@ -2281,12 +2273,12 @@ promotions:
       - { alias: "god_eater_3", discount_percentage: 90 }
       - { alias: "super_robot_wars_30_deluxe", discount_percentage: 70 }
   - org: bandai
-    name: "2025-08-11 → 2025-08-20 Heybox 52.9306% — NARUTO SHIPPUDEN: Ultimate Ni…"
+    name: "2025-08-11 → 2025-08-20 Heybox 53% — NARUTO SHIPPUDEN: Ultimate Ni…"
     start_date: 2025-08-11
     end_date: 2025-08-20
     resellers: [heybox]
     sku_discounts:
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 52.9306 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 53 }
   - org: bandai
     name: "2025-08-15 → 2025-08-28 Heybox 34–85%"
     start_date: 2025-08-15
@@ -2295,7 +2287,7 @@ promotions:
     sku_discounts:
       - { alias: "gundam_breaker_4", discount_percentage: 34 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_4", discount_percentage: 60 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 74.6696 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 75 }
       - { alias: "sword_art_online_last_recollection", discount_percentage: 75 }
       - { alias: "tales_of_arise_beyond_the_dawn_deluxe", discount_percentage: 63 }
       - { alias: "tekken_7", discount_percentage: 85 }
@@ -2367,7 +2359,7 @@ promotions:
       - { alias: "jujutsu_kaisen_cursed_clash_ultimate", discount_percentage: 50 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_4", discount_percentage: 60 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 63 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 74.6696 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 75 }
       - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 79 }
       - { alias: "sd_gundam_battle_alliance", discount_percentage: 75 }
       - { alias: "sd_gundam_battle_alliance_deluxe", discount_percentage: 75 }
@@ -3314,7 +3306,7 @@ promotions:
       - { alias: "death_note_killer_within_special", discount_percentage: 35 }
       - { alias: "digimon_story_cyber_sleuth_complete", discount_percentage: 88 }
       - { alias: "naruto_ultimate_ninja_storm", discount_percentage: 75 }
-      - { alias: "one_piece_pirate_warriors_4", discount_percentage: 72.191 }
+      - { alias: "one_piece_pirate_warriors_4", discount_percentage: 72 }
       - { alias: "one_piece_pirate_warriors_4_legendary", discount_percentage: 50 }
       - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 79 }
       - { alias: "scarlet_nexus", discount_percentage: 85 }
@@ -3454,7 +3446,7 @@ promotions:
       - { alias: "naruto_shippuden_ultimate_ninja_storm_4", discount_percentage: 25 }
       - { alias: "super_robot_wars_y_ultimate", discount_percentage: 30 }
   - org: bandai
-    name: "2026-02-01 → 2026-02-14 Heybox 15.7761–85%"
+    name: "2026-02-01 → 2026-02-14 Heybox 16–85%"
     start_date: 2026-02-01
     end_date: 2026-02-14
     resellers: [heybox]
@@ -3484,13 +3476,13 @@ promotions:
       - { alias: "dragon_ball_z_kakarot_master", discount_percentage: 35 }
       - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_deluxe", discount_percentage: 72 }
       - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_ultimate", discount_percentage: 65 }
-      - { alias: "little_nightmares_iii_deluxe", discount_percentage: 15.7761 }
+      - { alias: "little_nightmares_iii_deluxe", discount_percentage: 16 }
       - { alias: "mobile_suit_gundam_seed_battle_destiny_remastered", discount_percentage: 25 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 43 }
       - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 65 }
       - { alias: "naruto_x_boruto_ultimate_ninja_storm_connections_ultimate", discount_percentage: 60 }
       - { alias: "one_piece_pirate_warriors_4_legendary", discount_percentage: 50 }
-      - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 66.9262 }
+      - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 67 }
       - { alias: "scarlet_nexus", discount_percentage: 84 }
       - { alias: "scarlet_nexus_deluxe", discount_percentage: 85 }
       - { alias: "scarlet_nexus_ultimate", discount_percentage: 80 }
@@ -3708,7 +3700,7 @@ promotions:
     sku_discounts:
       - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 54 }
   - org: bandai
-    name: "2026-02-15 → 2026-02-28 Heybox 25–92.5746%"
+    name: "2026-02-15 → 2026-02-28 Heybox 25–93%"
     start_date: 2026-02-15
     end_date: 2026-02-28
     resellers: [heybox]
@@ -3719,7 +3711,7 @@ promotions:
       - { alias: "bleach_rebirth_of_souls_ultimate", discount_percentage: 50 }
       - { alias: "captain_tsubasa_rise_of_new_champions_deluxe", discount_percentage: 84 }
       - { alias: "captain_tsubasa_rise_of_new_champions_ultimate", discount_percentage: 82 }
-      - { alias: "code_vein", discount_percentage: 92.5746 }
+      - { alias: "code_vein", discount_percentage: 93 }
       - { alias: "digimon_story_cyber_sleuth_complete", discount_percentage: 90 }
       - { alias: "digimon_story_time_stranger", discount_percentage: 30 }
       - { alias: "digimon_story_time_stranger_deluxe", discount_percentage: 25 }
@@ -3728,8 +3720,8 @@ promotions:
       - { alias: "dragon_ball_z_kakarot_master", discount_percentage: 40 }
       - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_ultimate", discount_percentage: 77 }
       - { alias: "little_nightmares_iii_deluxe", discount_percentage: 34 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 57.9611 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 66.5 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 58 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 66 }
       - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 79 }
       - { alias: "scarlet_nexus", discount_percentage: 85 }
       - { alias: "scarlet_nexus_ultimate", discount_percentage: 85 }
@@ -3737,7 +3729,6 @@ promotions:
       - { alias: "tales_of_graces_f_remastered", discount_percentage: 60 }
       - { alias: "tales_of_xillia_remastered", discount_percentage: 30 }
       - { alias: "tales_of_xillia_remastered_deluxe", discount_percentage: 30 }
-      - { alias: "tekken_8", discount_percentage: 60.0806 }
   - org: bandai
     name: "2026-02-15 → 2026-02-28 Sonkwo 88% — DRAGON BALL FighterZ - Fighte…"
     start_date: 2026-02-15
@@ -3746,12 +3737,12 @@ promotions:
     sku_discounts:
       - { alias: "dragon_ball_fighterz_fighterz", discount_percentage: 88 }
   - org: bandai
-    name: "2026-02-19 → 2026-02-27 Heybox 70.5307% — NARUTO SHIPPUDEN: Ultimate Ni…"
+    name: "2026-02-19 → 2026-02-27 Heybox 71% — NARUTO SHIPPUDEN: Ultimate Ni…"
     start_date: 2026-02-19
     end_date: 2026-02-27
     resellers: [heybox]
     sku_discounts:
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 70.5307 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 71 }
   - org: bandai
     name: "2026-03-01 → 2026-03-14 All 25–70%"
     start_date: 2026-03-01
@@ -3815,7 +3806,7 @@ promotions:
       - { alias: "super_robot_wars_30_ultimate", discount_percentage: 60 }
       - { alias: "super_robot_wars_y", discount_percentage: 33 }
       - { alias: "super_robot_wars_y_ultimate", discount_percentage: 30 }
-      - { alias: "sword_art_online_alicization_lycoris", discount_percentage: 45.8182 }
+      - { alias: "sword_art_online_alicization_lycoris", discount_percentage: 46 }
       - { alias: "sword_art_online_fractured_daydream", discount_percentage: 60 }
       - { alias: "sword_art_online_fractured_daydream_deluxe", discount_percentage: 70 }
       - { alias: "sword_art_online_fractured_daydream_premium", discount_percentage: 60 }
@@ -3852,9 +3843,9 @@ promotions:
       - { alias: "jojo_s_bizarre_adventure_all_star_battle_r_deluxe", discount_percentage: 72 }
       - { alias: "pac_man_world_2_re_pac", discount_percentage: 20 }
       - { alias: "super_robot_wars_y_deluxe", discount_percentage: 30 }
-      - { alias: "sword_art_online_alicization_lycoris_deluxe", discount_percentage: 61.8468 }
-      - { alias: "sword_art_online_fatal_bullet", discount_percentage: 78.4545 }
-      - { alias: "sword_art_online_hollow_realization_deluxe", discount_percentage: 64.661 }
+      - { alias: "sword_art_online_alicization_lycoris_deluxe", discount_percentage: 62 }
+      - { alias: "sword_art_online_fatal_bullet", discount_percentage: 78 }
+      - { alias: "sword_art_online_hollow_realization_deluxe", discount_percentage: 65 }
       - { alias: "synduality_echo_of_ada", discount_percentage: 95 }
   - org: bandai
     name: "2026-03-01 → 2026-03-31 Sonkwo 25–88%"
@@ -3939,8 +3930,8 @@ promotions:
       - { alias: "dragon_ball_z_kakarot_daima", discount_percentage: 40 }
       - { alias: "little_nightmares_iii", discount_percentage: 30 }
       - { alias: "little_nightmares_iii_deluxe", discount_percentage: 34 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 57.9611 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 70.5307 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 58 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 71 }
       - { alias: "scarlet_nexus_deluxe", discount_percentage: 85 }
       - { alias: "super_robot_wars_30_deluxe", discount_percentage: 70 }
       - { alias: "super_robot_wars_30_ultimate", discount_percentage: 67 }
@@ -4195,7 +4186,7 @@ promotions:
       - { alias: "doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe", discount_percentage: 50 }
       - { alias: "dragon_ball_fighterz_fighterz", discount_percentage: 84 }
       - { alias: "dragon_ball_xenoverse_2_special", discount_percentage: 60 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 57.9611 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto", discount_percentage: 58 }
       - { alias: "naruto_ultimate_ninja_storm", discount_percentage: 50 }
       - { alias: "new_gundam_breaker", discount_percentage: 70 }
       - { alias: "one_piece_pirate_warriors_4_ultimate", discount_percentage: 79 }
@@ -4308,8 +4299,8 @@ promotions:
       - { alias: "hack_g_u_last_recode", discount_percentage: 90 }
       - { alias: "little_nightmares_iii", discount_percentage: 30 }
       - { alias: "little_nightmares_iii_deluxe", discount_percentage: 34 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 70.5307 }
-      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 66.5 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_legacy", discount_percentage: 71 }
+      - { alias: "naruto_shippuden_ultimate_ninja_storm_trilogy", discount_percentage: 66 }
   - org: bandai
     name: "2026-05-15 → 2026-05-28 Sonkwo 90% — Digimon Story Time Stranger"
     start_date: 2026-05-15

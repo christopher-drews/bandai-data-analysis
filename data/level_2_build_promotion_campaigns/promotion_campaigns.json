@@ -1,14 +1,10 @@
 [
   {
-    "name": "2024-11-01 → 2024-11-14 All 10.2–70.47%",
+    "name": "2024-11-01 → 2024-11-14 All 10–70%",
     "start_date": "2024-11-01",
     "end_date": "2024-11-14",
     "resellers": null,
     "skus": [
-      {
-        "sku": "accel_world_vs_sword_art_online_deluxe",
-        "discount_percentage": "68"
-      },
       {
         "sku": "armored_core_vi_fires_of_rubicon",
         "discount_percentage": "40"
@@ -19,7 +15,7 @@
       },
       {
         "sku": "captain_tsubasa_rise_of_new_champions_deluxe",
-        "discount_percentage": "70.47"
+        "discount_percentage": "70"
       },
       {
         "sku": "dark_souls_ii_scholar_of_the_first_sin",
@@ -43,7 +39,7 @@
       },
       {
         "sku": "digimon_story_cyber_sleuth_complete",
-        "discount_percentage": "61.4"
+        "discount_percentage": "61"
       },
       {
         "sku": "doraemon_story_of_seasons",
@@ -51,47 +47,47 @@
       },
       {
         "sku": "doraemon_story_of_seasons_friends_of_the_great_kingdom",
-        "discount_percentage": "29.84"
+        "discount_percentage": "30"
       },
       {
         "sku": "doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe",
-        "discount_percentage": "29.89"
+        "discount_percentage": "30"
       },
       {
         "sku": "dragon_ball_fighterz_legendary",
-        "discount_percentage": "60.3"
+        "discount_percentage": "60"
       },
       {
         "sku": "dragon_ball_the_breakers",
-        "discount_percentage": "10.2"
+        "discount_percentage": "10"
       },
       {
         "sku": "dragon_ball_xenoverse_2",
-        "discount_percentage": "10.2"
+        "discount_percentage": "10"
       },
       {
         "sku": "dragon_ball_xenoverse_2_special",
-        "discount_percentage": "64.52"
+        "discount_percentage": "65"
       },
       {
         "sku": "dragon_ball_z_kakarot",
-        "discount_percentage": "70.47"
+        "discount_percentage": "70"
       },
       {
         "sku": "god_eater_2_rage_burst",
-        "discount_percentage": "67.16"
+        "discount_percentage": "67"
       },
       {
         "sku": "god_eater_3",
-        "discount_percentage": "67.16"
+        "discount_percentage": "67"
       },
       {
         "sku": "jojo_s_bizarre_adventure_all_star_battle_r_ultimate",
-        "discount_percentage": "70.09"
+        "discount_percentage": "70"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_4",
-        "discount_percentage": "10.2"
+        "discount_percentage": "10"
       },
       {
         "sku": "naruto_x_boruto_ultimate_ninja_storm_connections",
@@ -103,31 +99,27 @@
       },
       {
         "sku": "sand_land",
-        "discount_percentage": "34.23"
+        "discount_percentage": "34"
       },
       {
         "sku": "spy_anya_operation_memories_deluxe",
         "discount_percentage": "30"
       },
       {
-        "sku": "super_robot_wars_30",
+        "sku": "super_robot_wars_30_deluxe",
         "discount_percentage": "67"
       },
       {
-        "sku": "super_robot_wars_30_deluxe",
-        "discount_percentage": "67.05"
-      },
-      {
         "sku": "super_robot_wars_x",
-        "discount_percentage": "64.52"
+        "discount_percentage": "65"
       },
       {
         "sku": "sword_art_online_hollow_realization_deluxe",
-        "discount_percentage": "68.35"
+        "discount_percentage": "68"
       },
       {
         "sku": "tales_of_arise",
-        "discount_percentage": "55.56"
+        "discount_percentage": "56"
       },
       {
         "sku": "tales_of_arise_beyond_the_dawn_expansion",
@@ -135,95 +127,87 @@
       },
       {
         "sku": "tales_of_berseria",
-        "discount_percentage": "67.16"
+        "discount_percentage": "67"
       }
     ]
   },
   {
-    "name": "2024-11-01 → 2024-11-30 All 10.2–83.01%",
+    "name": "2024-11-01 → 2024-11-30 All 10–83%",
     "start_date": "2024-11-01",
     "end_date": "2024-11-30",
     "resellers": null,
     "skus": [
       {
+        "sku": "accel_world_vs_sword_art_online_deluxe",
+        "discount_percentage": "68"
+      },
+      {
         "sku": "ace_combat_7_skies_unknown",
-        "discount_percentage": "67.16"
+        "discount_percentage": "67"
       },
       {
         "sku": "ace_combat_7_skies_unknown_top_gun_maverick",
-        "discount_percentage": "76.09"
+        "discount_percentage": "76"
       },
       {
         "sku": "ace_combat_7_skies_unknown_top_gun_maverick_ultimate",
-        "discount_percentage": "80.32"
+        "discount_percentage": "80"
       },
       {
         "sku": "black_clover_quartet_knights",
-        "discount_percentage": "67.16"
+        "discount_percentage": "67"
       },
       {
         "sku": "black_clover_quartet_knights_deluxe",
-        "discount_percentage": "69.44"
+        "discount_percentage": "69"
       },
       {
         "sku": "captain_tsubasa_rise_of_new_champions",
-        "discount_percentage": "55.56"
+        "discount_percentage": "56"
       },
       {
         "sku": "captain_tsubasa_rise_of_new_champions_ultimate",
-        "discount_percentage": "75.38"
+        "discount_percentage": "75"
       },
       {
         "sku": "code_vein",
-        "discount_percentage": "67.16"
+        "discount_percentage": "67"
       },
       {
         "sku": "code_vein_deluxe",
-        "discount_percentage": "76.09"
-      },
-      {
-        "sku": "digimon_survive",
-        "discount_percentage": "70.47"
+        "discount_percentage": "76"
       },
       {
         "sku": "digimon_world_next_order",
-        "discount_percentage": "64.52"
+        "discount_percentage": "65"
       },
       {
         "sku": "dragon_ball_fighterz",
-        "discount_percentage": "55.56"
-      },
-      {
-        "sku": "dragon_ball_fighterz_fighterz",
-        "discount_percentage": "70.47"
+        "discount_percentage": "56"
       },
       {
         "sku": "dragon_ball_the_breakers_special",
-        "discount_percentage": "40.54"
+        "discount_percentage": "41"
       },
       {
         "sku": "dragon_ball_xenoverse_2_deluxe",
-        "discount_percentage": "55.56"
+        "discount_percentage": "56"
       },
       {
         "sku": "dragon_ball_z_kakarot_deluxe",
-        "discount_percentage": "77.14"
-      },
-      {
-        "sku": "dragon_ball_z_kakarot_legendary",
-        "discount_percentage": "75.1"
+        "discount_percentage": "77"
       },
       {
         "sku": "hack_g_u_last_recode",
-        "discount_percentage": "68.35"
+        "discount_percentage": "68"
       },
       {
         "sku": "jojo_s_bizarre_adventure_all_star_battle_r",
-        "discount_percentage": "64.52"
+        "discount_percentage": "65"
       },
       {
         "sku": "jojo_s_bizarre_adventure_all_star_battle_r_deluxe",
-        "discount_percentage": "70.11"
+        "discount_percentage": "70"
       },
       {
         "sku": "jujutsu_kaisen_cursed_clash",
@@ -231,47 +215,47 @@
       },
       {
         "sku": "jujutsu_kaisen_cursed_clash_deluxe",
-        "discount_percentage": "30.15"
+        "discount_percentage": "30"
       },
       {
         "sku": "jujutsu_kaisen_cursed_clash_ultimate",
-        "discount_percentage": "30.12"
+        "discount_percentage": "30"
       },
       {
         "sku": "klonoa_phantasy_reverie_series",
-        "discount_percentage": "55.56"
+        "discount_percentage": "56"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_2",
-        "discount_percentage": "18.52"
+        "discount_percentage": "19"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto",
-        "discount_percentage": "60.21"
+        "discount_percentage": "60"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "76.61"
+        "discount_percentage": "77"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_trilogy",
-        "discount_percentage": "59.46"
+        "discount_percentage": "59"
       },
       {
         "sku": "naruto_to_boruto_shinobi_striker",
-        "discount_percentage": "10.2"
+        "discount_percentage": "10"
       },
       {
         "sku": "naruto_to_boruto_shinobi_striker_deluxe",
-        "discount_percentage": "55.56"
+        "discount_percentage": "56"
       },
       {
         "sku": "naruto_to_boruto_shinobi_striker_ultimate",
-        "discount_percentage": "77.14"
+        "discount_percentage": "77"
       },
       {
         "sku": "naruto_ultimate_ninja_storm",
-        "discount_percentage": "18.52"
+        "discount_percentage": "19"
       },
       {
         "sku": "naruto_x_boruto_ultimate_ninja_storm_connections_ultimate",
@@ -279,131 +263,115 @@
       },
       {
         "sku": "new_gundam_breaker",
-        "discount_percentage": "67.16"
+        "discount_percentage": "67"
       },
       {
         "sku": "one_piece_burning_blood",
-        "discount_percentage": "67.16"
-      },
-      {
-        "sku": "one_piece_burning_blood_gold",
-        "discount_percentage": "78.11"
+        "discount_percentage": "67"
       },
       {
         "sku": "one_piece_odyssey",
-        "discount_percentage": "60.07"
+        "discount_percentage": "60"
       },
       {
         "sku": "one_piece_odyssey_deluxe",
-        "discount_percentage": "60.05"
+        "discount_percentage": "60"
       },
       {
         "sku": "one_piece_pirate_warriors_4",
-        "discount_percentage": "55.56"
-      },
-      {
-        "sku": "one_piece_pirate_warriors_4_deluxe",
-        "discount_percentage": "74.71"
+        "discount_percentage": "56"
       },
       {
         "sku": "one_piece_pirate_warriors_4_ultimate",
-        "discount_percentage": "70.09"
+        "discount_percentage": "70"
       },
       {
         "sku": "one_piece_world_seeker",
-        "discount_percentage": "67.16"
+        "discount_percentage": "67"
       },
       {
         "sku": "one_piece_world_seeker_deluxe",
-        "discount_percentage": "73.17"
+        "discount_percentage": "73"
       },
       {
         "sku": "one_punch_man_a_hero_nobody_knows",
-        "discount_percentage": "67.16"
+        "discount_percentage": "67"
       },
       {
         "sku": "sand_land_deluxe",
-        "discount_percentage": "34.2"
+        "discount_percentage": "34"
       },
       {
         "sku": "scarlet_nexus",
-        "discount_percentage": "73.17"
+        "discount_percentage": "73"
       },
       {
         "sku": "scarlet_nexus_deluxe",
-        "discount_percentage": "77.89"
+        "discount_percentage": "78"
       },
       {
         "sku": "scarlet_nexus_ultimate",
-        "discount_percentage": "83.01"
+        "discount_percentage": "83"
       },
       {
         "sku": "sd_gundam_battle_alliance",
-        "discount_percentage": "67.24"
-      },
-      {
-        "sku": "sd_gundam_battle_alliance_deluxe",
-        "discount_percentage": "67.07"
+        "discount_percentage": "67"
       },
       {
         "sku": "sd_gundam_g_generation_cross_rays",
-        "discount_percentage": "55.56"
+        "discount_percentage": "56"
       },
       {
         "sku": "sd_gundam_g_generation_cross_rays_platinum",
-        "discount_percentage": "70.47"
+        "discount_percentage": "70"
       },
       {
         "sku": "soulcalibur_vi",
-        "discount_percentage": "70.47"
+        "discount_percentage": "70"
       },
       {
         "sku": "soulcalibur_vi_deluxe",
-        "discount_percentage": "80.36"
-      },
-      {
-        "sku": "super_robot_wars_30_ultimate",
-        "discount_percentage": "67.11"
+        "discount_percentage": "80"
       },
       {
         "sku": "sword_art_online_alicization_lycoris",
-        "discount_percentage": "70.47"
+        "discount_percentage": "70"
       },
       {
         "sku": "sword_art_online_alicization_lycoris_deluxe",
-        "discount_percentage": "82.33"
+        "discount_percentage": "82"
       },
       {
         "sku": "sword_art_online_fatal_bullet",
-        "discount_percentage": "44.3"
+        "discount_percentage": "44"
       },
       {
         "sku": "sword_art_online_fatal_bullet_complete",
-        "discount_percentage": "70.81"
+        "discount_percentage": "71"
       },
       {
         "sku": "sword_art_online_last_recollection",
-        "discount_percentage": "60.07"
+        "discount_percentage": "60"
       },
       {
         "sku": "sword_art_online_last_recollection_deluxe",
-        "discount_percentage": "60.05"
+        "discount_percentage": "60"
       },
       {
         "sku": "tales_of_vesperia_definitive",
-        "discount_percentage": "65.89"
+        "discount_percentage": "66"
       },
       {
         "sku": "tales_of_zestiria",
-        "discount_percentage": "71.97"
+        "discount_percentage": "72"
       },
       {
         "sku": "tekken_7",
-        "discount_percentage": "55.56"
+        "discount_percentage": "56"
       },
       {
         "sku": "tekken_7_originals",
-        "discount_percentage": "77.89"
+        "discount_percentage": "78"
       },
       {
         "sku": "tekken_8",
@@ -418,20 +386,12 @@
         "discount_percentage": "50"
       },
       {
-        "sku": "the_idolm_ster_starlit_season",
-        "discount_percentage": "60.06"
-      },
-      {
-        "sku": "the_idolm_ster_starlit_season_deluxe",
-        "discount_percentage": "60.04"
-      },
-      {
         "sku": "we_love_katamari_reroll_royal_reverie",
-        "discount_percentage": "40.54"
+        "discount_percentage": "41"
       },
       {
         "sku": "we_love_katamari_reroll_royal_reverie_special",
-        "discount_percentage": "55.56"
+        "discount_percentage": "56"
       }
     ]
   },
@@ -452,6 +412,38 @@
     ]
   },
   {
+    "name": "2024-11-01 → 2025-01-31 All 60–78%",
+    "start_date": "2024-11-01",
+    "end_date": "2025-01-31",
+    "resellers": null,
+    "skus": [
+      {
+        "sku": "digimon_survive",
+        "discount_percentage": "70"
+      },
+      {
+        "sku": "dragon_ball_z_kakarot_legendary",
+        "discount_percentage": "75"
+      },
+      {
+        "sku": "one_piece_burning_blood_gold",
+        "discount_percentage": "78"
+      },
+      {
+        "sku": "one_piece_pirate_warriors_4_deluxe",
+        "discount_percentage": "75"
+      },
+      {
+        "sku": "the_idolm_ster_starlit_season",
+        "discount_percentage": "60"
+      },
+      {
+        "sku": "the_idolm_ster_starlit_season_deluxe",
+        "discount_percentage": "60"
+      }
+    ]
+  },
+  {
     "name": "2024-11-01 → 2025-02-28 All 50% — Tales of Arise - Beyond the D…",
     "start_date": "2024-11-01",
     "end_date": "2025-02-28",
@@ -464,11 +456,23 @@
     ]
   },
   {
-    "name": "2024-11-01 → 2025-03-31 All 50% — Tales of Arise - Beyond the D…",
+    "name": "2024-11-01 → 2025-03-31 All 50–70%",
     "start_date": "2024-11-01",
     "end_date": "2025-03-31",
     "resellers": null,
     "skus": [
+      {
+        "sku": "dragon_ball_fighterz_fighterz",
+        "discount_percentage": "70"
+      },
+      {
+        "sku": "sd_gundam_battle_alliance_deluxe",
+        "discount_percentage": "67"
+      },
+      {
+        "sku": "super_robot_wars_30_ultimate",
+        "discount_percentage": "67"
+      },
       {
         "sku": "tales_of_arise_beyond_the_dawn_deluxe",
         "discount_percentage": "50"
@@ -476,18 +480,14 @@
     ]
   },
   {
-    "name": "2024-11-15 → 2024-11-28 All 67.12–68.35%",
-    "start_date": "2024-11-15",
-    "end_date": "2024-11-28",
+    "name": "2024-11-01 → 2025-04-30 All 67% — Super Robot Wars 30",
+    "start_date": "2024-11-01",
+    "end_date": "2025-04-30",
     "resellers": null,
     "skus": [
       {
-        "sku": "accel_world_vs_sword_art_online_deluxe",
-        "discount_percentage": "68.35"
-      },
-      {
         "sku": "super_robot_wars_30",
-        "discount_percentage": "67.12"
+        "discount_percentage": "67"
       }
     ]
   },
@@ -690,10 +690,6 @@
     "resellers": null,
     "skus": [
       {
-        "sku": "digimon_survive",
-        "discount_percentage": "70"
-      },
-      {
         "sku": "doraemon_story_of_seasons_friends_of_the_great_kingdom",
         "discount_percentage": "30"
       },
@@ -702,20 +698,8 @@
         "discount_percentage": "70"
       },
       {
-        "sku": "dragon_ball_z_kakarot_legendary",
-        "discount_percentage": "75"
-      },
-      {
         "sku": "naruto_x_boruto_ultimate_ninja_storm_connections_deluxe",
         "discount_percentage": "50"
-      },
-      {
-        "sku": "one_piece_burning_blood_gold",
-        "discount_percentage": "78"
-      },
-      {
-        "sku": "one_piece_pirate_warriors_4_deluxe",
-        "discount_percentage": "75"
       },
       {
         "sku": "sand_land",
@@ -744,14 +728,6 @@
       {
         "sku": "that_time_i_got_reincarnated_as_a_slime_isekai_chronicles_deluxe",
         "discount_percentage": "25"
-      },
-      {
-        "sku": "the_idolm_ster_starlit_season",
-        "discount_percentage": "60"
-      },
-      {
-        "sku": "the_idolm_ster_starlit_season_deluxe",
-        "discount_percentage": "60"
       },
       {
         "sku": "we_love_katamari_reroll_royal_reverie_special",
@@ -810,24 +786,8 @@
     "resellers": null,
     "skus": [
       {
-        "sku": "dragon_ball_fighterz_fighterz",
-        "discount_percentage": "70"
-      },
-      {
         "sku": "hack_g_u_last_recode",
         "discount_percentage": "90"
-      },
-      {
-        "sku": "sd_gundam_battle_alliance_deluxe",
-        "discount_percentage": "67"
-      },
-      {
-        "sku": "super_robot_wars_30",
-        "discount_percentage": "67"
-      },
-      {
-        "sku": "super_robot_wars_30_ultimate",
-        "discount_percentage": "67"
       },
       {
         "sku": "sword_art_online_alicization_lycoris_deluxe",
@@ -908,14 +868,14 @@
     ]
   },
   {
-    "name": "2024-12-15 → 2024-12-28 All 65.0111–77%",
+    "name": "2024-12-15 → 2024-12-28 All 65–77%",
     "start_date": "2024-12-15",
     "end_date": "2024-12-28",
     "resellers": null,
     "skus": [
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto",
-        "discount_percentage": "65.0111"
+        "discount_percentage": "65"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
@@ -2158,10 +2118,6 @@
         "discount_percentage": "35"
       },
       {
-        "sku": "super_robot_wars_30",
-        "discount_percentage": "67"
-      },
-      {
         "sku": "super_robot_wars_x",
         "discount_percentage": "75"
       },
@@ -2807,7 +2763,7 @@
       },
       {
         "sku": "tekken_8",
-        "discount_percentage": "29.8387"
+        "discount_percentage": "30"
       }
     ]
   },
@@ -2936,7 +2892,7 @@
     ]
   },
   {
-    "name": "2025-06-11 → 2025-06-20 All 63–74.67%",
+    "name": "2025-06-11 → 2025-06-20 All 63–75%",
     "start_date": "2025-06-11",
     "end_date": "2025-06-20",
     "resellers": null,
@@ -2947,12 +2903,12 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "74.67"
+        "discount_percentage": "75"
       }
     ]
   },
   {
-    "name": "2025-06-15 → 2025-06-28 All 30–92.2449%",
+    "name": "2025-06-15 → 2025-06-28 All 30–92%",
     "start_date": "2025-06-15",
     "end_date": "2025-06-28",
     "resellers": null,
@@ -2971,15 +2927,15 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_trilogy",
-        "discount_percentage": "83.25"
+        "discount_percentage": "83"
       },
       {
         "sku": "pac_man_mega_tunnel_battle_chomp_champs",
-        "discount_percentage": "92.2449"
+        "discount_percentage": "92"
       },
       {
         "sku": "sword_art_online_fatal_bullet_complete",
-        "discount_percentage": "83.92"
+        "discount_percentage": "84"
       },
       {
         "sku": "tekken_8",
@@ -2988,18 +2944,18 @@
     ]
   },
   {
-    "name": "2025-06-21 → 2025-06-30 All 70.4–79.651%",
+    "name": "2025-06-21 → 2025-06-30 All 70–80%",
     "start_date": "2025-06-21",
     "end_date": "2025-06-30",
     "resellers": null,
     "skus": [
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto",
-        "discount_percentage": "70.4"
+        "discount_percentage": "70"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "79.651"
+        "discount_percentage": "80"
       }
     ]
   },
@@ -3033,7 +2989,7 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_trilogy",
-        "discount_percentage": "72.0802"
+        "discount_percentage": "72"
       },
       {
         "sku": "one_piece_pirate_warriors_4_ultimate",
@@ -3197,7 +3153,7 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "74.6695"
+        "discount_percentage": "75"
       },
       {
         "sku": "sword_art_online_fractured_daydream",
@@ -3952,7 +3908,7 @@
     ]
   },
   {
-    "name": "2025-08-01 → 2025-08-10 Heybox 31.0389% — NARUTO SHIPPUDEN: Ultimate Ni…",
+    "name": "2025-08-01 → 2025-08-10 Heybox 31% — NARUTO SHIPPUDEN: Ultimate Ni…",
     "start_date": "2025-08-01",
     "end_date": "2025-08-10",
     "resellers": [
@@ -3961,7 +3917,7 @@
     "skus": [
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto",
-        "discount_percentage": "31.0389"
+        "discount_percentage": "31"
       }
     ]
   },
@@ -4019,7 +3975,7 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "59.8801"
+        "discount_percentage": "60"
       },
       {
         "sku": "naruto_x_boruto_ultimate_ninja_storm_connections",
@@ -4176,7 +4132,7 @@
     ]
   },
   {
-    "name": "2025-08-11 → 2025-08-20 Heybox 52.9306% — NARUTO SHIPPUDEN: Ultimate Ni…",
+    "name": "2025-08-11 → 2025-08-20 Heybox 53% — NARUTO SHIPPUDEN: Ultimate Ni…",
     "start_date": "2025-08-11",
     "end_date": "2025-08-20",
     "resellers": [
@@ -4185,7 +4141,7 @@
     "skus": [
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto",
-        "discount_percentage": "52.9306"
+        "discount_percentage": "53"
       }
     ]
   },
@@ -4207,7 +4163,7 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "74.6696"
+        "discount_percentage": "75"
       },
       {
         "sku": "sword_art_online_last_recollection",
@@ -4441,7 +4397,7 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "74.6696"
+        "discount_percentage": "75"
       },
       {
         "sku": "one_piece_pirate_warriors_4_ultimate",
@@ -7377,7 +7333,7 @@
       },
       {
         "sku": "one_piece_pirate_warriors_4",
-        "discount_percentage": "72.191"
+        "discount_percentage": "72"
       },
       {
         "sku": "one_piece_pirate_warriors_4_legendary",
@@ -7782,7 +7738,7 @@
     ]
   },
   {
-    "name": "2026-02-01 → 2026-02-14 Heybox 15.7761–85%",
+    "name": "2026-02-01 → 2026-02-14 Heybox 16–85%",
     "start_date": "2026-02-01",
     "end_date": "2026-02-14",
     "resellers": [
@@ -7891,7 +7847,7 @@
       },
       {
         "sku": "little_nightmares_iii_deluxe",
-        "discount_percentage": "15.7761"
+        "discount_percentage": "16"
       },
       {
         "sku": "mobile_suit_gundam_seed_battle_destiny_remastered",
@@ -7915,7 +7871,7 @@
       },
       {
         "sku": "one_piece_pirate_warriors_4_ultimate",
-        "discount_percentage": "66.9262"
+        "discount_percentage": "67"
       },
       {
         "sku": "scarlet_nexus",
@@ -8594,7 +8550,7 @@
     ]
   },
   {
-    "name": "2026-02-15 → 2026-02-28 Heybox 25–92.5746%",
+    "name": "2026-02-15 → 2026-02-28 Heybox 25–93%",
     "start_date": "2026-02-15",
     "end_date": "2026-02-28",
     "resellers": [
@@ -8627,7 +8583,7 @@
       },
       {
         "sku": "code_vein",
-        "discount_percentage": "92.5746"
+        "discount_percentage": "93"
       },
       {
         "sku": "digimon_story_cyber_sleuth_complete",
@@ -8663,11 +8619,11 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto",
-        "discount_percentage": "57.9611"
+        "discount_percentage": "58"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_trilogy",
-        "discount_percentage": "66.5"
+        "discount_percentage": "66"
       },
       {
         "sku": "one_piece_pirate_warriors_4_ultimate",
@@ -8696,10 +8652,6 @@
       {
         "sku": "tales_of_xillia_remastered_deluxe",
         "discount_percentage": "30"
-      },
-      {
-        "sku": "tekken_8",
-        "discount_percentage": "60.0806"
       }
     ]
   },
@@ -8718,7 +8670,7 @@
     ]
   },
   {
-    "name": "2026-02-19 → 2026-02-27 Heybox 70.5307% — NARUTO SHIPPUDEN: Ultimate Ni…",
+    "name": "2026-02-19 → 2026-02-27 Heybox 71% — NARUTO SHIPPUDEN: Ultimate Ni…",
     "start_date": "2026-02-19",
     "end_date": "2026-02-27",
     "resellers": [
@@ -8727,7 +8679,7 @@
     "skus": [
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "70.5307"
+        "discount_percentage": "71"
       }
     ]
   },
@@ -8957,7 +8909,7 @@
       },
       {
         "sku": "sword_art_online_alicization_lycoris",
-        "discount_percentage": "45.8182"
+        "discount_percentage": "46"
       },
       {
         "sku": "sword_art_online_fractured_daydream",
@@ -9065,15 +9017,15 @@
       },
       {
         "sku": "sword_art_online_alicization_lycoris_deluxe",
-        "discount_percentage": "61.8468"
+        "discount_percentage": "62"
       },
       {
         "sku": "sword_art_online_fatal_bullet",
-        "discount_percentage": "78.4545"
+        "discount_percentage": "78"
       },
       {
         "sku": "sword_art_online_hollow_realization_deluxe",
-        "discount_percentage": "64.661"
+        "discount_percentage": "65"
       },
       {
         "sku": "synduality_echo_of_ada",
@@ -9315,11 +9267,11 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto",
-        "discount_percentage": "57.9611"
+        "discount_percentage": "58"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "70.5307"
+        "discount_percentage": "71"
       },
       {
         "sku": "scarlet_nexus_deluxe",
@@ -10177,7 +10129,7 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto",
-        "discount_percentage": "57.9611"
+        "discount_percentage": "58"
       },
       {
         "sku": "naruto_ultimate_ninja_storm",
@@ -10561,11 +10513,11 @@
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_legacy",
-        "discount_percentage": "70.5307"
+        "discount_percentage": "71"
       },
       {
         "sku": "naruto_shippuden_ultimate_ninja_storm_trilogy",
-        "discount_percentage": "66.5"
+        "discount_percentage": "66"
       }
     ]
   },

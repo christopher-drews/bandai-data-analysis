@@ -1,6 +1,6 @@
 Product Name,Normalized Name,Customer,Promo Discount,paxCode,Customer Reference,start_date,end_date,basis
 .hack//G.U. Last Recode,hack_g_u_last_recode,Alibaba,0.34,PAX0011204972,E05367,2026-05-01,2026-05-31,full
-.hack//G.U. Last Recode,hack_g_u_last_recode,All,0.6835,PAX0011204972,E05367,2024-11-01,2024-11-30,full
+.hack//G.U. Last Recode,hack_g_u_last_recode,All,0.68,PAX0011204972,E05367,2024-11-01,2024-11-30,full
 .hack//G.U. Last Recode,hack_g_u_last_recode,All,0.9,PAX0011204972,E05367,2024-12-01,2025-03-31,full
 .hack//G.U. Last Recode,hack_g_u_last_recode,All,0.8,PAX0011204972,E05367,2025-04-01,2025-04-30,full
 .hack//G.U. Last Recode,hack_g_u_last_recode,All,0.9,PAX0011204972,E05367,2025-06-01,2025-06-30,full
@@ -16,7 +16,7 @@ Product Name,Normalized Name,Customer,Promo Discount,paxCode,Customer Reference,
 .hack//G.U. Last Recode,hack_g_u_last_recode,Heybox,0.9,PAX0011204972,E05367,2026-05-15,2026-05-28,stacked
 .hack//G.U. Last Recode,hack_g_u_last_recode,Sonkwo,0.9,PAX0011204972,E05367,2025-07-01,2025-07-31,full
 .hack//G.U. Last Recode,hack_g_u_last_recode,Sonkwo,0.8,PAX0011204972,E05367,2025-11-01,2026-02-28,full
-ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,All,0.6716,PAX0009836302,E03174,2024-11-01,2024-11-30,full
+ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,All,0.67,PAX0009836302,E03174,2024-11-01,2024-11-30,full
 ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,All,0.8,PAX0009836302,E03174,2024-12-01,2024-12-14,partial
 ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,All,0.8,PAX0009836302,E03174,2025-01-01,2025-01-14,partial
 ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,All,0.8,PAX0009836302,E03174,2025-02-01,2025-02-14,partial
@@ -42,7 +42,7 @@ ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,Sonkwo,0.89,PAX0009836302
 ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,Sonkwo,0.83,PAX0009836302,E03174,2025-12-01,2026-01-31,full
 ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,Sonkwo,0.92,PAX0009836302,E03174,2026-02-01,2026-02-28,full
 ACE COMBAT 7: SKIES UNKNOWN,ace_combat_7_skies_unknown,Sonkwo,0.84,PAX0009836302,E03174,2026-03-01,2026-04-30,full
-ACE COMBAT 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,All,0.8032,,E05444,2024-11-01,2024-11-30,full
+ACE COMBAT 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,All,0.8,,E05444,2024-11-01,2024-11-30,full
 ACE COMBAT 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,All,0.9,,E05444,2024-12-01,2024-12-14,partial
 ACE COMBAT 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,All,0.8,,E05444,2025-01-01,2025-01-14,stacked
 ACE COMBAT 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,All,0.9,,E05444,2025-01-15,2025-01-28,stacked
@@ -60,7 +60,7 @@ ACE COMBAT 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_sk
 ACE COMBAT 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,Sonkwo,0.8,,E05444,2025-07-01,2025-07-31,full
 ACE COMBAT 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,Sonkwo,0.8,,E05444,2025-10-01,2026-04-30,full
 ACE COMBAT 7: SKIES UNKNOWN - TOP GUN: Maverick Ultimate Edition,ace_combat_7_skies_unknown_top_gun_maverick_ultimate,Sonkwo,0.8,,E05444,2026-06-01,2026-06-30,full
-ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Edition,ace_combat_7_skies_unknown_top_gun_maverick,All,0.7609,PAX0012537704,E05445,2024-11-01,2024-11-30,full
+ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Edition,ace_combat_7_skies_unknown_top_gun_maverick,All,0.76,PAX0012537704,E05445,2024-11-01,2024-11-30,full
 ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Edition,ace_combat_7_skies_unknown_top_gun_maverick,All,0.8,PAX0012537704,E05445,2024-12-01,2025-05-31,full
 ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Edition,ace_combat_7_skies_unknown_top_gun_maverick,All,0.8,PAX0012537704,E05445,2025-06-01,2025-06-14,partial
 ACE COMBAT™ 7: SKIES UNKNOWN - TOP GUN: Maverick Edition,ace_combat_7_skies_unknown_top_gun_maverick,Heybox,0.8,PAX0012537704,E05445,2025-07-01,2026-06-30,full
@@ -95,8 +95,7 @@ ARMORED CORE VI FIRES OF RUBICON Standard Edition,armored_core_vi_fires_of_rubic
 ARMORED CORE VI FIRES OF RUBICON Standard Edition,armored_core_vi_fires_of_rubicon,Heybox,0.35,PAX0013077488,E05837,2026-02-01,2026-02-14,stacked
 ARMORED CORE VI FIRES OF RUBICON Standard Edition,armored_core_vi_fires_of_rubicon,Heybox,0.5,PAX0013077488,E05837,2026-02-15,2026-02-28,stacked
 ARMORED CORE VI FIRES OF RUBICON Standard Edition,armored_core_vi_fires_of_rubicon,Sonkwo,0.5,PAX0013077488,E05837,2025-12-01,2026-02-28,full
-Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,All,0.68,PAX0009526222,E02452,2024-11-01,2024-11-14,stacked
-Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,All,0.6835,PAX0009526222,E02452,2024-11-15,2024-11-28,stacked
+Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,All,0.68,PAX0009526222,E02452,2024-11-01,2024-11-30,full
 Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,All,0.9,PAX0009526222,E02452,2024-12-01,2025-06-30,full
 Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,Heybox,0.9,PAX0009526222,E02452,2025-07-01,2026-02-28,full
 Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,Heybox,0.8,PAX0009526222,E02452,2026-03-01,2026-03-31,full
@@ -104,14 +103,14 @@ Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_
 Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,Sonkwo,0.9,PAX0009526222,E02452,2025-10-01,2025-11-30,full
 Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,Sonkwo,0.9,PAX0009526222,E02452,2026-01-01,2026-01-31,full
 Accel World VS. Sword Art Online Deluxe Edition,accel_world_vs_sword_art_online_deluxe,Sonkwo,0.9,PAX0009526222,E02452,2026-03-01,2026-04-30,full
-BLACK CLOVER: QUARTET KNIGHTS,black_clover_quartet_knights,All,0.6716,PAX0009950542,E02895,2024-11-01,2024-11-30,full
+BLACK CLOVER: QUARTET KNIGHTS,black_clover_quartet_knights,All,0.67,PAX0009950542,E02895,2024-11-01,2024-11-30,full
 BLACK CLOVER: QUARTET KNIGHTS,black_clover_quartet_knights,All,0.9,PAX0009950542,E02895,2024-12-01,2025-06-30,full
 BLACK CLOVER: QUARTET KNIGHTS,black_clover_quartet_knights,Heybox,0.9,PAX0009950542,E02895,2025-07-01,2025-11-30,full
 BLACK CLOVER: QUARTET KNIGHTS,black_clover_quartet_knights,Heybox,0.89,PAX0009950542,E02895,2025-12-01,2025-12-31,full
 BLACK CLOVER: QUARTET KNIGHTS,black_clover_quartet_knights,Heybox,0.89,PAX0009950542,E02895,2026-01-01,2026-01-14,stacked
 BLACK CLOVER: QUARTET KNIGHTS,black_clover_quartet_knights,Heybox,0.9,PAX0009950542,E02895,2026-01-15,2026-01-28,stacked
 BLACK CLOVER: QUARTET KNIGHTS,black_clover_quartet_knights,Heybox,0.9,PAX0009950542,E02895,2026-02-01,2026-06-30,full
-BLACK CLOVER: QUARTET KNIGHTS Deluxe Edition,black_clover_quartet_knights_deluxe,All,0.6944,PAX0009950610,E02950,2024-11-01,2024-11-30,full
+BLACK CLOVER: QUARTET KNIGHTS Deluxe Edition,black_clover_quartet_knights_deluxe,All,0.69,PAX0009950610,E02950,2024-11-01,2024-11-30,full
 BLACK CLOVER: QUARTET KNIGHTS Deluxe Edition,black_clover_quartet_knights_deluxe,All,0.85,PAX0009950610,E02950,2024-12-01,2025-06-30,full
 BLACK CLOVER: QUARTET KNIGHTS Deluxe Edition,black_clover_quartet_knights_deluxe,Heybox,0.85,PAX0009950610,E02950,2025-07-01,2025-11-30,full
 BLACK CLOVER: QUARTET KNIGHTS Deluxe Edition,black_clover_quartet_knights_deluxe,Heybox,0.84,PAX0009950610,E02950,2025-12-01,2026-01-31,full
@@ -173,7 +172,7 @@ Baten Kaitos I & II HD Remaster,baten_kaitos_i_ii_hd_remaster,Sonkwo,0.5,PAX0014
 Baten Kaitos I & II HD Remaster,baten_kaitos_i_ii_hd_remaster,Sonkwo,0.5,PAX0014235936,E06117,2025-10-01,2025-11-30,full
 Baten Kaitos I & II HD Remaster,baten_kaitos_i_ii_hd_remaster,Sonkwo,0.5,PAX0014235936,E06117,2026-01-01,2026-01-31,full
 Baten Kaitos I & II HD Remaster,baten_kaitos_i_ii_hd_remaster,Sonkwo,0.6,PAX0014235936,E06117,2026-03-01,2026-04-30,full
-CODE VEIN,code_vein,All,0.6716,PAX0010324338,E03009,2024-11-01,2024-11-30,full
+CODE VEIN,code_vein,All,0.67,PAX0010324338,E03009,2024-11-01,2024-11-30,full
 CODE VEIN,code_vein,All,0.85,PAX0010324338,E03009,2024-12-01,2024-12-14,partial
 CODE VEIN,code_vein,All,0.85,PAX0010324338,E03009,2025-01-01,2025-01-31,full
 CODE VEIN,code_vein,All,0.85,PAX0010324338,E03009,2025-02-01,2025-02-14,partial
@@ -190,7 +189,7 @@ CODE VEIN,code_vein,Heybox,0.85,PAX0010324338,E03009,2025-11-01,2025-11-14,parti
 CODE VEIN,code_vein,Heybox,0.85,PAX0010324338,E03009,2025-12-01,2025-12-14,stacked
 CODE VEIN,code_vein,Heybox,0.89,PAX0010324338,E03009,2025-12-15,2025-12-28,stacked
 CODE VEIN,code_vein,Heybox,0.85,PAX0010324338,E03009,2026-02-01,2026-02-14,stacked
-CODE VEIN,code_vein,Heybox,0.925746,PAX0010324338,E03009,2026-02-15,2026-02-28,stacked
+CODE VEIN,code_vein,Heybox,0.93,PAX0010324338,E03009,2026-02-15,2026-02-28,stacked
 CODE VEIN,code_vein,Heybox,0.85,PAX0010324338,E03009,2026-03-01,2026-03-14,partial
 CODE VEIN,code_vein,Heybox,0.85,PAX0010324338,E03009,2026-04-01,2026-04-14,stacked
 CODE VEIN,code_vein,Heybox,0.9,PAX0010324338,E03009,2026-04-15,2026-04-28,stacked
@@ -202,7 +201,7 @@ CODE VEIN,code_vein,Sonkwo,0.9,PAX0010324338,E03009,2025-12-01,2025-12-31,full
 CODE VEIN,code_vein,Sonkwo,0.89,PAX0010324338,E03009,2026-01-01,2026-01-31,full
 CODE VEIN,code_vein,Sonkwo,0.85,PAX0010324338,E03009,2026-02-01,2026-04-30,full
 CODE VEIN,code_vein,Sonkwo,0.9,PAX0010324338,E03009,2026-06-01,2026-06-30,full
-CODE VEIN Deluxe Edition,code_vein_deluxe,All,0.7609,PAX0011496930,E03483,2024-11-01,2024-11-30,full
+CODE VEIN Deluxe Edition,code_vein_deluxe,All,0.76,PAX0011496930,E03483,2024-11-01,2024-11-30,full
 CODE VEIN Deluxe Edition,code_vein_deluxe,All,0.85,PAX0011496930,E03483,2024-12-01,2025-02-28,full
 CODE VEIN Deluxe Edition,code_vein_deluxe,All,0.85,PAX0011496930,E03483,2025-03-01,2025-03-14,partial
 CODE VEIN Deluxe Edition,code_vein_deluxe,All,0.85,PAX0011496930,E03483,2025-04-01,2025-04-14,partial
@@ -247,7 +246,7 @@ CODE VEIN II Ultimate Edition,code_vein_ii_ultimate,Heybox,0.25,PAX0015167570,L0
 CODE VEIN II Ultimate Edition,code_vein_ii_ultimate,Heybox,0.34,PAX0015167570,L00241,2026-06-01,2026-06-14,partial
 CODE VEIN II Ultimate Edition,code_vein_ii_ultimate,Sonkwo,0.25,PAX0015167570,L00241,2026-03-01,2026-03-31,full
 CODE VEIN II Ultimate Edition,code_vein_ii_ultimate,Sonkwo,0.34,PAX0015167570,L00241,2026-06-01,2026-06-30,full
-Captain Tsubasa: Rise of New Champions,captain_tsubasa_rise_of_new_champions,All,0.5556,PAX0010849876,E03350,2024-11-01,2024-11-30,full
+Captain Tsubasa: Rise of New Champions,captain_tsubasa_rise_of_new_champions,All,0.56,PAX0010849876,E03350,2024-11-01,2024-11-30,full
 Captain Tsubasa: Rise of New Champions,captain_tsubasa_rise_of_new_champions,All,0.85,PAX0010849876,E03350,2024-12-01,2025-02-28,full
 Captain Tsubasa: Rise of New Champions,captain_tsubasa_rise_of_new_champions,All,0.75,PAX0010849876,E03350,2025-03-01,2025-03-31,full
 Captain Tsubasa: Rise of New Champions,captain_tsubasa_rise_of_new_champions,All,0.88,PAX0010849876,E03350,2025-04-01,2025-05-31,full
@@ -272,7 +271,7 @@ Captain Tsubasa: Rise of New Champions,captain_tsubasa_rise_of_new_champions,Son
 Captain Tsubasa: Rise of New Champions,captain_tsubasa_rise_of_new_champions,Sonkwo,0.88,PAX0010849876,E03350,2025-10-01,2025-10-31,full
 Captain Tsubasa: Rise of New Champions,captain_tsubasa_rise_of_new_champions,Sonkwo,0.86,PAX0010849876,E03350,2025-11-01,2025-12-31,full
 Captain Tsubasa: Rise of New Champions,captain_tsubasa_rise_of_new_champions,Sonkwo,0.88,PAX0010849876,E03350,2026-02-01,2026-03-31,full
-Captain Tsubasa: Rise of New Champions - Deluxe Edition,captain_tsubasa_rise_of_new_champions_deluxe,All,0.7047,PAX0010849944,E04120,2024-11-01,2024-11-14,partial
+Captain Tsubasa: Rise of New Champions - Deluxe Edition,captain_tsubasa_rise_of_new_champions_deluxe,All,0.7,PAX0010849944,E04120,2024-11-01,2024-11-14,partial
 Captain Tsubasa: Rise of New Champions - Deluxe Edition,captain_tsubasa_rise_of_new_champions_deluxe,All,0.85,PAX0010849944,E04120,2024-12-01,2025-02-28,full
 Captain Tsubasa: Rise of New Champions - Deluxe Edition,captain_tsubasa_rise_of_new_champions_deluxe,All,0.84,PAX0010849944,E04120,2025-03-01,2025-06-30,full
 Captain Tsubasa: Rise of New Champions - Deluxe Edition,captain_tsubasa_rise_of_new_champions_deluxe,Heybox,0.84,PAX0010849944,E04120,2025-07-01,2025-10-31,full
@@ -294,7 +293,7 @@ Captain Tsubasa: Rise of New Champions - Deluxe Edition,captain_tsubasa_rise_of_
 Captain Tsubasa: Rise of New Champions - Deluxe Edition,captain_tsubasa_rise_of_new_champions_deluxe,Sonkwo,0.84,PAX0010849944,E04120,2025-12-01,2025-12-31,full
 Captain Tsubasa: Rise of New Champions - Deluxe Edition,captain_tsubasa_rise_of_new_champions_deluxe,Sonkwo,0.84,PAX0010849944,E04120,2026-02-01,2026-02-28,full
 Captain Tsubasa: Rise of New Champions - Deluxe Edition,captain_tsubasa_rise_of_new_champions_deluxe,Sonkwo,0.84,PAX0010849944,E04120,2026-04-01,2026-04-30,full
-Captain Tsubasa: Rise of New Champions - Ultimate Edition,captain_tsubasa_rise_of_new_champions_ultimate,All,0.7538,PAX0014008034,E06275,2024-11-01,2024-11-30,full
+Captain Tsubasa: Rise of New Champions - Ultimate Edition,captain_tsubasa_rise_of_new_champions_ultimate,All,0.75,PAX0014008034,E06275,2024-11-01,2024-11-30,full
 Captain Tsubasa: Rise of New Champions - Ultimate Edition,captain_tsubasa_rise_of_new_champions_ultimate,All,0.85,PAX0014008034,E06275,2024-12-01,2025-02-28,full
 Captain Tsubasa: Rise of New Champions - Ultimate Edition,captain_tsubasa_rise_of_new_champions_ultimate,All,0.75,PAX0014008034,E06275,2025-03-01,2025-03-31,full
 Captain Tsubasa: Rise of New Champions - Ultimate Edition,captain_tsubasa_rise_of_new_champions_ultimate,All,0.82,PAX0014008034,E06275,2025-04-01,2025-06-30,full
@@ -410,7 +409,7 @@ DEATH NOTE Killer Within Special Edition,death_note_killer_within_special,Heybox
 DEATH NOTE Killer Within Special Edition,death_note_killer_within_special,Heybox,0.5,,E06646,2026-04-01,2026-04-14,partial
 DEATH NOTE Killer Within Special Edition,death_note_killer_within_special,Heybox,0.5,,E06646,2026-05-01,2026-05-31,full
 DEATH NOTE Killer Within Special Edition,death_note_killer_within_special,Heybox,0.5,,E06646,2026-06-01,2026-06-14,partial
-DORAEMON STORY OF SEASONS: Friends of the Great Kingdom,doraemon_story_of_seasons_friends_of_the_great_kingdom,All,0.2984,PAX0012561776,E05019,2024-11-01,2024-11-14,partial
+DORAEMON STORY OF SEASONS: Friends of the Great Kingdom,doraemon_story_of_seasons_friends_of_the_great_kingdom,All,0.3,PAX0012561776,E05019,2024-11-01,2024-11-14,partial
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom,doraemon_story_of_seasons_friends_of_the_great_kingdom,All,0.3,PAX0012561776,E05019,2024-12-01,2025-01-31,full
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom,doraemon_story_of_seasons_friends_of_the_great_kingdom,All,0.3,PAX0012561776,E05019,2025-02-01,2025-02-14,partial
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom,doraemon_story_of_seasons_friends_of_the_great_kingdom,All,0.3,PAX0012561776,E05019,2025-03-01,2025-03-14,partial
@@ -424,7 +423,7 @@ DORAEMON STORY OF SEASONS: Friends of the Great Kingdom,doraemon_story_of_season
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom,doraemon_story_of_seasons_friends_of_the_great_kingdom,Heybox,0.6,PAX0012561776,E05019,2026-06-01,2026-06-30,full
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom,doraemon_story_of_seasons_friends_of_the_great_kingdom,Sonkwo,0.45,PAX0012561776,E05019,2025-07-01,2025-07-31,full
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom,doraemon_story_of_seasons_friends_of_the_great_kingdom,Sonkwo,0.5,PAX0012561776,E05019,2025-12-01,2026-02-28,full
-DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe,All,0.2989,,E05733,2024-11-01,2024-11-14,partial
+DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe,All,0.3,,E05733,2024-11-01,2024-11-14,partial
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe,All,0.3,,E05733,2024-12-01,2024-12-14,partial
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe,All,0.3,,E05733,2025-01-01,2025-01-31,full
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe,All,0.3,,E05733,2025-02-01,2025-02-14,partial
@@ -444,7 +443,7 @@ DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe,Heybox,0.6,,E05733,2026-06-01,2026-06-30,full
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe,Sonkwo,0.45,,E05733,2025-10-01,2025-10-31,full
 DORAEMON STORY OF SEASONS: Friends of the Great Kingdom Deluxe Edition,doraemon_story_of_seasons_friends_of_the_great_kingdom_deluxe,Sonkwo,0.5,,E05733,2025-11-01,2026-01-31,full
-DRAGON BALL FighterZ,dragon_ball_fighterz,All,0.5556,PAX0009332320,E02533,2024-11-01,2024-11-30,full
+DRAGON BALL FighterZ,dragon_ball_fighterz,All,0.56,PAX0009332320,E02533,2024-11-01,2024-11-30,full
 DRAGON BALL FighterZ,dragon_ball_fighterz,All,0.56,PAX0009332320,E02533,2025-01-01,2025-01-14,partial
 DRAGON BALL FighterZ,dragon_ball_fighterz,All,0.56,PAX0009332320,E02533,2025-02-01,2025-02-14,partial
 DRAGON BALL FighterZ,dragon_ball_fighterz,All,0.56,PAX0009332320,E02533,2025-03-01,2025-03-14,partial
@@ -460,8 +459,7 @@ DRAGON BALL FighterZ,dragon_ball_fighterz,Heybox,0.84,PAX0009332320,E02533,2026-
 DRAGON BALL FighterZ,dragon_ball_fighterz,Heybox,0.84,PAX0009332320,E02533,2026-06-01,2026-06-30,full
 DRAGON BALL FighterZ,dragon_ball_fighterz,Sonkwo,0.84,PAX0009332320,E02533,2025-07-01,2025-07-31,full
 DRAGON BALL FighterZ,dragon_ball_fighterz,Sonkwo,0.84,PAX0009332320,E02533,2025-10-01,2026-02-28,full
-DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,All,0.7047,PAX0009410826,E02595,2024-11-01,2024-11-30,full
-DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,All,0.7,PAX0009410826,E02595,2024-12-01,2025-03-31,full
+DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,All,0.7,PAX0009410826,E02595,2024-11-01,2025-03-31,full
 DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,All,0.84,PAX0009410826,E02595,2025-04-01,2025-06-30,full
 DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,Heybox,0.84,PAX0009410826,E02595,2025-07-01,2025-07-31,full
 DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,Heybox,0.84,PAX0009410826,E02595,2025-08-01,2025-08-14,partial
@@ -474,7 +472,7 @@ DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,Sonkwo,0.8
 DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,Sonkwo,0.84,PAX0009410826,E02595,2026-02-01,2026-02-14,stacked
 DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,Sonkwo,0.88,PAX0009410826,E02595,2026-02-15,2026-02-28,stacked
 DRAGON BALL FighterZ - FighterZ Edition,dragon_ball_fighterz_fighterz,Sonkwo,0.84,PAX0009410826,E02595,2026-04-01,2026-04-30,full
-DRAGON BALL FighterZ - Legendary Edition,dragon_ball_fighterz_legendary,All,0.603,PAX0013747526,E02596,2024-11-01,2024-11-14,partial
+DRAGON BALL FighterZ - Legendary Edition,dragon_ball_fighterz_legendary,All,0.6,PAX0013747526,E02596,2024-11-01,2024-11-14,partial
 DRAGON BALL FighterZ - Legendary Edition,dragon_ball_fighterz_legendary,All,0.64,PAX0013747526,E02596,2024-12-01,2024-12-31,full
 DRAGON BALL FighterZ - Legendary Edition,dragon_ball_fighterz_legendary,All,0.64,PAX0013747526,E02596,2025-01-01,2025-01-14,partial
 DRAGON BALL FighterZ - Legendary Edition,dragon_ball_fighterz_legendary,All,0.64,PAX0013747526,E02596,2025-02-01,2025-02-14,partial
@@ -491,7 +489,7 @@ DRAGON BALL FighterZ - Legendary Edition,dragon_ball_fighterz_legendary,Heybox,0
 DRAGON BALL FighterZ - Legendary Edition,dragon_ball_fighterz_legendary,Heybox,0.75,PAX0013747526,E02596,2026-06-01,2026-06-30,full
 DRAGON BALL FighterZ - Legendary Edition,dragon_ball_fighterz_legendary,Sonkwo,0.75,PAX0013747526,E02596,2025-07-01,2025-07-31,full
 DRAGON BALL FighterZ - Legendary Edition,dragon_ball_fighterz_legendary,Sonkwo,0.75,PAX0013747526,E02596,2025-10-01,2026-04-30,full
-DRAGON BALL XENOVERSE 2,dragon_ball_xenoverse_2,All,0.102,PAX0008452536,E02035,2024-11-01,2024-11-14,partial
+DRAGON BALL XENOVERSE 2,dragon_ball_xenoverse_2,All,0.1,PAX0008452536,E02035,2024-11-01,2024-11-14,partial
 DRAGON BALL XENOVERSE 2,dragon_ball_xenoverse_2,All,0.1,PAX0008452536,E02035,2024-12-01,2024-12-14,partial
 DRAGON BALL XENOVERSE 2,dragon_ball_xenoverse_2,All,0.1,PAX0008452536,E02035,2025-01-01,2025-01-14,partial
 DRAGON BALL XENOVERSE 2,dragon_ball_xenoverse_2,All,0.1,PAX0008452536,E02035,2025-02-01,2025-02-14,partial
@@ -513,7 +511,7 @@ DRAGON BALL XENOVERSE 2,dragon_ball_xenoverse_2,Sonkwo,0.7,PAX0008452536,E02035,
 DRAGON BALL XENOVERSE 2,dragon_ball_xenoverse_2,Sonkwo,0.7,PAX0008452536,E02035,2025-10-01,2026-02-28,full
 DRAGON BALL XENOVERSE 2,dragon_ball_xenoverse_2,Sonkwo,0.84,PAX0008452536,E02035,2026-05-01,2026-05-31,full
 DRAGON BALL XENOVERSE 2,dragon_ball_xenoverse_2,Sonkwo,0.9,PAX0008452536,E02035,2026-06-01,2026-06-30,full
-DRAGON BALL XENOVERSE 2 Deluxe Edition,dragon_ball_xenoverse_2_deluxe,All,0.5556,PAX0012760472,E02036,2024-11-01,2024-11-30,full
+DRAGON BALL XENOVERSE 2 Deluxe Edition,dragon_ball_xenoverse_2_deluxe,All,0.56,PAX0012760472,E02036,2024-11-01,2024-11-30,full
 DRAGON BALL XENOVERSE 2 Deluxe Edition,dragon_ball_xenoverse_2_deluxe,All,0.5,PAX0012760472,E02036,2024-12-01,2024-12-14,partial
 DRAGON BALL XENOVERSE 2 Deluxe Edition,dragon_ball_xenoverse_2_deluxe,All,0.5,PAX0012760472,E02036,2025-01-01,2025-01-14,partial
 DRAGON BALL XENOVERSE 2 Deluxe Edition,dragon_ball_xenoverse_2_deluxe,All,0.5,PAX0012760472,E02036,2025-02-01,2025-02-14,partial
@@ -541,7 +539,7 @@ DRAGON BALL XENOVERSE 2 Deluxe Edition,dragon_ball_xenoverse_2_deluxe,Sonkwo,0.6
 DRAGON BALL XENOVERSE 2 Deluxe Edition,dragon_ball_xenoverse_2_deluxe,Sonkwo,0.6,PAX0012760472,E02036,2025-11-01,2025-11-30,full
 DRAGON BALL XENOVERSE 2 Deluxe Edition,dragon_ball_xenoverse_2_deluxe,Sonkwo,0.75,PAX0012760472,E02036,2026-02-01,2026-04-30,full
 DRAGON BALL XENOVERSE 2 Deluxe Edition,dragon_ball_xenoverse_2_deluxe,Sonkwo,0.9,PAX0012760472,E02036,2026-06-01,2026-06-30,full
-DRAGON BALL XENOVERSE 2 Special Edition,dragon_ball_xenoverse_2_special,All,0.6452,,E06308,2024-11-01,2024-11-14,partial
+DRAGON BALL XENOVERSE 2 Special Edition,dragon_ball_xenoverse_2_special,All,0.65,,E06308,2024-11-01,2024-11-14,partial
 DRAGON BALL XENOVERSE 2 Special Edition,dragon_ball_xenoverse_2_special,All,0.5,,E06308,2024-12-01,2024-12-14,partial
 DRAGON BALL XENOVERSE 2 Special Edition,dragon_ball_xenoverse_2_special,All,0.5,,E06308,2025-01-01,2025-01-31,full
 DRAGON BALL XENOVERSE 2 Special Edition,dragon_ball_xenoverse_2_special,All,0.5,,E06308,2025-02-01,2025-02-14,partial
@@ -579,7 +577,7 @@ DRAGON BALL Z : KAKAROT - MASTER EDITION,dragon_ball_z_kakarot_master,Sonkwo,0.7
 DRAGON BALL Z : KAKAROT - MASTER EDITION,dragon_ball_z_kakarot_master,Sonkwo,0.2,,L00114,2025-11-01,2025-11-30,full
 DRAGON BALL Z : KAKAROT - MASTER EDITION,dragon_ball_z_kakarot_master,Sonkwo,0.35,,L00114,2025-12-01,2026-01-31,full
 DRAGON BALL Z : KAKAROT - MASTER EDITION,dragon_ball_z_kakarot_master,Sonkwo,0.4,,L00114,2026-02-01,2026-05-31,full
-DRAGON BALL Z: KAKAROT,dragon_ball_z_kakarot,All,0.7047,PAX0010474210,E03005,2024-11-01,2024-11-14,partial
+DRAGON BALL Z: KAKAROT,dragon_ball_z_kakarot,All,0.7,PAX0010474210,E03005,2024-11-01,2024-11-14,partial
 DRAGON BALL Z: KAKAROT,dragon_ball_z_kakarot,All,0.7,PAX0010474210,E03005,2024-12-01,2025-01-31,full
 DRAGON BALL Z: KAKAROT,dragon_ball_z_kakarot,All,0.7,PAX0010474210,E03005,2025-02-01,2025-02-14,partial
 DRAGON BALL Z: KAKAROT,dragon_ball_z_kakarot,All,0.7,PAX0010474210,E03005,2025-03-01,2025-03-14,partial
@@ -621,15 +619,14 @@ DRAGON BALL Z: KAKAROT DAIMA EDITION,dragon_ball_z_kakarot_daima,Sonkwo,0.77,PAX
 DRAGON BALL Z: KAKAROT DAIMA EDITION,dragon_ball_z_kakarot_daima,Sonkwo,0.4,PAX0015502742,L00113,2026-03-01,2026-04-30,full
 DRAGON BALL Z: KAKAROT DAIMA EDITION,dragon_ball_z_kakarot_daima,Sonkwo,0.25,PAX0015502742,L00113,2026-05-01,2026-05-31,full
 DRAGON BALL Z: KAKAROT DAIMA EDITION,dragon_ball_z_kakarot_daima,Sonkwo,0.4,PAX0015502742,L00113,2026-06-01,2026-06-30,full
-DRAGON BALL Z: KAKAROT Deluxe Edition,dragon_ball_z_kakarot_deluxe,All,0.7714,PAX0010489986,E03730,2024-11-01,2024-11-30,full
+DRAGON BALL Z: KAKAROT Deluxe Edition,dragon_ball_z_kakarot_deluxe,All,0.77,PAX0010489986,E03730,2024-11-01,2024-11-30,full
 DRAGON BALL Z: KAKAROT Deluxe Edition,dragon_ball_z_kakarot_deluxe,All,0.77,PAX0010489986,E03730,2024-12-01,2024-12-14,partial
 DRAGON BALL Z: KAKAROT Deluxe Edition,dragon_ball_z_kakarot_deluxe,All,0.77,PAX0010489986,E03730,2025-01-01,2025-03-31,full
 DRAGON BALL Z: KAKAROT Deluxe Edition,dragon_ball_z_kakarot_deluxe,All,0.77,PAX0010489986,E03730,2025-04-01,2025-04-14,partial
 DRAGON BALL Z: KAKAROT Deluxe Edition,dragon_ball_z_kakarot_deluxe,All,0.77,PAX0010489986,E03730,2025-05-01,2025-05-14,partial
 DRAGON BALL Z: KAKAROT Deluxe Edition,dragon_ball_z_kakarot_deluxe,All,0.77,PAX0010489986,E03730,2025-06-01,2025-06-14,partial
 DRAGON BALL Z: KAKAROT Deluxe Edition,dragon_ball_z_kakarot_deluxe,All,0.77,PAX0010489986,E03730,2025-07-01,2025-07-31,full
-DRAGON BALL Z: KAKAROT Legendary Edition,dragon_ball_z_kakarot_legendary,All,0.751,PAX0012673398,E06163,2024-11-01,2024-11-30,full
-DRAGON BALL Z: KAKAROT Legendary Edition,dragon_ball_z_kakarot_legendary,All,0.75,PAX0012673398,E06163,2024-12-01,2025-01-31,full
+DRAGON BALL Z: KAKAROT Legendary Edition,dragon_ball_z_kakarot_legendary,All,0.75,PAX0012673398,E06163,2024-11-01,2025-01-31,full
 DRAGON BALL Z: KAKAROT Legendary Edition,dragon_ball_z_kakarot_legendary,All,0.75,PAX0012673398,E06163,2025-02-01,2025-02-14,partial
 DRAGON BALL Z: KAKAROT Legendary Edition,dragon_ball_z_kakarot_legendary,All,0.75,PAX0012673398,E06163,2025-03-01,2025-03-14,partial
 DRAGON BALL Z: KAKAROT Legendary Edition,dragon_ball_z_kakarot_legendary,All,0.75,PAX0012673398,E06163,2025-04-01,2025-04-14,partial
@@ -691,7 +688,7 @@ DRAGON BALL: Sparking! ZERO Ultimate Edition,dragon_ball_sparking_zero_ultimate,
 DRAGON BALL: Sparking! ZERO Ultimate Edition,dragon_ball_sparking_zero_ultimate,Heybox,0.5,PAX0014117378,E06655,2026-04-01,2026-04-14,partial
 DRAGON BALL: Sparking! ZERO Ultimate Edition,dragon_ball_sparking_zero_ultimate,Heybox,0.5,PAX0014117378,E06655,2026-05-01,2026-05-14,partial
 DRAGON BALL: Sparking! ZERO Ultimate Edition,dragon_ball_sparking_zero_ultimate,Heybox,0.5,PAX0014117378,E06655,2026-06-01,2026-06-14,partial
-DRAGON BALL: THE BREAKERS,dragon_ball_the_breakers,All,0.102,PAX0012529510,E05011,2024-11-01,2024-11-14,partial
+DRAGON BALL: THE BREAKERS,dragon_ball_the_breakers,All,0.1,PAX0012529510,E05011,2024-11-01,2024-11-14,partial
 DRAGON BALL: THE BREAKERS,dragon_ball_the_breakers,All,0.1,PAX0012529510,E05011,2025-01-01,2025-01-14,partial
 DRAGON BALL: THE BREAKERS,dragon_ball_the_breakers,All,0.1,PAX0012529510,E05011,2025-03-01,2025-03-14,partial
 DRAGON BALL: THE BREAKERS,dragon_ball_the_breakers,All,0.75,PAX0012529510,E05011,2025-04-01,2025-04-14,partial
@@ -708,7 +705,7 @@ DRAGON BALL: THE BREAKERS,dragon_ball_the_breakers,Heybox,0.72,PAX0012529510,E05
 DRAGON BALL: THE BREAKERS,dragon_ball_the_breakers,Heybox,0.75,PAX0012529510,E05011,2026-03-01,2026-03-14,partial
 DRAGON BALL: THE BREAKERS,dragon_ball_the_breakers,Heybox,0.75,PAX0012529510,E05011,2026-04-01,2026-04-30,full
 DRAGON BALL: THE BREAKERS,dragon_ball_the_breakers,Heybox,0.75,PAX0012529510,E05011,2026-05-01,2026-05-14,partial
-DRAGON BALL: THE BREAKERS Special Edition,dragon_ball_the_breakers_special,All,0.4054,PAX0012527878,E05644,2024-11-01,2024-11-30,full
+DRAGON BALL: THE BREAKERS Special Edition,dragon_ball_the_breakers_special,All,0.41,PAX0012527878,E05644,2024-11-01,2024-11-30,full
 DRAGON BALL: THE BREAKERS Special Edition,dragon_ball_the_breakers_special,All,0.41,PAX0012527878,E05644,2025-03-01,2025-03-31,full
 DRAGON BALL: THE BREAKERS Special Edition,dragon_ball_the_breakers_special,All,0.75,PAX0012527878,E05644,2025-04-01,2025-04-14,partial
 DRAGON BALL: THE BREAKERS Special Edition,dragon_ball_the_breakers_special,All,0.75,PAX0012527878,E05644,2025-05-01,2025-05-14,partial
@@ -719,7 +716,7 @@ DRAGON BALL: THE BREAKERS Special Edition,dragon_ball_the_breakers_special,Heybo
 DRAGON BALL: THE BREAKERS Special Edition,dragon_ball_the_breakers_special,Heybox,0.75,PAX0012527878,E05644,2026-03-01,2026-05-31,full
 DRAGON BALL: THE BREAKERS Special Edition,dragon_ball_the_breakers_special,Sonkwo,0.75,PAX0012527878,E05644,2025-07-01,2025-07-31,full
 DRAGON BALL: THE BREAKERS Special Edition,dragon_ball_the_breakers_special,Sonkwo,0.75,PAX0012527878,E05644,2026-01-01,2026-01-31,full
-Digimon Story Cyber Sleuth: Complete Edition,digimon_story_cyber_sleuth_complete,All,0.614,PAX0010995022,E05368,2024-11-01,2024-11-14,partial
+Digimon Story Cyber Sleuth: Complete Edition,digimon_story_cyber_sleuth_complete,All,0.61,PAX0010995022,E05368,2024-11-01,2024-11-14,partial
 Digimon Story Cyber Sleuth: Complete Edition,digimon_story_cyber_sleuth_complete,All,0.61,PAX0010995022,E05368,2024-12-01,2024-12-14,partial
 Digimon Story Cyber Sleuth: Complete Edition,digimon_story_cyber_sleuth_complete,All,0.61,PAX0010995022,E05368,2025-01-01,2025-01-31,full
 Digimon Story Cyber Sleuth: Complete Edition,digimon_story_cyber_sleuth_complete,All,0.61,PAX0010995022,E05368,2025-02-01,2025-02-14,partial
@@ -780,8 +777,7 @@ Digimon Story Time Stranger Ultimate Edition,digimon_story_time_stranger_ultimat
 Digimon Story Time Stranger Ultimate Edition,digimon_story_time_stranger_ultimate,Sonkwo,0.25,PAX0014928856,L00116,2026-02-01,2026-03-31,full
 Digimon Story Time Stranger Ultimate Edition,digimon_story_time_stranger_ultimate,Sonkwo,0.25,PAX0014928856,L00116,2026-05-01,2026-05-31,full
 Digimon Story Time Stranger Ultimate Edition,digimon_story_time_stranger_ultimate,Sonkwo,0.35,PAX0014928856,L00116,2026-06-01,2026-06-30,full
-Digimon Survive,digimon_survive,All,0.7047,PAX0012413910,E05471,2024-11-01,2024-11-30,full
-Digimon Survive,digimon_survive,All,0.7,PAX0012413910,E05471,2024-12-01,2025-01-31,full
+Digimon Survive,digimon_survive,All,0.7,PAX0012413910,E05471,2024-11-01,2025-01-31,full
 Digimon Survive,digimon_survive,All,0.7,PAX0012413910,E05471,2025-03-01,2025-03-31,full
 Digimon Survive,digimon_survive,All,0.84,PAX0012413910,E05471,2025-04-01,2025-05-31,full
 Digimon Survive,digimon_survive,All,0.84,PAX0012413910,E05471,2025-06-01,2025-06-14,partial
@@ -793,7 +789,7 @@ Digimon Survive,digimon_survive,Heybox,0.84,PAX0012413910,E05471,2025-11-01,2025
 Digimon Survive,digimon_survive,Heybox,0.84,PAX0012413910,E05471,2025-12-01,2026-06-30,full
 Digimon Survive,digimon_survive,Sonkwo,0.84,PAX0012413910,E05471,2025-07-01,2025-07-31,full
 Digimon Survive,digimon_survive,Sonkwo,0.84,PAX0012413910,E05471,2025-10-01,2026-04-30,full
-Digimon World: Next Order,digimon_world_next_order,All,0.6452,PAX0012723344,E04521,2024-11-01,2024-11-30,full
+Digimon World: Next Order,digimon_world_next_order,All,0.65,PAX0012723344,E04521,2024-11-01,2024-11-30,full
 Digimon World: Next Order,digimon_world_next_order,All,0.64,PAX0012723344,E04521,2025-01-01,2025-01-31,full
 Digimon World: Next Order,digimon_world_next_order,All,0.64,PAX0012723344,E04521,2025-03-01,2025-03-14,partial
 Digimon World: Next Order,digimon_world_next_order,All,0.84,PAX0012723344,E04521,2025-04-01,2025-04-14,partial
@@ -822,7 +818,7 @@ EVERYBODY'S GOLF HOT SHOTS,everybody_s_golf_hot_shots,All,0.25,PAX0014836172,L00
 EVERYBODY'S GOLF HOT SHOTS,everybody_s_golf_hot_shots,Heybox,0.25,PAX0014836172,L00036,2026-02-01,2026-04-30,full
 EVERYBODY'S GOLF HOT SHOTS,everybody_s_golf_hot_shots,Heybox,0.25,PAX0014836172,L00036,2026-06-01,2026-06-14,partial
 EVERYBODY'S GOLF HOT SHOTS,everybody_s_golf_hot_shots,Sonkwo,0.25,PAX0014836172,L00036,2026-06-01,2026-06-30,full
-GOD EATER 2 Rage Burst,god_eater_2_rage_burst,All,0.6716,PAX0009309268,E05369,2024-11-01,2024-11-14,partial
+GOD EATER 2 Rage Burst,god_eater_2_rage_burst,All,0.67,PAX0009309268,E05369,2024-11-01,2024-11-14,partial
 GOD EATER 2 Rage Burst,god_eater_2_rage_burst,All,0.9,PAX0009309268,E05369,2024-12-01,2024-12-14,partial
 GOD EATER 2 Rage Burst,god_eater_2_rage_burst,All,0.9,PAX0009309268,E05369,2025-01-01,2025-01-14,partial
 GOD EATER 2 Rage Burst,god_eater_2_rage_burst,All,0.9,PAX0009309268,E05369,2025-02-01,2025-02-28,full
@@ -842,7 +838,7 @@ GOD EATER 2 Rage Burst,god_eater_2_rage_burst,Sonkwo,0.9,PAX0009309268,E05369,20
 GOD EATER 2 Rage Burst,god_eater_2_rage_burst,Sonkwo,0.89,PAX0009309268,E05369,2025-11-01,2026-01-31,full
 GOD EATER 2 Rage Burst,god_eater_2_rage_burst,Sonkwo,0.9,PAX0009309268,E05369,2026-02-01,2026-03-31,full
 GOD EATER 2 Rage Burst,god_eater_2_rage_burst,Sonkwo,0.84,PAX0009309268,E05369,2026-05-01,2026-05-31,full
-GOD EATER 3,god_eater_3,All,0.6716,PAX0009956560,E03177,2024-11-01,2024-11-14,partial
+GOD EATER 3,god_eater_3,All,0.67,PAX0009956560,E03177,2024-11-01,2024-11-14,partial
 GOD EATER 3,god_eater_3,All,0.9,PAX0009956560,E03177,2024-12-01,2024-12-14,partial
 GOD EATER 3,god_eater_3,All,0.9,PAX0009956560,E03177,2025-01-01,2025-04-30,full
 GOD EATER 3,god_eater_3,All,0.9,PAX0009956560,E03177,2025-06-01,2025-06-14,partial
@@ -899,7 +895,7 @@ GUNDAM BREAKER 4 Ultimate Edition,gundam_breaker_4_ultimate,Heybox,0.6,PAX001398
 GUNDAM BREAKER 4 Ultimate Edition,gundam_breaker_4_ultimate,Sonkwo,0.5,PAX0013986716,E06530,2026-02-01,2026-03-31,full
 GUNDAM BREAKER 4 Ultimate Edition,gundam_breaker_4_ultimate,Sonkwo,0.9,PAX0013986716,E06530,2026-05-01,2026-05-31,full
 GUNDAM BREAKER 4 Ultimate Edition,gundam_breaker_4_ultimate,Sonkwo,0.6,PAX0013986716,E06530,2026-06-01,2026-06-30,full
-JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,All,0.6452,PAX0012435840,E03528,2024-11-01,2024-11-30,full
+JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,All,0.65,PAX0012435840,E03528,2024-11-01,2024-11-30,full
 JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,All,0.7,PAX0012435840,E03528,2024-12-01,2024-12-14,partial
 JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,All,0.7,PAX0012435840,E03528,2025-01-01,2025-01-14,stacked
 JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,All,0.8,PAX0012435840,E03528,2025-01-15,2025-01-28,stacked
@@ -915,7 +911,7 @@ JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_ba
 JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,Heybox,0.8,PAX0012435840,E03528,2026-06-01,2026-06-14,partial
 JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,Sonkwo,0.8,PAX0012435840,E03528,2025-10-01,2026-04-30,full
 JoJo's Bizarre Adventure: All-Star Battle R,jojo_s_bizarre_adventure_all_star_battle_r,Sonkwo,0.5,PAX0012435840,E03528,2026-05-01,2026-05-31,full
-JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition,jojo_s_bizarre_adventure_all_star_battle_r_deluxe,All,0.7011,PAX0013153750,E05524,2024-11-01,2024-11-30,full
+JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition,jojo_s_bizarre_adventure_all_star_battle_r_deluxe,All,0.7,PAX0013153750,E05524,2024-11-01,2024-11-30,full
 JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition,jojo_s_bizarre_adventure_all_star_battle_r_deluxe,All,0.7,PAX0013153750,E05524,2024-12-01,2024-12-14,partial
 JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition,jojo_s_bizarre_adventure_all_star_battle_r_deluxe,All,0.7,PAX0013153750,E05524,2025-01-01,2025-01-14,stacked
 JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition,jojo_s_bizarre_adventure_all_star_battle_r_deluxe,All,0.72,PAX0013153750,E05524,2025-01-15,2025-01-28,stacked
@@ -935,7 +931,7 @@ JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition,jojo_s_bizarre_advent
 JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition,jojo_s_bizarre_adventure_all_star_battle_r_deluxe,Heybox,0.72,PAX0013153750,E05524,2026-06-01,2026-06-14,partial
 JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition,jojo_s_bizarre_adventure_all_star_battle_r_deluxe,Sonkwo,0.72,PAX0013153750,E05524,2025-10-01,2025-11-30,full
 JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition,jojo_s_bizarre_adventure_all_star_battle_r_deluxe,Sonkwo,0.72,PAX0013153750,E05524,2026-04-01,2026-04-30,full
-JoJo's Bizarre Adventure: All-Star Battle R Ultimate Edition,jojo_s_bizarre_adventure_all_star_battle_r_ultimate,All,0.7009,PAX0013456282,E06307,2024-11-01,2024-11-14,partial
+JoJo's Bizarre Adventure: All-Star Battle R Ultimate Edition,jojo_s_bizarre_adventure_all_star_battle_r_ultimate,All,0.7,PAX0013456282,E06307,2024-11-01,2024-11-14,partial
 JoJo's Bizarre Adventure: All-Star Battle R Ultimate Edition,jojo_s_bizarre_adventure_all_star_battle_r_ultimate,All,0.7,PAX0013456282,E06307,2024-12-01,2024-12-14,partial
 JoJo's Bizarre Adventure: All-Star Battle R Ultimate Edition,jojo_s_bizarre_adventure_all_star_battle_r_ultimate,All,0.7,PAX0013456282,E06307,2025-01-01,2025-01-14,partial
 JoJo's Bizarre Adventure: All-Star Battle R Ultimate Edition,jojo_s_bizarre_adventure_all_star_battle_r_ultimate,All,0.7,PAX0013456282,E06307,2025-02-01,2025-02-14,partial
@@ -965,7 +961,7 @@ Jujutsu Kaisen Cursed Clash,jujutsu_kaisen_cursed_clash,Heybox,0.5,PAX0013412422
 Jujutsu Kaisen Cursed Clash,jujutsu_kaisen_cursed_clash,Heybox,0.67,PAX0013412422,E05703,2026-03-01,2026-03-14,partial
 Jujutsu Kaisen Cursed Clash,jujutsu_kaisen_cursed_clash,Heybox,0.67,PAX0013412422,E05703,2026-04-01,2026-05-31,full
 Jujutsu Kaisen Cursed Clash,jujutsu_kaisen_cursed_clash,Heybox,0.75,PAX0013412422,E05703,2026-06-01,2026-06-30,full
-Jujutsu Kaisen Cursed Clash Deluxe Edition,jujutsu_kaisen_cursed_clash_deluxe,All,0.3015,PAX0014089430,E06213,2024-11-01,2024-11-30,full
+Jujutsu Kaisen Cursed Clash Deluxe Edition,jujutsu_kaisen_cursed_clash_deluxe,All,0.3,PAX0014089430,E06213,2024-11-01,2024-11-30,full
 Jujutsu Kaisen Cursed Clash Deluxe Edition,jujutsu_kaisen_cursed_clash_deluxe,All,0.3,PAX0014089430,E06213,2024-12-01,2024-12-14,partial
 Jujutsu Kaisen Cursed Clash Deluxe Edition,jujutsu_kaisen_cursed_clash_deluxe,All,0.35,PAX0014089430,E06213,2025-01-01,2025-01-31,full
 Jujutsu Kaisen Cursed Clash Deluxe Edition,jujutsu_kaisen_cursed_clash_deluxe,All,0.35,PAX0014089430,E06213,2025-03-01,2025-03-31,full
@@ -978,7 +974,7 @@ Jujutsu Kaisen Cursed Clash Deluxe Edition,jujutsu_kaisen_cursed_clash_deluxe,He
 Jujutsu Kaisen Cursed Clash Deluxe Edition,jujutsu_kaisen_cursed_clash_deluxe,Heybox,0.75,PAX0014089430,E06213,2026-06-01,2026-06-30,full
 Jujutsu Kaisen Cursed Clash Deluxe Edition,jujutsu_kaisen_cursed_clash_deluxe,Sonkwo,0.5,PAX0014089430,E06213,2025-10-01,2025-10-31,full
 Jujutsu Kaisen Cursed Clash Deluxe Edition,jujutsu_kaisen_cursed_clash_deluxe,Sonkwo,0.69,PAX0014089430,E06213,2026-02-01,2026-03-31,full
-Jujutsu Kaisen Cursed Clash Ultimate Edition,jujutsu_kaisen_cursed_clash_ultimate,All,0.3012,PAX0013436800,E06212,2024-11-01,2024-11-30,full
+Jujutsu Kaisen Cursed Clash Ultimate Edition,jujutsu_kaisen_cursed_clash_ultimate,All,0.3,PAX0013436800,E06212,2024-11-01,2024-11-30,full
 Jujutsu Kaisen Cursed Clash Ultimate Edition,jujutsu_kaisen_cursed_clash_ultimate,All,0.35,PAX0013436800,E06212,2025-01-01,2025-01-31,full
 Jujutsu Kaisen Cursed Clash Ultimate Edition,jujutsu_kaisen_cursed_clash_ultimate,All,0.5,PAX0013436800,E06212,2025-05-01,2025-06-30,full
 Jujutsu Kaisen Cursed Clash Ultimate Edition,jujutsu_kaisen_cursed_clash_ultimate,All,0.7,PAX0013436800,E06212,2026-02-01,2026-04-30,full
@@ -988,7 +984,7 @@ Jujutsu Kaisen Cursed Clash Ultimate Edition,jujutsu_kaisen_cursed_clash_ultimat
 Jujutsu Kaisen Cursed Clash Ultimate Edition,jujutsu_kaisen_cursed_clash_ultimate,Heybox,0.7,PAX0013436800,E06212,2026-05-01,2026-05-14,partial
 Jujutsu Kaisen Cursed Clash Ultimate Edition,jujutsu_kaisen_cursed_clash_ultimate,Heybox,0.75,PAX0013436800,E06212,2026-06-01,2026-06-30,full
 Jujutsu Kaisen Cursed Clash Ultimate Edition,jujutsu_kaisen_cursed_clash_ultimate,Sonkwo,0.5,PAX0013436800,E06212,2025-11-01,2025-11-30,full
-Klonoa Phantasy Reverie Series,klonoa_phantasy_reverie_series,All,0.5556,PAX0012403812,E04522,2024-11-01,2024-11-30,full
+Klonoa Phantasy Reverie Series,klonoa_phantasy_reverie_series,All,0.56,PAX0012403812,E04522,2024-11-01,2024-11-30,full
 Klonoa Phantasy Reverie Series,klonoa_phantasy_reverie_series,All,0.75,PAX0012403812,E04522,2025-01-01,2025-06-30,full
 Klonoa Phantasy Reverie Series,klonoa_phantasy_reverie_series,Heybox,0.75,PAX0012403812,E04522,2025-07-01,2026-04-30,full
 Klonoa Phantasy Reverie Series,klonoa_phantasy_reverie_series,Heybox,0.75,PAX0012403812,E04522,2026-06-01,2026-06-30,full
@@ -1018,7 +1014,7 @@ Little Nightmares III Digital Deluxe Edition,little_nightmares_iii_deluxe,Heybox
 Little Nightmares III Digital Deluxe Edition,little_nightmares_iii_deluxe,Heybox,0.34,PAX0015081176,L00119,2025-12-15,2025-12-28,stacked
 Little Nightmares III Digital Deluxe Edition,little_nightmares_iii_deluxe,Heybox,0.12,PAX0015081176,L00119,2026-01-01,2026-01-14,stacked
 Little Nightmares III Digital Deluxe Edition,little_nightmares_iii_deluxe,Heybox,0.34,PAX0015081176,L00119,2026-01-15,2026-01-28,stacked
-Little Nightmares III Digital Deluxe Edition,little_nightmares_iii_deluxe,Heybox,0.157761,PAX0015081176,L00119,2026-02-01,2026-02-14,stacked
+Little Nightmares III Digital Deluxe Edition,little_nightmares_iii_deluxe,Heybox,0.16,PAX0015081176,L00119,2026-02-01,2026-02-14,stacked
 Little Nightmares III Digital Deluxe Edition,little_nightmares_iii_deluxe,Heybox,0.34,PAX0015081176,L00119,2026-02-15,2026-02-28,stacked
 Little Nightmares III Digital Deluxe Edition,little_nightmares_iii_deluxe,Heybox,0.12,PAX0015081176,L00119,2026-03-01,2026-03-14,stacked
 Little Nightmares III Digital Deluxe Edition,little_nightmares_iii_deluxe,Heybox,0.34,PAX0015081176,L00119,2026-03-15,2026-03-28,stacked
@@ -1043,7 +1039,7 @@ MOBILE SUIT GUNDAM SEED BATTLE DESTINY REMASTERED,mobile_suit_gundam_seed_battle
 MOBILE SUIT GUNDAM SEED BATTLE DESTINY REMASTERED,mobile_suit_gundam_seed_battle_destiny_remastered,Heybox,0.25,PAX0014731554,E06942,2026-03-01,2026-03-14,partial
 MOBILE SUIT GUNDAM SEED BATTLE DESTINY REMASTERED,mobile_suit_gundam_seed_battle_destiny_remastered,Heybox,0.25,PAX0014731554,E06942,2026-05-01,2026-05-14,partial
 MOBILE SUIT GUNDAM SEED BATTLE DESTINY REMASTERED,mobile_suit_gundam_seed_battle_destiny_remastered,Sonkwo,0.25,PAX0014731554,E06942,2025-12-01,2025-12-31,full
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,All,0.1852,PAX0010567030,E05373,2024-11-01,2024-11-30,full
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,All,0.19,PAX0010567030,E05373,2024-11-01,2024-11-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,All,0.75,PAX0010567030,E05373,2025-06-01,2025-06-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,Heybox,0.75,PAX0010567030,E05373,2025-07-01,2025-09-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,Heybox,0.5,PAX0010567030,E05373,2025-10-01,2025-10-14,stacked
@@ -1057,7 +1053,7 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,Sonkwo,0.75,PAX0010567030,E05373,2025-10-01,2025-10-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,Sonkwo,0.5,PAX0010567030,E05373,2025-11-01,2025-11-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 2,naruto_shippuden_ultimate_ninja_storm_2,Sonkwo,0.5,PAX0010567030,E05373,2026-03-01,2026-03-31,full
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4,All,0.102,PAX0007774372,E01592,2024-11-01,2024-11-14,partial
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4,All,0.1,PAX0007774372,E01592,2024-11-01,2024-11-14,partial
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4,All,0.1,PAX0007774372,E01592,2025-01-01,2025-01-14,partial
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4,All,0.1,PAX0007774372,E01592,2025-02-01,2025-02-14,partial
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4,All,0.1,PAX0007774372,E01592,2025-03-01,2025-03-14,partial
@@ -1083,9 +1079,9 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4,Sonkwo,0.25,PAX0007774372,E01592,2025-11-01,2026-01-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4,Sonkwo,0.25,PAX0007774372,E01592,2026-03-01,2026-03-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,naruto_shippuden_ultimate_ninja_storm_4,Sonkwo,0.25,PAX0007774372,E01592,2026-05-01,2026-06-30,full
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.6021,PAX0011492170,E04555,2024-11-01,2024-11-30,full
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.6,PAX0011492170,E04555,2024-11-01,2024-11-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.6,PAX0011492170,E04555,2024-12-01,2024-12-14,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.650111,PAX0011492170,E04555,2024-12-15,2024-12-28,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.65,PAX0011492170,E04555,2024-12-15,2024-12-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.26,PAX0011492170,E04555,2025-01-01,2025-01-10,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.5,PAX0011492170,E04555,2025-01-11,2025-01-20,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.6,PAX0011492170,E04555,2025-01-21,2025-01-30,stacked
@@ -1093,10 +1089,10 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimat
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.53,PAX0011492170,E04555,2025-04-01,2025-05-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.6,PAX0011492170,E04555,2025-06-01,2025-06-10,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.63,PAX0011492170,E04555,2025-06-11,2025-06-20,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.704,PAX0011492170,E04555,2025-06-21,2025-06-30,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,All,0.7,PAX0011492170,E04555,2025-06-21,2025-06-30,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.63,PAX0011492170,E04555,2025-07-01,2025-07-31,full
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.310389,PAX0011492170,E04555,2025-08-01,2025-08-10,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.529306,PAX0011492170,E04555,2025-08-11,2025-08-20,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.31,PAX0011492170,E04555,2025-08-01,2025-08-10,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.53,PAX0011492170,E04555,2025-08-11,2025-08-20,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.63,PAX0011492170,E04555,2025-08-21,2025-08-30,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.63,PAX0011492170,E04555,2025-09-01,2025-09-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.58,PAX0011492170,E04555,2025-10-01,2025-10-14,stacked
@@ -1109,18 +1105,18 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimat
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.26,PAX0011492170,E04555,2026-01-01,2026-01-14,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.43,PAX0011492170,E04555,2026-01-15,2026-01-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.43,PAX0011492170,E04555,2026-02-01,2026-02-14,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.579611,PAX0011492170,E04555,2026-02-15,2026-02-28,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.58,PAX0011492170,E04555,2026-02-15,2026-02-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.26,PAX0011492170,E04555,2026-03-01,2026-03-14,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.579611,PAX0011492170,E04555,2026-03-15,2026-03-28,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.58,PAX0011492170,E04555,2026-03-15,2026-03-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.26,PAX0011492170,E04555,2026-04-01,2026-04-30,full
-NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.579611,PAX0011492170,E04555,2026-05-01,2026-05-31,full
+NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.58,PAX0011492170,E04555,2026-05-01,2026-05-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.26,PAX0011492170,E04555,2026-06-01,2026-06-14,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Heybox,0.58,PAX0011492170,E04555,2026-06-15,2026-06-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Sonkwo,0.6,PAX0011492170,E04555,2025-07-01,2025-07-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Sonkwo,0.6,PAX0011492170,E04555,2025-10-01,2025-10-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Sonkwo,0.43,PAX0011492170,E04555,2025-11-01,2026-03-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto,naruto_shippuden_ultimate_ninja_storm_4_road_to_boruto,Sonkwo,0.43,PAX0011492170,E04555,2026-06-01,2026-06-30,full
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.7661,PAX0015827680,E05371,2024-11-01,2024-11-30,full
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.77,PAX0015827680,E05371,2024-11-01,2024-11-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.45,PAX0015827680,E05371,2024-12-01,2024-12-14,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.77,PAX0015827680,E05371,2024-12-15,2024-12-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.45,PAX0015827680,E05371,2025-01-01,2025-01-10,stacked
@@ -1132,12 +1128,12 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_st
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.5,PAX0015827680,E05371,2025-03-15,2025-03-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.63,PAX0015827680,E05371,2025-04-01,2025-05-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.63,PAX0015827680,E05371,2025-06-01,2025-06-10,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.7467,PAX0015827680,E05371,2025-06-11,2025-06-20,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.79651,PAX0015827680,E05371,2025-06-21,2025-06-30,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.746695,PAX0015827680,E05371,2025-07-01,2025-07-31,full
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.598801,PAX0015827680,E05371,2025-08-01,2025-08-14,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.746696,PAX0015827680,E05371,2025-08-15,2025-08-28,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.746696,PAX0015827680,E05371,2025-09-01,2025-09-30,full
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.75,PAX0015827680,E05371,2025-06-11,2025-06-20,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,All,0.8,PAX0015827680,E05371,2025-06-21,2025-06-30,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.75,PAX0015827680,E05371,2025-07-01,2025-07-31,full
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.6,PAX0015827680,E05371,2025-08-01,2025-08-14,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.75,PAX0015827680,E05371,2025-08-15,2025-08-28,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.75,PAX0015827680,E05371,2025-09-01,2025-09-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.45,PAX0015827680,E05371,2025-10-01,2025-10-10,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.63,PAX0015827680,E05371,2025-10-11,2025-10-20,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.71,PAX0015827680,E05371,2025-10-21,2025-10-30,stacked
@@ -1150,12 +1146,12 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_st
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.46,PAX0015827680,E05371,2026-01-15,2026-01-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.45,PAX0015827680,E05371,2026-02-01,2026-02-09,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.54,PAX0015827680,E05371,2026-02-10,2026-02-18,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.705307,PAX0015827680,E05371,2026-02-19,2026-02-27,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.71,PAX0015827680,E05371,2026-02-19,2026-02-27,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.45,PAX0015827680,E05371,2026-03-01,2026-03-14,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.705307,PAX0015827680,E05371,2026-03-15,2026-03-28,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.71,PAX0015827680,E05371,2026-03-15,2026-03-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.45,PAX0015827680,E05371,2026-04-01,2026-04-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.45,PAX0015827680,E05371,2026-05-01,2026-05-14,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.705307,PAX0015827680,E05371,2026-05-15,2026-05-28,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.71,PAX0015827680,E05371,2026-05-15,2026-05-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.45,PAX0015827680,E05371,2026-06-01,2026-06-14,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Heybox,0.71,PAX0015827680,E05371,2026-06-15,2026-06-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Sonkwo,0.63,PAX0015827680,E05371,2025-07-01,2025-07-31,full
@@ -1165,14 +1161,14 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_st
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Sonkwo,0.54,PAX0015827680,E05371,2026-02-01,2026-03-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Sonkwo,0.25,PAX0015827680,E05371,2026-05-01,2026-05-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy,naruto_shippuden_ultimate_ninja_storm_legacy,Sonkwo,0.54,PAX0015827680,E05371,2026-06-01,2026-06-30,full
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,All,0.5946,PAX0009772144,E05387,2024-11-01,2024-11-30,full
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,All,0.59,PAX0009772144,E05387,2024-11-01,2024-11-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,All,0.5,PAX0009772144,E05387,2025-01-01,2025-01-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,All,0.5,PAX0009772144,E05387,2025-03-01,2025-03-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,All,0.65,PAX0009772144,E05387,2025-04-01,2025-05-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,All,0.75,PAX0009772144,E05387,2025-06-01,2025-06-14,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,All,0.8325,PAX0009772144,E05387,2025-06-15,2025-06-28,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,All,0.83,PAX0009772144,E05387,2025-06-15,2025-06-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,All,0.5,PAX0009772144,E05387,2026-01-01,2026-01-31,full
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.720802,PAX0009772144,E05387,2025-07-01,2025-07-14,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.72,PAX0009772144,E05387,2025-07-01,2025-07-14,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.75,PAX0009772144,E05387,2025-07-15,2025-07-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.75,PAX0009772144,E05387,2025-08-01,2025-09-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.65,PAX0009772144,E05387,2025-10-01,2025-10-14,stacked
@@ -1182,9 +1178,9 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_s
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.5,PAX0009772144,E05387,2025-12-01,2025-12-14,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.65,PAX0009772144,E05387,2025-12-15,2025-12-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.65,PAX0009772144,E05387,2026-02-01,2026-02-14,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.665,PAX0009772144,E05387,2026-02-15,2026-02-28,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.66,PAX0009772144,E05387,2026-02-15,2026-02-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.33,PAX0009772144,E05387,2026-05-01,2026-05-14,stacked
-NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.665,PAX0009772144,E05387,2026-05-15,2026-05-28,stacked
+NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.66,PAX0009772144,E05387,2026-05-15,2026-05-28,stacked
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Heybox,0.66,PAX0009772144,E05387,2026-06-01,2026-06-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Sonkwo,0.75,PAX0009772144,E05387,2025-07-01,2025-07-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Sonkwo,0.65,PAX0009772144,E05387,2025-10-01,2025-10-31,full
@@ -1192,7 +1188,7 @@ NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_s
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Sonkwo,0.65,PAX0009772144,E05387,2026-02-01,2026-04-30,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Sonkwo,0.54,PAX0009772144,E05387,2026-05-01,2026-05-31,full
 NARUTO SHIPPUDEN: Ultimate Ninja STORM Trilogy,naruto_shippuden_ultimate_ninja_storm_trilogy,Sonkwo,0.65,PAX0009772144,E05387,2026-06-01,2026-06-30,full
-NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,All,0.102,PAX0009688844,E02855,2024-11-01,2024-11-30,full
+NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,All,0.1,PAX0009688844,E02855,2024-11-01,2024-11-30,full
 NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,All,0.1,PAX0009688844,E02855,2025-03-01,2025-03-14,partial
 NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,All,0.75,PAX0009688844,E02855,2025-04-01,2025-04-30,full
 NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,All,0.75,PAX0009688844,E02855,2025-05-01,2025-05-14,partial
@@ -1204,7 +1200,7 @@ NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,Heybox,0.72,P
 NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,Heybox,0.75,PAX0009688844,E02855,2026-02-01,2026-05-31,full
 NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,Heybox,0.75,PAX0009688844,E02855,2026-06-01,2026-06-14,partial
 NARUTO TO BORUTO: SHINOBI STRIKER,naruto_to_boruto_shinobi_striker,Sonkwo,0.65,PAX0009688844,E02855,2026-05-01,2026-05-31,full
-NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_striker_deluxe,All,0.5556,PAX0009966964,E02942,2024-11-01,2024-11-30,full
+NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_striker_deluxe,All,0.56,PAX0009966964,E02942,2024-11-01,2024-11-30,full
 NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_striker_deluxe,All,0.56,PAX0009966964,E02942,2025-01-01,2025-01-31,full
 NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_striker_deluxe,All,0.1,PAX0009966964,E02942,2025-03-01,2025-03-31,full
 NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_striker_deluxe,All,0.75,PAX0009966964,E02942,2025-04-01,2025-06-30,full
@@ -1212,7 +1208,7 @@ NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_strike
 NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_striker_deluxe,Heybox,0.75,PAX0009966964,E02942,2025-11-01,2025-11-14,partial
 NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_striker_deluxe,Heybox,0.75,PAX0009966964,E02942,2025-12-01,2026-06-30,full
 NARUTO TO BORUTO: SHINOBI STRIKER Deluxe Edition,naruto_to_boruto_shinobi_striker_deluxe,Sonkwo,0.75,PAX0009966964,E02942,2026-01-01,2026-01-31,full
-NARUTO TO BORUTO: SHINOBI STRIKER Ultimate Edition,naruto_to_boruto_shinobi_striker_ultimate,All,0.7714,,E06292,2024-11-01,2024-11-30,full
+NARUTO TO BORUTO: SHINOBI STRIKER Ultimate Edition,naruto_to_boruto_shinobi_striker_ultimate,All,0.77,,E06292,2024-11-01,2024-11-30,full
 NARUTO TO BORUTO: SHINOBI STRIKER Ultimate Edition,naruto_to_boruto_shinobi_striker_ultimate,All,0.77,,E06292,2025-01-01,2025-02-28,full
 NARUTO TO BORUTO: SHINOBI STRIKER Ultimate Edition,naruto_to_boruto_shinobi_striker_ultimate,All,0.67,,E06292,2025-03-01,2025-03-31,full
 NARUTO TO BORUTO: SHINOBI STRIKER Ultimate Edition,naruto_to_boruto_shinobi_striker_ultimate,All,0.75,,E06292,2025-04-01,2025-06-30,full
@@ -1291,7 +1287,7 @@ NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Ultimate Edition,naruto_x_borut
 NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Ultimate Edition,naruto_x_boruto_ultimate_ninja_storm_connections_ultimate,Sonkwo,0.5,,E06165,2025-07-01,2025-07-31,full
 NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Ultimate Edition,naruto_x_boruto_ultimate_ninja_storm_connections_ultimate,Sonkwo,0.5,,E06165,2025-10-01,2025-10-31,full
 NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Ultimate Edition,naruto_x_boruto_ultimate_ninja_storm_connections_ultimate,Sonkwo,0.6,,E06165,2025-11-01,2026-06-30,full
-NARUTO: Ultimate Ninja STORM,naruto_ultimate_ninja_storm,All,0.1852,PAX0010567064,E05386,2024-11-01,2024-11-30,full
+NARUTO: Ultimate Ninja STORM,naruto_ultimate_ninja_storm,All,0.19,PAX0010567064,E05386,2024-11-01,2024-11-30,full
 NARUTO: Ultimate Ninja STORM,naruto_ultimate_ninja_storm,All,0.75,PAX0010567064,E05386,2025-04-01,2025-04-30,full
 NARUTO: Ultimate Ninja STORM,naruto_ultimate_ninja_storm,All,0.75,PAX0010567064,E05386,2025-05-01,2025-05-14,partial
 NARUTO: Ultimate Ninja STORM,naruto_ultimate_ninja_storm,All,0.75,PAX0010567064,E05386,2025-06-01,2025-06-30,full
@@ -1310,7 +1306,7 @@ NARUTO: Ultimate Ninja STORM,naruto_ultimate_ninja_storm,Sonkwo,0.75,PAX00105670
 NARUTO: Ultimate Ninja STORM,naruto_ultimate_ninja_storm,Sonkwo,0.75,PAX0010567064,E05386,2025-10-01,2026-01-31,full
 NARUTO: Ultimate Ninja STORM,naruto_ultimate_ninja_storm,Sonkwo,0.5,PAX0010567064,E05386,2026-03-01,2026-03-31,full
 Naruto Shippuden Ultimate Ninja Storm 3 - EU Version,naruto_shippuden_ultimate_ninja_storm_3_eu_version,Heybox,0.5,,,2025-07-01,2025-07-31,full
-New Gundam Breaker,new_gundam_breaker,All,0.6716,PAX0009974784,E02758,2024-11-01,2024-11-30,full
+New Gundam Breaker,new_gundam_breaker,All,0.67,PAX0009974784,E02758,2024-11-01,2024-11-30,full
 New Gundam Breaker,new_gundam_breaker,All,0.7,PAX0009974784,E02758,2025-01-01,2025-01-31,full
 New Gundam Breaker,new_gundam_breaker,All,0.7,PAX0009974784,E02758,2025-04-01,2025-04-30,full
 New Gundam Breaker,new_gundam_breaker,All,0.7,PAX0009974784,E02758,2025-06-01,2025-06-30,full
@@ -1319,7 +1315,7 @@ New Gundam Breaker,new_gundam_breaker,Heybox,0.7,PAX0009974784,E02758,2025-12-01
 New Gundam Breaker,new_gundam_breaker,Heybox,0.7,PAX0009974784,E02758,2026-02-01,2026-03-31,full
 New Gundam Breaker,new_gundam_breaker,Heybox,0.7,PAX0009974784,E02758,2026-05-01,2026-05-31,full
 New Gundam Breaker,new_gundam_breaker,Sonkwo,0.7,PAX0009974784,E02758,2025-07-01,2025-07-31,full
-ONE PIECE BURNING BLOOD,one_piece_burning_blood,All,0.6716,PAX0009056410,E01970,2024-11-01,2024-11-30,full
+ONE PIECE BURNING BLOOD,one_piece_burning_blood,All,0.67,PAX0009056410,E01970,2024-11-01,2024-11-30,full
 ONE PIECE BURNING BLOOD,one_piece_burning_blood,All,0.67,PAX0009056410,E01970,2025-03-01,2025-03-31,full
 ONE PIECE BURNING BLOOD,one_piece_burning_blood,All,0.9,PAX0009056410,E01970,2025-04-01,2025-06-30,full
 ONE PIECE BURNING BLOOD,one_piece_burning_blood,Heybox,0.9,PAX0009056410,E01970,2025-07-01,2025-11-30,full
@@ -1328,7 +1324,7 @@ ONE PIECE BURNING BLOOD,one_piece_burning_blood,Heybox,0.9,PAX0009056410,E01970,
 ONE PIECE BURNING BLOOD,one_piece_burning_blood,Sonkwo,0.9,PAX0009056410,E01970,2025-07-01,2025-07-31,full
 ONE PIECE BURNING BLOOD,one_piece_burning_blood,Sonkwo,0.89,PAX0009056410,E01970,2025-11-01,2025-11-30,full
 ONE PIECE BURNING BLOOD,one_piece_burning_blood,Sonkwo,0.9,PAX0009056410,E01970,2026-03-01,2026-05-31,full
-ONE PIECE ODYSSEY,one_piece_odyssey,All,0.6007,PAX0012652998,E05083,2024-11-01,2024-11-30,full
+ONE PIECE ODYSSEY,one_piece_odyssey,All,0.6,PAX0012652998,E05083,2024-11-01,2024-11-30,full
 ONE PIECE ODYSSEY,one_piece_odyssey,All,0.5,PAX0012652998,E05083,2024-12-01,2024-12-31,full
 ONE PIECE ODYSSEY,one_piece_odyssey,All,0.5,PAX0012652998,E05083,2025-01-01,2025-01-14,partial
 ONE PIECE ODYSSEY,one_piece_odyssey,All,0.5,PAX0012652998,E05083,2025-05-01,2025-06-30,full
@@ -1336,7 +1332,7 @@ ONE PIECE ODYSSEY,one_piece_odyssey,Heybox,0.5,PAX0012652998,E05083,2025-07-01,2
 ONE PIECE ODYSSEY,one_piece_odyssey,Heybox,0.63,PAX0012652998,E05083,2026-02-01,2026-05-31,full
 ONE PIECE ODYSSEY,one_piece_odyssey,Heybox,0.63,PAX0012652998,E05083,2026-06-01,2026-06-14,stacked
 ONE PIECE ODYSSEY,one_piece_odyssey,Heybox,0.75,PAX0012652998,E05083,2026-06-15,2026-06-28,stacked
-ONE PIECE ODYSSEY Deluxe Edition,one_piece_odyssey_deluxe,All,0.6005,PAX0012673432,E05788,2024-11-01,2024-11-30,full
+ONE PIECE ODYSSEY Deluxe Edition,one_piece_odyssey_deluxe,All,0.6,PAX0012673432,E05788,2024-11-01,2024-11-30,full
 ONE PIECE ODYSSEY Deluxe Edition,one_piece_odyssey_deluxe,All,0.5,PAX0012673432,E05788,2024-12-01,2024-12-31,full
 ONE PIECE ODYSSEY Deluxe Edition,one_piece_odyssey_deluxe,All,0.5,PAX0012673432,E05788,2025-04-01,2025-06-30,full
 ONE PIECE ODYSSEY Deluxe Edition,one_piece_odyssey_deluxe,All,0.75,PAX0012673432,E05788,2026-06-01,2026-06-30,full
@@ -1346,7 +1342,7 @@ ONE PIECE ODYSSEY Deluxe Edition,one_piece_odyssey_deluxe,Heybox,0.6,PAX00126734
 ONE PIECE ODYSSEY Deluxe Edition,one_piece_odyssey_deluxe,Heybox,0.6,PAX0012673432,E05788,2026-04-01,2026-05-31,full
 ONE PIECE ODYSSEY Deluxe Edition,one_piece_odyssey_deluxe,Sonkwo,0.5,PAX0012673432,E05788,2025-07-01,2025-07-31,full
 ONE PIECE ODYSSEY Deluxe Edition,one_piece_odyssey_deluxe,Sonkwo,0.6,PAX0012673432,E05788,2026-02-01,2026-02-28,full
-ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,All,0.5556,PAX0010605960,E02973,2024-11-01,2024-11-30,full
+ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,All,0.56,PAX0010605960,E02973,2024-11-01,2024-11-30,full
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,All,0.56,PAX0010605960,E02973,2025-01-01,2025-01-31,full
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,All,0.56,PAX0010605960,E02973,2025-02-01,2025-02-14,partial
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,All,0.56,PAX0010605960,E02973,2025-03-01,2025-03-14,partial
@@ -1358,7 +1354,7 @@ ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.75,PAX00106059
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.72,PAX0010605960,E02973,2025-11-01,2025-11-30,full
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.1,PAX0010605960,E02973,2025-12-01,2025-12-14,stacked
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.75,PAX0010605960,E02973,2025-12-15,2025-12-28,stacked
-ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.72191,PAX0010605960,E02973,2026-01-01,2026-01-31,full
+ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.72,PAX0010605960,E02973,2026-01-01,2026-01-31,full
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.75,PAX0010605960,E02973,2026-02-01,2026-02-28,full
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.75,PAX0010605960,E02973,2026-03-01,2026-03-14,partial
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.75,PAX0010605960,E02973,2026-05-01,2026-05-14,partial
@@ -1366,8 +1362,7 @@ ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Heybox,0.8,PAX001060596
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Sonkwo,0.75,PAX0010605960,E02973,2025-11-01,2026-01-31,full
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Sonkwo,0.6,PAX0010605960,E02973,2026-05-01,2026-05-31,full
 ONE PIECE: PIRATE WARRIORS 4,one_piece_pirate_warriors_4,Sonkwo,0.8,PAX0010605960,E02973,2026-06-01,2026-06-30,full
-ONE PIECE: PIRATE WARRIORS 4 Deluxe Edition,one_piece_pirate_warriors_4_deluxe,All,0.7471,PAX0010640946,E03825,2024-11-01,2024-11-30,full
-ONE PIECE: PIRATE WARRIORS 4 Deluxe Edition,one_piece_pirate_warriors_4_deluxe,All,0.75,PAX0010640946,E03825,2024-12-01,2025-01-31,full
+ONE PIECE: PIRATE WARRIORS 4 Deluxe Edition,one_piece_pirate_warriors_4_deluxe,All,0.75,PAX0010640946,E03825,2024-11-01,2025-01-31,full
 ONE PIECE: PIRATE WARRIORS 4 Deluxe Edition,one_piece_pirate_warriors_4_deluxe,All,0.75,PAX0010640946,E03825,2025-02-01,2025-02-14,partial
 ONE PIECE: PIRATE WARRIORS 4 Deluxe Edition,one_piece_pirate_warriors_4_deluxe,All,0.75,PAX0010640946,E03825,2025-03-01,2025-03-31,full
 ONE PIECE: PIRATE WARRIORS 4 Deluxe Edition,one_piece_pirate_warriors_4_deluxe,All,0.77,PAX0010640946,E03825,2025-04-01,2025-04-14,partial
@@ -1381,7 +1376,7 @@ ONE PIECE: PIRATE WARRIORS 4 Legendary Edition,one_piece_pirate_warriors_4_legen
 ONE PIECE: PIRATE WARRIORS 4 Legendary Edition,one_piece_pirate_warriors_4_legendary,Heybox,0.5,,L00434,2026-05-01,2026-05-14,partial
 ONE PIECE: PIRATE WARRIORS 4 Legendary Edition,one_piece_pirate_warriors_4_legendary,Heybox,0.6,,L00434,2026-06-01,2026-06-14,partial
 ONE PIECE: PIRATE WARRIORS 4 Legendary Edition,one_piece_pirate_warriors_4_legendary,Sonkwo,0.6,,L00434,2026-06-01,2026-06-30,full
-ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,All,0.7009,,E06098,2024-11-01,2024-11-30,full
+ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,All,0.7,,E06098,2024-11-01,2024-11-30,full
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,All,0.7,,E06098,2024-12-01,2024-12-14,partial
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,All,0.7,,E06098,2025-01-01,2025-01-14,partial
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,All,0.7,,E06098,2025-02-01,2025-02-14,partial
@@ -1399,7 +1394,7 @@ ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultima
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Heybox,0.33,,E06098,2025-12-01,2025-12-14,stacked
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Heybox,0.79,,E06098,2025-12-15,2025-12-28,stacked
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Heybox,0.79,,E06098,2026-01-01,2026-01-31,full
-ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Heybox,0.669262,,E06098,2026-02-01,2026-02-14,stacked
+ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Heybox,0.67,,E06098,2026-02-01,2026-02-14,stacked
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Heybox,0.79,,E06098,2026-02-15,2026-02-28,stacked
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Heybox,0.79,,E06098,2026-03-01,2026-03-14,partial
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Heybox,0.79,,E06098,2026-04-01,2026-04-14,partial
@@ -1408,7 +1403,7 @@ ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultima
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Sonkwo,0.79,,E06098,2025-10-01,2026-01-31,full
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Sonkwo,0.79,,E06098,2026-03-01,2026-04-30,full
 ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition,one_piece_pirate_warriors_4_ultimate,Sonkwo,0.6,,E06098,2026-05-01,2026-05-31,full
-ONE PUNCH MAN: A HERO NOBODY KNOWS,one_punch_man_a_hero_nobody_knows,All,0.6716,PAX0010593278,E02997,2024-11-01,2024-11-30,full
+ONE PUNCH MAN: A HERO NOBODY KNOWS,one_punch_man_a_hero_nobody_knows,All,0.67,PAX0010593278,E02997,2024-11-01,2024-11-30,full
 ONE PUNCH MAN: A HERO NOBODY KNOWS,one_punch_man_a_hero_nobody_knows,All,0.9,PAX0010593278,E02997,2024-12-01,2025-06-30,full
 ONE PUNCH MAN: A HERO NOBODY KNOWS,one_punch_man_a_hero_nobody_knows,Heybox,0.9,PAX0010593278,E02997,2025-07-01,2025-11-30,full
 ONE PUNCH MAN: A HERO NOBODY KNOWS,one_punch_man_a_hero_nobody_knows,Heybox,0.89,PAX0010593278,E02997,2025-12-01,2025-12-31,full
@@ -1426,8 +1421,7 @@ Once Upon A KATAMARI - King of All Sounds Edition,once_upon_a_katamari_king_of_a
 Once Upon A KATAMARI - King of All Sounds Edition,once_upon_a_katamari_king_of_all_sounds,Heybox,0.25,,L00120,2026-02-01,2026-05-31,full
 Once Upon A KATAMARI - King of All Sounds Edition,once_upon_a_katamari_king_of_all_sounds,Sonkwo,0.25,,L00120,2026-04-01,2026-04-30,full
 Once Upon A KATAMARI - King of All Sounds Edition,once_upon_a_katamari_king_of_all_sounds,Sonkwo,0.79,,L00120,2026-05-01,2026-05-31,full
-One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,All,0.7811,PAX0010475706,E05642,2024-11-01,2024-11-30,full
-One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,All,0.78,PAX0010475706,E05642,2024-12-01,2025-01-31,full
+One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,All,0.78,PAX0010475706,E05642,2024-11-01,2025-01-31,full
 One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,All,0.78,PAX0010475706,E05642,2025-02-01,2025-02-14,partial
 One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,All,0.78,PAX0010475706,E05642,2025-03-01,2025-03-31,full
 One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,All,0.87,PAX0010475706,E05642,2025-04-01,2025-06-30,full
@@ -1440,7 +1434,7 @@ One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,Sonkwo,0.87,PA
 One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,Sonkwo,0.87,PAX0010475706,E05642,2026-02-01,2026-02-28,full
 One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,Sonkwo,0.87,PAX0010475706,E05642,2026-04-01,2026-04-30,full
 One Piece Burning Blood Gold Edition,one_piece_burning_blood_gold,Sonkwo,0.87,PAX0010475706,E05642,2026-06-01,2026-06-30,full
-One Piece World Seeker,one_piece_world_seeker,All,0.6716,PAX0009975226,E03295,2024-11-01,2024-11-30,full
+One Piece World Seeker,one_piece_world_seeker,All,0.67,PAX0009975226,E03295,2024-11-01,2024-11-30,full
 One Piece World Seeker,one_piece_world_seeker,All,0.67,PAX0009975226,E03295,2025-01-01,2025-01-31,full
 One Piece World Seeker,one_piece_world_seeker,All,0.9,PAX0009975226,E03295,2025-04-01,2025-06-30,full
 One Piece World Seeker,one_piece_world_seeker,Heybox,0.9,PAX0009975226,E03295,2025-07-01,2025-11-30,full
@@ -1448,7 +1442,7 @@ One Piece World Seeker,one_piece_world_seeker,Heybox,0.89,PAX0009975226,E03295,2
 One Piece World Seeker,one_piece_world_seeker,Heybox,0.9,PAX0009975226,E03295,2026-02-01,2026-06-30,full
 One Piece World Seeker,one_piece_world_seeker,Sonkwo,0.9,PAX0009975226,E03295,2026-04-01,2026-04-30,full
 One Piece World Seeker,one_piece_world_seeker,Sonkwo,0.9,PAX0009975226,E03295,2026-06-01,2026-06-30,full
-One Piece World Seeker Deluxe Edition,one_piece_world_seeker_deluxe,All,0.7317,PAX0010423108,E03367,2024-11-01,2024-11-30,full
+One Piece World Seeker Deluxe Edition,one_piece_world_seeker_deluxe,All,0.73,PAX0010423108,E03367,2024-11-01,2024-11-30,full
 One Piece World Seeker Deluxe Edition,one_piece_world_seeker_deluxe,All,0.73,PAX0010423108,E03367,2025-01-01,2025-01-31,full
 One Piece World Seeker Deluxe Edition,one_piece_world_seeker_deluxe,All,0.73,PAX0010423108,E03367,2025-03-01,2025-03-31,full
 One Piece World Seeker Deluxe Edition,one_piece_world_seeker_deluxe,All,0.9,PAX0010423108,E03367,2025-04-01,2025-06-30,full
@@ -1460,7 +1454,7 @@ One Piece World Seeker Deluxe Edition,one_piece_world_seeker_deluxe,Sonkwo,0.25,
 One Piece World Seeker Deluxe Edition,one_piece_world_seeker_deluxe,Sonkwo,0.9,PAX0010423108,E03367,2026-06-01,2026-06-30,full
 PAC-MAN Mega Tunnel Battle: Chomp Champs,pac_man_mega_tunnel_battle_chomp_champs,All,0.9,PAX0013651816,E06649,2025-04-01,2025-05-31,full
 PAC-MAN Mega Tunnel Battle: Chomp Champs,pac_man_mega_tunnel_battle_chomp_champs,All,0.9,PAX0013651816,E06649,2025-06-01,2025-06-14,stacked
-PAC-MAN Mega Tunnel Battle: Chomp Champs,pac_man_mega_tunnel_battle_chomp_champs,All,0.922449,PAX0013651816,E06649,2025-06-15,2025-06-28,stacked
+PAC-MAN Mega Tunnel Battle: Chomp Champs,pac_man_mega_tunnel_battle_chomp_champs,All,0.92,PAX0013651816,E06649,2025-06-15,2025-06-28,stacked
 PAC-MAN Mega Tunnel Battle: Chomp Champs,pac_man_mega_tunnel_battle_chomp_champs,Heybox,0.9,PAX0013651816,E06649,2025-07-01,2025-10-31,full
 PAC-MAN Mega Tunnel Battle: Chomp Champs,pac_man_mega_tunnel_battle_chomp_champs,Sonkwo,0.9,PAX0013651816,E06649,2025-10-01,2025-10-31,full
 PAC-MAN Mega Tunnel Battle: Chomp Champs - Deluxe Edition,pac_man_mega_tunnel_battle_chomp_champs_deluxe,All,0.5,,E06652,2025-01-01,2025-01-31,full
@@ -1491,7 +1485,7 @@ PATAPON 1+2 REPLAY,patapon_1_2_replay,Sonkwo,0.5,PAX0014894210,E06134,2026-06-01
 Park Beyond,park_beyond,Heybox,0.67,PAX0012897084,E04538,2025-09-01,2025-10-31,full
 Park Beyond,park_beyond,Heybox,0.65,PAX0012897084,E04538,2025-12-01,2025-12-31,full
 Park Beyond,park_beyond,Heybox,0.67,PAX0012897084,E04538,2026-02-01,2026-04-30,full
-SAND LAND,sand_land,All,0.3423,PAX0013449516,E06114,2024-11-01,2024-11-14,partial
+SAND LAND,sand_land,All,0.34,PAX0013449516,E06114,2024-11-01,2024-11-14,partial
 SAND LAND,sand_land,All,0.34,PAX0013449516,E06114,2024-12-01,2025-01-31,full
 SAND LAND,sand_land,All,0.34,PAX0013449516,E06114,2025-03-01,2025-03-31,full
 SAND LAND,sand_land,All,0.6,PAX0013449516,E06114,2025-04-01,2025-06-30,full
@@ -1507,7 +1501,7 @@ SAND LAND,sand_land,Sonkwo,0.5,PAX0013449516,E06114,2025-12-01,2025-12-31,full
 SAND LAND,sand_land,Sonkwo,0.5,PAX0013449516,E06114,2026-02-01,2026-02-28,full
 SAND LAND,sand_land,Sonkwo,0.5,PAX0013449516,E06114,2026-04-01,2026-04-30,full
 SAND LAND,sand_land,Sonkwo,0.5,PAX0013449516,E06114,2026-06-01,2026-06-30,full
-SAND LAND Deluxe Edition,sand_land_deluxe,All,0.342,,E06272,2024-11-01,2024-11-30,full
+SAND LAND Deluxe Edition,sand_land_deluxe,All,0.34,,E06272,2024-11-01,2024-11-30,full
 SAND LAND Deluxe Edition,sand_land_deluxe,All,0.5,,E06272,2025-04-01,2025-06-30,full
 SAND LAND Deluxe Edition,sand_land_deluxe,Heybox,0.5,,E06272,2025-07-01,2025-09-30,full
 SAND LAND Deluxe Edition,sand_land_deluxe,Heybox,0.43,,E06272,2025-10-01,2025-10-14,stacked
@@ -1520,7 +1514,7 @@ SAND LAND Deluxe Edition,sand_land_deluxe,Sonkwo,0.5,,E06272,2025-07-01,2025-07-
 SAND LAND Deluxe Edition,sand_land_deluxe,Sonkwo,0.5,,E06272,2025-10-01,2025-10-31,full
 SAND LAND Deluxe Edition,sand_land_deluxe,Sonkwo,0.43,,E06272,2025-11-01,2026-02-28,full
 SAND LAND Deluxe Edition,sand_land_deluxe,Sonkwo,0.9,,E06272,2026-05-01,2026-05-31,full
-SCARLET NEXUS,scarlet_nexus,All,0.7317,PAX0011642280,E03557,2024-11-01,2024-11-30,full
+SCARLET NEXUS,scarlet_nexus,All,0.73,PAX0011642280,E03557,2024-11-01,2024-11-30,full
 SCARLET NEXUS,scarlet_nexus,All,0.85,PAX0011642280,E03557,2024-12-01,2025-02-28,full
 SCARLET NEXUS,scarlet_nexus,All,0.84,PAX0011642280,E03557,2025-03-01,2025-03-31,full
 SCARLET NEXUS,scarlet_nexus,All,0.85,PAX0011642280,E03557,2025-04-01,2025-06-30,full
@@ -1539,7 +1533,7 @@ SCARLET NEXUS,scarlet_nexus,Heybox,0.84,PAX0011642280,E03557,2026-03-01,2026-06-
 SCARLET NEXUS,scarlet_nexus,Sonkwo,0.85,PAX0011642280,E03557,2025-07-01,2025-07-31,full
 SCARLET NEXUS,scarlet_nexus,Sonkwo,0.85,PAX0011642280,E03557,2025-10-01,2026-02-28,full
 SCARLET NEXUS,scarlet_nexus,Sonkwo,0.84,PAX0011642280,E03557,2026-03-01,2026-04-30,full
-SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,All,0.7789,PAX0011642246,E04727,2024-11-01,2024-11-30,full
+SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,All,0.78,PAX0011642246,E04727,2024-11-01,2024-11-30,full
 SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,All,0.85,PAX0011642246,E04727,2024-12-01,2025-02-28,full
 SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,All,0.82,PAX0011642246,E04727,2025-03-01,2025-03-31,full
 SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,All,0.85,PAX0011642246,E04727,2025-04-01,2025-06-30,full
@@ -1559,7 +1553,7 @@ SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,Heybox,0.85,PAX0011642246,E047
 SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,Sonkwo,0.85,PAX0011642246,E04727,2025-10-01,2025-11-30,full
 SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,Sonkwo,0.85,PAX0011642246,E04727,2026-02-01,2026-04-30,full
 SCARLET NEXUS Deluxe Edition,scarlet_nexus_deluxe,Sonkwo,0.85,PAX0011642246,E04727,2026-06-01,2026-06-30,full
-SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,All,0.8301,,E05643,2024-11-01,2024-11-30,full
+SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,All,0.83,,E05643,2024-11-01,2024-11-30,full
 SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,All,0.85,,E05643,2024-12-01,2025-02-28,full
 SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,All,0.8,,E05643,2025-03-01,2025-03-31,full
 SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,All,0.85,,E05643,2025-04-01,2025-06-30,full
@@ -1578,7 +1572,7 @@ SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,Sonkwo,0.85,,E05643,2025-1
 SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,Sonkwo,0.8,,E05643,2026-03-01,2026-03-31,full
 SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,Sonkwo,0.25,,E05643,2026-05-01,2026-05-31,full
 SCARLET NEXUS Ultimate Edition,scarlet_nexus_ultimate,Sonkwo,0.8,,E05643,2026-06-01,2026-06-30,full
-SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,All,0.6724,PAX0012417582,E03559,2024-11-01,2024-11-30,full
+SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,All,0.67,PAX0012417582,E03559,2024-11-01,2024-11-30,full
 SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,All,0.67,PAX0012417582,E03559,2024-12-01,2024-12-14,partial
 SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,All,0.67,PAX0012417582,E03559,2025-01-01,2025-01-14,partial
 SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,All,0.67,PAX0012417582,E03559,2025-03-01,2025-03-31,full
@@ -1594,8 +1588,7 @@ SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,Heybox,0.75,PAX0012417582,E0
 SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,Sonkwo,0.75,PAX0012417582,E03559,2025-07-01,2025-07-31,full
 SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,Sonkwo,0.75,PAX0012417582,E03559,2025-10-01,2025-11-30,full
 SD GUNDAM BATTLE ALLIANCE,sd_gundam_battle_alliance,Sonkwo,0.75,PAX0012417582,E03559,2026-02-01,2026-02-28,full
-SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,All,0.6707,,E05472,2024-11-01,2024-11-30,full
-SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,All,0.67,,E05472,2024-12-01,2025-03-31,full
+SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,All,0.67,,E05472,2024-11-01,2025-03-31,full
 SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,All,0.75,,E05472,2025-04-01,2025-06-30,full
 SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,Heybox,0.67,,E05472,2025-07-01,2025-07-14,stacked
 SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,Heybox,0.75,,E05472,2025-07-15,2025-07-28,stacked
@@ -1610,7 +1603,7 @@ SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,Sonk
 SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,Sonkwo,0.75,,E05472,2025-10-01,2026-04-30,full
 SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,Sonkwo,0.43,,E05472,2026-05-01,2026-05-31,full
 SD GUNDAM BATTLE ALLIANCE - Deluxe Edition,sd_gundam_battle_alliance_deluxe,Sonkwo,0.75,,E05472,2026-06-01,2026-06-30,full
-SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,All,0.5556,PAX0011539804,E02985,2024-11-01,2024-11-30,full
+SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,All,0.56,PAX0011539804,E02985,2024-11-01,2024-11-30,full
 SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,All,0.75,PAX0011539804,E02985,2024-12-01,2024-12-14,partial
 SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,All,0.5,PAX0011539804,E02985,2025-01-01,2025-01-14,stacked
 SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,All,0.75,PAX0011539804,E02985,2025-01-15,2025-01-28,stacked
@@ -1626,7 +1619,7 @@ SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,Heybox,0.5,P
 SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,Heybox,0.5,PAX0011539804,E02985,2026-01-01,2026-01-14,partial
 SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,Heybox,0.5,PAX0011539804,E02985,2026-02-01,2026-06-30,full
 SD GUNDAM G GENERATION CROSS RAYS,sd_gundam_g_generation_cross_rays,Sonkwo,0.75,PAX0011539804,E02985,2025-07-01,2025-07-31,full
-SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,All,0.7047,,E06306,2024-11-01,2024-11-30,full
+SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,All,0.7,,E06306,2024-11-01,2024-11-30,full
 SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,All,0.5,,E06306,2024-12-01,2024-12-31,full
 SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,All,0.5,,E06306,2025-01-01,2025-01-14,partial
 SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,All,0.5,,E06306,2025-02-01,2025-02-28,full
@@ -1647,14 +1640,14 @@ SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_
 SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,Sonkwo,0.5,,E06306,2025-10-01,2026-04-30,full
 SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,Sonkwo,0.8,,E06306,2026-05-01,2026-05-31,full
 SD GUNDAM G GENERATION CROSS RAYS Platinum Edition,sd_gundam_g_generation_cross_rays_platinum,Sonkwo,0.5,,E06306,2026-06-01,2026-06-30,full
-SOULCALIBUR VI,soulcalibur_vi,All,0.7047,PAX0009799344,E02875,2024-11-01,2024-11-30,full
+SOULCALIBUR VI,soulcalibur_vi,All,0.7,PAX0009799344,E02875,2024-11-01,2024-11-30,full
 SOULCALIBUR VI,soulcalibur_vi,All,0.9,PAX0009799344,E02875,2024-12-01,2025-06-30,full
 SOULCALIBUR VI,soulcalibur_vi,All,0.9,PAX0009799344,E02875,2025-07-01,2025-07-31,full
 SOULCALIBUR VI,soulcalibur_vi,Heybox,0.9,PAX0009799344,E02875,2025-08-01,2025-08-14,partial
 SOULCALIBUR VI,soulcalibur_vi,Heybox,0.9,PAX0009799344,E02875,2025-09-01,2026-06-30,full
 SOULCALIBUR VI,soulcalibur_vi,Sonkwo,0.9,PAX0009799344,E02875,2025-10-01,2026-03-31,full
 SOULCALIBUR VI,soulcalibur_vi,Sonkwo,0.75,PAX0009799344,E02875,2026-05-01,2026-05-31,full
-SOULCALIBUR VI Deluxe Edition,soulcalibur_vi_deluxe,All,0.8036,PAX0009799650,E03123,2024-11-01,2024-11-30,full
+SOULCALIBUR VI Deluxe Edition,soulcalibur_vi_deluxe,All,0.8,PAX0009799650,E03123,2024-11-01,2024-11-30,full
 SOULCALIBUR VI Deluxe Edition,soulcalibur_vi_deluxe,All,0.9,PAX0009799650,E03123,2024-12-01,2025-01-31,full
 SOULCALIBUR VI Deluxe Edition,soulcalibur_vi_deluxe,All,0.9,PAX0009799650,E03123,2025-03-01,2025-03-31,full
 SOULCALIBUR VI Deluxe Edition,soulcalibur_vi_deluxe,All,0.84,PAX0009799650,E03123,2025-04-01,2025-06-30,full
@@ -1685,7 +1678,7 @@ SPY×ANYA: Operation Memories Deluxe Edition,spy_anya_operation_memories_deluxe,
 SPY×ANYA: Operation Memories Deluxe Edition,spy_anya_operation_memories_deluxe,Heybox,0.58,,E06533,2026-04-01,2026-06-30,full
 SPY×ANYA: Operation Memories Deluxe Edition,spy_anya_operation_memories_deluxe,Sonkwo,0.35,,E06533,2025-07-01,2025-07-31,full
 SPY×ANYA: Operation Memories Deluxe Edition,spy_anya_operation_memories_deluxe,Sonkwo,0.35,,E06533,2025-10-01,2025-10-31,full
-SUPER ROBOT WARS X,super_robot_wars_x,All,0.6452,PAX0011599848,E03632,2024-11-01,2024-11-14,partial
+SUPER ROBOT WARS X,super_robot_wars_x,All,0.65,PAX0011599848,E03632,2024-11-01,2024-11-14,partial
 SUPER ROBOT WARS X,super_robot_wars_x,All,0.65,PAX0011599848,E03632,2024-12-01,2025-01-31,full
 SUPER ROBOT WARS X,super_robot_wars_x,All,0.65,PAX0011599848,E03632,2025-02-01,2025-02-14,partial
 SUPER ROBOT WARS X,super_robot_wars_x,All,0.65,PAX0011599848,E03632,2025-03-01,2025-03-14,partial
@@ -1726,22 +1719,22 @@ SUPER ROBOT WARS Y Ultimate Edition,super_robot_wars_y_ultimate,Heybox,0.4,PAX00
 SUPER ROBOT WARS Y Ultimate Edition,super_robot_wars_y_ultimate,Sonkwo,0.3,PAX0014929434,L00035,2026-03-01,2026-04-30,full
 SUPER ROBOT WARS Y Ultimate Edition,super_robot_wars_y_ultimate,Sonkwo,0.84,PAX0014929434,L00035,2026-05-01,2026-05-31,full
 SUPER ROBOT WARS Y Ultimate Edition,super_robot_wars_y_ultimate,Sonkwo,0.4,PAX0014929434,L00035,2026-06-01,2026-06-30,full
-SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,All,0.7047,PAX0010781400,E03060,2024-11-01,2024-11-30,full
+SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,All,0.7,PAX0010781400,E03060,2024-11-01,2024-11-30,full
 SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,All,0.84,PAX0010781400,E03060,2024-12-01,2025-06-30,full
 SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,Heybox,0.84,PAX0010781400,E03060,2025-07-01,2026-02-28,full
-SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,Heybox,0.458182,PAX0010781400,E03060,2026-03-01,2026-03-14,partial
+SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,Heybox,0.46,PAX0010781400,E03060,2026-03-01,2026-03-14,partial
 SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,Heybox,0.5,PAX0010781400,E03060,2026-04-01,2026-05-31,full
 SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,Heybox,0.5,PAX0010781400,E03060,2026-06-01,2026-06-14,partial
 SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,Sonkwo,0.84,PAX0010781400,E03060,2026-01-01,2026-01-31,full
 SWORD ART ONLINE Alicization Lycoris,sword_art_online_alicization_lycoris,Sonkwo,0.84,PAX0010781400,E03060,2026-03-01,2026-03-31,full
-SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,All,0.8233,PAX0010797788,E03954,2024-11-01,2024-11-30,full
+SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,All,0.82,PAX0010797788,E03954,2024-11-01,2024-11-30,full
 SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,All,0.81,PAX0010797788,E03954,2024-12-01,2025-03-31,full
 SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,All,0.81,PAX0010797788,E03954,2025-04-01,2025-04-14,partial
 SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,All,0.81,PAX0010797788,E03954,2025-05-01,2025-06-30,full
 SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,Heybox,0.81,PAX0010797788,E03954,2025-07-01,2025-10-31,full
 SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,Heybox,0.81,PAX0010797788,E03954,2025-11-01,2025-11-14,partial
 SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,Heybox,0.81,PAX0010797788,E03954,2025-12-01,2026-01-31,full
-SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,Heybox,0.618468,PAX0010797788,E03954,2026-03-01,2026-03-31,full
+SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,Heybox,0.62,PAX0010797788,E03954,2026-03-01,2026-03-31,full
 SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,Heybox,0.75,PAX0010797788,E03954,2026-05-01,2026-06-30,full
 SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,Sonkwo,0.81,PAX0010797788,E03954,2025-10-01,2025-11-30,full
 SWORD ART ONLINE Alicization Lycoris Deluxe,sword_art_online_alicization_lycoris_deluxe,Sonkwo,0.81,PAX0010797788,E03954,2026-01-01,2026-04-30,full
@@ -1814,7 +1807,7 @@ SWORD ART ONLINE Fractured Daydream Premium Edition,sword_art_online_fractured_d
 SWORD ART ONLINE Fractured Daydream Premium Edition,sword_art_online_fractured_daydream_premium,Sonkwo,0.3,,E06532,2025-10-01,2025-10-31,full
 SWORD ART ONLINE Fractured Daydream Premium Edition,sword_art_online_fractured_daydream_premium,Sonkwo,0.38,,E06532,2025-11-01,2025-11-30,full
 SWORD ART ONLINE Fractured Daydream Premium Edition,sword_art_online_fractured_daydream_premium,Sonkwo,0.6,,E06532,2026-02-01,2026-02-28,full
-SWORD ART ONLINE Last Recollection,sword_art_online_last_recollection,All,0.6007,PAX0013159190,E05687,2024-11-01,2024-11-30,full
+SWORD ART ONLINE Last Recollection,sword_art_online_last_recollection,All,0.6,PAX0013159190,E05687,2024-11-01,2024-11-30,full
 SWORD ART ONLINE Last Recollection,sword_art_online_last_recollection,All,0.65,PAX0013159190,E05687,2024-12-01,2025-01-31,full
 SWORD ART ONLINE Last Recollection,sword_art_online_last_recollection,All,0.65,PAX0013159190,E05687,2025-03-01,2025-03-31,full
 SWORD ART ONLINE Last Recollection,sword_art_online_last_recollection,All,0.75,PAX0013159190,E05687,2025-04-01,2025-06-30,full
@@ -1830,7 +1823,7 @@ SWORD ART ONLINE Last Recollection,sword_art_online_last_recollection,Heybox,0.7
 SWORD ART ONLINE Last Recollection,sword_art_online_last_recollection,Heybox,0.75,PAX0013159190,E05687,2026-02-01,2026-06-30,full
 SWORD ART ONLINE Last Recollection,sword_art_online_last_recollection,Sonkwo,0.75,PAX0013159190,E05687,2025-10-01,2025-10-31,full
 SWORD ART ONLINE Last Recollection,sword_art_online_last_recollection,Sonkwo,0.75,PAX0013159190,E05687,2026-03-01,2026-03-31,full
-SWORD ART ONLINE Last Recollection Deluxe Edition,sword_art_online_last_recollection_deluxe,All,0.6005,PAX0014008374,E06096,2024-11-01,2024-11-30,full
+SWORD ART ONLINE Last Recollection Deluxe Edition,sword_art_online_last_recollection_deluxe,All,0.6,PAX0014008374,E06096,2024-11-01,2024-11-30,full
 SWORD ART ONLINE Last Recollection Deluxe Edition,sword_art_online_last_recollection_deluxe,All,0.65,PAX0014008374,E06096,2024-12-01,2025-03-31,full
 SWORD ART ONLINE Last Recollection Deluxe Edition,sword_art_online_last_recollection_deluxe,All,0.75,PAX0014008374,E06096,2025-04-01,2025-06-30,full
 SWORD ART ONLINE Last Recollection Deluxe Edition,sword_art_online_last_recollection_deluxe,Heybox,0.75,PAX0014008374,E06096,2025-07-01,2026-06-30,full
@@ -1873,10 +1866,7 @@ SYNDUALITY Echo of Ada Ultimate Edition,synduality_echo_of_ada_ultimate,Heybox,0
 SYNDUALITY Echo of Ada Ultimate Edition,synduality_echo_of_ada_ultimate,Sonkwo,0.7,,E06637,2026-04-01,2026-04-30,full
 SYNDUALITY Echo of Ada Ultimate Edition,synduality_echo_of_ada_ultimate,Sonkwo,0.7,,E06637,2026-06-01,2026-06-30,full
 Shadow Labyrinth,shadow_labyrinth,Heybox,0.5,PAX0014732166,E06972,2026-05-01,2026-05-31,full
-Super Robot Wars 30,super_robot_wars_30,All,0.67,PAX0011886978,E04508,2024-11-01,2024-11-14,stacked
-Super Robot Wars 30,super_robot_wars_30,All,0.6712,PAX0011886978,E04508,2024-11-15,2024-11-28,stacked
-Super Robot Wars 30,super_robot_wars_30,All,0.67,PAX0011886978,E04508,2024-12-01,2025-03-31,full
-Super Robot Wars 30,super_robot_wars_30,All,0.67,PAX0011886978,E04508,2025-04-01,2025-04-30,full
+Super Robot Wars 30,super_robot_wars_30,All,0.67,PAX0011886978,E04508,2024-11-01,2025-04-30,full
 Super Robot Wars 30,super_robot_wars_30,All,0.67,PAX0011886978,E04508,2025-05-01,2025-05-14,stacked
 Super Robot Wars 30,super_robot_wars_30,All,0.73,PAX0011886978,E04508,2025-05-15,2025-05-28,stacked
 Super Robot Wars 30,super_robot_wars_30,All,0.73,PAX0011886978,E04508,2025-06-01,2025-06-30,full
@@ -1888,7 +1878,7 @@ Super Robot Wars 30,super_robot_wars_30,Sonkwo,0.73,PAX0011886978,E04508,2025-10
 Super Robot Wars 30,super_robot_wars_30,Sonkwo,0.67,PAX0011886978,E04508,2026-01-01,2026-01-31,full
 Super Robot Wars 30,super_robot_wars_30,Sonkwo,0.75,PAX0011886978,E04508,2026-02-01,2026-03-31,full
 Super Robot Wars 30,super_robot_wars_30,Sonkwo,0.75,PAX0011886978,E04508,2026-05-01,2026-05-31,full
-Super Robot Wars 30 Digital Deluxe Edition,super_robot_wars_30_deluxe,All,0.6705,PAX0011923630,E05097,2024-11-01,2024-11-14,partial
+Super Robot Wars 30 Digital Deluxe Edition,super_robot_wars_30_deluxe,All,0.67,PAX0011923630,E05097,2024-11-01,2024-11-14,partial
 Super Robot Wars 30 Digital Deluxe Edition,super_robot_wars_30_deluxe,All,0.67,PAX0011923630,E05097,2024-12-01,2025-02-28,full
 Super Robot Wars 30 Digital Deluxe Edition,super_robot_wars_30_deluxe,All,0.67,PAX0011923630,E05097,2025-03-01,2025-03-14,partial
 Super Robot Wars 30 Digital Deluxe Edition,super_robot_wars_30_deluxe,All,0.7,PAX0011923630,E05097,2025-04-01,2025-04-14,partial
@@ -1909,8 +1899,7 @@ Super Robot Wars 30 Digital Deluxe Edition,super_robot_wars_30_deluxe,Sonkwo,0.7
 Super Robot Wars 30 Digital Deluxe Edition,super_robot_wars_30_deluxe,Sonkwo,0.67,PAX0011923630,E05097,2025-11-01,2026-01-31,full
 Super Robot Wars 30 Digital Deluxe Edition,super_robot_wars_30_deluxe,Sonkwo,0.7,PAX0011923630,E05097,2026-02-01,2026-02-28,full
 Super Robot Wars 30 Digital Deluxe Edition,super_robot_wars_30_deluxe,Sonkwo,0.75,PAX0011923630,E05097,2026-05-01,2026-05-31,full
-Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,All,0.6711,PAX0011934816,E05098,2024-11-01,2024-11-30,full
-Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,All,0.67,PAX0011934816,E05098,2024-12-01,2025-03-31,full
+Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,All,0.67,PAX0011934816,E05098,2024-11-01,2025-03-31,full
 Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,All,0.6,PAX0011934816,E05098,2025-04-01,2025-05-31,full
 Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,All,0.67,PAX0011934816,E05098,2025-06-01,2025-06-30,full
 Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,Heybox,0.67,PAX0011934816,E05098,2025-07-01,2025-09-30,full
@@ -1927,7 +1916,7 @@ Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,Sonkwo,0.6,PAX
 Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,Sonkwo,0.6,PAX0011934816,E05098,2026-04-01,2026-04-30,full
 Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,Sonkwo,0.75,PAX0011934816,E05098,2026-05-01,2026-05-31,full
 Super Robot Wars 30 Ultimate Edition,super_robot_wars_30_ultimate,Sonkwo,0.6,PAX0011934816,E05098,2026-06-01,2026-06-30,full
-Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,All,0.443,PAX0009455468,E02540,2024-11-01,2024-11-30,full
+Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,All,0.44,PAX0009455468,E02540,2024-11-01,2024-11-30,full
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,All,0.85,PAX0009455468,E02540,2024-12-01,2025-01-31,full
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,All,0.85,PAX0009455468,E02540,2025-02-01,2025-02-14,partial
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,All,0.85,PAX0009455468,E02540,2025-03-01,2025-04-30,full
@@ -1941,18 +1930,18 @@ Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Heybox,0.82,PAX0009
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Heybox,0.82,PAX0009455468,E02540,2026-01-01,2026-01-14,stacked
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Heybox,0.85,PAX0009455468,E02540,2026-01-15,2026-01-28,stacked
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Heybox,0.88,PAX0009455468,E02540,2026-02-01,2026-02-28,full
-Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Heybox,0.784545,PAX0009455468,E02540,2026-03-01,2026-03-31,full
+Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Heybox,0.78,PAX0009455468,E02540,2026-03-01,2026-03-31,full
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Heybox,0.75,PAX0009455468,E02540,2026-04-01,2026-04-14,partial
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Heybox,0.75,PAX0009455468,E02540,2026-05-01,2026-05-31,full
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Heybox,0.75,PAX0009455468,E02540,2026-06-01,2026-06-14,partial
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Sonkwo,0.9,PAX0009455468,E02540,2025-07-01,2025-07-31,full
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Sonkwo,0.82,PAX0009455468,E02540,2026-01-01,2026-01-31,full
 Sword Art Online: Fatal Bullet,sword_art_online_fatal_bullet,Sonkwo,0.88,PAX0009455468,E02540,2026-03-01,2026-03-31,full
-Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,All,0.7081,PAX0009957376,E03322,2024-11-01,2024-11-30,full
+Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,All,0.71,PAX0009957376,E03322,2024-11-01,2024-11-30,full
 Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,All,0.85,PAX0009957376,E03322,2024-12-01,2025-03-31,full
 Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,All,0.62,PAX0009957376,E03322,2025-05-01,2025-05-31,full
 Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,All,0.76,PAX0009957376,E03322,2025-06-01,2025-06-14,stacked
-Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,All,0.8392,PAX0009957376,E03322,2025-06-15,2025-06-28,stacked
+Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,All,0.84,PAX0009957376,E03322,2025-06-15,2025-06-28,stacked
 Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,Heybox,0.76,PAX0009957376,E03322,2025-07-01,2025-09-30,full
 Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,Heybox,0.75,PAX0009957376,E03322,2025-10-01,2025-11-30,full
 Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,Heybox,0.62,PAX0009957376,E03322,2025-12-01,2025-12-31,full
@@ -1965,7 +1954,7 @@ Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_co
 Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,Sonkwo,0.84,PAX0009957376,E03322,2026-02-01,2026-04-30,full
 Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,Sonkwo,0.7,PAX0009957376,E03322,2026-05-01,2026-05-31,full
 Sword Art Online: Fatal Bullet Complete Edition,sword_art_online_fatal_bullet_complete,Sonkwo,0.84,PAX0009957376,E03322,2026-06-01,2026-06-30,full
-Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,All,0.6835,PAX0009348402,E02310,2024-11-01,2024-11-14,partial
+Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,All,0.68,PAX0009348402,E02310,2024-11-01,2024-11-14,partial
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,All,0.85,PAX0009348402,E02310,2024-12-01,2024-12-14,partial
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,All,0.85,PAX0009348402,E02310,2025-01-01,2025-01-31,full
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,All,0.85,PAX0009348402,E02310,2025-03-01,2025-03-14,partial
@@ -1976,7 +1965,7 @@ Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_real
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,Heybox,0.58,PAX0009348402,E02310,2025-12-01,2025-12-14,stacked
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,Heybox,0.85,PAX0009348402,E02310,2025-12-15,2025-12-28,stacked
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,Heybox,0.85,PAX0009348402,E02310,2026-01-01,2026-02-28,full
-Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,Heybox,0.64661,PAX0009348402,E02310,2026-03-01,2026-03-31,full
+Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,Heybox,0.65,PAX0009348402,E02310,2026-03-01,2026-03-31,full
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,Heybox,0.5,PAX0009348402,E02310,2026-05-01,2026-05-14,partial
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,Sonkwo,0.85,PAX0009348402,E02310,2025-07-01,2025-07-31,full
 Sword Art Online: Hollow Realization Deluxe Edition,sword_art_online_hollow_realization_deluxe,Sonkwo,0.85,PAX0009348402,E02310,2025-10-01,2025-11-30,full
@@ -1997,7 +1986,7 @@ Sword Art Online: Lost Song,sword_art_online_lost_song,Sonkwo,0.75,PAX0010120168
 Sword Art Online: Lost Song,sword_art_online_lost_song,Sonkwo,0.69,PAX0010120168,E05372,2025-11-01,2025-11-30,full
 Sword Art Online: Lost Song,sword_art_online_lost_song,Sonkwo,0.75,PAX0010120168,E05372,2026-03-01,2026-03-31,full
 Sword Art Online: Lost Song,sword_art_online_lost_song,Sonkwo,0.75,PAX0010120168,E05372,2026-06-01,2026-06-30,full
-TEKKEN 7,tekken_7,All,0.5556,PAX0008666974,E02278,2024-11-01,2024-11-30,full
+TEKKEN 7,tekken_7,All,0.56,PAX0008666974,E02278,2024-11-01,2024-11-30,full
 TEKKEN 7,tekken_7,All,0.75,PAX0008666974,E02278,2024-12-01,2025-02-28,full
 TEKKEN 7,tekken_7,All,0.75,PAX0008666974,E02278,2025-03-01,2025-03-14,partial
 TEKKEN 7,tekken_7,All,0.75,PAX0008666974,E02278,2025-04-01,2025-05-31,full
@@ -2016,7 +2005,7 @@ TEKKEN 7,tekken_7,Heybox,0.85,PAX0008666974,E02278,2026-06-01,2026-06-30,full
 TEKKEN 7,tekken_7,Sonkwo,0.85,PAX0008666974,E02278,2025-07-01,2025-07-31,full
 TEKKEN 7,tekken_7,Sonkwo,0.75,PAX0008666974,E02278,2025-11-01,2025-11-30,full
 TEKKEN 7,tekken_7,Sonkwo,0.75,PAX0008666974,E02278,2026-01-01,2026-02-28,full
-TEKKEN 7 - Originals Edition,tekken_7_originals,All,0.7789,PAX0012530020,E05647,2024-11-01,2024-11-30,full
+TEKKEN 7 - Originals Edition,tekken_7_originals,All,0.78,PAX0012530020,E05647,2024-11-01,2024-11-30,full
 TEKKEN 7 - Originals Edition,tekken_7_originals,All,0.75,PAX0012530020,E05647,2024-12-01,2025-03-31,full
 TEKKEN 7 - Originals Edition,tekken_7_originals,All,0.85,PAX0012530020,E05647,2025-04-01,2025-04-14,partial
 TEKKEN 7 - Originals Edition,tekken_7_originals,All,0.85,PAX0012530020,E05647,2025-05-01,2025-06-30,full
@@ -2034,14 +2023,13 @@ TEKKEN 8,tekken_8,All,0.5,PAX0013411368,E05700,2025-02-01,2025-02-14,partial
 TEKKEN 8,tekken_8,All,0.5,PAX0013411368,E05700,2025-03-01,2025-03-14,partial
 TEKKEN 8,tekken_8,All,0.5,PAX0013411368,E05700,2025-04-01,2025-04-14,partial
 TEKKEN 8,tekken_8,All,0.5,PAX0013411368,E05700,2025-05-01,2025-05-14,partial
-TEKKEN 8,tekken_8,All,0.298387,PAX0013411368,E05700,2025-06-01,2025-06-14,stacked
+TEKKEN 8,tekken_8,All,0.3,PAX0013411368,E05700,2025-06-01,2025-06-14,stacked
 TEKKEN 8,tekken_8,All,0.5,PAX0013411368,E05700,2025-06-15,2025-06-28,stacked
 TEKKEN 8,tekken_8,Heybox,0.5,PAX0013411368,E05700,2025-07-01,2025-10-31,full
 TEKKEN 8,tekken_8,Heybox,0.5,PAX0013411368,E05700,2025-11-01,2025-11-14,partial
 TEKKEN 8,tekken_8,Heybox,0.5,PAX0013411368,E05700,2025-12-01,2025-12-31,full
 TEKKEN 8,tekken_8,Heybox,0.5,PAX0013411368,E05700,2026-01-01,2026-01-14,partial
-TEKKEN 8,tekken_8,Heybox,0.6,PAX0013411368,E05700,2026-02-01,2026-02-14,stacked
-TEKKEN 8,tekken_8,Heybox,0.600806,PAX0013411368,E05700,2026-02-15,2026-02-28,stacked
+TEKKEN 8,tekken_8,Heybox,0.6,PAX0013411368,E05700,2026-02-01,2026-02-14,partial
 TEKKEN 8,tekken_8,Heybox,0.6,PAX0013411368,E05700,2026-03-01,2026-03-14,partial
 TEKKEN 8,tekken_8,Heybox,0.41,PAX0013411368,E05700,2026-04-01,2026-04-14,partial
 TEKKEN 8,tekken_8,Heybox,0.4,PAX0013411368,E05700,2026-05-01,2026-05-14,partial
@@ -2104,8 +2092,7 @@ TEKKEN 8 Season 2 Ultimate Edition,tekken_8_season_2_ultimate,Heybox,0.3,,L00112
 TEKKEN 8 Season 2 Ultimate Edition,tekken_8_season_2_ultimate,Sonkwo,0.3,,L00112,2025-10-01,2025-11-30,full
 TEKKEN 8 Season 2 Ultimate Edition,tekken_8_season_2_ultimate,Sonkwo,0.4,,L00112,2026-02-01,2026-04-30,full
 TEKKEN 8 Season 2 Ultimate Edition,tekken_8_season_2_ultimate,Sonkwo,0.85,,L00112,2026-05-01,2026-05-31,full
-THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,All,0.6006,,E03045,2024-11-01,2024-11-30,full
-THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,All,0.6,,E03045,2024-12-01,2025-01-31,full
+THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,All,0.6,,E03045,2024-11-01,2025-01-31,full
 THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,All,0.6,,E03045,2025-03-01,2025-03-14,partial
 THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,All,0.6,,E03045,2025-04-01,2025-04-14,partial
 THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,All,0.6,,E03045,2025-05-01,2025-05-14,partial
@@ -2120,8 +2107,7 @@ THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,Heybox,0.6,,E03045,2
 THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,Sonkwo,0.6,,E03045,2025-07-01,2025-07-31,full
 THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,Sonkwo,0.6,,E03045,2026-03-01,2026-03-31,full
 THE IDOLM@STER STARLIT SEASON,the_idolm_ster_starlit_season,Sonkwo,0.85,,E03045,2026-05-01,2026-05-31,full
-THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,the_idolm_ster_starlit_season_deluxe,All,0.6004,,E05096,2024-11-01,2024-11-30,full
-THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,the_idolm_ster_starlit_season_deluxe,All,0.6,,E05096,2024-12-01,2025-01-31,full
+THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,the_idolm_ster_starlit_season_deluxe,All,0.6,,E05096,2024-11-01,2025-01-31,full
 THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,the_idolm_ster_starlit_season_deluxe,All,0.6,,E05096,2025-02-01,2025-02-14,partial
 THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,the_idolm_ster_starlit_season_deluxe,All,0.6,,E05096,2025-03-01,2025-03-14,partial
 THE IDOLM@STER STARLIT SEASON Digital Deluxe Edition,the_idolm_ster_starlit_season_deluxe,All,0.6,,E05096,2025-04-01,2025-04-14,partial
@@ -2166,7 +2152,7 @@ Taiko no Tatsujin: Rhythm Festival The Setlist Edition,taiko_no_tatsujin_rhythm_
 Taiko no Tatsujin: Rhythm Festival The Setlist Edition,taiko_no_tatsujin_rhythm_festival_the_setlist,Heybox,0.5,,E06635,2026-06-01,2026-06-14,partial
 Taiko no Tatsujin: Rhythm Festival The Setlist Edition,taiko_no_tatsujin_rhythm_festival_the_setlist,Sonkwo,0.3,,E06635,2025-10-01,2025-10-31,full
 Taiko no Tatsujin: Rhythm Festival The Setlist Edition,taiko_no_tatsujin_rhythm_festival_the_setlist,Sonkwo,0.4,,E06635,2025-11-01,2026-03-31,full
-Tales of Arise,tales_of_arise,All,0.5556,PAX0011827716,E03024,2024-11-01,2024-11-14,partial
+Tales of Arise,tales_of_arise,All,0.56,PAX0011827716,E03024,2024-11-01,2024-11-14,partial
 Tales of Arise,tales_of_arise,All,0.63,PAX0011827716,E03024,2024-12-01,2024-12-31,full
 Tales of Arise,tales_of_arise,All,0.63,PAX0011827716,E03024,2025-01-01,2025-01-14,partial
 Tales of Arise,tales_of_arise,All,0.63,PAX0011827716,E03024,2025-02-01,2025-02-14,partial
@@ -2244,7 +2230,7 @@ Tales of Arise - Beyond the Dawn Ultimate Edition,tales_of_arise_beyond_the_dawn
 Tales of Arise - Beyond the Dawn Ultimate Edition,tales_of_arise_beyond_the_dawn_ultimate,Sonkwo,0.5,,E06162,2026-01-01,2026-01-31,full
 Tales of Arise - Beyond the Dawn Ultimate Edition,tales_of_arise_beyond_the_dawn_ultimate,Sonkwo,0.6,,E06162,2026-02-01,2026-02-28,full
 Tales of Arise Beyond the Dawn Premium Edition,tales_of_arise_beyond_the_dawn_premium,Sonkwo,0.4,,,2026-05-01,2026-05-31,full
-Tales of Berseria,tales_of_berseria,All,0.6716,PAX0008665002,E02174,2024-11-01,2024-11-14,partial
+Tales of Berseria,tales_of_berseria,All,0.67,PAX0008665002,E02174,2024-11-01,2024-11-14,partial
 Tales of Berseria,tales_of_berseria,All,0.9,PAX0008665002,E02174,2024-12-01,2024-12-14,partial
 Tales of Berseria,tales_of_berseria,All,0.9,PAX0008665002,E02174,2025-01-01,2025-01-31,full
 Tales of Berseria,tales_of_berseria,All,0.9,PAX0008665002,E02174,2025-06-01,2025-06-30,full
@@ -2278,7 +2264,7 @@ Tales of Graces f Remastered Deluxe Edition,tales_of_graces_f_remastered_deluxe,
 Tales of Graces f Remastered Deluxe Edition,tales_of_graces_f_remastered_deluxe,Sonkwo,0.35,,E06689,2025-11-01,2025-11-30,full
 Tales of Graces f Remastered Deluxe Edition,tales_of_graces_f_remastered_deluxe,Sonkwo,0.35,,E06689,2026-01-01,2026-01-31,full
 Tales of Graces f Remastered Deluxe Edition,tales_of_graces_f_remastered_deluxe,Sonkwo,0.6,,E06689,2026-02-01,2026-04-30,full
-Tales of Vesperia: Definitive Edition,tales_of_vesperia_definitive,All,0.6589,PAX0010367280,E03191,2024-11-01,2024-11-30,full
+Tales of Vesperia: Definitive Edition,tales_of_vesperia_definitive,All,0.66,PAX0010367280,E03191,2024-11-01,2024-11-30,full
 Tales of Vesperia: Definitive Edition,tales_of_vesperia_definitive,All,0.8,PAX0010367280,E03191,2024-12-01,2025-06-30,full
 Tales of Vesperia: Definitive Edition,tales_of_vesperia_definitive,Heybox,0.8,PAX0010367280,E03191,2025-07-01,2026-06-30,full
 Tales of Vesperia: Definitive Edition,tales_of_vesperia_definitive,Sonkwo,0.8,PAX0010367280,E03191,2025-10-01,2025-11-30,full
@@ -2301,7 +2287,7 @@ Tales of Xillia Remastered Deluxe Edition,tales_of_xillia_remastered_deluxe,Heyb
 Tales of Xillia Remastered Deluxe Edition,tales_of_xillia_remastered_deluxe,Heybox,0.2,PAX0015249510,L00231,2026-05-01,2026-05-31,full
 Tales of Xillia Remastered Deluxe Edition,tales_of_xillia_remastered_deluxe,Heybox,0.25,PAX0015249510,L00231,2026-06-01,2026-06-30,full
 Tales of Xillia Remastered Deluxe Edition,tales_of_xillia_remastered_deluxe,Sonkwo,0.2,PAX0015249510,L00231,2026-04-01,2026-04-30,full
-Tales of Zestiria,tales_of_zestiria,All,0.7197,PAX0008665036,E01607,2024-11-01,2024-11-30,full
+Tales of Zestiria,tales_of_zestiria,All,0.72,PAX0008665036,E01607,2024-11-01,2024-11-30,full
 Tales of Zestiria,tales_of_zestiria,All,0.6,PAX0008665036,E01607,2024-12-01,2024-12-31,full
 Tales of Zestiria,tales_of_zestiria,All,0.6,PAX0008665036,E01607,2025-03-01,2025-03-31,full
 Tales of Zestiria,tales_of_zestiria,All,0.9,PAX0008665036,E01607,2025-04-01,2025-06-30,full
@@ -2349,14 +2335,14 @@ Towa and the Guardians of the Sacred Tree Deluxe Edition,towa_and_the_guardians_
 Towa and the Guardians of the Sacred Tree Deluxe Edition,towa_and_the_guardians_of_the_sacred_tree_deluxe,Heybox,0.25,,L00117,2026-04-01,2026-04-30,full
 Towa and the Guardians of the Sacred Tree Deluxe Edition,towa_and_the_guardians_of_the_sacred_tree_deluxe,Heybox,0.25,,L00117,2026-05-01,2026-05-14,partial
 Towa and the Guardians of the Sacred Tree Deluxe Edition,towa_and_the_guardians_of_the_sacred_tree_deluxe,Sonkwo,0.34,,L00117,2025-12-01,2026-01-31,full
-We Love Katamari REROLL+ Royal Reverie,we_love_katamari_reroll_royal_reverie,All,0.4054,PAX0012872162,E05071,2024-11-01,2024-11-30,full
+We Love Katamari REROLL+ Royal Reverie,we_love_katamari_reroll_royal_reverie,All,0.41,PAX0012872162,E05071,2024-11-01,2024-11-30,full
 We Love Katamari REROLL+ Royal Reverie,we_love_katamari_reroll_royal_reverie,All,0.75,PAX0012872162,E05071,2024-12-01,2025-04-30,full
 We Love Katamari REROLL+ Royal Reverie,we_love_katamari_reroll_royal_reverie,All,0.75,PAX0012872162,E05071,2025-06-01,2025-06-30,full
 We Love Katamari REROLL+ Royal Reverie,we_love_katamari_reroll_royal_reverie,Heybox,0.75,PAX0012872162,E05071,2025-07-01,2025-12-31,full
 We Love Katamari REROLL+ Royal Reverie,we_love_katamari_reroll_royal_reverie,Heybox,0.75,PAX0012872162,E05071,2026-02-01,2026-04-30,full
 We Love Katamari REROLL+ Royal Reverie,we_love_katamari_reroll_royal_reverie,Heybox,0.75,PAX0012872162,E05071,2026-06-01,2026-06-30,full
 We Love Katamari REROLL+ Royal Reverie,we_love_katamari_reroll_royal_reverie,Sonkwo,0.75,PAX0012872162,E05071,2025-11-01,2026-02-28,full
-We Love Katamari REROLL+ Royal Reverie Special Edition,we_love_katamari_reroll_royal_reverie_special,All,0.5556,,E06305,2024-11-01,2024-11-30,full
+We Love Katamari REROLL+ Royal Reverie Special Edition,we_love_katamari_reroll_royal_reverie_special,All,0.56,,E06305,2024-11-01,2024-11-30,full
 We Love Katamari REROLL+ Royal Reverie Special Edition,we_love_katamari_reroll_royal_reverie_special,All,0.75,,E06305,2024-12-01,2025-01-31,full
 We Love Katamari REROLL+ Royal Reverie Special Edition,we_love_katamari_reroll_royal_reverie_special,All,0.75,,E06305,2025-03-01,2025-06-30,full
 We Love Katamari REROLL+ Royal Reverie Special Edition,we_love_katamari_reroll_royal_reverie_special,Heybox,0.75,,E06305,2025-07-01,2025-11-30,full
