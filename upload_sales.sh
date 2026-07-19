@@ -102,8 +102,7 @@ worker() {
       --base-url https://bandai.knoxkee.io \
       --email christopher.drews@play-asia.com --password test1234 \
       testdata add-sales --reseller-org-id "$ORG_ID" --file "$file" \
-      --backdate \
-      --database-url "$DATABASE_URL" >> "$log" 2>&1 
+      --database-url "$DATABASE_URL" --backdate >> "$log" 2>&1 
     echo "---- $(date '+%Y-%m-%d %H:%M:%S') done $(basename "$file") (exit $?) ----" >> "$log"
   done
 }
