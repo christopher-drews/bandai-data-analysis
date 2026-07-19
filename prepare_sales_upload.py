@@ -33,6 +33,8 @@ from uuid import uuid4
 
 import requests
 
+from pa_auth import build_session
+
 DEFAULT_HOST = "lv.play-asia.com"
 DEFAULT_ORG_ID = "org-u1gm1u0j"
 DEFAULT_CSV = Path("data/level_2_anonymize_sales_history/product_sales_history.csv")
@@ -191,7 +193,9 @@ def main() -> int:
     parser.add_argument("--customer-org-map", default=DEFAULT_CUSTOMER_MAP, type=Path)
     parser.add_argument("--host", default=DEFAULT_HOST)
     parser.add_argument("--org-id", default=DEFAULT_ORG_ID, help="Supplier organisation id")
-    parser.add_argument("--token", required=True, help="Bearer JWT")
+    parser.add_argument("--token", help="Bearer JWT (or use --email/--password for auto-refresh on expiry)")
+    parser.add_argument("--email", help="Login email; with --password, re-authenticates when the token expires")
+    parser.add_argument("--password", help="Login password")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--idempotency-prefix", default=f"bandai-{uuid4().hex[:8]}",
                         help="Used to build X-Idempotency-Key per SKU upload")
@@ -200,10 +204,17 @@ def main() -> int:
                              "re-runs skip what's already there.")
     parser.add_argument("--skip-uploads", action="store_true",
                         help="Treat the upload phase as already complete (uses state for the transfer phase only).")
+    parser.add_argument("--month", default=None,
+                        help="Optional YYYY-MM filter (on start_month); defaults to all months. "
+                             "Stage/transfer only that month's quantities — pair with a per-month "
+                             "--state-file and --idempotency-prefix for a per-month lifecycle.")
     args = parser.parse_args()
 
     with args.csv.open(newline="", encoding="utf-8") as fh:
         rows = list(csv.DictReader(fh))
+    if args.month:
+        rows = [r for r in rows if (r.get("start_month") or "").strip() == args.month]
+        print(f"Filtered to month {args.month}: {len(rows)} rows", file=sys.stderr)
 
     cust_to_org = load_customer_org_map(args.customer_org_map)
     if not cust_to_org:
@@ -219,7 +230,7 @@ def main() -> int:
         "Authorization": f"Bearer {args.token}",
         "Content-Type": "application/json",
     }
-    session = requests.Session()
+    session = build_session(args.host, args.token, args.email, args.password)
 
     print("Fetching supplier catalog...", file=sys.stderr)
     pax_to_sku = fetch_catalog_by_paxcode(session, args.host, args.org_id, headers)

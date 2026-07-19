@@ -211,7 +211,11 @@ python level_1_extract_promo_history.py      # promo runs   → scenario promoti
     within a (product, reseller) **by construction** (no more 15/16 boundary splits,
     no "complex conflict" cases).
   - Heybox+Sonkwo windows sharing (slug, discount, dates) collapse to `All`.
-  June-2026: **2365 windows / 171 SKUs** (basis: 1150 full, 740 partial, 475 stacked;
+  - **Discounts are rounded to the nearest whole percent.** The report's `Promo Discount`
+    is a lossy ratio of integer prices, so exact values are noisy (e.g. 0.1852); nearest-1%
+    keeps the implied promo price within ~1 CNY of the reported selling price and merges
+    near-identical discounts (anything rounding to 0% is dropped).
+  June-2026: **~2350 windows / 171 SKUs** (basis: ~1141 full, ~741 partial, ~469 stacked;
   lengths 9–365 days). `basis` column records how each window was derived.
   **Alibaba** promo rows still present — dropped in the campaign step below.
 
@@ -271,17 +275,16 @@ carried each SKU → per-reseller authorization) and `level_0_extract_exchange_r
 Current output (June-2026, all validated):
 - **`bandai-base.yaml`** — 3 orgs, 184 SKUs (136 with paxCode), **2 relationships**. Idempotent → safe to re-run.
 - **`bandai-srp.yaml`** — 3 orgs, 184 SKUs with **316 SRP windows**. Create-only.
-- **`bandai-promotions.yaml`** — 3 orgs, 184 SKUs, **204 promotions** (bucket model, per-SKU discounts). Create-only, largest.
+- **`bandai-promotions.yaml`** — 3 orgs, 184 SKUs, **205 promotions** (bucket model, per-SKU discounts rounded to whole percent). Create-only, largest.
 Mapping details:
 - `skus[]`: every SKU; `pa_pax_code` when known; **`customer_reference`** = the
   report Item Number (172 set, unique per supplier; 12 blank→omitted);
   **`steam_app_id`** = catalog Steam App ID (136 set; `steam_type` defaults to `app`
   in the CLI); `srp[]` = the SKU's dated CNY windows (open-ended when `end_month`
   blank). `cost` NOT emitted (no cost in report).
-  *(Requires two lootvault CLI changes to SkuSpec/ensure_sku: `customer_reference`
-  (PR playasia/lootvault#1531) and `steam_app_id`/`steam_type` (added separately — #1531
-  only shipped `customer_reference`; `steam_type` defaults to `app`). Both set at SKU
-  create time, so they land via `bandai-base`, applied first.)*
+  *(lootvault CLI support for `customer_reference` (PR #1531) and `steam_app_id`/`steam_type`
+  (PR #1532) on SkuSpec/ensure_sku is **merged to main**; `steam_type` defaults to `app`.
+  Both set at SKU create time, so they land via `bandai-base`, applied first.)*
 - `relationships[]`: bandai→heybox and bandai→sonkwo. **`authorize_skus` is
   data-driven** — each reseller gets only the SKUs it actually carried (Heybox 170,
   Sonkwo 169; 159 shared). The 4 SKUs with no reseller-attributed data stay
@@ -350,28 +353,34 @@ Steps:
    ```
    ⚠️ The committed map holds `lv.play-asia.com` ids — this overwrites it with the real
    bandai ids.
-3. Stage + transfer inventory, then report sales — both against the bandai host,
-   reading level_1 (`--csv`):
+3. Run the sales cycle. **Per-month lifecycle (recommended)** — `run_sales_by_month.sh`
+   loops the months ascending, doing the full circle each month (stage that month's keys →
+   transfer → report → backdate to that month), so the inventory timeline is month-by-month,
+   not bulk-upfront:
    ```
-   python prepare_sales_upload.py --host bandai.knoxkee.io --org-id <bandai-supplier-id> --token <JWT> \
-     --csv data/level_1_extract_sales_history/product_sales_history.csv
-   python upload_sales_history.py --host bandai.knoxkee.io --org-id <bandai-supplier-id> --token <JWT> \
-     --csv data/level_1_extract_sales_history/product_sales_history.csv
+   BANDAI_EMAIL=<e> BANDAI_PASSWORD=<p> DATABASE_URL=<db-proxy psql url> ORG_ID=<bandai-supplier-id> \
+     ./run_sales_by_month.sh --dry-run     # then without --dry-run
    ```
+   **Auth**: pass `BANDAI_EMAIL`+`BANDAI_PASSWORD` (recommended for a long run) — the
+   scripts re-authenticate automatically on a `401`, so an expiring JWT is refreshed
+   mid-run (via `pa_auth.AuthSession`). A static `BANDAI_TOKEN` also works but can expire.
+   It uses per-month `--state-file`/`--idempotency-prefix` (so prepare's per-sku state
+   doesn't collide across months) and backdates each month with `created_date = M-01`
+   (the `created_at > :created_date` guards stop it re-touching earlier months).
+   *(Bulk alternative — one prepare/upload for all months + a single backdate to
+   `2024-07-01` — is simpler but stages all inventory upfront on one date.)*
+
    `All`/`Alibaba` rows are skipped automatically (not in the bandai org map). Synthetic
-   keys back the sales (not real Steam keys). Both resumable + `--dry-run`;
-   `reconcile_sales_inventory.py` is the check.
-4. **Backdate keys + transfers** (realism pass) — the sale `date` is already backdated,
-   but key `created_at` / transfer timestamps stamp `now()` (no API affordance), giving
-   sold-before-created rows. Fix DB-direct over the db-proxy tunnel with the DML app role:
-   ```
-   psql "$DATABASE_URL" -v supplier_org='<bandai-supplier-id>' -v created_date='2024-07-01' \
-     -f sql/backdate_bandai_inventory.sql
-   ```
-   Sets `product_keys.created_at`/`updated_at` and the transfer audit rows
-   (`vault.transactions.ts`, `vault.jobs.start_ts/end_ts`) to a pre-sales launch date;
-   leaves `selling_date` (the real sale time) untouched. Idempotent; prints a preview +
-   a `sold_before_created` post-check (must be 0).
+   keys back the sales (not real Steam keys). Everything is resumable + `--dry-run`.
+4. **Backdate mechanics** (invoked per-month by the driver, or once for the bulk path):
+   the sale `date` is already backdated, but key `created_at` / transfer timestamps stamp
+   `now()` (no API affordance), giving sold-before-created rows. `sql/backdate_bandai_inventory.sql`
+   fixes it DB-direct over the db-proxy tunnel (DML app role): sets
+   `product_keys.created_at`/`updated_at` and the transfer audit rows
+   (`vault.transactions.ts`, `vault.jobs.start_ts/end_ts`) to `created_date`; leaves
+   `selling_date` untouched. Idempotent; prints a preview + a `sold_before_created`
+   post-check (must be 0).
+5. Verify: `reconcile_sales_inventory.py --host bandai.knoxkee.io --org-id <id> --token <JWT> --csv <level_1>`.
 
 ### Phase 7 — Verify
 - Log into `https://bandai.knoxkee.io/` as the scenario superuser; spot-check

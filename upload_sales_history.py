@@ -39,6 +39,7 @@ from pathlib import Path
 
 import requests
 
+from pa_auth import build_session
 from prepare_sales_upload import (
     DEFAULT_CUSTOMER_MAP,
     DEFAULT_HOST,
@@ -146,7 +147,9 @@ def main() -> int:
     parser.add_argument("--host", default=DEFAULT_HOST)
     parser.add_argument("--org-id", default=DEFAULT_ORG_ID,
                         help="Supplier organisation id (used only for catalog lookup)")
-    parser.add_argument("--token", required=True, help="Bearer JWT")
+    parser.add_argument("--token", help="Bearer JWT (or use --email/--password for auto-refresh on expiry)")
+    parser.add_argument("--email", help="Login email; with --password, re-authenticates when the token expires")
+    parser.add_argument("--password", help="Login password")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--seed", type=int, default=None, help="RNG seed for timestamp generation")
     parser.add_argument("--month", default=None, help="Optional YYYY-MM filter; defaults to all months")
@@ -171,7 +174,7 @@ def main() -> int:
         "Authorization": f"Bearer {args.token}",
         "Content-Type": "application/json",
     }
-    session = requests.Session()
+    session = build_session(args.host, args.token, args.email, args.password)
 
     print("Fetching supplier catalog...", file=sys.stderr)
     pax_to_sku = fetch_catalog_by_paxcode(session, args.host, args.org_id, headers)

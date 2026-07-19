@@ -43,6 +43,7 @@ from uuid import uuid4
 
 import requests
 
+from pa_auth import build_session
 from prepare_sales_upload import (
     DEFAULT_CSV,
     DEFAULT_CUSTOMER_MAP,
@@ -119,7 +120,9 @@ def main() -> int:
     parser.add_argument("--customer-org-map", default=DEFAULT_CUSTOMER_MAP, type=Path)
     parser.add_argument("--host", default=DEFAULT_HOST)
     parser.add_argument("--org-id", default=DEFAULT_ORG_ID, help="Supplier organisation id")
-    parser.add_argument("--token", required=True, help="Bearer JWT")
+    parser.add_argument("--token", help="Bearer JWT (or use --email/--password for auto-refresh on expiry)")
+    parser.add_argument("--email", help="Login email; with --password, re-authenticates when the token expires")
+    parser.add_argument("--password", help="Login password")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--state-file", default=DEFAULT_STATE_FILE, type=Path,
                         help="prepare_sales_upload state file to update with new uploads/transfers.")
@@ -140,7 +143,7 @@ def main() -> int:
     print(f"Loaded {len(cust_to_org)} customer->org mappings", file=sys.stderr)
 
     headers = {"Authorization": f"Bearer {args.token}", "Content-Type": "application/json"}
-    session = requests.Session()
+    session = build_session(args.host, args.token, args.email, args.password)
 
     print("Fetching supplier catalog...", file=sys.stderr)
     pax_to_sku = fetch_catalog_by_paxcode(session, args.host, args.org_id, headers)
