@@ -1,37 +1,53 @@
-"""Upload promotion runs from data/level_1_extract_promo_history/product_promo_history.csv into LootVault.
+"""Upload bucket-model promotion campaigns into LootVault (direct API).
 
-For each row, POSTs a single-line promotion campaign to
-    /api/v1/supplier/{org_id}/promotions
+Reads the grouped campaigns from
+``data/level_2_build_promotion_campaigns/promotion_campaigns.json`` (Phase 3.5)
+and POSTs **one campaign per group** to
+    /api/v1/orgs/{org_id}/promotions
 
-The campaign carries the shared ``name``/``startDate``/``endDate``; the SKU,
-discount, and reseller scope live on its one inline line (``LineSpec``), with
-the SKU targeted via ``scope.skuIds``. (The older per-SKU endpoint
-``/catalog/{sku_id}/promotions`` is now GET-only and returns 405 on POST.)
+LootVault's promotion model is the **bucket model** (per-SKU discounts within a
+campaign, playasia/lootvault#1541): a campaign is a header (name, dates, reseller
+scope) over one or more **scope entries**, each carrying its own discount:
 
-Rows are joined to a LootVault SKU by normalizing the catalog item's
-``name`` with ``normalize.normalize_name`` and matching it against the
-CSV's ``Normalized Name`` column. The ``Customer`` column from
-level_1_extract_promo_history is mapped to a reseller scope:
+    {
+      "name": ..., "startDate": ..., "endDate": ...,
+      "resellers": [<reseller org ids>],        # omitted => all resellers
+      "skus": [ { "skuIds": [...], "discountPercentage": <pct> }, ... ]
+    }
 
-  - "All"       -> applies to every reseller (resellers field omitted)
-  - "Heybox"    -> matched case-insensitively against the SKU's resellers
-  - "Sonkwo"    -> matched case-insensitively against the SKU's resellers
-  - anything else -> skipped with a warning
+So SKUs sharing one discount are grouped into a single scope entry, and a
+campaign that mixes discounts emits one scope entry per distinct discount. The
+header ``discountPercentage`` is optional UI metadata (never read for pricing)
+and is omitted here — the per-SKU scope discount is authoritative.
 
-``Promo Discount`` is a fraction in the CSV (e.g. 0.20 = 20% off) and is
-multiplied by 100 for the API, which expects ``discountPercentage`` in
-the 0.01–100 range. ``start_date``/``end_date`` are YYYY-MM-DD and used
-verbatim. The currency defaults to CNY.
+This replaces the old per-row uploader, which POSTed one single-line promotion
+per SKU to ``/api/v1/supplier/{org_id}/promotions`` — maximal fragmentation and
+the pre-bucket ``lines[]`` body shape.
+
+Joins + scope resolution
+------------------------
+Each campaign SKU is a ``Normalized Name`` slug. Catalog items (fetched from
+``/api/v1/lv-team/catalog``, filtered to the supplier) are normalized with
+``normalize.normalize_name`` and indexed by slug → LootVault SKU id. A campaign
+SKU with no catalog match is dropped (with a warning); a campaign whose SKUs all
+drop is skipped.
+
+``resellers`` in the JSON is a list of scenario reseller **aliases**
+(``["heybox"]`` / ``["sonkwo"]``) or ``null`` (All). Aliases are matched
+case-insensitively against the reseller **display names** attached to the
+supplier's catalog SKUs to recover reseller org ids; ``null`` => the header
+``resellers`` field is omitted (all resellers). ``discount_percentage`` in the
+JSON is already a percentage (e.g. ``"20"`` = 20% off), used verbatim.
 
 Note: the create endpoint normally requires startDate >= today and admin
-privileges. Historical runs will fail unless the caller is admin and the
-server permits backdating.
+privileges. Historical runs will fail unless the caller is admin and the server
+permits backdating.
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
+import json
 import sys
 import time
 from collections import defaultdict
@@ -43,13 +59,10 @@ from normalize import normalize_name
 
 DEFAULT_HOST = "lv.play-asia.com"
 DEFAULT_ORG_ID = "org-u1gm1u0j"
-DEFAULT_CSV = Path("data/level_1_extract_promo_history/product_promo_history.csv")
-DEFAULT_CURRENCY = "CNY"
+DEFAULT_CAMPAIGNS = Path("data/level_2_build_promotion_campaigns/promotion_campaigns.json")
 CATALOG_PAGE_SIZE = 1000
 REQUEST_DELAY_S = 0.1
 TIMEOUT_S = 30
-
-ALL_CUSTOMERS_TOKEN = "All"
 
 
 def fetch_catalog(
@@ -60,7 +73,7 @@ def fetch_catalog(
     Pages through /api/v1/lv-team/catalog filtered to this supplier so each
     SKU is returned alongside its attached resellers (id + display name).
     Catalog item names are normalized with ``normalize.normalize_name`` so
-    they match the ``Normalized Name`` column the level_1 extracts emit.
+    they match the ``Normalized Name`` slugs the level_1/level_2 extracts emit.
     """
     base = f"https://{host}/api/v1/lv-team/catalog"
     by_name: dict[str, tuple[str, dict[str, str]]] = {}
@@ -102,18 +115,73 @@ def fetch_catalog(
     return by_name
 
 
+def global_reseller_map(catalog: dict[str, tuple[str, dict[str, str]]]) -> dict[str, str]:
+    """Union every catalog SKU's resellers into one {reseller_name_lower: id} map.
+
+    A reseller org has one id across the catalog, so header-level reseller scope
+    (per campaign) can be resolved without a per-SKU lookup.
+    """
+    out: dict[str, str] = {}
+    for _sku_id, resellers in catalog.values():
+        out.update(resellers)
+    return out
+
+
+def resolve_resellers(
+    aliases: list[str] | None, reseller_ids: dict[str, str]
+) -> tuple[list[str] | None, str | None]:
+    """Map campaign reseller aliases -> org ids. Returns (ids_or_None, error).
+
+    ``None``/empty aliases => all resellers (``(None, None)``, header omitted).
+    An unknown alias yields ``(None, "<message>")`` so the caller can skip.
+    """
+    if not aliases:
+        return None, None
+    ids: list[str] = []
+    for alias in aliases:
+        rid = reseller_ids.get(alias.strip().lower())
+        if not rid:
+            return None, f"reseller alias {alias!r} not among catalog resellers {sorted(reseller_ids)}"
+        ids.append(rid)
+    return ids, None
+
+
+def build_scopes(
+    skus: list[dict], catalog: dict[str, tuple[str, dict[str, str]]]
+) -> tuple[list[dict], list[str]]:
+    """Group a campaign's SKUs by discount into scope entries.
+
+    Returns (scopes, missing_slugs). Each scope is
+    ``{"skuIds": [...], "discountPercentage": <float>}``; scopes are ordered by
+    discount. ``missing_slugs`` are SKUs with no catalog match (dropped).
+    """
+    by_discount: dict[str, list[str]] = defaultdict(list)
+    missing: list[str] = []
+    for entry in skus:
+        slug = entry["sku"]
+        hit = catalog.get(slug)
+        if not hit:
+            missing.append(slug)
+            continue
+        by_discount[str(entry["discount_percentage"])].append(hit[0])
+
+    scopes = [
+        {"skuIds": sorted(sku_ids), "discountPercentage": float(pct)}
+        for pct, sku_ids in sorted(by_discount.items(), key=lambda kv: float(kv[0]))
+    ]
+    return scopes, missing
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--csv", default=DEFAULT_CSV, type=Path)
+    parser.add_argument("--campaigns", default=DEFAULT_CAMPAIGNS, type=Path)
     parser.add_argument("--host", default=DEFAULT_HOST)
     parser.add_argument("--org-id", default=DEFAULT_ORG_ID)
-    parser.add_argument("--currency", default=DEFAULT_CURRENCY)
     parser.add_argument("--token", required=True, help="Bearer JWT")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    with args.csv.open(newline="", encoding="utf-8") as fh:
-        rows = list(csv.DictReader(fh))
+    campaigns = json.loads(args.campaigns.read_text(encoding="utf-8"))
 
     headers = {
         "Authorization": f"Bearer {args.token}",
@@ -123,78 +191,52 @@ def main() -> int:
 
     print("Fetching supplier catalog...", file=sys.stderr)
     catalog = fetch_catalog(session, args.host, args.org_id, headers)
-    print(f"  {len(catalog)} SKUs indexed by normalized name", file=sys.stderr)
+    reseller_ids = global_reseller_map(catalog)
+    print(f"  {len(catalog)} SKUs indexed by normalized name; "
+          f"resellers: {sorted(reseller_ids)}", file=sys.stderr)
 
-    ok = fail = skipped = 0
-    for row in rows:
-        slug = (row.get("Normalized Name") or "").strip() or normalize_name(row.get("Product Name"))
-        promo_raw = (row.get("Promo Discount") or "").strip()
-        customer = (row.get("Customer") or "").strip()
-        start_date = (row.get("start_date") or "").strip()
-        end_date = (row.get("end_date") or "").strip()
-        product = (row.get("Product Name") or "").strip()
+    url = f"https://{args.host}/api/v1/orgs/{args.org_id}/promotions"
+    ok = fail = skipped = dropped_skus = 0
+    for camp in campaigns:
+        name = camp["name"]
+        start_date = camp["start_date"]
+        end_date = camp["end_date"]
 
-        if not slug:
-            print(f"  skip {product!r}: no normalized name", file=sys.stderr)
-            skipped += 1
-            continue
-        entry = catalog.get(slug)
-        if not entry:
-            print(f"  skip {product!r} ({slug}): no matching SKU in catalog", file=sys.stderr)
-            skipped += 1
-            continue
-        sku_id, sku_resellers = entry
-
-        if not (promo_raw and start_date and end_date):
-            print(f"  skip {product!r}: missing promo/dates", file=sys.stderr)
+        resellers, err = resolve_resellers(camp.get("resellers"), reseller_ids)
+        if err:
+            print(f"  skip {name!r}: {err}", file=sys.stderr)
             skipped += 1
             continue
 
-        try:
-            discount_percentage = float(promo_raw) * 100
-        except ValueError:
-            print(f"  skip {product!r}: bad Promo Discount value {promo_raw!r}", file=sys.stderr)
+        scopes, missing = build_scopes(camp["skus"], catalog)
+        if missing:
+            dropped_skus += len(missing)
+            print(f"  warn {name!r}: {len(missing)} SKU(s) not in catalog, dropped: "
+                  f"{missing}", file=sys.stderr)
+        if not scopes:
+            print(f"  skip {name!r}: no SKUs resolved to the catalog", file=sys.stderr)
             skipped += 1
             continue
 
-        line: dict = {
-            "discountPercentage": round(discount_percentage, 4),
-            "currencies": [args.currency],
-            "scope": {"skuIds": [sku_id]},
-        }
-
-        scope = "all-resellers"
-        if customer and customer != ALL_CUSTOMERS_TOKEN:
-            reseller_id = sku_resellers.get(customer.lower())
-            if not reseller_id:
-                print(
-                    f"  skip {product!r} ({slug}): customer {customer!r} not in "
-                    f"SKU resellers {sorted(sku_resellers)}",
-                    file=sys.stderr,
-                )
-                skipped += 1
-                continue
-            line["resellers"] = [reseller_id]
-            scope = f"{customer}={reseller_id}"
-
-        reseller_label = customer if customer and customer != ALL_CUSTOMERS_TOKEN else "All"
-        name = f"{product} {start_date} -{round(discount_percentage, 2)}% [{reseller_label}]"
         body: dict = {
             "name": name,
             "startDate": start_date,
             "endDate": end_date,
-            "lines": [line],
+            "skus": scopes,
         }
+        if resellers:
+            body["resellers"] = resellers
 
+        n_skus = sum(len(s["skuIds"]) for s in scopes)
+        scope_label = "All" if not resellers else "+".join(resellers)
         prefix = (
-            f"{slug} ({sku_id}) {line['discountPercentage']}% "
-            f"{start_date}->{end_date} [{scope}]"
+            f"{name!r} {start_date}->{end_date} [{scope_label}] "
+            f"{n_skus} SKU(s) in {len(scopes)} discount bucket(s)"
         )
         if args.dry_run:
             print(f"  [dry-run] POST {prefix}", file=sys.stderr)
             continue
 
-        url = f"https://{args.host}/api/v1/supplier/{args.org_id}/promotions"
         resp = session.post(url, json=body, headers=headers, timeout=TIMEOUT_S)
         if resp.ok:
             print(f"  ok   {prefix}", file=sys.stderr)
@@ -204,7 +246,8 @@ def main() -> int:
             fail += 1
         time.sleep(REQUEST_DELAY_S)
 
-    print(f"\nDone. ok={ok} fail={fail} skipped={skipped} total={len(rows)}", file=sys.stderr)
+    print(f"\nDone. ok={ok} fail={fail} skipped={skipped} "
+          f"dropped_skus={dropped_skus} total_campaigns={len(campaigns)}", file=sys.stderr)
     return 1 if fail else 0
 
 

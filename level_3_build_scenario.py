@@ -8,6 +8,9 @@ emits a scenario the lootvault CLI can apply (``scenario apply``):
                 dated SRP windows (CNY) from level_1_extract_srp_history.
   * promotions[] — read verbatim from level_2_build_promotion_campaigns
                 (already grouped into campaigns and named); emitted as-is.
+                Each campaign uses the per-SKU ``sku_discounts`` form (bucket
+                model): one header (name, dates, reseller scope) over a list of
+                ``{alias, discount_percentage}`` — no single header discount.
 
 Hybrid build (see RUNBOOK.md): still **no keys and no sales** — the live-API leg
 owns inventory + sales. ``steamId`` is not emitted (SkuSpec ``deny_unknown_fields``).
@@ -184,10 +187,15 @@ def build_yaml(name: str, skus: pd.DataFrame, srp_by_slug: dict[str, list[dict]]
             lines.append(f"    name: {yq(p['name'])}")
             lines.append(f"    start_date: {p['start_date']}")
             lines.append(f"    end_date: {p['end_date']}")
-            lines.append(f"    discount_percentage: {p['discount_percentage']}")
             if p["resellers"]:
                 lines.append(f"    resellers: [{', '.join(p['resellers'])}]")
-            lines.append(f"    skus: [{', '.join(yq(a) for a in p['skus'])}]")
+            # Per-SKU discounts (bucket model): each SKU carries its own rate.
+            lines.append("    sku_discounts:")
+            for s in p["skus"]:
+                lines.append(
+                    f"      - {{ alias: {yq(s['sku'])}, "
+                    f"discount_percentage: {s['discount_percentage']} }}"
+                )
 
     return "\n".join(lines) + "\n"
 

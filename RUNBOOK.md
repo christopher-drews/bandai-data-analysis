@@ -46,7 +46,7 @@ source of truth. What each royalty concept maps to:
 | SKU catalog | `skus[].name`, `.pa_pax_code` | exact (matched rows only) | `level_0_match_pax_codes` |
 | Pricing / SRP | `skus[].srp[]` — **multiple dated windows** | **full history** | `level_1_extract_srp_history` |
 | Supplier cost | `skus[].cost[].percentage` | **assumption** (not in report; default 70%) | — |
-| Promotions | `promotions[]` (grouped by dates+discount+resellers → sku list) | exact | `level_1_extract_promo_history` → `level_2_build_promotion_campaigns` |
+| Promotions | `promotions[]` (bucket model: grouped by dates+resellers → per-SKU discounts) | exact | `level_1_extract_promo_history` → `level_2_build_promotion_campaigns` |
 | Relationships / FX | `relationships[]` (authorize, region-china, monthly CNY→USD) | exact | fixed + FX extract |
 | Inventory | `skus[].keys`, `relationships[].distribute_keys` | derived (must cover sales) | from sales totals |
 | **Sales** | `sales[]` — `percent_sold` per reseller per month | **⚠ APPROXIMATE** | `level_2_anonymize_sales_history` |
@@ -228,14 +228,31 @@ JSON the builder consumes verbatim.
 ```
 python level_2_build_promotion_campaigns.py  # -> data/level_2_build_promotion_campaigns/promotion_campaigns.json
 ```
-- Collapses promo rows sharing `(start_date, end_date, discount, reseller-scope)` into
-  one campaign over many SKUs. `Customer` → scope: All → all resellers; Heybox/Sonkwo →
-  that reseller; **Alibaba dropped**; rows whose SKU isn't in `skus.csv` dropped.
-- **Name** = `"{YYYY-MM} {scope} {pct}%"`; when a campaign covers exactly one SKU, a
-  truncated product suffix is appended (≤30 chars, trademark + " Edition" stripped) —
-  e.g. `2025-08 Heybox 20% — ELDEN RING NIGHTREIGN`. Mirrors `rename_promotions.py`
-  (the live-API renamer); the single-item helper is kept in sync by hand.
-  June-2026: **1293 campaigns** (855 single-SKU, named with product).
+- **Per-SKU discounts (bucket model).** LootVault's promotion model changed
+  (playasia/lootvault#1541): a campaign is a *bucket* of SKUs, each carrying its **own
+  discount**, identified only by time frame + reseller scope. So the discount **drops
+  out of the grouping key** and moves onto each SKU line. Collapses promo rows sharing
+  `(start_date, end_date, reseller-scope)` into one campaign over many SKUs. `Customer`
+  → scope: All → all resellers; Heybox/Sonkwo → that reseller; **Alibaba dropped**; rows
+  whose SKU isn't in `skus.csv` dropped. A SKU appears at most once per campaign; if it
+  turns up twice with different discounts, the **largest wins** (with a warning) — the
+  level_1 duration model packs stacked discounts into non-overlapping windows, so this
+  shouldn't fire.
+- **Name** = `"{start_date} → {end_date} {scope} {pct-or-range}%"` — the full date range
+  (not just the month) because several campaigns share a month + scope with different
+  windows; the discount is one value when uniform, else a `{min}–{max}%` range. When a
+  campaign covers exactly one SKU, a truncated product suffix is appended (≤30 chars,
+  trademark + " Edition" stripped) — e.g.
+  `2025-08-01 → 2025-08-14 Heybox 20% — ELDEN RING NIGHTREIGN`.
+  June-2026: **204 campaigns** (47 single-SKU named with product; 153 span >1 discount),
+  down from 1293 under the old discount-in-key model.
+- Output shape: `{name, start_date, end_date, resellers, skus:[{sku, discount_percentage}]}`
+  — `discount_percentage` is a percentage string (e.g. `"20"`).
+- `rename_promotions.py` (the live-API renamer) produces the **same** canonical name
+  from server state: it lists campaigns via `GET /api/v1/orgs/{org_id}/promotions` (one
+  row per campaign, with `discountMin`/`discountMax`) and PUTs the header name per
+  campaign id. Its `build_name`/`fmt_num` mirror this step, so names match byte-for-byte;
+  it defaults to **all** statuses (the seeded campaigns are backdated/ended).
 
 ### Phase 4 — Generate the scenario YAML  *(`level_3_build_scenario.py`)*
 
@@ -254,15 +271,16 @@ carried each SKU → per-reseller authorization) and `level_0_extract_exchange_r
 Current output (June-2026, all validated):
 - **`bandai-base.yaml`** — 3 orgs, 184 SKUs (136 with paxCode), **2 relationships**. Idempotent → safe to re-run.
 - **`bandai-srp.yaml`** — 3 orgs, 184 SKUs with **316 SRP windows**. Create-only.
-- **`bandai-promotions.yaml`** — 3 orgs, 184 SKUs, **1293 promotions**. Create-only, largest.
+- **`bandai-promotions.yaml`** — 3 orgs, 184 SKUs, **204 promotions** (bucket model, per-SKU discounts). Create-only, largest.
 Mapping details:
 - `skus[]`: every SKU; `pa_pax_code` when known; **`customer_reference`** = the
   report Item Number (172 set, unique per supplier; 12 blank→omitted);
   **`steam_app_id`** = catalog Steam App ID (136 set; `steam_type` defaults to `app`
   in the CLI); `srp[]` = the SKU's dated CNY windows (open-ended when `end_month`
   blank). `cost` NOT emitted (no cost in report).
-  *(Requires the lootvault CLI change adding `customer_reference` + `steam_app_id`/
-  `steam_type` to SkuSpec/ensure_sku — PR playasia/lootvault#1531. Both set at SKU
+  *(Requires two lootvault CLI changes to SkuSpec/ensure_sku: `customer_reference`
+  (PR playasia/lootvault#1531) and `steam_app_id`/`steam_type` (added separately — #1531
+  only shipped `customer_reference`; `steam_type` defaults to `app`). Both set at SKU
   create time, so they land via `bandai-base`, applied first.)*
 - `relationships[]`: bandai→heybox and bandai→sonkwo. **`authorize_skus` is
   data-driven** — each reseller gets only the SKUs it actually carried (Heybox 170,
@@ -270,8 +288,12 @@ Mapping details:
   unauthorized. `allowed_regions: [region-china]`, `distribute_keys: 0` (hybrid),
   and 23 monthly `exchange_rates` (CNY→USD, from the workbook's rate cell).
 - `promotions[]`: read **verbatim** from `promotion_campaigns.json` (Phase 3.5) — the
-  builder no longer groups or names, it just emits. `discount_percentage` = report
-  fraction ×100.
+  builder no longer groups or names, it just emits. Emitted in the **per-SKU
+  `sku_discounts` form** (bucket model): one header (name, dates, reseller scope) over a
+  list of `{alias, discount_percentage}`, **no single header discount**.
+  *(Requires the lootvault CLI change extending `PromotionSpec` with `sku_discounts` +
+  optional header discount — playasia/lootvault#1541. The uniform `discount_percentage` +
+  `skus` form still parses for hand-written scenarios.)*
 - **Hybrid**: no `keys`, no `sales` (live-API leg owns those). `pa_pax_code` optional,
   so uncurated SKUs are still emitted (and can carry SRP/promotions).
 - `franchises` + `apply_franchises: true` (optional, mirrors existing scenario).

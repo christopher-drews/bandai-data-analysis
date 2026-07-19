@@ -1,31 +1,38 @@
-"""Set ``name`` on every active/future LootVault promotion (server-driven, no CSV).
+"""Set ``name`` on every LootVault promotion campaign (server-driven, no CSV).
 
-Pages the supplier's ``/api/v1/supplier/{org_id}/promotion-lists`` endpoint,
-which returns every promotion grouped by ``COALESCE(name, id)``. For
-currently-unnamed promotions the ``groupKey`` is the promotion id, so we can
-PUT directly without per-SKU listing. For already-named groups we only
-intervene if the canonical name we compute differs from the existing one
-(rare during normal operation).
+Bucket model (playasia/lootvault#1541)
+--------------------------------------
+A promotion is now a single **campaign** entity identified by its time frame +
+reseller scope, with **per-SKU discounts** — there is no one campaign-wide
+discount. The supplier list endpoint returns one row per campaign, exposing
+``discountMin``/``discountMax`` across the campaign's SKUs. Renaming is therefore
+a single ``PUT`` per campaign against its ``id`` — no per-SKU line resolution.
 
-Naming
-------
-Base label: ``"{YYYY-MM} {Customer} {pct}%"`` — e.g. ``"2025-08 Heybox 20%"``.
-When multiple promotions share ``(start_date, end_date, resellers, discount)``,
-they collapse into one campaign row in the supplier UI.
+  * ``GET  /api/v1/orgs/{org_id}/promotions`` — one row per campaign (id, dates,
+    ``discountMin``/``discountMax``, resellers, ``skuIds``, ``skuCount``).
+  * ``PUT  /api/v1/orgs/{org_id}/promotions/{promotion_id}`` — update the header;
+    dates + reseller scope are **echoed back unchanged** so only the name moves
+    (a real date/scope change is frozen once the campaign has reported sales).
 
-When the tuple covers only ONE promotion server-wide, the label gets a
-truncated product suffix (≤30 chars, trademark + " Edition" stripped):
-``"2025-08 Heybox 20% — ELDEN RING NIGHTREIGN"``.
+Naming (matches level_2_build_promotion_campaigns.py)
+-----------------------------------------------------
+``"{start_date} → {end_date} {scope} {pct-or-range}%"`` — e.g.
+``"2025-08-01 → 2025-08-14 Heybox 20%"``. The discount is one value when every
+SKU shares it (``discountMin == discountMax``), else the range
+``"{min}–{max}%"``. When a campaign covers exactly ONE SKU, a truncated product
+suffix is appended (≤30 chars, trademark + " Edition" stripped):
+``"2025-08-01 → 2025-08-14 Heybox 20% — ELDEN RING NIGHTREIGN"``.
 
-The "customer" comes directly from the promotion's ``resellers`` array
-(server returns ``[{id, name}, ...]``): single reseller → that reseller's
-display name; missing/empty → ``"All"``; multiple → reseller names joined
-with ``+`` (rare).
+``scope`` comes from the campaign's ``resellers`` array (server returns
+``[{id, name}, ...]``): single reseller → that reseller's display name;
+missing/empty → ``"All"``; multiple → names joined with ``+`` (rare).
 
-Idempotent: rows whose name already matches the canonical form are skipped.
+Idempotent: campaigns whose name already matches the canonical form are skipped.
+The header ``discountPercentage`` (UI-convenience metadata, never read for
+pricing) is left out of the PUT — the bandai campaigns carry no header discount.
 
-Note: the public ``api.yaml`` omits ``name`` from ``UpdatePromotionRequest``
-but the server accepts it.
+Note: the public ``api.yaml`` omits ``name`` from ``UpdatePromotionRequest`` but
+the server accepts it.
 """
 
 from __future__ import annotations
@@ -34,7 +41,6 @@ import argparse
 import re
 import sys
 import time
-from collections import Counter
 
 import requests
 
@@ -42,12 +48,10 @@ DEFAULT_HOST = "lv.play-asia.com"
 DEFAULT_ORG_ID = "org-u1gm1u0j"
 CATALOG_PAGE_SIZE = 1000
 PROMO_LIST_PAGE_SIZE = 500
-PROMOTIONS_PAGE_LIMIT = 1000
 REQUEST_DELAY_S = 0.05
 TIMEOUT_S = 30
 ALL_CUSTOMERS_TOKEN = "All"
 PRODUCT_NAME_MAX = 30
-DISCOUNT_TOLERANCE = 1e-4
 
 EDITION_SUFFIX_RE = re.compile(
     r"\s+(Digital\s+|Premium\s+|Ultimate\s+|Deluxe\s+|Standard\s+|Collector'?s?\s+)?Edition\s*$",
@@ -65,14 +69,21 @@ def short_product(name: str) -> str:
     return cleaned
 
 
-def build_name(
-    start_date: str, customer: str, discount_percentage: float, cluster_size: int, product: str
-) -> str:
-    pct = f"{discount_percentage:g}"
-    base = f"{start_date[:7]} {customer or ALL_CUSTOMERS_TOKEN} {pct}%"
-    if cluster_size <= 1:
-        return f"{base} — {short_product(product)}"
-    return base
+def fmt_num(x: float | str, nd: int = 4) -> str:
+    """Trim a number for display: integer when whole, else rounded to nd places.
+
+    Mirrors ``fmt_num`` in level_2_build_promotion_campaigns.py so the renamer and
+    the campaign builder produce byte-identical names.
+    """
+    v = round(float(x), nd)
+    return str(int(v)) if v == int(v) else str(v)
+
+
+def discount_annotation(disc_min: float | str | None, disc_max: float | str | None) -> str:
+    """``"{pct}%"`` when min == max, else ``"{min}–{max}%"`` (en dash, as in level_2)."""
+    lo = fmt_num(disc_min if disc_min is not None else 0)
+    hi = fmt_num(disc_max if disc_max is not None else 0)
+    return f"{lo}%" if lo == hi else f"{lo}–{hi}%"
 
 
 def customer_label(resellers: list[dict] | None) -> str:
@@ -84,19 +95,14 @@ def customer_label(resellers: list[dict] | None) -> str:
     return "+".join(sorted(names)) if names else ALL_CUSTOMERS_TOKEN
 
 
-def reseller_id_set(resellers: list[dict] | None) -> frozenset[str]:
-    if not resellers:
-        return frozenset()
-    return frozenset(r["id"] for r in resellers if isinstance(r, dict) and r.get("id"))
-
-
-def cluster_key(item: dict) -> tuple[str, str, frozenset[str], float]:
-    return (
-        item.get("startDate", ""),
-        item.get("endDate", ""),
-        reseller_id_set(item.get("resellers")),
-        round(float(item.get("discountPercentage", 0)), 4),
-    )
+def build_name(item: dict, product: str) -> str:
+    """Canonical campaign name from a promotion-list row (bucket model)."""
+    scope = customer_label(item.get("resellers"))
+    disc = discount_annotation(item.get("discountMin"), item.get("discountMax"))
+    name = f"{item.get('startDate', '')} → {item.get('endDate', '')} {scope} {disc}"
+    if int(item.get("skuCount", 0) or 0) <= 1:
+        name = f"{name} — {short_product(product)}"
+    return name
 
 
 def fetch_sku_names(
@@ -127,10 +133,11 @@ def fetch_sku_names(
     return names
 
 
-def fetch_promotion_groups(
+def fetch_promotions(
     session: requests.Session, host: str, org_id: str, headers: dict, status: str
 ) -> list[dict]:
-    base = f"https://{host}/api/v1/supplier/{org_id}/promotion-lists"
+    """Page the supplier promotion list. ``status``: '' (all), active, future, ended."""
+    base = f"https://{host}/api/v1/orgs/{org_id}/promotions"
     items: list[dict] = []
     offset = 0
     while True:
@@ -150,72 +157,20 @@ def fetch_promotion_groups(
     return items
 
 
-def fetch_sku_promotions(
-    session: requests.Session, host: str, org_id: str, sku_id: str, headers: dict
-) -> list[dict]:
-    url = f"https://{host}/api/v1/supplier/{org_id}/catalog/{sku_id}/promotions"
-    resp = session.get(
-        url,
-        params={"offset": 0, "limit": PROMOTIONS_PAGE_LIMIT},
-        headers=headers,
-        timeout=TIMEOUT_S,
-    )
-    resp.raise_for_status()
-    return resp.json().get("items", [])
-
-
-def resolve_group_promo_ids(
-    session: requests.Session,
-    host: str,
-    org_id: str,
-    headers: dict,
-    item: dict,
-) -> list[tuple[str, str]]:
-    """For a /promotion-lists group, return [(sku_id, promo_id), ...] by per-SKU GET.
-
-    Used when groupKey is a name (not a promo id), so we need individual
-    promotion ids to issue PUTs. Matches by dates + discount + resellers.
-    """
-    target_dates = (item.get("startDate"), item.get("endDate"))
-    target_disc = round(float(item.get("discountPercentage", 0)), 4)
-    target_resellers = reseller_id_set(item.get("resellers"))
-    out: list[tuple[str, str]] = []
-    for sku_id in item.get("skuIds", []):
-        for promo in fetch_sku_promotions(session, host, org_id, sku_id, headers):
-            if (promo.get("startDate"), promo.get("endDate")) != target_dates:
-                continue
-            try:
-                if abs(float(promo.get("discountPercentage")) - target_disc) > DISCOUNT_TOLERANCE:
-                    continue
-            except (TypeError, ValueError):
-                continue
-            if reseller_id_set(promo.get("resellers")) != target_resellers:
-                continue
-            out.append((sku_id, promo["id"]))
-    return out
-
-
 def put_rename(
-    session: requests.Session,
-    host: str,
-    org_id: str,
-    headers: dict,
-    sku_id: str,
-    promo_id: str,
-    item: dict,
-    new_name: str,
+    session: requests.Session, host: str, org_id: str, headers: dict, item: dict, new_name: str
 ) -> tuple[bool, str]:
+    """PUT the header with the new name; dates + reseller scope echoed unchanged."""
+    reseller_ids = [r["id"] for r in (item.get("resellers") or []) if r.get("id")] or None
     body = {
-        "discountPercentage": item["discountPercentage"],
+        "name": new_name,
         "startDate": item["startDate"],
         "endDate": item["endDate"],
-        "currencies": item.get("currencies"),
-        "resellers": [r["id"] for r in (item.get("resellers") or [])] or None,
-        "name": new_name,
+        "resellers": reseller_ids,
     }
-    url = f"https://{host}/api/v1/supplier/{org_id}/catalog/{sku_id}/promotions/{promo_id}"
+    url = f"https://{host}/api/v1/orgs/{org_id}/promotions/{item['id']}"
     resp = session.put(url, json=body, headers=headers, timeout=TIMEOUT_S)
-    return resp.ok, f"{resp.status_code} {resp.text}" if not resp.ok else ""
+    return resp.ok, "" if resp.ok else f"{resp.status_code} {resp.text}"
 
 
 def main() -> int:
@@ -225,8 +180,9 @@ def main() -> int:
     parser.add_argument("--token", required=True, help="Bearer JWT")
     parser.add_argument(
         "--status",
-        default="active,future",
-        help="Comma-separated statuses to process (default: active,future)",
+        default="",
+        help="Comma-separated statuses to process: active, future, ended, or empty "
+        "for all (default: all — the bandai campaigns are backdated/ended).",
     )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
@@ -241,99 +197,58 @@ def main() -> int:
     sku_names = fetch_sku_names(session, args.host, args.org_id, headers)
     print(f"  {len(sku_names)} SKUs", file=sys.stderr)
 
-    statuses = [s.strip() for s in args.status.split(",") if s.strip()]
+    statuses = [s.strip() for s in args.status.split(",")] if args.status.strip() else [""]
+    seen: set[str] = set()
     items: list[dict] = []
     for status in statuses:
-        print(f"Fetching promotion groups (status={status})...", file=sys.stderr)
-        batch = fetch_promotion_groups(session, args.host, args.org_id, headers, status)
-        print(f"  {len(batch)} groups", file=sys.stderr)
-        items.extend(batch)
-
-    # Natural cluster size: count actual promotions (sku_count per group), not groups.
-    # Two unnamed promos that share (dates, resellers, discount) appear as two
-    # groups in the response — but they should collapse into one campaign once
-    # we give them the same name.
-    cluster_size: Counter[tuple[str, str, frozenset[str], float]] = Counter()
-    for it in items:
-        cluster_size[cluster_key(it)] += int(it.get("skuCount", 1) or 1)
+        label = status or "all"
+        print(f"Fetching promotions (status={label})...", file=sys.stderr)
+        batch = fetch_promotions(session, args.host, args.org_id, headers, status)
+        fresh = [it for it in batch if it.get("id") and it["id"] not in seen]
+        seen.update(it["id"] for it in fresh)
+        items.extend(fresh)
+        print(f"  {len(batch)} rows ({len(fresh)} new)", file=sys.stderr)
 
     ok = fail = skipped = unchanged = 0
     for item in items:
-        group_key = item.get("groupKey", "")
-        start_date = item.get("startDate", "")
-        discount = round(float(item.get("discountPercentage", 0)), 4)
-        customer = customer_label(item.get("resellers"))
-        size = cluster_size[cluster_key(item)]
+        promo_id = item.get("id", "")
         sku_ids = item.get("skuIds") or []
-
         if not sku_ids:
-            print(f"  skip {group_key}: no skuIds in group", file=sys.stderr)
+            print(f"  skip {promo_id}: campaign has no SKUs", file=sys.stderr)
             skipped += 1
             continue
 
-        # Product for singleton naming: pick the first SKU's name (only matters when size==1).
-        first_sku = sku_ids[0]
-        product = sku_names.get(first_sku, first_sku)
-        new_name = build_name(start_date, customer, discount, size, product)
+        # Product name for single-SKU campaigns (only used when skuCount <= 1).
+        product = sku_names.get(sku_ids[0], sku_ids[0])
+        new_name = build_name(item, product)
 
-        is_unnamed = group_key.startswith("promo-")
-        scope = customer if customer == ALL_CUSTOMERS_TOKEN else customer
+        scope = customer_label(item.get("resellers"))
+        disc = discount_annotation(item.get("discountMin"), item.get("discountMax"))
         prefix = (
-            f"{first_sku} {discount}% {start_date}->{item.get('endDate')} "
-            f"[{scope} ×{size}]"
+            f"{promo_id} {item.get('startDate')}->{item.get('endDate')} "
+            f"[{scope} {disc} ×{item.get('skuCount', len(sku_ids))}]"
         )
 
-        if not is_unnamed:
-            # groupKey is the current name shared by all promos in the group.
-            if group_key == new_name:
-                unchanged += int(item.get("skuCount", 1) or 1)
-                continue
-            # Name differs — need to fall back to per-SKU promotion listing to
-            # get individual promo ids, then PUT each.
-            print(
-                f"  RENAME-group {prefix}: {group_key!r} -> {new_name!r}",
-                file=sys.stderr,
-            )
-            pairs = resolve_group_promo_ids(session, args.host, args.org_id, headers, item)
-            if not pairs:
-                print(f"    WARN could not resolve any promo ids", file=sys.stderr)
-                skipped += 1
-                continue
-            for sku_id, promo_id in pairs:
-                if args.dry_run:
-                    print(f"    [dry-run] PUT {sku_id}/{promo_id}", file=sys.stderr)
-                    continue
-                success, err = put_rename(
-                    session, args.host, args.org_id, headers, sku_id, promo_id, item, new_name
-                )
-                if success:
-                    ok += 1
-                else:
-                    print(f"    FAIL {sku_id}/{promo_id} -> {err}", file=sys.stderr)
-                    fail += 1
-                time.sleep(REQUEST_DELAY_S)
+        if item.get("name", "") == new_name:
+            unchanged += 1
             continue
 
-        # Unnamed: groupKey IS the promotion id. Single promo in this group.
-        promo_id = group_key
-        sku_id = first_sku
         if args.dry_run:
-            print(f"  [dry-run] PUT {sku_id}/{promo_id} {prefix} -> {new_name!r}", file=sys.stderr)
+            print(f"  [dry-run] PUT {prefix}: {item.get('name')!r} -> {new_name!r}", file=sys.stderr)
             continue
 
-        success, err = put_rename(
-            session, args.host, args.org_id, headers, sku_id, promo_id, item, new_name
-        )
+        success, err = put_rename(session, args.host, args.org_id, headers, item, new_name)
         if success:
-            print(f"  ok   {sku_id}/{promo_id} {prefix} -> {new_name!r}", file=sys.stderr)
+            print(f"  ok   {prefix}: -> {new_name!r}", file=sys.stderr)
             ok += 1
         else:
-            print(f"  FAIL {sku_id}/{promo_id} {prefix} -> {err}", file=sys.stderr)
+            print(f"  FAIL {prefix} -> {err}", file=sys.stderr)
             fail += 1
         time.sleep(REQUEST_DELAY_S)
 
     print(
-        f"\nDone. ok={ok} unchanged={unchanged} fail={fail} skipped={skipped} groups={len(items)}",
+        f"\nDone. ok={ok} unchanged={unchanged} fail={fail} skipped={skipped} "
+        f"campaigns={len(items)}",
         file=sys.stderr,
     )
     return 1 if fail else 0
