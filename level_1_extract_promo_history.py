@@ -25,8 +25,15 @@ Because partial windows are packed within their month and full spans are
 whole-month, the output has no overlapping ranges for a given (slug, reseller),
 so LootVault's no-overlap rule is satisfied by construction.
 
-Identical windows for both Heybox and Sonkwo (same slug, discount, dates) collapse
-into one Customer=All row.
+Reseller scope (assume shared unless proven otherwise)
+------------------------------------------------------
+Before windows are built, each month's per-reseller promo state is resolved into a
+scope (see ``resolve_reseller_scope``): a discount is attributed to ``Customer=All``
+(both resellers) unless a reseller was actively selling that month *without* it —
+a different discount, or full price. A reseller with no sales that month is silent,
+not evidence of divergence, so it inherits the shared discount instead of splitting
+the span. Only genuine divergence (both resellers selling at different discounts in
+the same month) yields reseller-specific rows.
 
 Discounts are **rounded to the nearest whole percent**. The report's Promo Discount
 is a lossy ratio of integer prices (SRP vs selling price), so exact values are noisy
@@ -116,10 +123,18 @@ def extract_file_promo_state(path: Path) -> pd.DataFrame:
             r for d in g.loc[g["promo"] > 0, "promo"]
             if (r := round(float(d) * 100) / 100) > 0
         })
-        if not discounts:
-            continue
         has_nonpromo = bool(((g["promo"] == 0) & (g["units"] > 0)).any())
         pname = g["Product Name"].iloc[0]
+        if not discounts:
+            # Reseller sold this month but only at full price. Emit a discount-less
+            # presence marker so scope resolution can treat it as a dissenter (proof
+            # it did not share a discount), rather than as silent (assumed to share).
+            if has_nonpromo:
+                rows.append({
+                    "Product Name": pname, "Normalized Name": slug, "Customer": customer,
+                    "discount": float("nan"), "has_nonpromo": True, "n_discounts": 0,
+                })
+            continue
         for d in discounts:
             rows.append({
                 "Product Name": pname, "Normalized Name": slug, "Customer": customer,
@@ -196,8 +211,96 @@ def _full_row(slug, customer, product, discount, sm, em) -> dict:
     }
 
 
+POOLABLE = ("Heybox", "Sonkwo")
+
+
+def resolve_reseller_scope(per_period: pd.DataFrame) -> pd.DataFrame:
+    """Collapse per-reseller promo state into a reseller *scope* per (slug, month).
+
+    Business rule: a discount is assumed to apply to **both** resellers unless a
+    reseller was actively selling that month without it. For each (slug, month,
+    discount ``d``), ``d`` is **shared** unless a present reseller sold that month
+    without it — a *different* discount, or full price (the discount-less presence
+    marker from ``extract_file_promo_state``). A silent reseller is not evidence of
+    divergence, so it inherits shared discounts rather than fragmenting a span.
+
+    The month is then emitted under **one** regime, which is what keeps windows
+    non-overlapping on every physical reseller (LootVault rejects a SKU in two
+    overlapping promotions, and ``All`` covers both resellers):
+
+      * **Fully shared** (every discount that month is shared) -> one ``All`` row per
+        discount. Consecutive fully-shared months merge into one span downstream.
+      * **Divergent** (any discount is reseller-specific) -> emit *per physical
+        reseller* (Heybox/Sonkwo). Each reseller gets a discount it ran, plus any
+        shared discount (assumed given to both). This packs all of a reseller's
+        discounts for the month together in :func:`build_windows`, so an ``All``
+        window can never overlap a reseller-specific one for the same SKU.
+
+    Emitting shared discounts to ``All`` only in fully-shared months (never inside a
+    divergent month) is the crux: it prevents the ``All``×reseller overlap while
+    ``collapse_heybox_sonkwo`` still merges identical Heybox+Sonkwo windows back to
+    ``All`` afterwards for compactness. Non-poolable customers (the pre-split blank
+    ``Customer`` -> ``All`` era, Alibaba) pass through unchanged.
+    """
+    meta_cols = ["Product Name", "start_month", "end_month", "file"]
+    out: list[dict] = []
+    for (slug, _fname), g in per_period.groupby(["Normalized Name", "file"], sort=False):
+        meta = {c: g[c].iloc[0] for c in meta_cols}
+
+        # Non-poolable customers pass through as their own scope (real discounts only).
+        for _, r in g[~g["Customer"].isin(POOLABLE)].iterrows():
+            if pd.notna(r["discount"]):
+                out.append({**meta, "Normalized Name": slug, "Customer": r["Customer"],
+                            "discount": float(r["discount"]), "has_nonpromo": bool(r["has_nonpromo"])})
+
+        # Poolable resellers: gather each one's discount set + full-price flag.
+        state: dict[str, dict] = {}
+        for _, r in g[g["Customer"].isin(POOLABLE)].iterrows():
+            s = state.setdefault(r["Customer"], {"discounts": set(), "has_nonpromo": False})
+            if pd.notna(r["discount"]):
+                s["discounts"].add(float(r["discount"]))
+            s["has_nonpromo"] = s["has_nonpromo"] or bool(r["has_nonpromo"])
+        if not state:
+            continue
+
+        present = set(state)  # resellers that sold this SKU this month (promo or full price)
+        all_d = sorted({d for s in state.values() for d in s["discounts"]})
+        # d is shared iff no present reseller sold this month without it.
+        shared = {d: not (present - {r for r in present if d in state[r]["discounts"]})
+                  for d in all_d}
+
+        if all(shared.values()):
+            hn = any(s["has_nonpromo"] for s in state.values())
+            for d in all_d:
+                out.append({**meta, "Normalized Name": slug, "Customer": "All",
+                            "discount": d, "has_nonpromo": hn})
+        else:
+            for reseller in POOLABLE:
+                own = state.get(reseller)
+                ds = [d for d in all_d if (own is not None and d in own["discounts"]) or shared[d]]
+                if not ds:
+                    continue
+                # One has_nonpromo per (reseller, month) so build_windows classifies
+                # the whole month consistently: the reseller's own, else inherited.
+                hn = own["has_nonpromo"] if own is not None else \
+                    any(s["has_nonpromo"] for s in state.values())
+                for d in ds:
+                    out.append({**meta, "Normalized Name": slug, "Customer": reseller,
+                                "discount": d, "has_nonpromo": hn})
+
+    cols = ["Product Name", "Normalized Name", "Customer", "discount",
+            "has_nonpromo", "file", "start_month", "end_month"]
+    return pd.DataFrame(out, columns=cols)
+
+
 def collapse_heybox_sonkwo(runs: pd.DataFrame) -> pd.DataFrame:
-    """Merge Heybox+Sonkwo rows sharing (slug, discount, dates) into one Customer=All row."""
+    """Merge Heybox+Sonkwo rows sharing (slug, discount, dates) into one Customer=All row.
+
+    Opportunistic compaction after windows are built: in a divergent month a shared
+    discount is emitted to both resellers, so their identical windows collapse back
+    to ``All`` here. Because the two windows are identical (not merely overlapping),
+    the collapse introduces no new overlap.
+    """
     key = ["Normalized Name", "Promo Discount", "start_date", "end_date"]
     grp = runs.groupby(key, sort=False)["Customer"].agg(set).reset_index()
     pairs = grp[grp["Customer"].apply(lambda s: {"Heybox", "Sonkwo"}.issubset(s))][key]
@@ -251,6 +354,7 @@ def main() -> int:
         return 0
 
     per_period = pd.concat(parts, ignore_index=True)
+    per_period = resolve_reseller_scope(per_period)
     runs = build_windows(per_period, file_order, args.default_days)
     runs = collapse_heybox_sonkwo(runs)
 
