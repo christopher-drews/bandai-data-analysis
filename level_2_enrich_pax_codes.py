@@ -92,9 +92,15 @@ def load_catalog_by_pax(path: Path) -> dict[str, dict]:
 
 
 def load_overrides(path: Path) -> dict[str, dict]:
-    """Normalized Name -> {paxCode, steamId} from the manual override file.
+    """Normalized Name -> {paxCode, steamId, customer_reference} from the override file.
 
-    Only rows with a paxCode are applied; blank rows are template placeholders.
+    A row is applied when it carries a paxCode OR a Customer Reference:
+      - ``paxCode``           -> a manual paxCode match (wins over auto-matching).
+      - ``Customer Reference`` -> the SKU's customer_reference, used when the royalty
+        report has no Item Number of its own (new/upcoming titles). Overrides the
+        blank value carried from skus.csv so the SKU can flow into the scenario's
+        ``customer_reference`` and the add-sales CSVs.
+    A row may set either or both; rows with neither are template placeholders.
     Missing file is fine (returns empty).
     """
     if not path.exists():
@@ -104,8 +110,10 @@ def load_overrides(path: Path) -> dict[str, dict]:
     for _, r in df.iterrows():
         slug = r.get("Normalized Name", "").strip()
         pax = r.get("paxCode", "").strip()
-        if slug and pax:
-            out[slug] = {"paxCode": pax, "steamId": r.get("steamId", "").strip()}
+        ref = r.get("Customer Reference", "").strip()
+        if slug and (pax or ref):
+            out[slug] = {"paxCode": pax, "steamId": r.get("steamId", "").strip(),
+                         "customer_reference": ref}
     return out
 
 
@@ -160,8 +168,8 @@ def main() -> int:
         reasons: list[str] = []
 
         override = overrides.get(slug)
-        if override is not None:
-            # Manual match wins outright.
+        if override is not None and override["paxCode"]:
+            # Manual paxCode match wins outright.
             status, score = "manual", None
             pax = override["paxCode"]
             cat = by_pax.get(pax, {})
@@ -175,7 +183,7 @@ def main() -> int:
             else:
                 reasons.append("unmatched")
 
-        rows.append({
+        row = {
             **sku.to_dict(),
             "paxCode": pax,
             "steamId": steam,
@@ -186,7 +194,13 @@ def main() -> int:
             "_priority": MATCH_PRIORITY[status],
             "pax_needs_review": bool(reasons),
             "pax_review_reason": ", ".join(reasons),
-        })
+        }
+        # A Customer Reference override supplies a customer_reference the royalty
+        # report lacked (new/upcoming titles with no Item Number) — it wins over
+        # the blank value carried from skus.csv.
+        if override is not None and override["customer_reference"]:
+            row["Customer Reference"] = override["customer_reference"]
+        rows.append(row)
 
     enriched = pd.DataFrame(rows)
 
