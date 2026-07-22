@@ -128,6 +128,22 @@ CSVs). Emits one row per unique SKU keyed on normalized Product Name, each with 
 ```
 python level_1_extract_skus.py
 ```
+
+**Why normalized name is the key, not `Item Number` (DECIDED — measured over all 22
+periods / 7,012 observations / 190 SKUs).** The two identifiers fail in complementary
+directions, so the name is the identity and the code only corroborates:
+
+| Axis | Normalized name | `Item Number` |
+|------|-----------------|---------------|
+| Coverage | 100% (always present) | **12 SKUs (6.3%) never have a valid code**; 3.0% of rows blank; `0` placeholders appear |
+| Stability over time | perfectly stable | **27 SKUs drift codes** (21 transient 1-month typos, 6 genuine re-codes) |
+| Uniqueness | collapses 36 SKUs' worth of spelling/formatting noise; only **6** real dupes remain | 6 codes shared across products |
+
+Deduping by code alone yields 179 groups **plus 12 unassignable SKUs**; the name covers
+everything and its only weakness (6 same-product/different-spelling pairs) is finite and
+handled by `known_name_variants.csv`. Hence: **name = identity, `Item Number` = corroboration**
+(temporal dominance auto-fixes the transient typos, and a shared code surfaces the spelling
+variants a name-only pass would miss).
 Corruption handling (DECIDED: auto-fix + flag):
 - Valid codes = `^[EL]\d{5}$` (`E####`/`L####` families; both real). `0` and other
   malformed values are dropped.
